@@ -1,0 +1,148 @@
+// Docker快速入门之常用命令总结
+https://zhuanlan.zhihu.com/p/31697702
+
+Docker概念
+镜像（Image）：相当于root文件系统。分层存储（由多层文件系统联合组成）。镜像是静态的定义，类比面向对象程序设计中的类
+容器（Container）：容器是镜像运行时的实体。类比面向对象程序设计中的实例。容器可以被创建、启动、停止、删除、暂停等。容器的实质是进程，但与直接在宿主执行的进程不同，容器进程运行于属于自己的独立的命名空间。因此容器可以拥有自己的 root 文件系统、自己的网络配置、自己的进程空间，甚至自己的用户 ID 空间。容器内的进程是运行在一个隔离的环境里，使用起来，就好像是在一个独立于宿主的系统下操作一样
+仓库（Repository）：集中的存储、分发镜像的服务。一个注册服务器 Docker Registry 中可以包含多个仓库（ Repository） ；每个仓库可以包含多个标签 （ Tag） ；每个标签对应一个镜像。（通常，一个仓库会包含同一个软件不同版本的镜像，而标签就常用于对应该软件的各个版 本。<仓库名>:<标签>）默认的 Registry：官方的 Docker Hub
+访问仓库
+登录：docker login
+退出：docker logout
+搜索镜像：docker search image-name
+拉取镜像：docker pull image-name(<仓库名>:<标签> )
+标记镜像：docker tag ubuntu:17.10 username/ubuntu:17.10
+推送镜像：docker push username/ubuntu:17.10
+使用镜像
+Docker1.13+：docker image
+Docker 运行容器前需要本地存在对应的镜像，如果镜像不存在本地，Docker 会从镜像仓库下载（ 默认是 Docker Hub ）
+获取镜像：
+$ docker pull [选项] [Docker Registry地址]<仓库名>:<标签>
+docker pull centos:latest
+运行镜像（新建并运行容器）：
+$ docker run -it --rm ubuntu:14.04 bash
+列出镜像：
+$ docker images
+定制镜像：
+Dockerfile脚本是一个文本文件，其内包含了一条条的指令(Instruction)，每一条指令构建一层。（行尾添加 \ 的命令换行；行首 # 进行注释）
+从一个容器创建新镜像（创建到本地，并不会推送到仓库）：
+docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
+docker commit container-name my-image:version2
+删除本地镜像：
+docker rmi [选项] <镜像1> [<镜像2> ...]
+使用容器
+Docker1.13+：docker container
+启动容器：
+新建并启动：
+docker run ubuntu:14.04 /bin/echo 'Hello world' 与在本地直接执行 /bin/echo 'hello world' 几乎感觉不出任何区别；
+启动一个 bash 终端，允许用户进行交互：
+$ docker run --name container-name -it ubuntu:17.10 /bin/bash
+Docker 在后台运行的标准操作包括：
+检查本地是否存在指定的镜像，不存在就从公有仓库下载
+利用镜像创建并启动一个容器
+分配一个文件系统，并在只读的镜像层外面挂载一层可读写层
+从宿主主机配置的网桥接口中桥接一个虚拟接口到容器中去
+从地址池配置一个 ip 地址给容器
+执行用户指定的应用程序
+执行完毕后容器被终止
+启动已终止容器：docker start -i container-name
+后台运行容器：
+添加 -d 参数让 Docker 在后台运行而不是直接把执行命令的结果输出在当前宿主机下
+查看所有容器
+查看所有启动的容器：docker ps
+查看所有启动/关闭的容器：docker ps -a
+获取容器的控制台输出信息：docker logs container-name
+终止容器：
+docker stop container-name
+当Docker容器中指定的应用终结时，容器也自动终止
+查看终止状态的容器：docker ps -a
+重启容器：docker restart container-name
+进入后台容器（已启动容器）：
+直接进入容器 启动命令 的终端，不会启动新的进程：docker attach container-name
+在容器中打开新的终端，并且可以启动新的进程：docker exec -it container-name bash
+如果想直接在终端中查看启动命令的输出，用attach；其他情况使用exec。
+导入导出容器：
+导出容器：
+$ docker export 7691a814370e > ubuntu.tar
+导入容器快照：
+$ cat ubuntu.tar | docker import - test/ubuntu:v1.0
+也可以通过指定 URL 或者某个目录来导入：$ docker import http://example.com/exampleimage.tgz example/imagerepo
+删除容器：
+删除一个处于终止状态的容器：docker rm container-name
+删除一个运行中的容器：docker rm -f container-name
+清理掉所有处于终止状态的容器：docker container prune
+Docker数据管理
+Docker1.13+：docker volume
+
+数据卷（ Volumes）与挂载主机目录:
+
+数据卷特点：
+对数据卷的更新，不会影响镜像
+数据卷可以在容器之间共享和重用；对数据卷的修改会立马生效（宿主机和容器）
+数据卷默认会一直存在，即使容器被删除。数据卷生命周期独立于容器，Docker 不会在容器被删除后自动删除 数据卷 ，并且也不存在垃圾回收这样的机制来处理没有任何容器引用的 数据卷；如果需要在删除容器的同时移除数据卷，可以在删除容器的时候使用 docker rm -v 这个命令
+数据卷的使用，类似于Linux下对目录或文件进行mount
+创建一个数据卷：docker volume create my-vol
+查看所有的数据卷：docker volume ls
+查看指定数据卷的信息：docker volume inspect my-vol
+删除数据卷：docker volume rm my-vol
+清理无主的数据卷：docker volume prune
+创建并启动容器时，挂载一个数据卷到容器中：--mount 或-v。
+docker run -d \
+-it \
+--name devtest \
+
+--mount source=my-vol,target=/app \
+
+nginx:latest
+
+创建并启动容器时，挂载一个主机目录/文件到容器中作为数据卷：--mount 或-v。
+docker run --rm -it \
+# -v $HOME/.bash_history:/root/ \ --mount type=bind,source=$HOME/.bash_history,target=/root \
+centos:latest \
+bash
+--rm 参数：在容器退出时，把容器和数据卷一起删除（数据卷删除，但本地目录并不会删除）。类似在当容器退出后，使用docker rm -v 。与-d不能共用
+宿主机目录如果不存在，则会自动在宿主机生成
+容器目录必须是绝对路径，宿主机目录最好也是绝对路径（因为宿主机的相对路径指的是/var/lib/docker/volumes/，与宿主机的当前目录无关）
+宿主机与容器中挂载的目录/文件的修改是实时重用的（增删查改一致）；容器销毁后，宿主机的目录/文件并不会销毁
+查看容器的数据卷、网络等具体信息：docker inspect container-name
+宿主机与docker容器之间复制文件：
+
+从宿主机复制到容器：docker cp foo.txt mycontainer:/foo.txt
+从容器复制到宿主机：docker cp mycontainer:/foo.txt foo.txt
+Docker网络功能
+Docker 允许通过外部访问容器或容器互联的方式来提供网络服务。
+Docker 1.13+：docker network
+容器中可以运行一些网络应用，要让外部也可以访问这些应用，可以通过 -P 或 -p 参数来指定端口映射。
+创建并启动容器时，使用 ip : hostPort : containerPort 格式指定：把容器端口(containerPort)映射到一个特定地址的特定端口(ip : hostPort)：
+docker run -d -p 127.0.0.1:5000:5000 training/webapp python app.py
+docker run -d -p 5000:5000 training/webapp python app.py
+当使用 -P 标记时，Docker 会把内部容器开放的网络端口随机映射到宿主机的49000~49900的端口。
+查看映射端口配置：
+$ docker port container-name [port]
+输出：containerPort -> 宿主机host:port
+容器互联：
+
+新建网络：$ docker network create -d bridge my-net
+创建容器并连接到网络：$ docker run -it --rm --name busybox1 --net my-net busy。所有连接到同一个网络的容器之间可以相互ping通
+常用
+数据卷、网络等都需要在创建和运行docker容器时指定，一旦容器创建了，就不能再改变。对已创建的容器添加数据卷、网络映射配置的方法：
+
+1、stop running container
+docker stop test01
+2、commit the container
+docker commit test01 test02
+NOTE: The above, test02 is a new image that I'm constructing from the test01 container.
+3、re-run from the commited image
+docker run -p 8080:8080 -td test02
+
+（来源：https://stackoverflow.com/questions/19335444/how-do-i-assign-a-port-mapping-to-an-existing-docker-container ）
+
+
+
+最后来一张Docker常用命令行图：
+
+
+参考：
+
+《docker 从入门到实践》
+
+https://docs.docker.com/
