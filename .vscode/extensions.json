@@ -1,0 +1,16 @@
+{
+    "recommendations": [
+        "equinusocio.vsc-material-theme",
+        "github.copilot",
+        "ms-vscode-remote.remote-wsl",
+        "ms-dotnettools.csharp",
+        "ms-vscode-remote.remote-containers",
+        "visualstudioexptteam.vscodeintellicode",
+        "ms-vscode.powershell",
+        "msjsdiag.debugger-for-edge",
+        "ms-azure-devops.azure-pipelines",
+        "teamsdevapp.ms-teams-vscode-extension",
+        "microsoft-isvexptools.powerplatform-vscode",
+        "atlassian.atlascode"
+    ]
+}
