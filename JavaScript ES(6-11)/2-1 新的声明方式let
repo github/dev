@@ -12,4 +12,10 @@ index.js?b635:2 9
 
 dist文件夹只有上线才会用到
 
+let不能重复定义变量
 
+let a
+let b
+
+
+var能变量提升
