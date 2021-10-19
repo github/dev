@@ -1,0 +1,10 @@
+const和let一样，具有块级作用域
+if(true){
+    const a=5
+}
+console.log(a)
+
+const和let一样，不能变量提升
+
+const定义对象和数组的时候，栈内存(stack)里面存的是指向堆内存的地址，堆内存(heap)里面存的是内容
+diff --git a/JavaScript ES(6-11)/2-4  关于作用域的理解 b/JavaScript ES(6-11)/2-4  关于作用域的理解

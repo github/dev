@@ -1,0 +1,12 @@
+基础概念
+・面向对象
+・HTTP原理、RESTful、GraphQL
+・浏览器渲染原理，SPA
+・MVC、MVVM
+・Angular与Nestjs中的：Controller、Filter、Intercepter、Middleware、Guard
+・Angular与Nestjs中的Module和注入，单例模式
+・认证和授权。CORS、跨域。加密算法等
+
+编程
+・await、async、promise、observer、rxjs(常用的map、tap、debounce、flatMap等)
+・注解，泛型，typescript注意点（any，nullable, type guard）
