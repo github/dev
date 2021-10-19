@@ -49,7 +49,7 @@ PS C:\project\sample> nrm use yarn
    Registry has been set to: https://registry.yarnpkg.com/
 
 构建开发环境
-1.npm install -g imooc-es-cli
+1.npm install -g imooc-es-cli 安装imooc-es-cli包
 
 2.imooc-es-cli -h 查看当前命令包括哪些可以使用的命令
 
