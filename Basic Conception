@@ -10,3 +10,9 @@
 编程
 ・await、async、promise、observer、rxjs(常用的map、tap、debounce、flatMap等)
 ・注解，泛型，typescript注意点（any，nullable, type guard）
+
+要安装的
+@nestjs/config
+@typegoose/typegoose
+nestjs-console
+nestjs-typegoose
