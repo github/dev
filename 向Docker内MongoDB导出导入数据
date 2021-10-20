@@ -1,0 +1,29 @@
+1.先去ares测试环境db把sky-order的数据export出来(MongoExpress Export按钮)放在本地(c:\Users\wang.you\Downloads\skytree_order)
+
+インポートデータをMongoDBコンテナにコピー
+↓↓↓
+2.# MongoDBコンテナに入る
+PS C:\project\ares\packages\serverless-ticket\docker> docker ps
+CONTAINER ID   IMAGE           COMMAND                  CREATED          STATUS          PORTS                      NAMES
+d109d60d2df9   mongo:3.6.16    "docker-entrypoint.s…"   22 minutes ago   Up 22 minutes   0.0.0.0:27017->27017/tcp   docker-mongo-1
+8a07363dc71b   mongo-express   "tini -- /docker-ent…"   22 minutes ago   Up 21 minutes   0.0.0.0:8081->8081/tcp     docker-mongo-express-1
+
+3.# コマンド例：docker cp <コピー元> <コンテナID>:<コピー先>
+$ docker cp \Users\wang.you\Downloads\skytree_order d109d60d2df9:/data/
+
+4.# ファイルがコンテナ内にコピーされている
+PS C:\project\ares\packages\serverless-ticket\docker> docker exec -it d109d60d2df9  /bin/bash
+root@d109d60d2df9:/# ls /data
+configdb  db  skytree_order
+
+MongoDBにデータをインポート
+↓↓↓
+5．# mongoimportコマンドでデータをインポート
+root@d109d60d2df9:/# cd data
+root@d109d60d2df9:/data# mongoimport  --authenticationDatabase admin -u root -p 1 --db test --collection skytree_order --drop --file skytree_order
+2021-10-20T06:36:13.734+0000    connected to: localhost
+2021-10-20T06:36:13.735+0000    dropping: test.skytree_order
+2021-10-20T06:36:13.810+0000    imported 9 documents
+
+6．查看本地MongoDB，http://localhost:8081/db/test/skytree_order，确认9条数据已成功导入
+

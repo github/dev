@@ -1,0 +1,70 @@
+1.安装docker
+
+2.安装docker-compose(windows安装了docker以后自带了docker-compose,无需再单独安装)
+
+3.ares-servless-ticket/docker/docker-compose.yml 　文件内容如下:
+
+version: '3'
+
+services:
+  # # MySQL
+  # db:
+  #   image: mysql:5.7
+  #   container_name: test-mysql
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: root
+  #     MYSQL_DATABASE: test_database
+  #     MYSQL_USER: docker
+  #     MYSQL_PASSWORD: docker
+  #     TZ: 'Asia/Tokyo'
+  #   command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+  #   volumes:
+  #     - ./tmp/db/data:/var/lib/mysql
+  #     - ./tmp/db/my.cnf:/etc/mysql/conf.d/my.cnf
+  #     - ./tmp/db/sql:/docker-entrypoint-initdb.d
+  #   ports:
+  #     - 3306:3306
+  # adminer:
+  #   container_name: test-adminer
+  #   image: adminer
+  #   ports:
+  #     - 8080:8080
+  # redis:
+  #   image: 'redis:latest'
+  #   environment:
+  #     REDIS_PASSWORD: redis
+  #   ports:
+  #     - '6379:6379'
+  #   volumes:
+  #     - './docker/redis:/data'
+
+  # Mongodb
+  mongo:
+    image: mongo:3.6.16
+    restart: always
+    volumes:
+      - ./tmp/mongodb/data/db:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 1
+    ports:
+      - '27017:27017'
+
+  # Mongodb图形化界面远程管理
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - '8081:8081'
+    environment:
+      ME_CONFIG_MONGODB_URL: mongodb://root:1@mongo:27017/
+
+下载下来进入到文件所在的位置，执行docker-compose up -d,就能自动下载镜像并启动
+
+4.PS C:\project\ares\packages\serverless-ticket\docker> docker ps -a
+CONTAINER ID   IMAGE           COMMAND                  CREATED       STATUS       PORTS                      NAMES
+d109d60d2df9   mongo:3.6.16    "docker-entrypoint.s…"   4 hours ago   Up 4 hours   0.0.0.0:27017->27017/tcp   docker-mongo-1        
+8a07363dc71b   mongo-express   "tini -- /docker-ent…"   4 hours ago   Up 4 hours   0.0.0.0:8081->8081/tcp     docker-mongo-express-1
+
+STATUS是UP说明容器已启动
+
