@@ -1,0 +1,9 @@
+let s = new Set([4,2,3,2])
+s.add('imooc').add('es').add('ess')
+s.delete(4)
+//s.clear()
+console.log(s)
+console.log(s.has('imooc')) //包含'imooc'，返回ture
+console.log(s.has('mooc')) //不包含'mooc'，返回false
+console.log(s.size)  //输出set长度5 {2, 3, 'imooc', 'es', 'ess'}
+console.log(typeof s) //object

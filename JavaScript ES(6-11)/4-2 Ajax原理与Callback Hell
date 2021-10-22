@@ -1,0 +1,6 @@
+Ajax:
+Asynchronous Javascript And XML（异步JavaScript和XML）
+可以让前端和后端进行数据交换
+通过Ajax，通过实现异步的更新，也就是说，可以在不加载整个页面的情况下，可以对网页某个部分的数据进行局部刷新
+
+

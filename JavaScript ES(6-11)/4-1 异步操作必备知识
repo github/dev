@@ -1,0 +1,11 @@
+// const a=2
+// const b=3
+// console.log(a+b) //同步任务
+
+// setTimeout(()=>{console.log(a+b)},2000)  //异步任务
+
+setTimeout(()=>{console.log(1)},0)  //异步任务
+console.log(3)
+console.log(2) 
+
+先判断是同步还是异步任务，同步任务进入主线程，异步任务进入事件队列，先入先出。同步任务执行完成以后，再去队列里调取异步任务执行。

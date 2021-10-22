@@ -27,3 +27,4 @@ root@d109d60d2df9:/data# mongoimport  --authenticationDatabase admin -u root -p 
 
 6．查看本地MongoDB，http://localhost:8081/db/test/skytree_order，确认9条数据已成功导入
 
+以上是导入，导出可以看 https://pocketcode.net/mongo-import-export

@@ -1,0 +1,18 @@
+let p1 = new Promise((resolve,reject)=>{
+    resolve(1)
+})
+let p2 = new Promise((resolve,reject)=>{
+    setTimeout(()=>{resolve(2)},1000)
+})
+let p3 = new Promise((resolve,reject)=>{
+    setTimeout(()=>{reject(3)},1000)
+})
+console.log(p1) //fulfilled 同步操作，直接fulfilled
+console.log(p2) //pending→fulfilled 异步操作，初始状态pending，1秒后变成fulfilled
+console.log(p3) //pending→rejected  异步操作，初始状态pending，1秒后变成rejected
+setTimeout(()=>{console.log(p2)},2000) //p2在1秒后状态已变成fulfilled，所以这里打出来就是fullfilled
+setTimeout(()=>{console.log(p3)},2000) //p3在1秒后状态已变成rejected，所以这里打出来就是rejected
+
+p1.then(res=>(console.log(res)))
+p2.then(res=>(console.log(res)))
+p3.catch(res=>(console.log(res))) //catch接收的是reject处理
