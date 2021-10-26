@@ -1,0 +1,16 @@
+1.进https://isc.test.intares.jp/login，用tenant:isc&user:admin/1新建一个租户hejin
+
+2.http://mongo.teamx.tokyo:8081/ (用户名密码:ares/1nTasecT)
+
+3.进Database isc
+
+4.进collection management_user
+
+5.找到_id是admin的数据，{_id: 'admin',tenantId: 'isc',createdBy: 'SYSTEM',...}
+
+6.在usableTenants里面加上hejin
+
+7.再进https://isc.test.intares.jp/login，用tenant:isc&user:admin/1切换到租户hejin(点右上角切换进入)，
+  这时url变成https://hejin.test.intares.jp/login
+
+8.在hejin租户下新建user，这些user就都是hejin租户下的user了。

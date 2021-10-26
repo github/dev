@@ -26,3 +26,7 @@ var能变量提升,let不能
 
 let具有块级作用域
 
+想要打包上线，输入以下命令
+npm run build 
+
+多出dist文件夹，

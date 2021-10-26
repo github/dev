@@ -1,0 +1,11 @@
+可参考
+https://www.runoob.com/typescript/ts-map.html
+
+键值对
+
+使用obj的地方都可以考虑map，map提供更丰富的方法，比如has，size等
+
+WeakMap这种数据结构的键名只支持引用数据类型，引用数据类型比如函数，数组，对象
+
+WeakMap和Map具有一样的方法，但是不支持clear和遍历，也获取不到size
+

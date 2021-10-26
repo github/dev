@@ -1,0 +1,46 @@
+//1.布尔类型(boolean)
+var flag : boolean = true
+var flag : boolean = false
+
+//2.数值类型(number)
+var a : number = 123
+
+//3.字符串类型(string)
+var str : string = "这是ts"
+let str1 : string = "这是ts"
+
+//4.数组类型(array) ts定义数组有两种方式
+//es5是这样的:arr = [a,"123",false]
+
+//第一种方式
+
+let arr : number[]=[1,2,3,4,5]
+let str2 : string[]=["a","b","c"]
+
+//第二种方式
+let arr1 : Array<number>=[1,2,3,4,5]
+let arr2 : Array<string>=["a","b","c"]
+
+//5.元祖类型(tuple) 属于数组的一种,可以指定多种类型
+let arr3 : [string,number,boolean]=["a",2,true]
+
+//6.枚举类型 定义标识符
+//enum 枚举名{
+//   标识符 [=整型常数]，
+//   标识符 [=整型常数]，
+//   ...
+//   标识符 [=整型常数]，
+//}
+
+enum Flag {success = 1, error = -1}
+var f : Flag = Flag.success
+
+enum payStatus {unpaid = -1,paid = 0, success = 1}
+var p : payStatus = payStatus.unpaid
+
+enum Color {red,blue,black} //未赋值
+var c : Color = Color.blue  //索引值1
+
+enum Color1 {red,blue=5,black} //部分未赋值
+var c1 : Color1 = Color1.blue  //red赋值索引值，blue正常赋值，black的值是前面一个值+1 red = 0,blue = 5,black =6
+

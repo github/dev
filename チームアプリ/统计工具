@@ -1,0 +1,33 @@
+tian
+做一个cli的工具,每天查一下skytree的未支付和支付的订单数量
+
+curl -X POST -H 'Content-Type: application/json' --data '{"text":"Example message","attachments":[{"title":"Rocket.Chat","title_link":"https://rocket.chat","text":"Rocket.Chat, the best open source chat","image_url":"/images/integration-attachment-example.png","color":"#764FA5"}]}' https://chat.teamx.tokyo/hooks/ZdEHh7cHqv6KNPBJR/oERXxLw4WnsW7QiSrTiXg2L7YCqkC6YMkJfeSqYjij3EBogF
+你试试跑这个会给bot那个聊天频道发内容。
+
+你们需要做的就是在nestjs里面发送一个http的post请求到上面这个url：
+https://chat.teamx.tokyo/hooks/ZdEHh7cHqv6KNPBJR/oERXxLw4WnsW7QiSrTiXg2L7YCqkC6YMkJfeSqYjij3EBogF
+
+he
+问个问题，下面代码里的providers为啥要指定ApplicationConfigService？
+本模块的作用是把.env的内容设定成环境变量，ApplicationConfigService的作用是读取环境变量，这个依赖性注入的目的是啥？
+@Global()
+@Module({
+  imports: [
+    ConfigModule.forRoot({
+      envFilePath: ['.env'],
+    }),
+  ],
+  providers: [ApplicationConfigService],
+  exports: [ConfigModule, ApplicationConfigService],
+})
+export class ConfigsModule {}
+
+liu
+这个模块的作用是要把文件的设置设定为环境变量后并读取到程序中
+而提供把文件设为环境变量这个操作的，是
+ConfigModule.forRoot({
+envFilePath: ['.env'],
+}),
+这一句话
+整个大的模块是把这个和读取绑在一起的
+
