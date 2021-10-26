@@ -1,0 +1,36 @@
+各小程序访问URL：
+
+内容管理：
+tenant:furano
+LINE：
+	https://liff.line.me/1653852388-M88LY0nE
+H5:
+	https://test.mini.intares.jp/content/h5/pages/index/index
+
+ticket:
+tenant:skytree
+LINE:
+	https://liff.line.me/1653852388-PAG3ojMr
+        https://liff.line.me/1655169016-vZBQL1Yk
+
+问卷:
+LINE:
+	https://liff.line.me/1653852388-OK0PA3pV?tenantId=furano&questionnaireInstanceId=5f87f0f07f3671000ca795e3
+H5:
+	https://test.mini.intares.jp/questionnaire/h5/pages/index/index?tenantId=furano&questionnaireInstanceId=5f87f0f07f3671000ca795e3
+
+集章:
+LINE:
+	https://liff.line.me/1653852388-wzK8GQ5R/?tenantId=furano&activityInstanceId=5f86946f50921d000b50158e
+H5:
+	https://test.mini.intares.jp/stamp-rally/h5/pages/index/index?tenantId=furano&activityInstanceId=5f86946f50921d000b50158e
+
+优惠券:
+LINE:
+	https://liff.line.me/1653852388-Ao87D4nx?tenantId=furano
+H5:
+	https://test.mini.intares.jp/coupon/h5/pages/index/index?tenantId=furano
+
+
+我们以后用的Line URL只会是
+https://liff.line.me/1653852388-wzK8GQ5R

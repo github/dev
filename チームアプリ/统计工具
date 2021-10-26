@@ -1,6 +1,8 @@
 tian
 做一个cli的工具,每天查一下skytree的未支付和支付的订单数量
 
+你们只需要看UnpaidTicketInstance和TicketInstance还有order。setting你们这次做的东西不需要关注
+
 curl -X POST -H 'Content-Type: application/json' --data '{"text":"Example message","attachments":[{"title":"Rocket.Chat","title_link":"https://rocket.chat","text":"Rocket.Chat, the best open source chat","image_url":"/images/integration-attachment-example.png","color":"#764FA5"}]}' https://chat.teamx.tokyo/hooks/ZdEHh7cHqv6KNPBJR/oERXxLw4WnsW7QiSrTiXg2L7YCqkC6YMkJfeSqYjij3EBogF
 你试试跑这个会给bot那个聊天频道发内容。
 

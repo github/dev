@@ -1,0 +1,58 @@
+web:
+package.json替换以下内容
+"web:common:build": "npx lerna run build --concurrency=1 --stream --scope=@ares/common --scope=@ares/web-common --scope=@ares/web-payment --scope=@ares/web-questionnaire --scope=@ares/web-restaurant --scope=@ares/web-stamp-rally --scope=@ares/web-ticket --scope=@ares/web-live --scope=@ares/web-content",
+(全部编到一起，只需要执行一个命令)只替换一次，编完就改回来
+
+yarn bootstrap
+yarn web:common:build
+(上面两个命令都是用来加载依赖库的 只要加载过了, package.json没有变化就不需要再执行 bootstrap 了
+web:common:build是用来编译web-common和web-payment的 只要没有修改这两个工程的代码就不需要执行)本次在执行过一次后只需要执行web:live:build
+yarn serverless:common:build(这个不用运行，不知道为什么)(现在知道为什么了，因为bootstrap里面已经包含了serverless-common的编译)
+
+yarn serverless:authenticate:dev  单独一个终端窗口
+yarn serverless:management:dev  单独一个终端窗口
+
+yarn serverless:live:dev  单独一个终端窗口
+
+yarn web:management:dev  单独一个终端窗口
+
+服务启动起来后   修改host文件   搜索一下 win10 修改host文件
+本地ip(192.168.0.25) wytest.test.com
+本地ip(192.168.0.25) isc.test.com
+
+改web-management的enviroment.development.ts环境文件 要改成ip访问后台服务 127.0.0.1改成192.168.0.25，注意url用http，不用https，因为本地没有装加密证书，不支持https协议
+
+报错没装snappy.解决方法:severless-common 里面的config.ts文件里，需要压缩的是management的配置，所以设为false，就不需要安装snappy了。(MongoDB和serverless这两个方法里的不用压缩，因为只是控制调用MongoDB的时候用)
+
+http://192.168.0.25:4200/login × http://livetest.test.com:4200/login 〇
+后台在获取tenantId的时候 其实是从你的访问URL获取的 比如http:wytest.test.com:4200/login 前台在截取的时候是拿到wytest.test.com 然后用点[ . ]分割拿到第一个 也就是wytest作为你要使用的tenantId
+现在你是http://192.168.0.25:4200/login 那他拿到的tenantId就是192 肯定要报440
+现在你看数据库里 应该是多了一个叫 192 的租户了
+只是没有数据
+
+
+
+
+
+
+taro:
+taro代码下载后，BASEURL: JSON.stringify('http://192.168.0.32:3090'), // 真正的api 这里改为本地IP
+ 先执行 yarn 再执行 yarn build:weapp:development(直播) 或者 yarn build:mock-live:weapp:development(直播，卖票)
+
+出现提示:
+
+Tips: 数据mock服务未启动，设置 TARO_MOCK 为 true 可以开启 mock。
+Example:
+$ TARO_MOCK=true taro build --type weapp --watch
+不用管,因为启动了后台服务 就不用管mock. mock是在没有后台api可调用的情况下使用的
+
+ares-taro-live/config/development.js
+    BASE_URL: isMock
+      ? JSON.stringify('http://127.0.0.1:9527') // mock地址
+      : JSON.stringify('http://192.168.6.73:3070'), // 真正的api
+把真正的api改成本地ip
+
+在微信开发者工具新建项目，选文件夹C/project/ares-taro-live/dist/weapp，就能打开小程序
+
+
+development.js  TENANT_ID:JSON.stringify('livetest'),设置租户

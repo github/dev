@@ -1,0 +1,22 @@
+getLanguage: () => {
+    if (CHANNEL === Channel.wechat) {
+      return Language.zh_CN; // 如果是微信，手机不管设置什么语言，都使用中文显示票名
+    } else {
+      const language = Taro.getSystemInfoSync().language.replace('_', '-');
+      for (const languageItem in Language) {
+        if (language === languageItem) {
+          return language;
+        }
+      }
+      if (language.toLowerCase().indexOf('zh') > -1) {
+        return Language.zh_CN;
+      }
+      if (language.toLowerCase().indexOf('ja') > -1) {
+        return Language.ja_JP;
+      }
+      if (language.toLowerCase().indexOf('en') > -1) {
+        return Language.en_US;
+      }
+      return Language.ja_JP;
+    }
+  }

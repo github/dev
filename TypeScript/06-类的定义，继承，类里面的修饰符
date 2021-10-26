@@ -1,0 +1,23 @@
+class Person{
+    name : string;
+
+    constructor(n : string){
+           this.name = n;
+    }
+    run():void{
+        alert(this.name);
+    }
+}
+var p=new Person('zhangsan');
+p.run
+
+继承用 extends和super关键字
+
+//修饰符 public protected private
+
+
+           可以访问             不能访问
+
+public     类，子类，类外面
+protected  类，子类             类外面     
+private    类                   子类，类外面     
