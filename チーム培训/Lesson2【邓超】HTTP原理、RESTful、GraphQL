@@ -1,0 +1,14 @@
+先预习一下
+
+http原理
+https://developer.mozilla.org/zh-CN/docs/Web/HTTP
+主要介绍内容
+1.HTTP guide/Overview of HTTP
+2.HTTP guide/HTTP Message
+3.HTTP authentication
+4.HTTP caching
+5.HTTP redirects
+6.HTTP headers
+7.HTTP request methods(GET POST PUT OPTIONS PATCH)
+8.HTTP response status codes(200 301 400 401 403 404 500 )
+

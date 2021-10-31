@@ -1,0 +1,37 @@
+接口是一种规范的定义，行为和动作的规范，约束属性，函数，类
+和抽象类相似，也是定义标准
+
+1.属性类接口
+对jason的约束
+
+函数一:
+function printLable(label:string):void {
+    console.log('printLable');
+}
+printLable('hahah');             //正确。符合函数定义的传入参数规范。
+printLable(123);                 //错误
+
+函数二:
+function printLable(labelInfo:{label:string}):void {
+    console.log('printLable');
+}
+
+printLable('hahah');             //错误
+printLable({name:'zhangsan'});   //错误
+printLable({label:'zhangsan'});  //正确。符合函数定义的传入参数规范。
+
+
+
+定义一个接口:
+interface Fullname{ 
+    firstName:string;
+    lastName:string;
+}
+
+实现这个接口:
+function printName(name:Fullname) {  //必须传入对象.name是一个对象,满足Fullname接口的对象。
+    console.log(name.firstName+'-----'+name.lastName); //输出 Faye-----Wong
+}
+// printName({'Faye'},{'Wong'}); //错误写法
+// printName(123); //错误写法
+printName({firstName:'Faye',lastName:'Wong'}); //正确.

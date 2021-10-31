@@ -1,0 +1,7 @@
+http://www.mongoosejs.net/docs/api.html#Model
+add => save/create/findByIdAndUpdate
+update => findByIdAndUpdate/findOneAndUpdate
+delete => findByIdAndRemove/findOneAndRemove/remove/deleteOne/deleteMany
+get => findById/find/findOne/aggregate
+
+

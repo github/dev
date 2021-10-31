@@ -1,0 +1,177 @@
+Lesson 1
+10/27【刘钊宇】・面向对象
+培训资料
+https://docs.google.com/presentation/d/1cuR1aQPF5_r5kVMyUUWJ3_hUIIXdywVUGPOGPVL7zJk/edit#slide=id.p
+
+interfaceとtypeの違い、そして何を使うべきかについて
+https://zenn.dev/luvmini511/articles/6c6f69481c2d17
+
+五子棋小游戏，可以怎么创建对象？
+Fanclub的直播功能，可以怎么创建对象？
+
+课后作业
+https://docs.google.com/presentation/d/1gnxxHijgghJ5ggQ7nVTvbyjg9MGbnPG9WUPNhciCWxE/edit#slide=id.p
+
+1.三角形，圆形和矩形是三种不同的几何图形，都能够计算面积和周长，而计算方式各有不同。请用面向对象的方式，使能实现
+三角形能根据三边长后能计算出面积和周长
+圆形能根据半径算出面积和周长
+矩形能根据长宽算出面积和周长
+（提示：三角形三边算面积可以使用海伦公式）
+
+矩形 rectangle
+   边长1 side1
+   边长2 side2
+   面积 area 
+   周长 perimeter
+
+三角形 triangle
+   边长1 side1
+   边长2 side2
+   边长3 side3
+   面积  area
+   周长  perimeter
+
+圆 circle
+   半径 radius
+   面积 area
+   周长 circumference
+
+class Rectangle{
+    constructor(side1:number,side2:number){
+        this.side1 = side1;
+        this.side2 = side2;
+    }
+    getArea(this.side1:number,this.side2:number):number{
+        let area:number;
+        return area = this.side1 * this.side2;
+    }
+    getPerimeter(this.side1:number,this.side2:number):number{
+        let perimeter:number;
+        return perimeter = (this.side1 + this.side2)*2 
+    }
+}
+class Circle{
+    constructor(radius:number){
+        this.radius = radius;
+    }
+    getArea(this.radius):number{
+        let area:number;
+        return area = Math.PI * Math.pow(this.radius,2);
+    }
+    getCircumference(this.radius):number{
+        let circumference:number;
+        return circumference = 2 * Math.PI * this.radius;
+    }
+}
+class Triangle{
+    constructor(side1:number,side2:number,side3:number){
+        this.side1 = side1;
+        this.side2 = side2;
+        this.side3 = side3;
+    }
+    getArea(this.side1:number,this.side2:number,this.side3:number):number{
+        let area:number;
+        let p:number;
+        p = 1/2 * (this.side1 + this.side2 + this.side3);
+        return area = Math.sqrt(p*(p-this.side1)*(p-this.side2)*(p-this.side3));
+    }
+    getPerimeter(){
+        let perimeter:number;
+        return perimeter = this.side1 + this.side2 + this.side3;
+    }
+}
+let rectangle:any = new Rectangle(675,1673); //矩形的两条边
+let circle:any = new Circle(5);         //圆的半径
+let triangle:any = new Triangle(10,20,30); //三角形的三条边
+
+console.log(`长方形面积是${rectangle.getArea()}`);
+console.log(`长方形周长是${rectangle.getPerimeter()}`);
+console.log(`圆面积是${circle.getArea()}`);
+console.log(`圆周长是${circle.getCircumference()}`);
+
+let resOfTriangle:number;
+resOfTriangle = triangle.getArea();
+if(resOfTriangle !== 0){
+    console.log(`三角形面积是${triangle.getArea()}`);
+}else{
+    console.log(`请确认后重新输入。`)
+}
+
+console.log(`三角形周长是${triangle.getPerimeter()}`);
+
+
+
+
+
+2.日本新干线东海道线往返于东京和新大阪，设计有三种级别的列车，分别为kodama（下图蓝色线），hikari（下图红色线）以及nozomi（下图黄色线）。
+其中hikari还会细分成两种，一种除圆圈标注的必停站以外，还停靠浜松，静冈，热海，三岛，另一种则停靠米原，岐阜羽岛，丰桥，小田原。
+请根据上面的描述和下图，抽出实体，定义列车的类，并使列车的对象能够按顺序输出自己的停靠站。(图片见课件)
+
+class Train {
+    constructor(lineName:string){
+        this.lineName = lineName;
+    }
+    getStation(this.lineName):any{
+        if(this.lineName === 'のぞみ'){
+        let stationName1:string[]=['東京','品川','新横浜','名古屋','京都','新大阪'];
+            return stationName1;
+        } else if(this.lineName === 'ひかり１'){
+            let stationName2:string[]=['東京','品川','新横浜','小田原','豊橋','名古屋',
+            '岐阜羽島','米原','京都','新大阪'];
+            return stationName2;
+        } else if(this.lineName === 'ひかり２'){
+            let stationName3:string[]=['東京','品川','新横浜','熱海',
+            '三島','静岡','浜松','名古屋','京都','新大阪'];
+            return stationName3;
+                }else if(this.lineName === 'こだま'){
+                    let stationName4:string[]=['東京','品川','新横浜','小田原','熱海',
+                    '三島','新富士','静岡','掛川','浜松','豊橋','三河安城','名古屋',
+                    '岐阜羽島','米原','京都','新大阪'];
+                    return stationName4;
+            }else{
+                return 'error';
+            }
+    } 
+}   
+
+let t:any = new Train('こだま'); //のぞみ、ひかり１、ひかり２、こだまを選択
+let res:any = t.getStation();
+let flag:number = 0; //0:東京→新大阪　1:新大阪→東京
+
+if((typeof res)==='object'&&flag === 0){
+     let printStation:string[] = t.getStation();
+    printStation.forEach(function(value){
+        console.log(value);
+    })
+}else if((typeof res)==='object'&&flag === 1){
+    let printStation:string[] = t.getStation();
+    for(let i = printStation.length-1; i >= 0; i--) {
+        console.log(printStation[i]);
+        }
+    }else{
+        console.log(res);
+    }
+}
+
+※目前没有做到把站名的番号打印出来，只打印了名字。以后改进。
+
+3.一个消息系统会从另一个消息系统接收到如下格式的信息，信息有存入mongoDB的需求，请为此类数据定义合适的类。
+（参考typegoose）
+{
+ “massageId”: “29363414197572109884427213413”,
+ “createdAt” : “2021-06-10T12:57:54.124Z”,
+ “operationResult”: [
+        {
+         “productId”: “5ed7a7b4db6ae0000ac13b29”,
+         “operation”: “delete”,
+         “result”: “true”,
+        },
+        {
+         “productId”: “5ed7a7b4db6ae6000fc13b29”,
+         “operation”: “create”,
+         “result”: “true”,
+        },
+    ] ,
+}
+
+

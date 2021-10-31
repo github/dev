@@ -1,1 +1,98 @@
-对象冒充实现继承
+
+//1.类的定义
+function Person(){
+    this.name = '张三';
+    this.run=function(){　　　　　　　//可以在构造函数里定义方法
+        alert(this.name+'在运动');
+    }
+}
+Person.prototype.sex='男'；  　　　　　//在原型链定义属性
+Person.prototype.work=function(){　　 //在原型链定义方法
+    alert(this.name+'在工作');
+  }
+
+//2.类的静态方法
+Person.getInfo=function (){
+    console.log('我是一个静态方法');
+}
+Person.getInfo()                     //调用静态方法
+
+let p = new Person();
+p.run();
+p.work();
+alert(p.sex);
+
+//※原型链上面的属性会被多个实例共享，构造函数不会。具体举例说明呢？
+
+//3.类的继承
+
+//实现继承的两种方式
+//①.原型链
+//②.对象冒充
+//用得最多的是两种组合起来用
+
+function Web(){
+    Person.call(this)；    //对象冒充实现继承。
+}
+
+var w = new Web();
+w.run();                    //对象冒充 可以 继承构造函数的属性和方法。正常输出。
+w.work();                   //对象冒充 不能 继承原型链上面的属性和方法。报错。
+
+//那要怎么继承原型链上的属性和方法呢？应该下面这样:
+function Web(){
+
+}
+Web.prototype = new Person(); //原型链实现继承:既可以继承构造函数里面的属性和方法，又可以继承原型链上的属性和方法
+let w = new Web();
+w.run();    //构造函数里面的方法，成功继承
+w.work();   //原型链上的的方法，成功继承
+//但是还是存在问题:实例化子类的时候，没法给父类传参。例子如下:
+
+function Person(name,age){
+    this.name = name;
+    this.age = age;
+    this.run=function(){
+        alert(this.name+'在运动');
+    }
+}
+
+Person.prototype.sex='男'；  　　　　　//在原型链定义属性
+Person.prototype.work=function(){　　 //在原型链定义方法
+         alert(this.name+'在工作');
+   }
+   let p = new Person('Irene',13);
+//    p.run();
+function Web(name.age){
+
+}
+Web.prototype = new Person(); //原型链实现继承:既可以继承构造函数里面的属性和方法，又可以继承原型链上的属性和方法
+let w = new Web('wangyou',37);
+w.run(); //浏览器控制台输出:undefined在运动，而不是wangyou在运动。因为，实例化子类的时候，没法给父类传参。
+
+//怎么办呢？用对象冒充+原型链继承的组合方式来继承。代码如下:
+
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+    this.run = function () {
+        alert(this.name + '在运动');
+    };
+}
+Person.prototype.sex = '男';
+Person.prototype.work = function () {
+    alert(this.name + '在工作');
+};
+var p = new Person('Irene', 13);
+//    p.run();
+function Web(name, age) {
+    Person.call(this, name, age); //对象冒充继承，也叫构造函数继承，实例化子类可以给父类传参。
+}
+Web.prototype = new Person(); //原型链实现继承:既可以继承构造函数里面的属性和方法，又可以继承原型链上的属性和方法
+var w = new Web('wangyou', 37);
+w.run(); //浏览器控制台输出:wangyou在运动
+w.work();//浏览器控制台输出:wangyou在工作
+
+//这个例子里面，对象冒充继承Person.call(this, name, age);和原型链继承Web.prototype = new Person();结合起来了。
+
+//注意:Web.prototype = new Person();也可以写成 Web.prototype = Person.prototype;

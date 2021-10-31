@@ -1,0 +1,9 @@
+
+
+做统计工具要安装的
+@nestjs/config
+@typegoose/typegoose
+nestjs-console
+nestjs-typegoose
+
+https://www.npmjs.com/package/nestjs-typegoose

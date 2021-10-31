@@ -1,0 +1,19 @@
+Namespace A{
+
+}
+
+Namespace B{
+    
+}
+
+避免命名冲突
+
+export Namespace A{
+
+}
+
+export Namespace B{
+    
+}
+
+import {A,B} from path;
