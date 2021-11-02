@@ -1,0 +1,8 @@
+tenant:gangqiang
+店铺B
+1.店铺设定-takeout不做任何设定(所有设定都为空)
+2.takeoutweb页面显示骨架图,如图1(应显示该店铺无takeout服务)
+3.进入店铺设定,将店铺B-takeout设置必要内容(有效/日期/默认打印机),保存后刷新takeoutweb页面
+4.再次进入店铺设定,将店铺B-takeout设置为无效,保存后刷新takeoutweb页面
+5.takeoutweb页面提示无菜单,如图2(应显示该店铺无takeout服务)
+

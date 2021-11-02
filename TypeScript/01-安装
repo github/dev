@@ -13,7 +13,10 @@ yarn global add typescript
 
 tsc --init
 
-tsconfig.json生成后，设置"outDir": "./js",  /* Redirect output structure to the directory. */
+tsconfig.json生成后
+1.设置"outDir": "./js",  /* Redirect output structure to the directory. */
+2.设置"experimentalDecorators": true,              /* Enables experimental support for ES7 decorators. */
+3.设置"emitDecoratorMetadata": true,               /* Enables experimental support for emitting type metadata for decorators. */
 
 三.配置自动编译.ts文件
 

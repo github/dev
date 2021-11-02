@@ -17,6 +17,8 @@ yarn serverless:live:dev  单独一个终端窗口
 yarn web:management:dev  单独一个终端窗口
 
 服务启动起来后   修改host文件   搜索一下 win10 修改host文件
+C:\WINDOWS\system32\drivers\etc
+
 本地ip(192.168.0.25) wytest.test.com
 本地ip(192.168.0.25) isc.test.com
 

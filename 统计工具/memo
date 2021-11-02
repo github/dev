@@ -6,4 +6,9 @@
 nestjs-console
 nestjs-typegoose
 
+先看mongoose:
+https://mongoosejs.com/docs/index.html
+
+
+再看typegoose:
 https://www.npmjs.com/package/nestjs-typegoose

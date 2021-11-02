@@ -36,49 +36,69 @@ https://docs.google.com/presentation/d/1gnxxHijgghJ5ggQ7nVTvbyjg9MGbnPG9WUPNhciC
    面积 area
    周长 circumference
 
-class Rectangle{
-    constructor(side1:number,side2:number){
-        this.side1 = side1;
-        this.side2 = side2;
-    }
-    getArea(this.side1:number,this.side2:number):number{
-        let area:number;
-        return area = this.side1 * this.side2;
-    }
-    getPerimeter(this.side1:number,this.side2:number):number{
-        let perimeter:number;
-        return perimeter = (this.side1 + this.side2)*2 
-    }
+加上继承，并修改语法以后:
+class Graph{
+  getArea(){
+
+  }
+  getPerimeter(){
+
+  }
 }
-class Circle{
-    constructor(radius:number){
-        this.radius = radius;
-    }
-    getArea(this.radius):number{
-        let area:number;
-        return area = Math.PI * Math.pow(this.radius,2);
-    }
-    getCircumference(this.radius):number{
-        let circumference:number;
-        return circumference = 2 * Math.PI * this.radius;
-    }
+
+class Rectangle extends Graph{
+  side1:number;
+  side2:number;
+
+  constructor(side1:number,side2:number){
+      super();
+      this.side1 = side1;
+      this.side2 = side2;
+  }
+  getArea():number{
+      let area:number;
+      return area = this.side1 * this.side2;
+  }
+  getPerimeter():number{
+      let perimeter:number;
+      return perimeter = (this.side1 + this.side2)*2 
+  }
 }
-class Triangle{
-    constructor(side1:number,side2:number,side3:number){
-        this.side1 = side1;
-        this.side2 = side2;
-        this.side3 = side3;
-    }
-    getArea(this.side1:number,this.side2:number,this.side3:number):number{
-        let area:number;
-        let p:number;
-        p = 1/2 * (this.side1 + this.side2 + this.side3);
-        return area = Math.sqrt(p*(p-this.side1)*(p-this.side2)*(p-this.side3));
-    }
-    getPerimeter(){
-        let perimeter:number;
-        return perimeter = this.side1 + this.side2 + this.side3;
-    }
+class Circle extends Graph{
+      radius:number;
+  constructor(radius:number){
+      super();
+      this.radius = radius;
+  }
+  getArea():number{
+      let area:number;
+      return area = Math.PI * Math.pow(this.radius,2);
+  }
+  getPerimeter():number{
+      let circumference:number;
+      return circumference = 2 * Math.PI * this.radius;
+  }
+}
+class Triangle extends Graph{
+      side1:number;
+      side2:number;
+      side3:number;
+  constructor(side1:number,side2:number,side3:number){
+      super();
+      this.side1 = side1;
+      this.side2 = side2;
+      this.side3 = side3;
+  }
+  getArea():number{
+      let area:number;
+      let p:number;
+      p = 1/2 * (this.side1 + this.side2 + this.side3);
+      return area = Math.sqrt(p*(p-this.side1)*(p-this.side2)*(p-this.side3));
+  }
+  getPerimeter(){
+      let perimeter:number;
+      return perimeter = this.side1 + this.side2 + this.side3;
+  }
 }
 let rectangle:any = new Rectangle(675,1673); //矩形的两条边
 let circle:any = new Circle(5);         //圆的半径
@@ -87,19 +107,17 @@ let triangle:any = new Triangle(10,20,30); //三角形的三条边
 console.log(`长方形面积是${rectangle.getArea()}`);
 console.log(`长方形周长是${rectangle.getPerimeter()}`);
 console.log(`圆面积是${circle.getArea()}`);
-console.log(`圆周长是${circle.getCircumference()}`);
+console.log(`圆周长是${circle.getPerimeter()}`);
 
 let resOfTriangle:number;
 resOfTriangle = triangle.getArea();
 if(resOfTriangle !== 0){
-    console.log(`三角形面积是${triangle.getArea()}`);
+  console.log(`三角形面积是${triangle.getArea()}`);
 }else{
-    console.log(`请确认后重新输入。`)
+  console.log(`请确认后重新输入。`)
 }
 
 console.log(`三角形周长是${triangle.getPerimeter()}`);
-
-
 
 
 
@@ -107,7 +125,9 @@ console.log(`三角形周长是${triangle.getPerimeter()}`);
 其中hikari还会细分成两种，一种除圆圈标注的必停站以外，还停靠浜松，静冈，热海，三岛，另一种则停靠米原，岐阜羽岛，丰桥，小田原。
 请根据上面的描述和下图，抽出实体，定义列车的类，并使列车的对象能够按顺序输出自己的停靠站。(图片见课件)
 
+之前自己写的:
 class Train {
+    lineName:string;
     constructor(lineName:string){
         this.lineName = lineName;
     }
@@ -151,7 +171,86 @@ if((typeof res)==='object'&&flag === 0){
     }else{
         console.log(res);
     }
+-----------------------
+劉さん指导后修改的:
+-----------------------
+class Train {
+  stationName:string[]=[];
+    getStation(){
+    return this.stationName;
+  }
 }
+class Nozomi extends Train {
+  constructor(){
+    super();
+    this.stationName=['東京','品川','新横浜','名古屋','京都','新大阪'];
+  }
+}
+class Kodame extends Train {
+  constructor(){
+    super();
+    this.stationName=['東京','品川','新横浜','小田原','熱海',
+    '三島','新富士','静岡','掛川','浜松','豊橋','三河安城','名古屋',
+    '岐阜羽島','米原','京都','新大阪'];
+  }
+}
+class Hikari extends Train {
+    constructor(kubun=0){
+      super();
+      if(kubun === 0){
+        this.stationName=['東京','品川','新横浜','小田原','豊橋','名古屋',
+        '岐阜羽島','米原','京都','新大阪'];
+      }else if(kubun === 1){
+        this.stationName=['東京','品川','新横浜','熱海',
+        '三島','静岡','浜松','名古屋','京都','新大阪'];
+      }
+    }
+}
+let nozomi = new Nozomi();
+nozomi.getStation().forEach(function(value:any){
+    console.log(`のぞみ線:${value}`);
+})
+let hikari = new Hikari(1);
+hikari.getStation().forEach(function(value:any){
+  console.log(`ひかり線:${value}`);
+})
+let kodame = new Kodame();
+kodame.getStation().forEach(function(value:any){
+  console.log(`こだめ線:${value}`);
+})
+
+-------------------------
+用get和set方法实现
+-------------------------
+试了一下，用get和set不容易实现
+
+例子如下，调试失败:
+
+class Train {
+      _line : number;
+  constructor(){
+        this._line = -1;
+  }
+  get line(){
+      if (this._line === 0){
+          return ['東京','品川','新横浜','名古屋','京都','新大阪'];
+      }else if (this._line === 1){
+          return ['東京','品川','新横浜','小田原','熱海',
+          '三島','新富士','静岡','掛川','浜松','豊橋','三河安城','名古屋',
+          '岐阜羽島','米原','京都','新大阪'];
+      }else if (this._line === 2){
+          return ['東京','品川','新横浜','小田原','豊橋','名古屋',
+          '岐阜羽島','米原','京都','新大阪'];}
+      }
+
+  set line(val){
+      if (val == 0 || val ==1|| val ==2){
+          this._line = val;
+      }
+  }
+let train = new Train();
+train.line = 1;
+console.log(train.line);
 
 ※目前没有做到把站名的番号打印出来，只打印了名字。以后改进。
 
@@ -174,4 +273,65 @@ if((typeof res)==='object'&&flag === 0){
     ] ,
 }
 
+练习如下:
 
+class Temp{
+    messageId ?: number;
+    createdAt ?: string;
+    operationResult ?: [
+           {
+            productId ?: string,
+            operation ?: string,
+            result ?: boolean,
+           },
+           {
+            productId ?: string,
+            operation ?: string,
+            result ?: boolean,
+           },
+       ] ;
+}
+
+class Temp {
+  @prop()
+  public messageId?: number;
+
+  @prop()
+  public createdAt?: string;
+
+未完待续
+}
+
+typegoose参考这里:
+https://typegoose.github.io/typegoose/docs/guides/quick-start-guide
+
+-------------------------
+How to use Typegoose
+-------------------------
+**************************************************
+Let's say you have a Mongoose model like this one:
+**************************************************
+
+const kittenSchema = new mongoose.Schema({
+  name: String
+});
+
+const KittenModel = mongoose.model('Kitten', kittenSchema);
+
+let document = await KittenModel.create({ name: 'Kitty' });
+// "document" has no types
+
+
+******************************************************
+With Typegoose, it can be converted to something like:
+******************************************************
+
+class KittenClass {
+  @prop()
+  public name?: string;
+}
+
+const KittenModel = getModelForClass(KittenClass);
+
+let document = await KittenModel.create({ name: 'Kitty' });
+// "document" has proper types of KittenClass

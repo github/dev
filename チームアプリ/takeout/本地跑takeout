@@ -1,0 +1,56 @@
+1.ares下git pull,切到orgin-ARES-361
+yarn
+yarn bootstrap
+yarn serverless:takeout:dev
+
+
+2.ares-web-takeout取到本地
+https://bitbucket.teamx.tokyo/projects/ARES-TAKEOUT/repos/ares-web-takeout/browse
+yarn
+yarn bootstrap
+yarn ssr //启动web服务
+
+3.修改hosts文件
+C:\WINDOWS\system32\drivers\etc\hosts
+192.168.105.167 chengdutest.com gangqiang.teamx.tokyo
+
+4.snappy禁掉
+serverless-takeout\.env
+.env的末尾加这两句:
+MANAGEMENT_MONGODB_OPTIONS_COMPRESS=false
+MONGODB_OPTIONS_COMPRESS=false
+
+5.安装插件
+
+https://github.com/localtunnel/localtunnel
+npm install -g localtunnel
+正常安装
+lt --port 3100
+运行不正常
+运行情况如下:
+wang.you@NW20210012 MINGW64 /c/project/ares (ARES-361)
+$ lt --port 3100
+your url is: https://perfect-grasshopper-37.loca.lt
+Assertion failed: new_time >= loop->time, file c:\ws\deps\uv\src\win\core.c, line 309
+
+wang.you@NW20210012 MINGW64 /c/project/ares (ARES-361)
+$ Assertion failed: new_time >= loop->time, file c:\ws\deps\uv\src\win\core.c, line 309
+
+★★★★★这一步失败
+
+6.改.ENV的sonypay
+PAYMENT_SONYPAY_ENDPOINTS_POST_URL=https://tender-husky-6.loca.lt/order/cb
+★★★★★具体还不清楚
+
+7.访问https://gangqiang.teamx.tokyo/?shopCode=001
+这里的shopCode是后台管理系统的【店铺コード】
+url里面，shopCode改成不同的店铺コード，即可访问不同店铺的页面。
+
+
+
+
+
+
+
+
+

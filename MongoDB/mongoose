@@ -4,4 +4,38 @@ update => findByIdAndUpdate/findOneAndUpdate
 delete => findByIdAndRemove/findOneAndRemove/remove/deleteOne/deleteMany
 get => findById/find/findOne/aggregate
 
+Quick Start:
+https://mongoosejs.com/docs/index.html
 
+const mongoose = require('mongoose');      //引用mongoose
+
+main().catch(err => console.log(err));     //promise异常处理
+
+async function main() {
+  await mongoose.connect('mongodb://localhost:27017/test');
+}
+const kittySchema = new mongoose.Schema({  //创建schema
+    name:String
+});
+
+const Kitten = mongoose.model('Kitten',kittySchema); //创建model(用创建好的schema)
+
+const silence = new Kitten({name:'Silence'});        //创建具体实例(给model传值)
+console.log(silence.name);                           //输出具体实例的具体属性
+
+kittySchema.methods.speak = function speak(){        //给schema增加方法
+    const greeting = this.name ? "Meow name is"+this.name : "I don't hava a name";
+    console.log(greeting);
+}
+const Kitten = mongoose.model('Kitten',kittySchema); //重新编译到model
+
+const fluffy = new Kitten({name : 'fluffy'});        //创建具体实例(给model传值)
+fluffy.speak();                                      //具体实例调用schema的方法
+
+await fluffy.save();                                 //增加一条具体实例到db
+fluffy.speak();                                      //具体实例调用schema的方法
+
+const kittens = await Kitten.find();                 //查询(使用model的find方法)
+console.log(kittens);                                //输出查询结果
+
+await Kitten.find({name:/^fluff/});                  //查询(name以fluff开头的)

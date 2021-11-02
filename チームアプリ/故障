@@ -1,0 +1,24 @@
+PS C:\project\ares> git pull
+fatal: unable to access 'https://bitbucket.teamx.tokyo/scm/~wang.you/ares.git/': Could not resolve host: bitbucket.teamx.tokyo
+田哥，这是什么情况啊，怎么不能访问了呢
+
+你执行 ping bitbucket.teamx.tokyo 看看啥结果？
+
+PS C:\project\ares> ping bitbucket.teamx.tokyo
+bitbucket.teamx.tokyo [124.156.188.246]に ping を送信しています 32 バイトのデータ:
+124.156.188.246 からの応答: バイト数 =32 時間 =53ms TTL=51
+124.156.188.246 からの応答: バイト数 =32 時間 =50ms TTL=51
+124.156.188.246 からの応答: バイト数 =32 時間 =50ms TTL=51
+124.156.188.246 からの応答: バイト数 =32 時間 =51ms TTL=51
+
+124.156.188.246 の ping 統計:
+    パケット数: 送信 = 4、受信 = 4、損失 = 0 (0% の損失)、
+ラウンド トリップの概算時間 (ミリ秒):
+    最小 = 50ms、最大 = 53ms、平均 = 51ms
+
+域名应该没问题。
+你再试试呢？
+
+(不知道进行了什么操作 )
+
+可以了。
