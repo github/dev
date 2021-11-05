@@ -1,3 +1,61 @@
-插件 Vscode NestJs Snippets-自动补充引用依赖
+课程url:
 
+【Nestjs实战】Nodejs必学框架 | Nest企业级项目构建与开发实战
+https://www.bilibili.com/video/BV1bQ4y1A77L?from=search&seid=2589482238581882975&spm_id_from=333.337.0.0
+
+编码工具:Vscode
+浏览器:Chrome
+命令行工具:Hyper
+调试工具:Postman
+版本管理工具:Git
+工具:Sourcetree
+
+
+Nest入门视频教程（IT营大地）
+https://www.bilibili.com/video/BV1jJ411u7ju?p=1
+
+1.参考文档:
+
+官网:https://docs.nestjs.cn/
+中文网站:https://docs.nestjs.com/
+github:https://github.com/nestjs/nest
+
+2.插件:
+Vscode NestJs Snippets-自动补充引用依赖
+
+3.先行课程
+TypeScript，Nodejs，MongoDB，Express
+
+Typescript教程
+https://www.bilibili.com/video/BV1yt411e7xV?spm_id_from=333.999.0.0
+
+Nodejs+Express视频教程
+https://www.bilibili.com/video/BV1Gz4y1X7Uq?spm_id_from=333.999.0.0
+
+nodejs教程_Nodejs+Express+Mongoose企业级车展项目入门实战视频教程
+https://www.bilibili.com/video/BV11t411k79h?spm_id_from=333.999.0.0
+
+认识Express
+https://www.cnblogs.com/joe235/p/12915725.html
+
+4.装一个Postman
+打开后用下面这个url发送一个请求
+https://postman-echo.com/get
+
+返回的Body
+{
+    "args": {},
+    "headers": {
+        "x-forwarded-proto": "https",
+        "x-forwarded-port": "443",
+        "host": "postman-echo.com",
+        "x-amzn-trace-id": "Root=1-61834376-5031532a4bf0d42606547b29",
+        "user-agent": "PostmanRuntime/7.28.4",
+        "accept": "*/*",
+        "postman-token": "bd143af1-9c4f-4a39-996c-6efb63472f82",
+        "accept-encoding": "gzip, deflate, br",
+        "cookie": "sails.sid=s%3AjPMwRi6miholuY3KvL7yMbIlp2eDzsn5.fH7%2BHcelozvGJlDcfjvKU2laflpdr9LuYmOoG0hp8Dc"
+    },
+    "url": "https://postman-echo.com/get"
+}
 

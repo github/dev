@@ -292,6 +292,10 @@ class Temp{
        ] ;
 }
 
+以上没用typegoose
+
+以下用typegoose完成作业
+
 class Temp {
   @prop()
   public messageId?: number;
@@ -299,8 +303,90 @@ class Temp {
   @prop()
   public createdAt?: string;
 
-未完待续
+  @prop({ type: Number, ref: Product })  //Product的主键是number型，所以type: Number
+  public operationResult: Array<Ref<Product, Object>>;
 }
+
+class Product {
+  @prop()
+  public productId?: string;
+
+  @prop()
+  public operation?: string;
+
+  @prop()
+  public result?: boolean;
+}
+
+超哥点评：
+
+是的 Product 本身是一个Object，但是引用的时候我们是存字符串
+mysql里面创建外键的时候也是根据要关联的表的主键类型来的
+这么理解吧 Ref<Product, string> 第一个参数是要引用的类 Product 第二个参数是引用的类的主键
+在这里 Product 这个类的主键应该是productId 它的类型是string 那么第二个参数就应该是string
+多表关联查询时候都是通过主键来查找的 所以第二个参数就是表的主键的类型
+
+如果这里Product表的主键productId: number的话 那么operationResult: Array<Ref<Product, number>>;
+另外就是表的主键不能为空 必须存在 所以'public productId?: string;' 这里的问号(?)不应该有
+
+
+@prop({ type: () => [String], ref: Category })
+public children?: Array<Ref<Category, string>>;
+
+Q:type: () => [String]这个是什么意思啊
+A:就是指children从数据库中返回的类型是字符串的数组
+
+{ type: String, ref: Category } 这里代表这个字段在db中的存储类型是String 他是一个引用类型 引用的目标类型是 Category
+
+
+Q：type: String代表这个字段在db中的存储类型是String，type: () => [String]从数据库中返回的类型是字符串的数组，
+存储类型和返回类型有什么区别呢，没理解到返回类型的概念
+A：哦哦 这里没解释清楚 @prop({ type: String, ref: Product }) 这里描述的是你这个数组中的每一项的存储类型是string，
+不对，这里的type: String 指的是存放的productId 也就是Product这个表的主键 不是Product里面每个字段的类型
+引用的是Product类，type: () => [String] operationResult这个字段不是个数组嘛，数据库中存储的类似
+temp { operationResult: ["productId1","productId2"] } 
+那operationResult的值就是一个字符串数组["productId1","productId2"]
+
+例如：
+  @prop({ type: () => [String], ref: 'TicketInstance' })
+  public ticketInstances?: Array<Ref<TicketInstance, string>>;
+
+http://mongo.teamx.tokyo:8081/db/nishikawa/restaurant_order/"6180c7fd6a26f7001322d750"
+拿这个举例 suborders指代的是表restaurant_suborder的_id，关联查询的时候通过这个_id主键查询suborder数据
+但是在这个restaurant_order表里面就只需要存放表restaurant_suborder的_id，可以节省很多空间 也变得灵活
+我们在查询suborder数据的时候 是不是先拿到orderId去查询order，
+然后拿到suborders里面的值作为表restaurant_suborder的_id去查找suborder数据
+
+
+
+
+超哥点评后修改如下:
+
+class Message {
+  @prop()
+  public messageId?: number;
+
+  @prop()
+  public createdAt?: string;
+
+  @prop({ type: 这里还不知道写什么, ref: Product })
+  public operationResult?: Array<Ref<Product, number>>;
+}
+
+class Product {
+  @prop()
+  public productId: number;
+
+  @prop()
+  public operation?: string;
+
+  @prop()
+  public result?: boolean;
+}
+
+Ref<PopulatedType, RawId>参考这里:
+https://typegoose.github.io/typegoose/docs/api/types/ref-type/
+
 
 typegoose参考这里:
 https://typegoose.github.io/typegoose/docs/guides/quick-start-guide
