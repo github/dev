@@ -1,10 +1,22 @@
-
+田哥给的几个参考:
+https://docs.nestjs.cn/8/firststeps
+https://www.npmjs.com/package/nestjs-console
+https://docs.nestjs.com/techniques/mongodb
+https://docs.nestjs.com/fundamentals/lifecycle-events
 
 做统计工具要安装的
-@nestjs/config
+@nestjs/config 
+npm i --save @nestjs/config
+
 @typegoose/typegoose
+npm install --save @typegoose/typegoose # install typegoose itself
+npm install --save mongoose # install peer-dependency mongoose
+
 nestjs-console
+npm install commander@^8.1.0 nestjs-console --save
+
 nestjs-typegoose
+npm install --save nestjs-typegoose
 
 先看mongoose:
 https://mongoosejs.com/docs/index.html
@@ -13,7 +25,7 @@ https://mongoosejs.com/docs/index.html
 再看typegoose:
 https://www.npmjs.com/package/nestjs-typegoose
 
-
+要安装nest/console的话需要node.js版本在14以上，目前是12.16.1，所以要装一个版本切换工具
 
 切换node版本的工具:
 
@@ -63,4 +75,13 @@ PS C:\project\ticket-count> nodist dist
   確認のために、Node.jsのバージョンを確認してみます。
   node -v
   ちゃんとv12.17.0と表示されればOKです。
+
+后来才知道Windows也可以用nodenv，环境变量设置在属性的高级设置里
+
+然后做法改变了，用独立应用来做:
+https://docs.nestjs.cn/8/standalone-applications
+
+
+HTTP module
+npm i --save @nestjs/axios
 

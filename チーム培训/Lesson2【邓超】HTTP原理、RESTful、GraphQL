@@ -30,3 +30,117 @@ https://www.runoob.com/nodejs/nodejs-restful-api.html
 RPC 和 REST还有RESTFul到底是个什么玩意？
 https://cloud.tencent.com/developer/article/1687563
 
+
+不好意思哈 之前的课后作业我考虑不全 描述也不清楚 现在重新发一下restful的课后作业哈
+
+GET 可以根据contentId获取以下数据结构
+content{
+	contentId: "20200819163438",
+	category: "5f3ce20d434857000b6dc0dd"
+	subCategory: "5f3ce234434857000b6dc0df",
+	longitude: 142.388441,
+	latitude: 43.3453149,
+	openTimeEnd: "02:00",
+	phoneNumber: "167-22-3956",
+	isShowInDetail: true,
+	tag: ["test"],
+	createdAt: "2020-08-19 08:58:44"
+}
+GET 可以根据以下query结构查询content结果列表(选做)
+query{
+	category: "123456",
+	subCategory: "Aa1234",
+	tag: "test",
+	sort: "createdAt,DESC"
+}
+
+PUT 可以接收以下结构数据进行数据更新
+content{
+	contentId: "20200819163438",
+	category: "5f3ce20d434857000b6dc0dd"
+	subCategory: "5f3ce234434857000b6dc0df",
+	longitude: 142.388441,
+	latitude: 43.3453149,
+	openTimeEnd: "02:00",
+	phoneNumber: "167-22-3956",
+	isShowInDetail: true,
+	tag: ["test"],
+	createdAt: "2020-08-19 08:58:44"
+}
+
+PATCH 可以接收以下结构数据进行部分数据更新(category、subCategory)
+content{
+	contentId: "20200819163438",
+	category: "5f3ce20d434857000b6dc0dd"
+	subCategory: "5f3ce234434857000b6dc0df",
+}
+
+DELETE 可以接收contentId删除指定content
+
+
+可以用类似ares下面的test里面的.http文件那样的东西，用REST Client来发起request，测试一下，感受一下
+
+body传是加密的，query传不加密且url长度有限制
+
+
+import { Injectable } from '@nestjs/common';
+
+@Injectable()
+export class ContentService {
+    getInfo(): Array {
+        return 'Hello World!';
+      }
+}
+
+
+
+import { Controller, Get, Query, Body, Put, Param, Patch,Delete } from '@nestjs/common';
+import { CreateContentDto, UpdateContentDto, ListAllEntities } from './content.dto';
+
+@Controller('content')
+export class ContentController {
+
+  @Get(':contentId')
+  findOne(@Param('contentId') contentId: number) {
+    return xx;
+  }
+
+  @Get()
+  findAll(@Query() query: ListAllEntities) {
+    return xx;
+  }
+
+  @Put(':contentId')
+  update(@Query() query: ListAllEntities, @Body() listAllEntities: ListAllEntities) {
+    return xx;
+  }
+
+  @Patch(':contentId')
+  update(@Param('contentId') contentId: number, @Body() updateCatDto: UpdateCatDto) {
+    return xx;
+  }
+
+  @Delete(':contentId')
+  remove(@Param('contentId') contentId: number) {
+    return xx;
+}
+
+
+export class CreateContentDto {
+    contentId: number;
+    category: string;
+    subCategory: string;
+    longitude: number;
+    latitude: number;
+    openTimeEnd: string;
+    phoneNumber: string;
+    isShowInDetail: boolean;
+    tag:Array;
+    createdAt: string;
+  }
+
+  export class UpdateContentDto {
+    contentId: number;
+    category: string;
+    subCategory: string;
+  }
