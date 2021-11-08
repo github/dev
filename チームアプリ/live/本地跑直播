@@ -38,8 +38,11 @@ http://192.168.0.25:4200/login × http://livetest.test.com:4200/login 〇
 
 
 taro:
-taro代码下载后，BASEURL: JSON.stringify('http://192.168.0.32:3090'), // 真正的api 这里改为本地IP
+taro代码下载后(https://bitbucket.teamx.tokyo/projects/ARES/repos/ares-taro-live/browse)，
+BASEURL: JSON.stringify('http://192.168.0.32:3090'), // 真正的api 这里改为本地IP
  先执行 yarn 再执行 yarn build:weapp:development(直播) 或者 yarn build:mock-live:weapp:development(直播，卖票)
+
+ yarn build:weapp:test 测试环境
 
 出现提示:
 

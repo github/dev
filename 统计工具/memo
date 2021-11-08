@@ -12,3 +12,55 @@ https://mongoosejs.com/docs/index.html
 
 再看typegoose:
 https://www.npmjs.com/package/nestjs-typegoose
+
+
+
+切换node版本的工具:
+
+Mac:nodenv
+使用方法:
+https://qiita.com/1000ch/items/41ea7caffe8c42c5211c
+
+Windows:nodist
+使用方法:
+https://qiita.com/satoyan419/items/56e0b5f35912b9374305
+下载exe:
+https://github.com/nullivex/nodist/releases
+
+
+nodist -v
+0.9.1
+
+0.9.1と表示されました。これでnodistのインストールが完了しました。
+
+インストール可能なNode.jsのバージョンの一覧を表示します。
+nodist dist
+
+以下のようにNode.jsのバージョンが表示されます。
+PS C:\project\ticket-count> nodist dist
+  0.1.14
+  0.1.15
+  0.1.16
+  0.1.17
+  0.1.18
+  ...
+  16.9.0
+  16.9.1
+  16.10.0
+  16.11.0
+  16.11.1
+  16.12.0
+  16.13.0
+  17.0.0
+  17.0.1
+
+  ここでは12.17.0のNode.jsをインストールします。
+  nodist + 12.17.0
+
+  次に、使用するNode.jsのバージョンを指定します。
+  nodist 12.17.0
+
+  確認のために、Node.jsのバージョンを確認してみます。
+  node -v
+  ちゃんとv12.17.0と表示されればOKです。
+
