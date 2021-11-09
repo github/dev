@@ -268,3 +268,160 @@ Number('5a') 会报一个错
 参数多 结构复杂的 就使用@Query()传递
 使用@Query()传递的时候 前台发送请求时 是把这部分参数塞进了request的body的
 
+2021.11.9 20:51写的:
+
+content.controller.ts
+
+import {
+  Controller,
+  Get,
+  Query,
+  Param,
+  Body,
+  Put,
+  Patch,
+  Delete,
+} from '@nestjs/common';
+import { UpdateContent, UpdateSomeContent, ContentQuery } from './content.dto';
+import { ContentService } from './content.service';
+
+@Controller('content')
+export class ContentController {
+  constructor(private contentService: ContentService) {}
+
+  @Get()
+  index() {
+    return 'Content Homepage';
+  }
+
+  @Get('some')
+  findSome(@Query() query: ContentQuery) {
+    console.log(query);
+    return this.contentService.getContentInfo(query);
+  }
+
+  @Get(':id')
+  findOne(@Param() contentId: string) {
+    return this.contentService.getContentById(Number(contentId));
+  }
+
+  @Put()
+  update(@Body() updateContent: UpdateContent) {
+    return this.contentService.updateContent(updateContent);
+  }
+
+  @Patch()
+  updateSome(@Body() updateSomeContent: UpdateSomeContent) {
+    return this.contentService.updateSomeContent(updateSomeContent);
+  }
+
+  @Delete(':id')
+  remove(@Param() contentId: string) {
+    return this.contentService.deleteOne(Number(contentId));
+  }
+}
+
+content.service.ts
+
+import { ContentQuery, UpdateContent, UpdateSomeContent } from './content.dto';
+
+import { Injectable } from '@nestjs/common';
+
+@Injectable()
+export class ContentService {
+  getContentById(contentId: number) {
+    return {
+      contentId: 20200819163437,
+      category: '5f3ce20d434857000b6dc0dd',
+      subCategory: '5f3ce234434857000b6dc0df',
+      longitude: 142.388441,
+      latitude: 43.3453149,
+      openTimeEnd: '02:00',
+      phoneNumber: '167-22-3956',
+      isShowInDetail: true,
+      tag: ['test'],
+      createdAt: '2020-08-19 08:58:44',
+    };
+  }
+  getContentInfo(query: ContentQuery) {
+    return [
+      {
+        contentId: 20200819163440,
+        category: '123456',
+        subCategory: 'Aa1234',
+        longitude: 142.388441,
+        latitude: 43.3453149,
+        openTimeEnd: '02:00',
+        phoneNumber: '167-22-3956',
+        isShowInDetail: true,
+        tag: ['test'],
+        createdAt: '2020-08-20 08:58:44',
+      },
+      {
+        contentId: 20200819163439,
+        category: '123456',
+        subCategory: 'Aa1234',
+        longitude: 142.388441,
+        latitude: 43.3453149,
+        openTimeEnd: '02:00',
+        phoneNumber: '167-22-3956',
+        isShowInDetail: true,
+        tag: ['test'],
+        createdAt: '2020-08-19 08:58:44',
+      },
+    ];
+  }
+  updateContent(updateContent: UpdateContent) {
+    return {
+      contentId: '20200819163438',
+      category: '5f3ce20d434857000b6dc0dd',
+      subCategory: '5f3ce234434857000b6dc0df',
+      longitude: 142.388441,
+      latitude: 43.3453149,
+      openTimeEnd: '02:00',
+      phoneNumber: '167-22-3956',
+      isShowInDetail: 'true',
+      tag: ['test'],
+      createdAt: '2020-08-19 08:58:44,',
+    };
+  }
+  updateSomeContent(updateSomeContent: UpdateSomeContent) {
+    return [
+      {
+        category: '5f3ce20d434857000b6dc0dd',
+        subCategory: '5f3ce234434857000b6dc0df',
+      },
+    ];
+  }
+  deleteOne(contentId: number): boolean {
+    return true;
+  }
+}
+
+content.dto.ts
+
+export class UpdateContent {
+  contentId: number;
+  category: string;
+  subCategory: string;
+  longitude: number;
+  latitude: number;
+  openTimeEnd: string;
+  phoneNumber: string;
+  isShowInDetail: boolean;
+  tag: string[];
+  createdAt: string;
+}
+
+export class UpdateSomeContent {
+  contentId: number;
+  category: string;
+  subCategory: string;
+}
+
+export class ContentQuery {
+  category: string;
+  subCategory: string;
+  tag: string;
+}
+
