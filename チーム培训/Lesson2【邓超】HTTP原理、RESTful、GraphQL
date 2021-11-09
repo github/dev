@@ -87,46 +87,97 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class ContentService {
-    getInfo(): Array {
-        return 'Hello World!';
-      }
+    getContentById(): Array {
+      return '[{"contentId": "20200819163438",
+  	            "category": "5f3ce20d434857000b6dc0dd"
+  	          	"subCategory": "5f3ce234434857000b6dc0df",
+  	          	"longitude": 142.388441,
+  	          	"latitude": 43.3453149,
+  	          	"openTimeEnd": "02:00",
+  	          	"phoneNumber": "167-22-3956",
+  	          	"isShowInDetail": true,
+  	          	"tag": "[test]",
+  	          	"createdAt": "2020-08-19 08:58:44"}
+  	          	]';}
+       getContentInfo(): Array {
+               return '[{"contentId": "20200819163440",
+  	            "category": "123456"
+  	          	"subCategory": "Aa1234",
+  	          	"longitude": 142.388441,
+  	          	"latitude": 43.3453149,
+  	          	"openTimeEnd": "02:00",
+  	          	"phoneNumber": "167-22-3956",
+  	          	"isShowInDetail": true,
+  	          	"tag": "test",
+  	          	"createdAt": "2020-08-20 08:58:44"},
+                {"contentId": "20200819163439",
+  	            "category": "123456"
+  	          	"subCategory": "Aa1234",
+  	          	"longitude": 142.388441,
+  	          	"latitude": 43.3453149,
+  	          	"openTimeEnd": "02:00",
+  	          	"phoneNumber": "167-22-3956",
+  	          	"isShowInDetail": true,
+  	          	"tag": "test",
+  	          	"createdAt": "2020-08-19 08:58:44"},
+  	          	]';}
+         
+
+    }
+       updateSomeContent(): Array {
+         retunr [
+
+    ]}
+       updateContent(): Array {[
+
+    ]}
+       deleteOne(): boolean {[
+       return true;
+    ]}
 }
 
 
 
 import { Controller, Get, Query, Body, Put, Param, Patch,Delete } from '@nestjs/common';
-import { CreateContentDto, UpdateContentDto, ListAllEntities } from './content.dto';
+import { updateContent, updateSomeContent,listSome} from './content.dto';
 
 @Controller('content')
 export class ContentController {
 
-  @Get(':contentId')
-  findOne(@Param('contentId') contentId: number) {
-    return xx;
+  constructor(private contentService:ContentService){}
+
+  @Get()
+  index(){
+    return 'Content Homepage';
   }
 
   @Get()
-  findAll(@Query() query: ListAllEntities) {
-    return xx;
+  findOne(@Query('contentid') contentId: number) {
+    return this.service.getContentById();
   }
 
-  @Put(':contentId')
-  update(@Query() query: ListAllEntities, @Body() listAllEntities: ListAllEntities) {
-    return xx;
+  @Get()
+  findSome(@Query() query: listSome,@Body() updateContent: UpdateContent) {
+    return this.service.getContentInfo();
   }
 
-  @Patch(':contentId')
-  update(@Param('contentId') contentId: number, @Body() updateCatDto: UpdateCatDto) {
-    return xx;
+  @Put()
+  update(@Query('contentid') contentId: number, @Body() updateContent: UpdateContent) {
+    return this.service.updateContent();
   }
 
-  @Delete(':contentId')
-  remove(@Param('contentId') contentId: number) {
-    return xx;
+  @Patch()
+  updateSome(@Query('contentid') contentId: number, @Body() updateSomeContent: UpdateSomeContent) {
+    return this.service.updateSomeContent();
+  }
+
+  @Delete()
+  remove(@Query('contentid') contentId: number) {
+    return this.service.deleteOne();
 }
 
 
-export class CreateContentDto {
+export class updateContent {
     contentId: number;
     category: string;
     subCategory: string;
@@ -139,8 +190,15 @@ export class CreateContentDto {
     createdAt: string;
   }
 
-  export class UpdateContentDto {
+  export class updateSomeContent {
     contentId: number;
     category: string;
     subCategory: string;
+  }
+
+  export class listSome {
+    category: string;
+    subCategory: string;
+    tag:Array;
+    createdAt: string;
   }
