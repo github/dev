@@ -1,6 +1,7 @@
 1.ares下git pull,切到orgin-ARES-361，然后:
 yarn
 yarn bootstrap
+yarn serverless:common:build
 yarn serverless:takeout:dev
 
 2.ares-web-takeout取到本地

@@ -23,3 +23,10 @@
 ipconfig/registerdns，清除掉DNS相关的所有东西，等于重置
 ipconfig/renew，重新获取一个IP
 netsh winsock reset，直接重置所有当前网络配置
+
+
+JSON Parse Online:可以把JSON格式化
+debug:vscode左边第四个
+launch.
+设置断点
+shop-menu.resolver.ts shop-menu.service.ts

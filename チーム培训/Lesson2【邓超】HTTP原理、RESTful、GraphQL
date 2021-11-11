@@ -425,3 +425,27 @@ export class ContentQuery {
   tag: string;
 }
 
+2021.11.10 GraphQL-超哥
+
+相关网上资料:
+https://qiita.com/Gma_Gama/items/90b98e046e1b66a71c22
+https://github.com/nestjs/graphql
+https://docs.nestjs.com/graphql/quick-start
+https://graphql.cn/graphql-js/graphql-clients/
+
+可以参考ares-takeout
+schema.graphql
+通过data.xx获取get的数据
+
+name:string nullable:true
+password?:string
+
+组装是什么意思
+
+takeout里面有哪些是GraphQL做的
+获取店铺设定
+
+
+用框架的好处是少写代码，少出bug
+
+OPTION GET
