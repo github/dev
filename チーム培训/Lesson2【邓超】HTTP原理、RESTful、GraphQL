@@ -428,7 +428,7 @@ export class ContentQuery {
 2021.11.10 GraphQL-超哥
 
 相关网上资料:
-https://qiita.com/Gma_Gama/items/90b98e046e1b66a71c22
+https://qiita.com/Gma_Gama/items/90b98e046e1b66a71c22 晋哥推荐攻略
 https://github.com/nestjs/graphql
 https://docs.nestjs.com/graphql/quick-start
 https://graphql.cn/graphql-js/graphql-clients/
@@ -437,6 +437,7 @@ https://graphql.cn/graphql-js/graphql-clients/
 schema.graphql
 通过data.xx获取get的数据
 
+田哥举的例子，要向下面这样写，不过不知道啥意思:
 name:string nullable:true
 password?:string
 
@@ -448,4 +449,37 @@ takeout里面有哪些是GraphQL做的
 
 用框架的好处是少写代码，少出bug
 
+RESTful:
 OPTION GET
+OPTION POST
+OPTION UPDATE
+OPTION DELETE
+每次访问调2次后台API，以上共8次
+
+GraphQL:
+OPTION (GET,POST,UPDATE,DELETE)
+1次访问调2次后台，节约6次
+
+
+Q:RouterModule.forRoutes(routes), 这个是起什么作用呢？
+只知道controller的@Get()可以设置路由。上面这个也是设置路由吗？
+A:是的 这个是在设置子模块的路由
+这样的好处是可以将不同功能模块的放到一个module里面，最后添加到appModule里面
+
+
+超哥给的测试的例子:
+
+POST http://localhost:3090/graphql
+Content-Type: application/json
+tenant-id: chengdutest
+shop-code: 00001
+shop-id: 5fa27651e587d7000b5664c1
+X-REQUEST-TYPE: GraphQL
+Accept-Language: ja_JP
+
+query {
+  checkOrderStatus(orderId: "29648036813702351794257041472") {
+    orderId
+    status
+  }
+}
