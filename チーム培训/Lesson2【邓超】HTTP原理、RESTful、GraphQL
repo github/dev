@@ -483,3 +483,77 @@ query {
     status
   }
 }
+
+
+Angular:
+1.安装cli
+npm install -g @angular/cli
+
+2.新建项目
+ng new 项目名(angular-click)
+
+3.启动项目
+ng serve --open
+
+4.创建组件
+ng g component 组件名(click)
+
+安装插件：VS Code Angular Snippets
+
+ngOnInit(){
+  this.title = 'Hello-angular';
+  this.message = '※ボタンをクリック！'；
+  this.count = 0;
+}
+
+doClick(){
+  this.message = ++this.count + "回、クリックしました。";
+}
+
+Vue:
+1.安装cli
+npm install -g @vue/cli
+
+2.新建项目
+vue create 项目名(vue-click)
+
+3.启动项目
+npm run serve 或者 yarn serve
+
+安装插件：Vue VSCode Snippets
+
+https://cn.vuejs.org/v2/guide/events.html
+
+<div id="example-1">
+  <button v-on:click="counter += 1">Click！</button>
+  <p>The button above has been clicked {{ counter }} times.</p>
+</div>
+<script>
+var example1 = new Vue({
+  el: '#example-1',
+  data: {
+    counter: 0
+  }
+})
+</script>
+
+React:
+1.安装脚手架：
+npm install -g create-react-app
+
+2.新建项目：
+create-react-app 项目名(react-click)
+
+3.启动项目或生成项目
+npm start 或者 yarn start 启动项目
+npm run build 或者 yarn build 生成项目
+
+※另外一种方法，用npx安装：
+npx react-create-app react-click
+相当于1.npm install -g create-react-app 2.create-react-app 项目名(react-click) 两步合成一步
+
+React是来自Facebook的开源项目，可以开发单页面应用（SPA），基于模块化组件化的开发模式，
+通过DOM的模拟（虚拟DOM），最大限度地减少与DOM的交互（数据绑定）
+基于jsx语法（js和html混写）
+
+React的src文件夹里面的文件比较乱，可以先整理一下，
