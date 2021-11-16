@@ -76,7 +76,8 @@ PS C:\project\ticket-count> nodist dist
   node -v
   ちゃんとv12.17.0と表示されればOKです。
 
-后来才知道Windows也可以用nodenv，环境变量设置在属性的高级设置里
+后来才知道Windows也可以用nodenv，环境变量设置在属性的高级设置里,但是要装虚拟机WSL，还要装Ubuntu，
+太麻烦了，放弃了。就用nvm切换node。
 
 然后做法改变了，用独立应用来做:
 https://docs.nestjs.cn/8/standalone-applications

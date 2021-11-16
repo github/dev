@@ -39,19 +39,35 @@ https://72ko-weblog.site/js/windows-nodenv01/
 【node.js】Windowsにnodenvを導入してみる。(後編)
 https://72ko-weblog.site/tool/windows-nodenv02/
 
-点赞那个bug：
-这个就是田广讲的虚拟Dom相关了
-浏览器画面呈现出来前   在运行内存中   一直是以虚拟Dom的形式存在  也就是一个JavaScript对象   
-而这个虚拟Dom有个好处就是能记住前后的变化  比如前一秒的输入框背景色还是红色，后一秒就变成白色了
-当一部分Dom需要变化时   会记住前后的值
-那个likes那里   是一个数组   数组中存的是数字 然后有多少个数字就显示多少个 
-当有多个线程的时候，就是异步时候，那个数组里面  可能前一秒有个数字是4   
-下一秒子组件刚被销毁   变回了3  但是另一个线程又给他变回了4    
-那这个时候  虚拟Dom就认为前后的4是同一个    就没有变化
-在画面上的效果就是  有一个一直停留着
+node版本切换工具nvm，安装和使用方法
+2021.3找的
+https://juejin.cn/post/6844904025503039496
+
+2021.11找的
+https://juejin.cn/post/7011398696999288839
+
+// 安装nodejs 12.13.0
+nvm install 12.13.0
+// 查看已安装的nodejs
+nvm ls
+// 切换 nodejs
+nvm use 12.13.0
 
 
+nodist のアンインストール方法
+
+設定 ＞ アプリ ＞ Nodist から「アンインストール」します。
+/c/Program Files (x86)/Nodist を削除します。
+/c/Users/（ユーザ名）/.npmrc を削除します。
+/c/Users/（ユーザ名）/AppData/Roaming/npm_cache を削除します。
+
+安装之前的操作
 
 
+请注意： 在安装nvm for windows之前，你需要卸载任何现有版本的node.js。
+并且需要删除现有的nodejs安装目录（例如："C:\Program Files\nodejs’）。
+因为，nvm生成的symlink（符号链接/超链接)不会覆盖现有的（甚至是空的）安装目录。
+你还需要删除现有的npm安装位置（例如“C:\Users\lmq28\AppData\Roaming\npm”），以便正确使用nvm安装位置。
 
-
+package.jsonのdependenciesとdevDependencies
+https://qiita.com/chihiro/items/ca1529f9b3d016af53ec
