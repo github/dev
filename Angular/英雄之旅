@@ -1,0 +1,21 @@
+安装插件
+Angular Language Service 一定要安装，非常重要。智慧提示的东西。比如{{title}},title打一半就会提示剩下的
+Auto Import
+Auto Rename Tag
+Angular Snippets 提示语法
+ESLint 让你的Script在写得正确的基础上，写得更好更标准
+
+在开始英雄之旅之前，先做一个示例小项目
+
+快速上手项目
+https://angular.cn/start
+
+为了帮助你更好地起步，本教程提供了一个已完成的应用，你可以在 Stackblitz 上试验及互动，而不用建立本地开发环境。 
+StackBlitz 是一个基于浏览器的开发环境，你可以在其中使用各种技术来创建、保存和共享项目。
+
+
+英雄之旅开始
+https://angular.cn/tutorial
+
+ng new angular-tour-of-heros
+在app目录下 ng g c heros
