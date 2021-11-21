@@ -16,3 +16,8 @@ Q5:controller里面定义了4个API，但是只注入了1个service，只能调�
 Q6:controller获取的前台传值，怎么送到service里去？
 通过调用service里面的函数时传入，比如getInfo(id).
 
+Q7:分包是什么意思哦，没搞清楚，上回淳哥讲了没听懂common到底改了什么
+
+A7:以前 restful api 和 认证 和 token ，以及 权限、mqtt、kafka这些都是杂揉在serverless-common一个module里面的，，觉得有点臃肿了 因为serverless-takeout是graphql 所以需要按需引入 这样能减少单个子工程的依赖大小 而不是所有的都引入进来 因为有些用不着
+包括payment也是 有些只有微信 有些只有line和h5 如果全部把paymentModule引入进来了 就是相当于不管你用不用微信、line、h5 都会全部引入进来 实际上我们可能只用到其中一个 这就造成浪费了
+另一个就是 graphqlModule和restfulModule 这两个 这是两种完全不同的api需要的module 如果同时引入的话有些地方需要特别设置一下 所以还是分开比较好
