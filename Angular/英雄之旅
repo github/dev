@@ -34,7 +34,7 @@ ng version
 PS C:\project\angular-product-demo> ng serve
 Schema validation failed with the following errors:
   Data path "" should have required property 'browserTarget'.
-
+暂时不想解决，去fork那儿在线看吧
 
 英雄之旅开始
 https://angular.cn/tutorial

@@ -1,0 +1,4 @@
+serverless-common
+https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/serverless-common/src/lib/config.ts#57,83
+这两个地方的值改为false
+
