@@ -2,3 +2,24 @@ serverless-common
 https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/serverless-common/src/lib/config.ts#57,83
 这两个地方的值改为false
 
+本地跑服务:
+1. yarn   -- 下载第三方包
+2. yarn bootstrap  -- 编译共通包
+3. yarn serverless:authenticate:dev     启动本地认证服务
+4. yarn serverless:management:dev       启动本地管理服务
+5. yarn serverless:restaurant:dev       启动点餐服务
+
+服务启动后访问:
+http://wytest.test.com:4200/welcome
+
+修改shop-setting.component.html
+
+yarn web:restaurant:build 或者 yarn web:restaurant:dev(修改保存后自动编译)
+
+
+
+
+改完代码后:
+1.点+,改的部分就跑到Staged Changes里去了
+2.yarn commit
+3.git push
