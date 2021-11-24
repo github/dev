@@ -71,3 +71,9 @@ nodist のアンインストール方法
 
 package.jsonのdependenciesとdevDependencies
 https://qiita.com/chihiro/items/ca1529f9b3d016af53ec
+
+
+
+~1.2.3 代表 1.2.3 <= 版本号 < 1.3.0
+
+^1.2.3 代表 1.2.3 <= 版本号 < 2.0.0
