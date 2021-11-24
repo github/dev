@@ -21,5 +21,16 @@ yarn web:restaurant:build 或者 yarn web:restaurant:dev(修改保存后自动�
 
 改完代码后:
 1.点+,改的部分就跑到Staged Changes里去了
-2.yarn commit
+2.git commit 或者 yarn commit
 3.git push
+4.去JIRA ARES-388页面查看最新commit
+5.创建拉请
+6.継続する
+7.作成する
+
+
+productCodeWithSmaregiNotice: 'スマレジ連携の場合、商品コードの1桁目が1~9になる数値のデータのみは処理されます。',
+productCodeWithSmaregiNotice: '联动Smaregi的情况下，商品号必须以1~9的数字开头。',
+productCodeWithSmaregiNotice: 'When binding with Smaregi, prodcut code must be a number that starts with 1~9.',
+
+
