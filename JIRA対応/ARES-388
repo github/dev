@@ -35,7 +35,7 @@ productCodeWithSmaregiNotice: 'When binding with Smaregi, prodcut code must be a
 
 有冲突
 
-1.先把development的代码pull下来，和本地的merge.
+1.git pull origin 先把development的代码pull下来，和本地的merge.
 2.有冲突的地方，决定一个，accept
 3.yarn commit
 4.git push
