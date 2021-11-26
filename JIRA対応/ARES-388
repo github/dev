@@ -33,4 +33,21 @@ productCodeWithSmaregiNotice: 'スマレジ連携の場合、商品コードの1
 productCodeWithSmaregiNotice: '联动Smaregi的情况下，商品号必须以1~9的数字开头。',
 productCodeWithSmaregiNotice: 'When binding with Smaregi, prodcut code must be a number that starts with 1~9.',
 
+有冲突
+
+1.先把development的代码pull下来，和本地的merge.
+2.有冲突的地方，决定一个，accept
+3.yarn commit
+4.git push
+
+需要再改
+
+取完代码发现没有分支可以切换
+
+执行 git fetch origin
+
+选分支，改代码，staging,yarn commit,git push
+
+
+
 
