@@ -29,7 +29,7 @@ yarn web:restaurant:build 或者 yarn web:restaurant:dev(修改保存后自动�
 7.作成する
 
 
-productCodeWithSmaregiNotice: 'スマレジ連携の場合、商品コードの1桁目が1~9になる数値のデータのみは処理されます。',
+productCodeWithSmaregiNotice: 'スマレジ連携の場合、商品コードの先頭が1~9の数字を入力してください。',
 productCodeWithSmaregiNotice: '联动Smaregi的情况下，商品号必须以1~9的数字开头。',
 productCodeWithSmaregiNotice: 'When binding with Smaregi, prodcut code must be a number that starts with 1~9.',
 
