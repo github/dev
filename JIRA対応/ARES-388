@@ -7,7 +7,17 @@ https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/serverles
 2. yarn bootstrap  -- 编译共通包
 3. yarn serverless:authenticate:dev     启动本地认证服务
 4. yarn serverless:management:dev       启动本地管理服务
-5. yarn serverless:restaurant:dev       启动点餐服务
+5. yarn serverless:restaurant:dev       启动你们测试的服务
+        serverless:ticket:dev
+        serverless:questionnaire:dev
+        serverless:content:dev
+        serverless:live:dev
+        。。。。
+        
+6. yarn web:all-submodule:build       编译所有web包
+7. ~/development/bitbucket.teamx.tokyo/ares/packages/web-management/src/environments/environment.development.ts
+   确认地址 保证本地一样
+8. yarn web:management:dev
 
 服务启动后访问:
 http://wytest.test.com:4200/welcome

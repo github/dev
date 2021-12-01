@@ -1,0 +1,68 @@
+https://jira.teamx.tokyo/browse/ARES-404
+
+tsconfig添加内容:
+"strictNullChecks": true,
+"strictPropertyInitialization": true
+
+切到404，git pull
+
+修改tsconfig.ts以后，执行yarn serverless:content:build
+
+git push前要git pull
+
+null和undefined的区别:
+https://juejin.cn/post/6844903777506426893
+https://www.ruanyifeng.com/blog/2014/03/undefined-vs-null.html
+https://zhuanlan.zhihu.com/p/50058862 超哥发的
+https://www.zhihu.com/question/56841737 超哥发的
+
+严格不相等 (!==)
+
+x !== y
+!(x === y)
+
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_inequality
+
+环境变量设置参照例子:
+saslEnable: process.env.KAFKA_SASL_ENABLE
+        ? commonConfig.toBoolean(process.env.KAFKA_SASL_ENABLE)
+        : false || false,
+
+filter()
+检测数值元素，并返回符合条件所有元素的数组。
+function isBigEnough(element, index, array) { 
+   return (element >= 10); 
+} 
+          
+var passed = [12, 5, 8, 130, 44].filter(isBigEnough); 
+console.log("Test Value : " + passed ); // 12,130,44
+
+
+声明文件或模块的语法格式如下：
+declare module Module_Name {
+}
+https://www.runoob.com/typescript/ts-ambient.html
+
+
+Truthy（真值）
+https://developer.mozilla.org/zh-CN/docs/Glossary/Truthy
+Falsy
+https://developer.mozilla.org/zh-CN/docs/Glossary/Falsy
+
+可选链操作符
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining
+req?.abc
+req!.abc
+
+编译成功但还需要确认和修改的文件:
+
+serverless-content:
+
+1.content.service.ts
+L131 换行问题
+2.条件判断加在&&后面是否有问题
+
+service-live:
+1.
+
+
