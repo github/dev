@@ -42,3 +42,4 @@ https://angular.cn/tutorial
 ng new angular-tour-of-heros
 在app目录下 ng g c heros
 
+从添加服务开始重新做
