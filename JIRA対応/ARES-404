@@ -4,6 +4,28 @@ tsconfig添加内容:
 "strictNullChecks": true,
 "strictPropertyInitialization": true
 
+1.serverless-authenticate
+2.serverless-content
+3.serverless-elcom-middleware
+4.serverless-id-generator
+5.serverless-live
+6.serverless-management------王幽
+
+1.serverless-common
+2.serverless-notification
+3.serverless-notification-middleware
+4.serverless-questionnaire
+5.serverless-restaurant
+6.serverless-smaregi-middleware
+7.serverless-smaregi-order-middleware-----冮强
+
+1.serverless-payment
+2.serverless-smaregi-product-middleware
+3.serverless-stamp-rally
+4.serverless-takeout
+5.serverless-ticket
+6.serverless-util----何晋
+
 切到404，git pull
 
 修改tsconfig.ts以后，执行yarn serverless:content:build
@@ -64,5 +86,9 @@ L131 换行问题
 
 service-live:
 1.
+
+
+serverless-authenticate
+.entity 确认
 
 

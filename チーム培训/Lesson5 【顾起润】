@@ -1,0 +1,26 @@
+@param
+@query
+@body 安全
+
+课后作业
+	搭建两个简易工程（angular，nestjs）
+	使用以下技术点
+	1.interceptor（angular）
+		给所有请求设置header：'accept-language', ‘zh-cn’
+		response时候把status打印出来(通知，console等任选)
+	2.interceptor（nest）
+		所有的response添加字段datetime
+		所有的request过来的accept-language设为‘zh_cn’
+
+	3.controller
+		某个接口throw 
+		new BadRequestException({
+      			errorCode: ‘12345’,
+      			errorMessage: `上山打老虎`,
+    		});
+
+	4.filter
+		处理自定义异常
+		将httpcode改为200，response返回自定义errorcode和message
+
+        
