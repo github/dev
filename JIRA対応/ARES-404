@@ -92,3 +92,55 @@ serverless-authenticate
 .entity 确认
 
 
+単体テスト
+content:
+
+后台:
+1. yarn   -- 下载第三方包
+2. yarn bootstrap  -- 编译共通包
+3. yarn serverless:authenticate:dev     启动本地认证服务
+4. yarn serverless:management:dev       启动本地管理服务
+5. yarn serverless:content:dev       启动你们测试的服务      
+6. yarn web:all-submodule:build       编译所有web包
+7. ~/development/bitbucket.teamx.tokyo/ares/packages/web-management/src/environments/environment.development.ts
+   确认地址 保证本地一样
+8. yarn web:management:dev
+
+小程序:
+一.修改ares-taro-content-management/config/development.js
+
+1.
+修改为本地IP，如下:
+BASE_URL: JSON.stringify('http://192.168.99.50:3020'),
+
+2.
+根据需要修改小程序id，如下:
+const appId = 'wxc6a8a0756c11ac8b';
+
+二.执行命令
+
+1.先跑ares-taro-common-ui
+yarn build:component
+
+2.再跑ares-taro-content-management
+(如果要跑development或者test命令的话，就需要注释掉app.tsx的第159～162行的直播小程序插件的代码)
+所以，注释掉 ares-taro-content-management/src/app.tsx 里面的:
+    // 'live-player-plugin': {
+      //   version: '1.3.0',
+      //   provider: 'wx2b03c6e691cd7370'
+      // }
+然后执行 yarn build:weapp:development
+
+三.打开微信开发者工具，登录，导入ares-taro-content-management，点编译按钮，画面正常显示
+
+
+※超哥：
+编译的环境是默认使用development命令
+这里我描述不准确
+平时我们说test环境都是认为是云端的测试环境
+这个测试环境是由yarn build:weapp:test类似这样的命令来编译出来的
+"build:weapp:development": "cross-env BUILD_CONFIG=development CHANNEL=wechat npx taro build --type weapp",
+比如这个命令就是用来指定编译 /config/development.js这个配置文件的
+https://bitbucket.teamx.tokyo/projects/ARES-CONTENT-MANAGEMENT/repos/ares-taro-content-management/browse/config/development.js
+
+
