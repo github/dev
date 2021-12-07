@@ -148,3 +148,9 @@ Fast-forward
  packages/serverless-common/tsconfig.json           |   4 +-
  50 files changed, 313 insertions(+), 414 deletions(-)
  delete mode 100644 packages/serverless-common/src/lib/nestjs/restful/pipes/validation.pipe.ts
+
+
+http://*.team.x
+或
+http://*.team.x:4200
+冯:本地开发请使用以上域名格式，以避免 ares 开发时文件上传时禁止跨域的问题
