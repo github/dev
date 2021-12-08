@@ -144,3 +144,41 @@ yarn build:component
 https://bitbucket.teamx.tokyo/projects/ARES-CONTENT-MANAGEMENT/repos/ares-taro-content-management/browse/config/development.js
 
 
+超哥review我的404上改的代码，提出以下指摘:
+
+https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/serverless-content/src/entities/content.entity.ts?at=refs/heads/feature/ARES-404#265
+这个是必须字段 漏了@IsNotEmpty()
+https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/serverless-content/src/entities/page.entity.ts?at=feature/ARES-404#48,78,82
+https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/serverless-content/src/modules/miniprogram/services/theme.service.ts?at=refs/heads/feature/ARES-404#14
+像这种返回值有空值的 前台接收后使用的时候需要添加空判断，否则容易出问题
+重新建一个新的tenant，从空白开始随便跑两下，没问题就差不多了
+
+ares-taro-content-management/config/index.js:
+
+outputRoot: 'dist', 编译到dist文件夹
+
+Q:outputRoot: dist/${process.env.TARO_ENV},
+直播为什么不是dist呢，这个可以随意设定吗
+
+A:这个就是内容管理当初没有规范好的原因
+正确的做法就是应该像直播这样 不同端的编译文件分开放，
+比如：微信小程序放在 dist/weapp下，h5放在 dist/h5下，
+outputRoot: dist/${process.env.TARO_ENV}, 这里就是在设置编译后的文件放在哪里，这里面的 process.env.TARO_ENV 是从你的命令中取出来的
+https://bitbucket.teamx.tokyo/projects/ARES-CONTENT-MANAGEMENT/repos/ares-taro-content-management/browse/package.json#13
+
+    "build:weapp:development": "cross-env BUILD_CONFIG=development CHANNEL=wechat npx taro build --type weapp",
+
+这里最后的 --type weapp 就是这个process.env.TARO_ENV的值
+也可以随意设定，只要你能找到编译后的文件路径
+
+Q:这里最后的 --type weapp 就是这个process.env.TARO_ENV的值.这个属于哪一块的知识？
+
+A:就是一个命令用法 跟环境相关的
+幽姐用过shell吗
+或者也可以理解为方法的参数
+外面调用方法的时候传入参数值，这个参数的key是--type，对应的值是 weapp，这个方法拿到之后会把这个值设到一个变量里面
+然后其他地方要获取这个weapp，就通过 process.env.TARO_ENV 这种方式
+
+http://taro-docs.jd.com/taro/docs/GETTING-STARTED/#%E7%BC%96%E8%AF%91%E8%BF%90%E8%A1%8C
+在这里有说明
+

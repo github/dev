@@ -154,3 +154,19 @@ http://*.team.x
 或
 http://*.team.x:4200
 冯:本地开发请使用以上域名格式，以避免 ares 开发时文件上传时禁止跨域的问题
+
+
+数据库
+packages/serverless-common/src/lib/config.ts
+
+    return {
+      hostname: process.env.MONGODB_HOSTNAME || 'mongo.teamx.tokyo',
+      port: Number(process.env.MONGODB_PORT) || 27017,
+      user: process.env.MONGODB_USER || 'testmymongodb',
+      password: process.env.MONGODB_PASSWORD || 'Atswda1F',
+      socketTimeoutMS: Number(process.env.MONGODB_SOCKET_TIMEOUT) || 1000 * 20,
+      debug: process.env.MONGODB_DEBUG ? this.toBoolean(process.env.MONGODB_DEBUG) : false,
+      options: {
+        compress: process.env.MONGODB_OPTIONS_COMPRESS ? this.toBoolean(process.env.MONGODB_OPTIONS_COMPRESS) : true,
+      },
+      
