@@ -1,3 +1,6 @@
+https://jira.teamx.tokyo/browse/ARES-388
+
+
 serverless-common
 https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/serverless-common/src/lib/config.ts#57,83
 这两个地方的值改为false
@@ -39,9 +42,9 @@ yarn web:restaurant:build 或者 yarn web:restaurant:dev(修改保存后自动�
 7.作成する
 
 
-productCodeWithSmaregiNotice: 'スマレジ連携の場合、商品コードの先頭が1~9の数字を入力してください。',
-productCodeWithSmaregiNotice: '联动Smaregi的情况下，商品号必须以1~9的数字开头。',
-productCodeWithSmaregiNotice: 'When binding with Smaregi, prodcut code must be a number that starts with 1~9.',
+productCodeWithSmaregiNotice: 'スマレジ連携の場合、1~9で始まる数字1桁から15桁までの商品コードを設定してください。',
+productCodeWithSmaregiNotice: '联动Smaregi的情况下，商品号必须是以1~9的数字开头的15位以内的数字。',
+productCodeWithSmaregiNotice: 'When binding with Smaregi, prodcut code must be numbers within 15 digits that starts with 1~9.',
 
 有冲突
 
