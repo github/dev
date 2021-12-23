@@ -23,4 +23,7 @@
 		处理自定义异常
 		将httpcode改为200，response返回自定义errorcode和message
 
-        
+
+HttpInterceptorの使用例メモ-Angular
+https://qiita.com/puku0x/items/68c16c34975ee4e41211
+

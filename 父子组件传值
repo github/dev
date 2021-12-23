@@ -1,0 +1,14 @@
+比如现在有一个子组件 <ares-editor> 子组件有一个@Input data 有一个@Output() dataChange 有一个方法 validate() {}
+父组件 <ares-system-shop-create-and-edit>
+在父组件的html里面传子组件传值 使用
+
+
+子组件.html
+<ares-editor  #description [data]="data" (dataChange)="onDataChange($event)"></ares-editor>
+父组件.ts
+@ViewChild('description') descriptionComponent: AresEditorComponent;
+data: string = 'This is parent component';
+onDataChange(value: string) {
+  console.log(value);
+  this.descriptionComponent.validate();
+}

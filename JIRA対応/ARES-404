@@ -106,7 +106,7 @@ content:
    确认地址 保证本地一样
 8. yarn web:management:dev
 
-小程序:
+小程序:(前提:先安装taro)
 一.修改ares-taro-content-management/config/development.js
 
 1.
@@ -182,3 +182,6 @@ A:就是一个命令用法 跟环境相关的
 http://taro-docs.jd.com/taro/docs/GETTING-STARTED/#%E7%BC%96%E8%AF%91%E8%BF%90%E8%A1%8C
 在这里有说明
 
+pull request以后如果有冲突，解决冲突:
+git pull origin development
+选一个保留的版本
