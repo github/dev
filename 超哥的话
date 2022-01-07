@@ -4,3 +4,26 @@
 除非是功能是完全独立的 然后可以这样弄 最后可以自由组装起来
 就像web-managment就是最大的module web-common、web-restaurant就是子module
 
+2022/1/5
+Q:
+1. yarn -- 下载第三方包
+2. yarn bootstrap -- 编译共通包
+我把这两步跑了才改下面这个：
+serverless-common
+https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/serverless-common/src/lib/config.ts#57,83
+这两个地方的值改为false
+
+那是不是要重新跑2啊
+
+A:
+改了 serverless-common 后 重新跑 yarn serverless-common:build 就行
+yarn bootstrap 太耗时了 没必要
+
+后台需要写两个api
+1.查询所有的访客数据 findByQuery @Get
+2.保存编辑的访客数据 put @Put
+
+2022/1/6
+getter
+就是定义这个方法只能用来获取 不能用来修改数据
+

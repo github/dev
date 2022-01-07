@@ -106,6 +106,8 @@ content:
    确认地址 保证本地一样
 8. yarn web:management:dev
 
+访问http://wytest.team.x:4200/login
+
 小程序:(前提:先安装taro)
 一.修改ares-taro-content-management/config/development.js
 

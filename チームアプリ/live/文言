@@ -1,0 +1,78 @@
+参照
+https://support.google.com/youtube/answer/2853833?hl=ja
+
+consumerInfo: '消費者情報',　顧客情報
+      consumerOrders: '消费者注文',　注文履歴/購入履歴/購入した配信
+      consumerWatchedLives: '消费者視聴配信',　顧客視聴履歴
+      nickname: 'ニックネーム',
+      formerNickname: '旧ニックネーム',　元のニックネーム
+      avatar: '画像',　アイコン画像
+      totalConsumptionAmount: '合計売上',　注文合計金額/お買い上げ金額
+      consumerId: '消費者ID',　顧客ID
+      orderCount: '注文品数',　注文回数
+      liveCount: '配信視聴数',　視聴回数
+      recentlyLaunchTime: '最近起動時刻',　最近起動日時
+      firstLaunchTime: '最初起動時刻',　初回起動日時
+      lastWatchedTime: '最近視聴時刻',　最近視聴日時
+      consumptionData: {
+        averageOrderAmount: ' 1回注文売上',　平均注文金額
+        orderCountUnit: '品',　回
+        totalOrderCount: '注文合計品数',　合計注文回数
+        watchedLivePriceStatus: '視聴配信の経費状況',　視聴した配信の支払い有無
+        livePriceStatus: {
+          free: '無料',
+          paid: '有料',
+        },
+      },
+      launchOptions: {
+        path: '最初起動パス',　初回起動時のパス
+        query: '最初起動パラメータ',　初回起動時のバラメータ
+      },
+      label: {
+        dataHasBeenSortedByFirstLaunchTimeInDescendingOrder: 'データは最初起動時刻の降順でソートしています。', データは初回起動日時の降順でソートしています。
+        backToConsumerList: ' 消費者一覧画面に戻る',　顧客一覧画面に戻る
+        hasBeenSortedWithWatchTimeInDescendingOrder: 'データは最近視聴日時の降順でソートしています。',
+        liveViewerList: '視聴者一覧',
+      },
+      event: {
+        inquire: '照会',
+      },
+
+
+
+consumerInfo: '消費者情報',　顧客情報
+      consumerOrders: '消费者注文',　注文履歴/購入履歴/購入した配信
+      consumerWatchedLives: '消费者視聴配信',　顧客視聴履歴
+      nickname: 'ニックネーム',
+      formerNickname: '旧ニックネーム',　元のニックネーム
+      avatar: '画像',　アイコン画像
+      totalConsumptionAmount: '合計売上',　注文合計金額/お買い上げ金額
+      consumerId: '消費者ID',　顧客ID
+      orderCount: '注文品数',　注文回数
+      liveCount: '配信視聴数',　視聴回数
+      recentlyLaunchTime: '最近起動時刻',　最近起動日時
+      firstLaunchTime: '最初起動時刻',　最初起動日時
+      lastWatchedTime: '最近視聴時刻',　最近視聴日時
+      consumptionData: {
+        averageOrderAmount: ' 1回注文売上',　平均注文金額
+        orderCountUnit: '品',　回
+        totalOrderCount: '注文合計品数',　合計注文回数
+        watchedLivePriceStatus: '視聴配信の経費状況',　視聴した配信の支払い有無
+        livePriceStatus: {
+          free: '無料',
+          paid: '有料',
+        },
+      },
+      launchOptions: {
+        path: '最初起動パス',
+        query: '最初起動パラメータ',
+      },
+      label: {
+        dataHasBeenSortedByFirstLaunchTimeInDescendingOrder: 'データは最初起動時刻の降順でソートしています。',
+        backToConsumerList: ' 消費者一覧画面に戻る',　顧客一覧画面に戻る
+        hasBeenSortedWithWatchTimeInDescendingOrder: 'データは最近視聴日時の降順でソートしています。',
+        liveViewerList: '視聴者一覧',
+      },
+      event: {
+        inquire: '照会',
+      },

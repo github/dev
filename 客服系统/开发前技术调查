@@ -1,0 +1,80 @@
+开发任务:
+1.访客列表 API、画面
+2.访客编辑 API、画面
+
+开发思路:
+
+后台需要写两个api
+1.查询所有的访客数据 findByQuery @Get
+2.保存编辑的访客数据 put @Put
+
+参照機能:
+
+ユーザー一覧機能
+
+参照代码:
+
+①．后台API:
+
+ares\packages\serverless-management\src\controllers\user.controller.ts
+ares\packages\serverless-management\src\services\user.service.ts
+
+②．前台web:
+
+ares\packages\web-management\src\app\modules\system\pages\user\user-list
+
+③．前后台连接:
+
+ares\packages\web-common\projects\ares-web\common\src\lib\services\http.service.ts
+调用这个service里面的方法发起请求
+
+
+技术文档
+
+ng-zorro指南:
+
+https://ng.ant.design/docs/introduce/zh
+
+其他:
+做好这样的AresQuery 传到后台 后台拿到这个 AresQuery 进行条件查询
+
+
+那就user-list吧 稍等 我给你找参考代码
+https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/web-management/src/app/modules/system/pages/user/user-list/user-list.component.ts#84-102
+1.前台像这样给 aresQuery 塞进去要查询的条件
+https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/web-management/src/app/services/user.service.ts#17
+2.然后直接把aresQuery传递到后台去
+https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/serverless-management/src/controllers/user.controller.ts#67-76
+3.后台的controller里像这样接收前台传过来的 aresQuery
+https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/serverless-management/src/services/user.service.ts#79-81
+4.后台的service里 就这样一行代码
+
+
+数据处理#
+将数据传入[nzData]，经过组件处理之后（包括分页、排序、筛选等），通过 模板变量 获取当前展示表格部分的数据，使用 *ngFor 依据需求将数据渲染。
+
+<nz-table #basicTable [nzData]="dataSet">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Address</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of basicTable.data">
+      <td>{{data.name}}</td>
+      <td>{{data.age}}</td>
+      <td>{{data.address}}</td>
+      <td>
+        <a>Action 一 {{data.name}}</a>
+        <nz-divider nzType="vertical"></nz-divider>
+        <a>Delete</a>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>
+代码演示
+
+mongoose.query.ts
