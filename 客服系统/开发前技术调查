@@ -40,15 +40,21 @@ https://ng.ant.design/docs/introduce/zh
 
 
 那就user-list吧 稍等 我给你找参考代码
-https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/web-management/src/app/modules/system/pages/user/user-list/user-list.component.ts#84-102
 1.前台像这样给 aresQuery 塞进去要查询的条件
-https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/web-management/src/app/services/user.service.ts#17
-2.然后直接把aresQuery传递到后台去
-https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/serverless-management/src/controllers/user.controller.ts#67-76
-3.后台的controller里像这样接收前台传过来的 aresQuery
-https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/serverless-management/src/services/user.service.ts#79-81
-4.后台的service里 就这样一行代码
+https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/web-management/src/app/modules/system/pages/user/user-list/user-list.component.ts#84-102
 
+2.然后直接把aresQuery传递到后台去
+https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/web-management/src/app/services/user.service.ts#17
+
+3.后台的controller里像这样接收前台传过来的 aresQuery
+https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/serverless-management/src/controllers/user.controller.ts#67-76
+
+4.后台的service里 就这样一行代码
+https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/serverless-management/src/services/user.service.ts#79-81
+
+(以下是我加的)
+5.具体怎么用aresQuery的条件去查询数据库，交给共通的executeAresQuery方法
+https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/serverless-common/src/lib/nestjs/core/mongoose/plugins/mongoose.query.ts
 
 数据处理#
 将数据传入[nzData]，经过组件处理之后（包括分页、排序、筛选等），通过 模板变量 获取当前展示表格部分的数据，使用 *ngFor 依据需求将数据渲染。
@@ -78,3 +84,63 @@ https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/serverles
 代码演示
 
 mongoose.query.ts
+ares-query.model.ts
+user.model.ts
+
+Q:
+/**
+   * @description 某字段等于某值.
+   * @param fieldName 字段名.
+   * @param filedValue 值.
+   */
+  public equalsTo(fieldName: string, filedValue: any) {
+    if (typeof filedValue === 'string') {
+      this.eq[fieldName] = encodeURIComponent(filedValue);
+    } else {
+      this.eq[fieldName] = filedValue;
+    }
+  }
+
+this.eq[fieldName] 这是什么用法啊，中括号
+
+A:
+这就是对象的自定义添加属性
+之前小康讲课那次记得提过 就是一个未定义类型的对象 可以自由往里面添加属性
+比如你有一个变量
+obj: any = {};
+这时候是没有指定明确类型的 也就是说这个对象obj里面没有任何属性 是个空对象
+然后可以通过 obj['name'] = 'admin'，这样添加属性和值
+执行后这个obj就有属性了 obj { name: 'admin' }
+
+共通相关
+https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/web-management/src/app/i18n/management.i18n.ja.ts#288
+https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/serverless-common/src/lib/nestjs/core/mongoose/plugins/mongoose.query.ts
+
+
+开发列表
+后台
+
+create:
+guest.controller.ts
+guest.service.ts
+guest.entity.ts
+
+update:
+management.i18n.ja.ts
+management.i18n.zh.ts
+management.i18n.en.ts
+
+前台
+
+create:
+guest-list.component.ts
+guest-list.component.scss
+guest-list.component.html
+guest.model.ts
+guest.service.ts
+
+update:
+management.i18n.ja.ts
+management.i18n.zh.ts
+management.i18n.en.ts
+

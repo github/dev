@@ -1,0 +1,10 @@
+作业：
+1.自己实现一个简单的单例模式
+2.开会时需要使用TencentMeeting（和成都同事） 和 GoogleMeeting（和日本同事），都有个meeting的方法。
+如何使用依赖注入写一个CommonMeeting来实现开会，内部不需要关心使用的是TencentMeeting还是GoogleMeeting。
+
+就是内部不要写关于new TencentMeeting() 和 new GoogleMeeting()的代码
+
+ES6中的单例模式
+https://zhuanlan.zhihu.com/p/34754447
+

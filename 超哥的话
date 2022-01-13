@@ -27,3 +27,10 @@ yarn bootstrap 太耗时了 没必要
 getter
 就是定义这个方法只能用来获取 不能用来修改数据
 
+2022/1/11
+还是觉得看这个代码{{ 'system.user.name' | translate }} 的话不知道怎么去查找
+translate点进去是编译后的代码，前面部分的system.user.name也不知道怎么找
+
+确定这个多语言是当前工程的还是共通工程的，如果是当前工程的就在当前工程的 i18n文件里面去按照 system => user => username 这个层级去找
+如果是共通的，就去common共通工程的i18n文件里面去按照层级找
+只需要找 system.user.name

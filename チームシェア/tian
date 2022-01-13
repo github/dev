@@ -1,0 +1,5 @@
+all 我建了一个自定义的localtunnel。大家可以用来开发的时候内网穿透。
+安装：yarn global add https://github.com/tian-zhihui/mytunnel.git
+使用：lt --subdomain <大家名字的拼音> --host https://lt.intares.live --port <需要代理的本地服务端口> --token j9WxPMien93WGePhotbzUhYKfRHWTC69
+例：lt --subdomain tianzhihui --host https://lt.intares.live --port 4200 --token j9WxPMien93WGePhotbzUhYKfRHWTC69
+成都那边先试试速度。做微信开发和ares开发的时候都用得到。

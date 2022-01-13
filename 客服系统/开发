@@ -1,0 +1,20 @@
+
+工程url:
+https://bitbucket.teamx.tokyo/projects/INQUIRYMANAGEMENT/repos/inquiry-management/browse
+
+工程clone:
+git clone https://bitbucket.teamx.tokyo/scm/inquirymanagement/inquiry-management.git
+
+启动服务:
+bootstrap-only
+common:build
+
+serverless
+api:common:build
+api:authenticate:dev
+api:management:dev
+
+web
+web:common:build
+web:management:dev
+
