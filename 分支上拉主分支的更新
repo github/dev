@@ -1,5 +1,5 @@
 你如果要拉主分支的代码到321，需要
 1. git pull
-2. git merge master
+2. git merge origin/master
 
 
