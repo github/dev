@@ -117,8 +117,8 @@ https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/web-manag
 https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/serverless-common/src/lib/nestjs/core/mongoose/plugins/mongoose.query.ts
 
 
-开发列表
-后台
+开发列表(自己想的)
+后台:
 
 create:
 guest.controller.ts
@@ -136,10 +136,16 @@ create:
 guest-list.component.ts
 guest-list.component.scss
 guest-list.component.html
+guest-edit.component.ts
+guest-edit.component.scss
+guest-edit.component.html
 guest.model.ts
 guest.service.ts
 
 update:
+system-routing.module.ts
+system.module.ts
+
 management.i18n.ja.ts
 management.i18n.zh.ts
 management.i18n.en.ts

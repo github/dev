@@ -6,3 +6,17 @@ tenant:gangqiang
 4.再次进入店铺设定,将店铺B-takeout设置为无效,保存后刷新takeoutweb页面
 5.takeoutweb页面提示无菜单,如图2(应显示该店铺无takeout服务)
 
+
+加信用卡信息
+
+开发者模式:
+console输入以下内容:
+
+sudo lt --port 3100
+$$('input[name="k_cardNo1"]')[0].value = "4123";
+$$('input[name="k_cardNo2"]')[0].value = "0000";
+$$('input[name="k_cardNo3"]')[0].value = "0000";
+$$('input[name="k_cardNo4"]')[0].value = "0300";
+$$('select[name="k_cardYukoKigenMonth"]')[0].value = 12;
+$$('select[name="k_cardYukoKigenYear"]')[0].value = 28;
+$$('input[name="k_securityCode"]')[0].value = 8888;
