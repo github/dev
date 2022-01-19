@@ -4,6 +4,9 @@ https://www.npmjs.com/package/nestjs-console
 https://docs.nestjs.com/techniques/mongodb
 https://docs.nestjs.com/fundamentals/lifecycle-events
 
+nestjs初学者适用
+https://zenn.dev/morinokami/articles/nestjs-overview
+
 做统计工具要安装的
 @nestjs/config 
 npm i --save @nestjs/config

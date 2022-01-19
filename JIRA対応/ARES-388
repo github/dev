@@ -53,7 +53,7 @@ productCodeWithSmaregiNotice: 'When binding with Smaregi, prodcut code must be n
 3.yarn commit
 4.git push
 
-需要再改
+需要再改:
 
 取完代码发现没有分支可以切换
 
@@ -61,6 +61,8 @@ productCodeWithSmaregiNotice: 'When binding with Smaregi, prodcut code must be n
 
 选分支，改代码，staging,yarn commit,git push
 
-
+这里其实是：
+git fetch [alias]
+以上命令告诉 Git 去获取它有你没有的数据
 
 
