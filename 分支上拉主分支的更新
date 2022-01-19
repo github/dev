@@ -1,5 +1,6 @@
 你如果要拉主分支的代码到321，需要
 1. git pull
 2. git merge origin/master
-
-
+这里其实是：
+git merge [alias]/[branch]
+以上命令将服务器上的任何更新（假设有人这时候推送到服务器了）合并到你的当前分支。
