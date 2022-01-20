@@ -1,12 +1,5 @@
 你如果要拉主分支的代码到321，需要
-1. git pull
-2. git merge origin/master
-这里其实是：
-git merge [alias]/[branch]
-以上命令将服务器上的任何更新（假设有人这时候推送到服务器了）合并到你的当前分支。
+1.git pull
+2.git merge origin/master
 
-Q1:在vscode上有鼠标点，创建新的分支，是不是在远程仓库也创建了同样的分支？
 
-Q2:上面的“1. git pull ，2. git merge origin/master”可不可以改成“git pull origin/master”?
-
-Q3:不同分支同时开发的情况下，合并的时候可能会有冲突。引起冲突的内容的时间范围有多大？

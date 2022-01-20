@@ -20,6 +20,16 @@ web:
 yarn web:common:build
 yarn web:management:dev
 
+以上已作废
+
+
+新工程如下:
+工程url:
+https://bitbucket.teamx.tokyo/projects/INQUIRY/repos/inquiry-server/browse
+https://bitbucket.teamx.tokyo/projects/INQUIRY/repos/inquiry-web/browse
+
+
+
 
 
 
@@ -33,5 +43,9 @@ A:先把这行删了
 
 
 
+Q:访客列表要排序。类似MongoDBFiledSort的东西好像没有搬过来
+A:你直接把排序条件传到后台的聚合里面就行了吧
 
 
+面包屑
+page-header.component

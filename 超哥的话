@@ -27,6 +27,32 @@ yarn bootstrap 太耗时了 没必要
 getter
 就是定义这个方法只能用来获取 不能用来修改数据
 
+2022/1/7
+Q:
+/**
+   * @description 某字段等于某值.
+   * @param fieldName 字段名.
+   * @param filedValue 值.
+   */
+  public equalsTo(fieldName: string, filedValue: any) {
+    if (typeof filedValue === 'string') {
+      this.eq[fieldName] = encodeURIComponent(filedValue);
+    } else {
+      this.eq[fieldName] = filedValue;
+    }
+  }
+
+this.eq[fieldName] 这是什么用法啊，中括号
+
+A:
+这就是对象的自定义添加属性
+之前小康讲课那次记得提过 就是一个未定义类型的对象 可以自由往里面添加属性
+比如你有一个变量
+obj: any = {};
+这时候是没有指定明确类型的 也就是说这个对象obj里面没有任何属性 是个空对象
+然后可以通过 obj['name'] = 'admin'，这样添加属性和值
+执行后这个obj就有属性了 obj { name: 'admin' }
+
 2022/1/11
 还是觉得看这个代码{{ 'system.user.name' | translate }} 的话不知道怎么去查找
 translate点进去是编译后的代码，前面部分的system.user.name也不知道怎么找
@@ -55,3 +81,5 @@ HTTP是存在于浏览器的东西吗
 使用专门用于http通信的工具就好了撒 web不是用 httpClient进行通信的么 可能我没理解到你的意思
 
 应该是我缺基础知识，没领会到你说的意思。先记下来
+
+
