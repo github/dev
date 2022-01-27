@@ -1,1 +1,61 @@
-1.guest.entity 各项是否必入力？更新时间，微信ID，在数据库中一定有数据吗？
+Q1.guest.entity 各项是否必入力？更新时间，微信ID，在数据库中一定有数据吗？
+
+
+
+
+
+
+Q2.前端guest.service里面，给HttpService传了url和serchGuestCondition，然后再传给HttpClient，
+但是传入HttpClient的参数是
+url和{
+      observe: 'response',
+      params,
+    }
+url形状确实是一样的，但是serchGuestCondition和{
+      observe: 'response',
+      params,
+    }形状不一样。这是怎么回事？
+
+A2:实际上，HttpService接收的参数是url和serchGuestCondition，这里的serchGuestCondition就是传入HttpCLient
+的params。也就是说，HttpClient接收的参数是 url和{
+      observe: 'response',
+      serchGuestCondition,
+    }
+
+
+
+
+
+Q3:this.pageGuestData =
+          response.body as unknown as PageResponse<GuestData>;
+这里怎么就能把response赋值给pageGuestData这个对象了？pageGuestData里面有返回内容和件数。
+
+
+Q4:在 HeroDetail 组件类中，添加如下的 save() 方法，
+它使用英雄服务中的 updateHero() 方法来保存对英雄名字的修改，然后导航回前一个视图。
+save(): void {
+  if (this.hero) {
+    this.heroService.updateHero(this.hero)
+      .subscribe(() => this.goBack());
+  }
+}
+刷新浏览器，修改英雄名，保存这些修改。在 HeroDetailComponent 的 save() 方法中导航到前一个视图。 
+现在，改名后的英雄已经显示在列表中了。
+
+这里没看懂，什么意思？
+
+Q5:<div nz-row [nzGutter]="[24, 24]">
+   </div> 
+   这是什么意思？
+
+A5:
+col-lg一般用于大屏设备， (min-width:1200px);
+
+col-md一般用于中屏设备， (min-width：992px);
+
+col-sm一般用于小屏设备， (min-width：768px);
+
+col-xs用于超小型设备， (max-width：768px);
+————————————————
+版权声明：本文为CSDN博主「zcl_1」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/weixin_41656025/article/details/98502786

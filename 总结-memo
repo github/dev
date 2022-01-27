@@ -1,0 +1,18 @@
+2022/01/25
+
+guest-edit.html里面的formControlName都去掉
+
+这种适用于查询:
+html:
+<form nz-form [formGroup]="searchForm">
+name = 'xxx'
+ts:
+searchForm!: FormGroup;
+
+这种适用于新建和编辑，要录入内容的，而且要对录入内容进行验证的:
+html:
+<form nz-form #guestForm="ngForm"> 
+formControlName="xxx"
+ts:
+  @ViewChild('guestForm', { static: false })
+  guestForm!: NgForm;

@@ -83,3 +83,21 @@ HTTP是存在于浏览器的东西吗
 应该是我缺基础知识，没领会到你说的意思。先记下来
 
 
+
+
+
+2022/01/23
+Q1:前台service传api怎么传？比如访客列表，7个检索条件查询的api应该是怎么构成的？
+
+
+Q2:在ares里面，用的是AresQuery和executeAresQuery这样的共通方法，新工程需要自己写了，
+这两个方法看不懂。另外，decodeURIComponent是什么意思?
+
+
+Q3:练习nestjs的时候，用http://localhost:3000，现在inquery-server工程用什么访问？
+
+
+
+Q4:访客列表到访客编辑的路由怎么配？
+[QueryParams]?
+

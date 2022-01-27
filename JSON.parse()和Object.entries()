@@ -1,0 +1,26 @@
+JSON.parse():
+
+const json = '{"result":true, "count":42}';
+const obj = JSON.parse(json);
+console.log(obj);
+console.log(obj.count);
+// expected output: 42
+
+console.log(obj.result);
+// expected output: true
+
+
+
+
+
+Object.entries():
+
+const object1 = {
+  a: 'somestring',
+  b: 42
+};
+
+for (const [key, value] of Object.entries(object1)) {
+  console.log(key);
+  console.log(value);
+}
