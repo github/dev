@@ -1,14 +1,46 @@
-１.更新时间的颜色不对　〇
+１.更新时间的颜色不对　〇 nz-table加上 [nzScroll]="{ x: '1100px' }"就可以了
 
-２.第二条数据编辑页面没取到值　〇
+２.第二条数据编辑页面没取到值　〇 手动改了db的数据,导致id和_id不一样。实际上没问题
 
-３.tag
+-３.tag还没按设计做好
 
-４.年龄 设置范围 〇
+-４.年龄 设置范围 {age: {$gte: min, $lte: max}}
+                $gte ---- 大于等于
+                $lte ---- 小于等于
 
-５.检索条件前面三个不能入力了 〇
+５.检索条件前面三个不能入力了 〇 原因是nz-Gutter设置得太大(设置的是200)，具体原理还要去研究一下
 
-６.Wechat ID没有冒号　〇 label宽度不够
+６.Wechat ID的冒号没显示出来　〇 原因是Wechat ID的label宽度不够，冒号被挤在里面了
 
-７.編集 ミュート 变为button 〇 不用变，就用<a>
+７.編集 ミュート 变为button 〇 不用变，就用<a></a>,和ares一致。
+
+８.头像还没取到。在db里面头像是怎样存储的？只存储一个url就行了吗? 〇 db存储没问题，没取到是因为nzsrc没赋初值
+[nzSrc]="data.thumbnail "　改成→　[nzSrc]="data.thumbnail ?? ''"   就OK了
+
+-９.「操作」前面的竖线，标题和数据的没对齐
+
+-１０.还没正确显示「データの表示順番は券種期間限定の終了日時の降順です。」，字体太大
+
+１１.条件检索的布局还没调好 〇 label+form=24，在这个基础上再去个别调整
+
+-１２.guest-list查询数据还没做排序
+
+-１３.按降序排列的提示信息 样式改成如下不起作用
+class="ares-table-extra-description-container" 
+
+  &-table-extra-description-container {
+    margin-top: 20px;
+    .ant-alert-message {
+      font-size: smaller;
+      line-height: inherit;
+      color: rgba(0, 0, 0, 0.85);
+    }
+    .ant-alert-description {
+      font-size: smaller;
+      line-height: inherit;
+      color: rgba(0, 0, 0, 0.85);
+    }
+  }
+
+-１４.xl以外尺寸的size设定还没确认好
 

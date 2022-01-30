@@ -63,6 +63,6 @@ productCodeWithSmaregiNotice: 'When binding with Smaregi, prodcut code must be n
 
 这里其实是：
 git fetch [alias]
-以上命令告诉 Git 去获取它有你没有的数据
+以上命令告诉 Git 去获取它有而你没有的数据
 
 
