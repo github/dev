@@ -1,20 +1,43 @@
-JSON.parse():
+--------------------------------------------------------
+JSON.stringify(): 该方法将一个 JavaScript 对象或值转换为 JSON 字符串。
+--------------------------------------------------------
+console.log(JSON.stringify({ x: 5, y: 6 }));
+// expected output: "{"x":5,"y":6}"
 
+console.log(JSON.stringify([new Number(3), new String('false'), new Boolean(false)]));
+// expected output: "[3,"false",false]"
+
+console.log(JSON.stringify({ x: [10, undefined, function(){}, Symbol('')] }));
+// expected output: "{"x":[10,null,null,null]}"
+
+console.log(JSON.stringify(new Date(2006, 0, 2, 15, 4, 5)));
+// expected output: ""2006-01-02T15:04:05.000Z""
+--------------------------------------------------------
+
+
+
+
+
+---------------------------------------------------------
+JSON.parse(): 该方法用来解析JSON字符串，构造由字符串描述的JavaScript值或对象。
+---------------------------------------------------------
 const json = '{"result":true, "count":42}';
 const obj = JSON.parse(json);
-console.log(obj);
-console.log(obj.count);
-// expected output: 42
 
 console.log(obj.result);
 // expected output: true
 
+console.log(obj.count);
+// expected output: 42
+
+console.log(obj);
+// expected output: Object { result: true, count: 42 }
+----------------------------------------------------------
 
 
-
-
-Object.entries():
-
+----------------------------------------------------------
+Object.entries(): 该方法返回一个给定对象自身可枚举属性的键值对数组。
+----------------------------------------------------------
 const object1 = {
   a: 'somestring',
   b: 42
@@ -23,4 +46,14 @@ const object1 = {
 for (const [key, value] of Object.entries(object1)) {
   console.log(key);
   console.log(value);
+  console.log(`${key}: ${value}`);
 }
+
+// expected output:
+// "a"
+// "somestring"
+// "a: somestring"
+// "b"
+// 42
+// "b: 42"
+----------------------------------------------------------
