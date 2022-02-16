@@ -1,0 +1,59 @@
+export class GuestService {
+  constructor(
+    @InjectModel(Guest)
+    private readonly guestModel: ReturnModelType<typeof Guest>,
+  ) {}
+  public async getByQuery(
+    pageSize: number,
+    pageNumber: number,
+    guestName: string,
+    ageFrom: number,
+    ageTo: number,
+    gender: string,
+    telephone: number,
+    eMail: string,
+    wechatId: string,
+    tags: string[],
+  ) {
+    const whereOption: mongoose.FilterQuery<Event> = {};
+    if (guestName) {
+      whereOption['name'] = { $regex: guestName };
+    }
+    if (ageFrom && ageTo && ageFrom === ageTo) {
+      whereOption['age'] = { $eq: ageFrom };
+    } else if (ageFrom && ageTo && ageFrom < ageTo) {
+      whereOption['age'] = { $gte: ageFrom, $lte: ageTo };
+    } else if (ageFrom && ageTo && ageFrom > ageTo) {
+      whereOption['age'] = { $gte: ageTo, $lte: ageFrom };
+    } else if (ageFrom && !ageTo) {
+      whereOption['age'] = { $gte: ageFrom };
+    } else if (!ageFrom && ageTo) {
+      whereOption['age'] = { $lte: ageTo };
+    }
+    if (gender) {
+      whereOption['gender'] = { $eq: gender };
+    }
+    if (telephone) {
+      whereOption['phone'] = { $eq: telephone };
+    }
+    if (eMail) {
+      whereOption['mail'] = { $regex: eMail };
+    }
+    if (wechatId) {
+      whereOption['wechatId'] = { $regex: wechatId };
+    }
+    if (tags) {
+      whereOption['tags'] = { $regex: tags };
+    }
+    const totalDocs = await this.guestModel.find(whereOption).exec();
+    const docs = (await this.guestModel
+      .find(whereOption)
+      .skip((pageNumber - 1) * pageSize)
+      .limit(parseInt(pageSize.toString()))
+      .exec()) as Guest[];
+    const result = {
+      docs,
+      totalDocs: totalDocs.length,
+    };
+    return result;
+  }

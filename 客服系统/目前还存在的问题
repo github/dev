@@ -6,7 +6,7 @@
 
 -４.年龄 设置范围 {age: {$gte: min, $lte: max}}
                 $gte ---- 大于等于
-                $lte ---- 小于等于
+                $lte ---- 小于等于  〇
 
 ５.检索条件前面三个不能入力了 〇 原因是nz-Gutter设置得太大(设置的是200)，具体原理还要去研究一下
 
@@ -17,13 +17,13 @@
 ８.头像还没取到。在db里面头像是怎样存储的？只存储一个url就行了吗? 〇 db存储没问题，没取到是因为nzsrc没赋初值
 [nzSrc]="data.thumbnail "　改成→　[nzSrc]="data.thumbnail ?? ''"   就OK了
 
--９.「操作」前面的竖线，标题和数据的没对齐
+９.「操作」前面的竖线，标题和数据的没对齐　〇
 
 -１０.还没正确显示「データの表示順番は券種期間限定の終了日時の降順です。」，字体太大
 
 １１.条件检索的布局还没调好 〇 label+form=24，在这个基础上再去个别调整
 
--１２.guest-list查询数据还没做排序
+-１２.guest-list查询数据还没做降序排序
 
 -１３.按降序排列的提示信息 样式改成如下不起作用
 class="ares-table-extra-description-container" 
@@ -43,4 +43,37 @@ class="ares-table-extra-description-container"
   }
 
 -１４.xl以外尺寸的size设定还没确认好
+
+-１５.findGuestByOpenId　→　findGuestById 命名不对，需要修改，但是还有其他程序在用guest.service，所以暂时不能改。以后统一改。
+
+-１６.王幽 下拉列表的tag可以直接取出该租户该用户所属平台账号（客服主管的话是所有平台账号，普通客服的话是所属平台账号）下的所有访客的tag
+不需要额外的tag表
+
+-１７.查询条件加上平台账号的选择框
+
+-１８.编辑页面的性别改成选择框　〇
+
+-１９.访客编辑页面的tag改成 用数组生成一组标签，可以动态添加和删除。参照内容管理hot-word　×　対応不要
+
+-２０.名字以外都是非必入力 〇
+
+-２１.不用单独的tagservice，不需要单独的tag表，从guest表里找tag的数据 
+后台写查询语句的话就这样写:guestModel.find(...).select(['tag']).exec()
+那么前台呢?应该怎么写?
+
+-２２.用inquiryQuery共通查询　〇
+
+-２３.年龄不能为负数
+
+-２４.「クリア」以后性别不能是unknown(なし)
+
+-２５.「クリア」以后アカウント不能清除
+
+-２６.<input nz-input formControlName="guestName" id="guestName" />这里的id="guestName"可以删除吗?
+
+-２７.年龄输入框还有问题
+
+-２８.编辑 改成button
+
+
 
