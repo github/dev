@@ -1,0 +1,36 @@
+    修改前：
+　　html:
+    <!-- 性別 -->
+    <nz-form-item>
+      <nz-form-label [nzXl]="3" [nzMd]="6" [nzXs]="24">{{ i18n.guest.gender }}</nz-form-label>
+      <nz-form-control [nzXl]="3" [nzMd]="6" [nzXs]="24">
+        <nz-select nzAllowClear nzMode="multiple" formControlName="gender" id="gender">
+          <nz-option *ngFor="let gender of genderData" [nzValue]="gender" [nzLabel]="gender"> </nz-option>
+        </nz-select>
+      </nz-form-control>
+    </nz-form-item>
+
+    ts:
+    for (const key in Gender) {
+        this.genderData.push(key);
+      }
+
+      修改后1:
+      html: 
+    <!-- 性別 -->
+    <nz-form-item>
+        <nz-form-label [nzXl]="3" [nzMd]="6" [nzXs]="24">{{ i18n.guest.gender }}</nz-form-label>
+        <nz-form-control [nzXl]="3" [nzMd]="6" [nzXs]="24">
+          <nz-select nzAllowClear nzMode="multiple" formControlName="gender" id="gender">
+            <nz-option [nzValue]="'unknown'" [nzLabel]="i18n.guest.unknown"> </nz-option>
+            <nz-option [nzValue]="'female'" [nzLabel]="i18n.guest.female"> </nz-option>
+            <nz-option [nzValue]="'male'" [nzLabel]="i18n.guest.male"> </nz-option>
+          </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+
+      ts:
+      无
+
+
+      

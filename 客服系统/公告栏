@@ -1,4 +1,4 @@
-用户是管理者时可以管理所属租户下的所有数据
+1.用户是管理者时可以管理所属租户下的所有数据
 用户是普通用户时只以管理所属租户和所绑定的平台账号下的数据
 用户是超级管理员时没有任何限制
 所以你们做的列表画面检索条件那里有 平台账号 这个条件的话，有没有考虑这个条件的数据。 zhaoxiang 这个API是你提供的吗？
@@ -6,3 +6,73 @@
 用户是普通用户时只以管理所属租户和所绑定的平台账号下的数据
 这个没有去考虑
 
+2.这样，翔哥，小程序和公众号的URL都是 https://API地址/wechat/平台账号地址
+中间就不按小程序 公众号 作区分了
+
+https://i-isc.team.x:3000/wechat/eb93e698-0e2e-4bf0-a764-f8baed7c9364
+出来就这种嘛
+id会不会有点长哦
+
+id无所谓，这点长度没关系，能缩少最好，现在是UUID吧？
+
+是的，就那个共通的util生成的
+
+2022/02/21
+
+问题共通部分：
+1.html的样式要放到以该html最上层的class{}中去
+2.列表画面的表格行操作按钮，只保留编辑按钮，按钮样式参考素材管理画面
+3.列表画面的表格行至少用名字作为link跳转 + 编辑按钮跳转
+4.实体删除操作都放到编辑画面中去
+5.删除不必要的 component，比如：
+ src/app/pages/platform-account/platform-account.component.ts
+ src/app/pages/tenant/tenant.component.ts
+ src/app/pages/user/user.component.ts
+6.关键的代码块或变量适当写一些注释
+
+
+具体问题
+用户列表画面；
+1.检索没有使用InquiryQuery的方式
+2.表格行数据中头像无有效数据时显示默认用户头像 /assets/avatar/inquiry.png
+3.表格行数据中关联的平台账户列表显示优化一下吧
+
+用户编辑画面：
+1.打开平台账户选项画面，选中平台账户后，点击”确认“按钮。 重复多次这个操作，用户绑定平台账户列表会无限追加所选的平台账户
+2.用户头像上传限制容量大小就可以了吧，不用限制分辨率
+3.添加用户的时候，角色单选那里默认都不选中，让操作者自己选
+4.关联平台账户选择画面：
+4.1 全选按钮选中时，没有产生全选效果
+4.2 有多个平台账户时，只选中其中一个，全选按钮也被选中了，这块建议参考chat的按平台账户过滤会话功能
+    代码位置：src/app/pages/chat/components/chat-room-platform-account-filter/chat-room-platform-account-filter.component.ts
+4.3 平台账号类型显示不对
+4.4 已经选择了的平台账号在选择画面中的checkbox没有被勾选上
+5.关联平台账户的删除confirm按钮文言以及提示都不对
+6.关联平台账户的显示部分现在是小程序和公众号分开做的两部分html，以后要是有其他类型的平台账户，又得修改html，建议做成共通component
+
+访客列表画面：
+1.表哥行数据中头像无有效数据时按性别区分显示默认访客头像 /assets/avatar/unknown或male或female.png
+  可参考chat 的访客信息画面 src/app/pages/chat/components/chat-guest-info/chat-guest-info.component.html 中 nz-avatar 的部分 〇
+2.表格列“更新时间”可以不要，还有行数据无有效值的部分显示为“-” 〇
+3.表格行数据操作按钮不要“ミュート”按钮　〇
+4.检索条件“Wechat ID”不是模糊匹配，另外输入存在的Wechat ID也检索不到数据　〇
+5.检索条件“タグ”，不是单选，改为多选，另外也改成访客编辑面的tag的方式（可多选已存在的tags，也可以输入别的tag）〇
+6.检索条件“年龄”，没有能按输入的条件值获取到正确的检索结果。另外这是两个输入组件，会有以下5种行为：
+6.1 只输入左边的组件，这时候数据过滤条件是 >=左边输入数值　〇
+6.2 只输入右边的组件，这时候数据过滤条件是 <=右边输入数值　〇
+6.3 输入左右两边的组件，左边 = 右边，这时候数据过滤条件是  =左边输入数值（右边输入数值）　〇
+6.4 输入左右两边的组件，左边 < 右边，这时候数据过滤条件是  >=左边输入数值且<=右边输入数值　〇
+6.5 输入左右两边的组件，左边 > 右边，这时候数据过滤条件是  >=右边输入数值且<=左边输入数值　〇
+7.检索条件“性別”，不是单选，改为多选　〇
+
+访客编辑画面：
+1.名前，电话，email，tag等文本字段不可以只输入空格，需要手动trim() 〇
+  validate(): boolean {
+    for (const key of Object.keys(this.guestForm.controls)) {
+      this.guestForm.controls[key].setValue(this.guestForm.controls[key].value.trim());
+      this.guestForm.controls[key].markAsDirty();
+      this.guestForm.controls[key].updateValueAndValidity();
+    }
+    return this.guestForm.valid!;
+  }
+2.表单添加email合法性check 〇

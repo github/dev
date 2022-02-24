@@ -49,7 +49,7 @@ class="ares-table-extra-description-container"
 -１６.王幽 下拉列表的tag可以直接取出该租户该用户所属平台账号（客服主管的话是所有平台账号，普通客服的话是所属平台账号）下的所有访客的tag
 不需要额外的tag表
 
--１７.查询条件加上平台账号的选择框
+-１７.查询条件加上平台账号的选择框　〇
 
 -１８.编辑页面的性别改成选择框　〇
 
@@ -59,21 +59,31 @@ class="ares-table-extra-description-container"
 
 -２１.不用单独的tagservice，不需要单独的tag表，从guest表里找tag的数据 
 后台写查询语句的话就这样写:guestModel.find(...).select(['tag']).exec()
-那么前台呢?应该怎么写?
+那么前台呢?应该怎么写? 〇前台只是拼查询语句，查询方法是在后台做的
 
 -２２.用inquiryQuery共通查询　〇
 
--２３.年龄不能为负数
+-２３.年龄不能为负数　〇
 
 -２４.「クリア」以后性别不能是unknown(なし)
 
--２５.「クリア」以后アカウント不能清除
+-２５.「クリア」以后アカウント不能清除　〇
 
 -２６.<input nz-input formControlName="guestName" id="guestName" />这里的id="guestName"可以删除吗?
 
--２７.年龄输入框还有问题
+-２７.年龄输入框还有问题，右边跟着左边被选
 
 -２８.编辑 改成button
 
+-２９.现在不是都用共通query了吗，之前手动去分页的应该不用了吧　〇
 
+-３０.性别 目前存进数据库的是显示的内容，应该是枚举的数值
 
+-３１.名字link跳转 + 编辑按钮跳转
+
+-３２.https://www.npmjs.com/package/animal-avatar-generator
+https://roma-lukashik.github.io/animal-avatar-generator/dist/
+根据传入的seed 和 size，它就会自动生成svg头像
+只有当你们的实体 avatar 字段没有值的时候，显示它就行
+
+-３３.做表单验证之前，文本字段的统一 trim() 了再做验证就好

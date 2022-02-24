@@ -17,3 +17,18 @@ A:数据库会自己添加这个属性
 
 其他再细分的可以后面确定有需求了再弄
 画面那个只是例子
+
+表格的头像:
+修改前:
+
+<td>
+　　<img nz-image width="50px" height="50px" [nzSrc]="data.avatar ?? ''" alt="" />
+ </td>
+
+修改后:
+        <td>
+          <div class="avatar">
+            <nz-avatar *ngIf="data.avatar" [nzSize]="64" nzIcon="user" [nzSrc]="data.avatar"></nz-avatar>
+            <div *ngIf="!data.avatar" [innerHTML]="data.id | avatar: 64"></div>
+          </div>
+        </td>
