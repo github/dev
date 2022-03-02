@@ -1,0 +1,32 @@
+html:
+    <!-- タグ -->
+    <nz-form-item>
+      <nz-form-label [nzXl]="3" [nzMd]="6" [nzXs]="24">{{ i18n.page.guest.tags }}</nz-form-label>
+      <nz-form-control [nzXl]="6" [nzMd]="6" [nzXs]="24">
+        <nz-select
+          nzAllowClear
+          nzMode="multiple"
+          [nzPlaceHolder]="'タグを選択してください'"
+          (ngModelChange)="onTagChange($event)"
+          formControlName="tags"
+        >
+          <nz-option *ngFor="let tag of tagsOptions" [nzValue]="tag" [nzLabel]="tag"> </nz-option>
+        </nz-select>
+      </nz-form-control>
+    </nz-form-item>
+
+ts:
+
+selectedTags?: string[] = [];
+
+// tag入力
+onTagChange(tags: any) {
+  const newTags = [];
+  for (const tag of tags) {
+    newTags.push(tag);
+  }
+  this.selectedTags = newTags;
+}
+
+另外还要注意，如果是编辑页面的话，页面初始化的时候把db取的tag赋给selectedTags，然后把newTags赋给selectedTags，
+最后在插入db前把selectedTags赋给要插入db的变量

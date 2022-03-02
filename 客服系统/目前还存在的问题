@@ -71,13 +71,13 @@ class="ares-table-extra-description-container"
 
 -２６.<input nz-input formControlName="guestName" id="guestName" />这里的id="guestName"可以删除吗?
 
--２７.年龄输入框还有问题，右边跟着左边被选
+-２７.年龄输入框还有问题，右边跟着左边被选 〇超哥说没问题，暂不对应
 
 -２８.编辑 改成button
 
 -２９.现在不是都用共通query了吗，之前手动去分页的应该不用了吧　〇
 
--３０.性别 目前存进数据库的是显示的内容，应该是枚举的数值
+-３０.性别 目前存进数据库的是显示的内容，应该是枚举的数值　〇性别的三个option写死，没用ngfor，分别value和lable
 
 -３１.名字link跳转 + 编辑按钮跳转
 
@@ -86,4 +86,44 @@ https://roma-lukashik.github.io/animal-avatar-generator/dist/
 根据传入的seed 和 size，它就会自动生成svg头像
 只有当你们的实体 avatar 字段没有值的时候，显示它就行
 
--３３.做表单验证之前，文本字段的统一 trim() 了再做验证就好
+-３３.做表单验证之前，文本字段的统一 trim() 了再做验证就好　〇　
+
+-３４.guest-list表格的性别应显示汉字而不是字母
+
+-３５.i18n结构是不是不对 我看别人都是写在 i18n的 page 里面的 〇　
+
+-３６.絞り込み&クリア按钮右移 〇　
+
+-３７.list表格的头像偏大　〇
+
+-３８.nzValue 可以写成 genderEnum.unknown genderEnum.female. genderEnum.male
+以防gender枚举keyvalue变了这快漏了修改，gender枚举keyvalue变了的话 genderEnum.unknown 的方式编译会报错的
+ 〇 ts里面 import Gender from xxx ; genderEnum = Gender ;
+
+-３９.还有，这个方法应该有参数的，租户id 和 平台账号id,不限制的话就会取到别的租户别的平台账户访客的tag,属于数据不安全了
+
+-４０.API 的意思是取tags，怎么路径写成 Get('tag') ? 〇
+
+-４１.还有方法名，一会 findxxx 一会 getxxx,要做统一，我们一般是用 getxxxx　〇
+
+-４２.理解客服系统的租户，用户以及权限的关系
+
+-４３.tag检索条件输入了值，点一次检索按钮，然后点 “clear” 按钮，再次检索，发现query 条件里面还有这个 in 条件
+
+-４４.tag检索条件的值 不能模糊匹配是吗？/是的，tag的检索条件是in，不是模糊匹配，因为tag是一个数组，检索结果是含有输入条件的数据。
+/做不了的话，就不让用户输入自定义值了。 〇　
+　
+-４５.首先，是先获取平台账号列表是吧？作为平台账号下拉列表的数据。所以ngInit 里面取tags就用这些平台ids作为条件。
+每当用户操作平台下拉列表时，可以拿到change事件之类的吧？在这个事件里面先清空当前tags下拉列表数据，
+再用平台账号列表选择的平台ids作为条件重新获取tags
+
+还有一种做法，是在init里面根据取得的所有用户所属平台id列表作为条件去取所有tags（带有平台账号id），保存一份数据backup在前台，
+然后用户选择了平台id以后在onchage事件里根据选择的平台id去数据backup过滤取tags。
+两种方法有利有弊，
+第一种可以获取数据库最新的tags，不好的地方就是需要一直发request
+第二种可以只发一次request，但是不能实时获取数据库中最新tags
+x现在选择第二种来做
+
+-４６.平台账户改成多选下拉框　〇　
+
+‐４７.【BUG！！】tag检索条件输入了值，点一次检索按钮，然后点 “clear” 按钮，再次检索，发现query 条件里面还有这个 in 条件

@@ -1,0 +1,6 @@
+    //タグ
+    if (Array.isArray(searchGuestsCondition.tags) && searchGuestsCondition.tags.length > 0) {
+      inquiryQuery.matchValueInAnArray('tags', searchGuestsCondition.tags);
+    }
+
+    

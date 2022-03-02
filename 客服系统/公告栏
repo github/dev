@@ -69,10 +69,27 @@ id无所谓，这点长度没关系，能缩少最好，现在是UUID吧？
 1.名前，电话，email，tag等文本字段不可以只输入空格，需要手动trim() 〇
   validate(): boolean {
     for (const key of Object.keys(this.guestForm.controls)) {
-      this.guestForm.controls[key].setValue(this.guestForm.controls[key].value.trim());
+      if (key === 'guestName' || key === 'wechatid' || key === 'telephone' || key === 'email') {
+        this.guestForm.controls[key].setValue(this.guestForm.controls[key].value.trim());
+      }
       this.guestForm.controls[key].markAsDirty();
       this.guestForm.controls[key].updateValueAndValidity();
     }
+
     return this.guestForm.valid!;
   }
 2.表单添加email合法性check 〇
+
+
+inquiry-manager-role 客服主管
+management-platform-account 管理平台账户
+management-user 管理用户
+management-media-material 管理素材
+management-guest 管理访客
+
+tenant-manager-role 租户管理员
+management-tenant 管理租户
+management-platform-account 管理平台账户
+management-user 管理用户
+management-media-material 管理素材
+management-guest 管理访客
