@@ -8,7 +8,7 @@ html:
           nzMode="multiple"
           [nzPlaceHolder]="'タグを選択してください'"
           (ngModelChange)="onTagChange($event)"
-          formControlName="tags"
+          formControlName="selectedTags"
         >
           <nz-option *ngFor="let tag of tagsOptions" [nzValue]="tag" [nzLabel]="tag"> </nz-option>
         </nz-select>
@@ -28,5 +28,5 @@ onTagChange(tags: any) {
   this.selectedTags = newTags;
 }
 
-另外还要注意，如果是编辑页面的话，页面初始化的时候把db取的tag赋给selectedTags，然后把newTags赋给selectedTags，
-最后在插入db前把selectedTags赋给要插入db的变量
+另外还要注意，如果是编辑页面的话，页面初始化的时候把db取的tags赋给selectedTags，然后把newTags赋给selectedTags，
+最后在插入db前把selectedTags赋给要插入db的tags

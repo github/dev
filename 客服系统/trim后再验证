@@ -1,0 +1,11 @@
+  validate(): boolean {
+    for (const key of Object.keys(this.guestForm.controls)) {
+      if (key === 'guestName' || key === 'wechatid' || key === 'telephone' || key === 'email') {
+        this.guestForm.controls[key].setValue(this.guestForm.controls[key].value.trim());
+      }
+      this.guestForm.controls[key].markAsDirty();
+      this.guestForm.controls[key].updateValueAndValidity();
+    }
+
+    return this.guestForm.valid!;
+  }

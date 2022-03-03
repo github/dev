@@ -22,15 +22,29 @@
         <nz-form-label [nzXl]="3" [nzMd]="6" [nzXs]="24">{{ i18n.guest.gender }}</nz-form-label>
         <nz-form-control [nzXl]="3" [nzMd]="6" [nzXs]="24">
           <nz-select nzAllowClear nzMode="multiple" formControlName="gender" id="gender">
-            <nz-option [nzValue]="'unknown'" [nzLabel]="i18n.guest.unknown"> </nz-option>
-            <nz-option [nzValue]="'female'" [nzLabel]="i18n.guest.female"> </nz-option>
-            <nz-option [nzValue]="'male'" [nzLabel]="i18n.guest.male"> </nz-option>
+            <nz-option [nzValue]="genderEnum.unknown" [nzLabel]="i18n.guest.unknown"> </nz-option>
+            <nz-option [nzValue]="genderEnum.female" [nzLabel]="i18n.guest.female"> </nz-option>
+            <nz-option [nzValue]="genderEnum.male" [nzLabel]="i18n.guest.male"> </nz-option>
           </nz-select>
         </nz-form-control>
       </nz-form-item>
 
       ts:
-      无
+      genderEnum = Gender;
 
 
-      
+以下节选自chat的对话：
+
+      export enum Gender {
+        unknown = 'なし',
+        female = '女',
+        male = '男',
+        }
+
+这个是错误的
+值要和key一样
+你对比别的enum
+
+
+渲染下拉列表，选项文字肯定要是多语言文字
+不是enum的key或者value
