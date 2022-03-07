@@ -93,3 +93,28 @@ management-platform-account 管理平台账户
 management-user 管理用户
 management-media-material 管理素材
 management-guest 管理访客
+
+
+
+
+
+
+类似这样的规范：
+1.必须有值时 require:true string的话有@IsNotEmpty注解
+2.非必须有值时 require:false 然后指定默认值，比如string时 default:''
+  @ApiProperty({ required: true, description: '访客名字' })
+  @IsString()
+  @IsNotEmpty()
+  @prop({ required:true  })
+  public name!: string;
+
+  @ApiProperty({ required: false, description: '电话号码' })
+  @IsString()
+  @prop({ required:false ,default: '' })
+  public phone?: string;
+
+
+vscode 装这个插件 
+mike-co.import-sorter
+这个插件的 import 排版比较合理
+它的配置文件对应的是工程根目录下面的 import-sorter.json 文件

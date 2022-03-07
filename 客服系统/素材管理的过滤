@@ -1,0 +1,17 @@
+async findMaterialByCondition(searchMaterialCondition: SearchMaterialCondition) {
+    const inquiryQuery: InquiryQuery = this.getInquiryQuery(searchMaterialCondition);
+    const getMaterialsByQueryResponse = await this.materialService.findMaterialsByQuery(inquiryQuery).toPromise();
+    if (getMaterialsByQueryResponse.status === 200 && getMaterialsByQueryResponse.body) {
+      this.materialTableDataset = [];
+      const materialTableDataset: Material[] = [];
+      const materials = getMaterialsByQueryResponse.body.docs; // TODO:
+      materials.forEach((material) => {
+        material.platformAccount = this.currentUserPlatformAccounts.find(
+          (platformAccount) => platformAccount.id === material.platformAccountId
+        ) as PlatformAccount;
+        materialTableDataset.push(material);
+      });
+      this.materialTableDataset = materialTableDataset;
+      this.total = getMaterialsByQueryResponse.body.totalDocs;
+    }
+  }

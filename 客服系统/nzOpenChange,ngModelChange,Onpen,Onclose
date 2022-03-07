@@ -1,0 +1,31 @@
+    html:
+    <!-- 検索条件 -->
+    <!-- アカウント -->
+    <nz-form-item>
+      <nz-form-label [nzXl]="3" [nzMd]="6" [nzXs]="24">
+        {{ i18n.page.guest.platformAccount }}
+      </nz-form-label>
+      <nz-form-control [nzXl]="6" [nzMd]="6" [nzXs]="24">
+        <nz-select nzMode="multiple" formControlName="platformAccountIds" (nzOpenChange)="onChange()" nzAllowClear>
+          <nz-option
+            *ngFor="let platformAccount of platformAccounts"
+            [nzValue]="platformAccount.id"
+            [nzLabel]="platformAccount.name"
+          >
+          </nz-option>
+        </nz-select>
+      </nz-form-control>
+    </nz-form-item>
+
+
+
+    ts:
+    onChange() {
+        const selectedPlatformAccountIds = this.searchForm.controls.platformAccountIds.value
+          ? this.searchForm.controls.platformAccountIds.value
+          : [];
+        const filteredBackup = this.backup.filter((item) => selectedPlatformAccountIds.includes(item.platformAccountId));
+        this.tagOptions = filteredBackup.map((item) => item.tags);
+        let set = new Set(this.tagOptions);
+        this.tagOptionsDistinct = [...set];
+      }

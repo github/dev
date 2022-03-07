@@ -62,3 +62,7 @@ col-xs用于超小型设备， (max-width：768px);
 
 
 <nz-avatar></nz-avatar>这样的自定义组件怎么写啊？
+
+为什么访客管理查询的时候url没有变成类似"?user=xxx&name=xxx"这种形状啊？
+
+跨域是什么意思？
