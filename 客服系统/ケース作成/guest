@@ -1,0 +1,9 @@
+疑似bug:
+1.租户izhaoxiang的user查询到租户i-isc下的platformAccount表里的数据(数据的租户是izhaoxiang)，并显示在guest管理的platformAccount下拉框
+  解决:客服系统只有一个数据库，用tenant-id来区分。
+
+2．平台id只有一个的时候查不到tags
+  解决: 判断类型吧，是string就做个单元素数组,那个应该是query的问题,只有一个，不会转成数组,两个或以上才会
+      if (typeof ids === 'string') {
+      ids = [ids];
+    }

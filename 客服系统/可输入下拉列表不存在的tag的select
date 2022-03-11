@@ -1,4 +1,5 @@
 html:
+guest.component.ts
     <!-- タグ -->
     <nz-form-item>
       <nz-form-label [nzXl]="3" [nzMd]="6" [nzXs]="24">{{ i18n.page.guest.tags }}</nz-form-label>
@@ -11,6 +12,24 @@ html:
           formControlName="selectedTags"
         >
           <nz-option *ngFor="let tag of tagsOptions" [nzValue]="tag" [nzLabel]="tag"> </nz-option>
+        </nz-select>
+      </nz-form-control>
+    </nz-form-item>
+
+edit-component.ts
+    <!-- タグ -->
+    <nz-form-item>
+      <nz-form-label [nzXl]="3" [nzMd]="6" [nzXs]="24">{{ i18n.page.guest.tags }}</nz-form-label>
+      <nz-form-control [nzSm]="6" [nzXs]="24">
+        <nz-select
+          nzMode="tags"
+          [nzMaxTagCount]="8"
+          [nzPlaceHolder]="'タグを選択してください'"
+          [ngModel]="selectedTags"
+          (ngModelChange)="onTagChange($event)"
+          name="tags"
+        >
+          <nz-option *ngFor="let tag of tagOptionsDistinct" [nzLabel]="tag" [nzValue]="tag"></nz-option>
         </nz-select>
       </nz-form-control>
     </nz-form-item>

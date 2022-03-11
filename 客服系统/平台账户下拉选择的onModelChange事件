@@ -1,0 +1,40 @@
+<nz-select (ngModelChange)="onSelectChange($event)">
+
+
+  tagsWithPlatformAccountIdFromGuests: { platformAccountId: string; tags: string }[] = [];
+  tagOptions: string[] = [];
+  tagOptionsDistinct?: string[] = [];
+
+  onSelectChange(platformAccountIds: string[]) {
+    if (Array.isArray(platformAccountIds) && platformAccountIds.length > 0) {
+      const selectedPlatformAccountIds = platformAccountIds;
+      const filteredTagsWithPlatformAccountIdFromGuests = this.tagsWithPlatformAccountIdFromGuests.filter((item) =>
+        selectedPlatformAccountIds.includes(item.platformAccountId)
+      );
+      this.tagOptions = filteredTagsWithPlatformAccountIdFromGuests.map((item) => item.tags);
+      let set = new Set(this.tagOptions);
+      this.tagOptionsDistinct = [...set];
+    } else {
+      const selectedPlatformAccountIds = this.platformAccountIds;
+      const filteredTagsWithPlatformAccountIdFromGuests = this.tagsWithPlatformAccountIdFromGuests.filter((item) =>
+        selectedPlatformAccountIds.includes(item.platformAccountId)
+      );
+      this.tagOptions = filteredTagsWithPlatformAccountIdFromGuests.map((item) => item.tags);
+      let set = new Set(this.tagOptions);
+      this.tagOptionsDistinct = [...set];
+    }
+  }
+
+    async getTags(ids: string[]) {
+    console.log('899', ids, typeof ids);
+    this.guestService.getTags(ids).subscribe(async (result) => {
+      if (result.status === 200 || result.status === 201) {
+        this.tagsWithPlatformAccountIdFromGuests = result.body!;
+        if (this.tagsWithPlatformAccountIdFromGuests) {
+          this.tagOptions = this.tagsWithPlatformAccountIdFromGuests.map((item) => item.tags);
+          let set = new Set(this.tagOptions);
+          this.tagOptionsDistinct = [...set];
+        }
+      }
+    });
+  }

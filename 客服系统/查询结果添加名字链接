@@ -1,0 +1,10 @@
+        修改前:
+        <td nzBreakWord>{{ data.name ? data.name : '-' }}</td>
+
+
+        修改后:
+        <td nzBreakWord>
+          <a class="operate-button" routerLink="./edit" [queryParams]="{ guestId: data.id }">{{
+            data.name ? data.name : '-'
+          }}</a>
+        </td>

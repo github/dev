@@ -118,3 +118,13 @@ vscode 装这个插件
 mike-co.import-sorter
 这个插件的 import 排版比较合理
 它的配置文件对应的是工程根目录下面的 import-sorter.json 文件
+
+web 那里加了个 avatar 的 pipe
+<div  [innerHTML]="要传的字符串 | avatar: 头像大小（像素）"></div>
+
+比如： <div [innerHTML]="guest.id | avatar: 64"></div>
+
+素材管理:
+小程序： 文本 图片
+公众号：文本 图片 视频 音频
+

@@ -127,3 +127,11 @@ x现在选择第二种来做
 -４６.平台账户改成多选下拉框　〇　
 
 ‐４７.【BUG！！】tag检索条件输入了值，点一次检索按钮，然后点 “clear” 按钮，再次检索，发现query 条件里面还有这个 in 条件
+
+-４８.查询结果和件数的变量全局改为共通
+export class PageResponse<T> {
+  public docs!: T[];
+  public totalDocs!: number;
+}
+
+-４９.增加tag下拉选择的过滤平台账户事件
