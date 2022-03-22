@@ -38,3 +38,5 @@ A:数据库会自己添加这个属性
 TypegooseModule.forFeature([ ]), 还有这里面没加Tag，报Nest can't resolve dependencies of the TagService (?). Please make sure that the argument TagModel at index [0] is available in the ManagementModule context.
 
 搞懂子路由，看懂page-header
+
+判断是新建用户还是编辑用户，是看id是否有值。id就是用户列表组件给用户编辑组件传的值，也就是选中某一条用户数据后获取的id

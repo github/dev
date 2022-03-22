@@ -1,4 +1,4 @@
-疑似bug:
+遇到的问题和解决方法:
 1.租户izhaoxiang的user查询到租户i-isc下的platformAccount表里的数据(数据的租户是izhaoxiang)，并显示在guest管理的platformAccount下拉框
   解决:客服系统只有一个数据库，用tenant-id来区分。
 
@@ -7,3 +7,8 @@
       if (typeof ids === 'string') {
       ids = [ids];
     }
+
+单体测试中发现的bug:
+所有的多选框(账户，性别，tag)删除最后一个再检索，无数据
+
+普通用户的情况下，选账户后搜索结果不对，比如选东京晴空塔，全部账户都出来了。

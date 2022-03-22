@@ -1,0 +1,71 @@
+      <!-- パスワード -->
+      <nz-form-item>
+        <nz-form-label [nzRequired]="isCreate" [nzXl]="3" [nzMd]="6" [nzXs]="24">
+          {{ i18n.inquiry.page.user.password }}
+        </nz-form-label>
+        <nz-form-control [nzSm]="12" [nzXs]="24" [nzErrorTip]="passwordErrorTemplate">
+          <input
+            nz-input
+            type="password"
+            class="user-password"
+            [(ngModel)]="user.password"
+            name="password"
+            maxlength="63"
+            required
+            [required]="isCreate"
+          />
+        </nz-form-control>
+        <ng-template #passwordErrorTemplate let-control>
+          <ng-container *ngIf="control.hasError('required')">
+            {{ i18n.common.message.error.enterTheItem | translate: { item: i18n.inquiry.page.user.password } }}
+          </ng-container>
+        </ng-template>
+      </nz-form-item>
+
+      <!-- パスワード確認 -->
+      <nz-form-item>
+        <nz-form-label [nzRequired]="isCreate" [nzXl]="3" [nzMd]="6" [nzXs]="24">
+          {{ i18n.inquiry.page.user.confirmPassword }}
+        </nz-form-label>
+        <nz-form-control [nzSm]="12" [nzXs]="24" [nzErrorTip]="errorTpl">
+          <input
+            nz-input
+            type="password"
+            class="user-confirmPassword"
+            name="confirmPassword"
+            maxlength="63"
+            [required]="isCreate"
+            [(ngModel)]="userConfirmPassword"
+          />
+          <ng-template #errorTpl let-control>
+            <ng-container *ngIf="control.hasError('required')">{{
+              i18n.common.message.error.enterTheItem | translate: { item: i18n.inquiry.page.user.confirmPassword }
+            }}</ng-container>
+            <ng-container *ngIf="control.hasError('notSame')">
+              {{ i18n.inquiry.page.user.message.passwordInconsistent }}
+            </ng-container>
+          </ng-template>
+        </nz-form-control>
+      </nz-form-item>
+
+
+
+      validate(): boolean {
+        for (const key of Object.keys(this.userForm.controls)) {
+          this.userForm.controls[key].setValue(this.userForm.controls[key].value?.trim());
+          this.userForm.controls[key].markAsDirty();
+          this.userForm.controls[key].updateValueAndValidity();
+        }
+    
+        this.validateConfirmPassword();
+    
+        return this.userForm.valid!;
+      }
+    
+      validateConfirmPassword() {
+        if (this.userForm.controls['password'].value) {
+          if (this.userForm.controls['confirmPassword'].value !== this.userForm.controls['password'].value) {
+            this.userForm.controls['confirmPassword'].setErrors({ notSame: true });
+          }
+        }
+      }

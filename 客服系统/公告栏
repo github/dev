@@ -128,3 +128,15 @@ web 那里加了个 avatar 的 pipe
 小程序： 文本 图片
 公众号：文本 图片 视频 音频
 
+韬哥，超级管理员这个角色是是怎么创建的呢？
+准备是第一次部署应用的时候，自动生成的一个租户和一个超级管理员数据
+
+    officialAccount: {
+        appId: 'U2FsdGVkX1/J+ypt6F/cLs1jF8xid7CzSq6LETOx044=',
+        appSecret: 'U2FsdGVkX193E0gQzHxrm9lqW+vSM20tW1CgOGNuCAY=',
+        serverUrl: 'http://i-isc.team.x:3000/wechat/5fe469d88e400000',
+        token: 'test0316',
+        encodingAesKey: 'test0316test0316test0316test0316test0316tes'
+    },
+    这里appId和appSecret不是页面输入的值，这是因为敏感信息存db加密了。
+    敏感信息存db加密，使用时解密
