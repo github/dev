@@ -1,0 +1,17 @@
+  public async getTags(ids: string[] = []) {
+    if (typeof ids === 'string') {
+      ids = [ids];
+    }
+    if (Array.isArray(ids) && ids.length > 0) {
+      const tagsDb = await this.guestModel
+        .aggregate()
+        .match({ platformAccountId: { $in: ids } })
+        .unwind('tags')
+        .project({
+          _id: 0,
+          platformAccountId: 1,
+          tags: 1,
+        });
+      return tagsDb;
+    }
+  }

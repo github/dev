@@ -1,0 +1,5 @@
+nvm ls // 查看已安装的nodejs
+
+nvm install 12.13.0 // 安装nodejs 12.13.0
+
+nvm use 12.13.0 // 切换 nodejs
