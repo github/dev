@@ -1,0 +1,27 @@
+
+字符串转成数组
+if (typeof ids === 'string') {
+      ids = [ids];
+    }
+
+数组转成字符串
+
+let arr = [77,45,2,3,1,3,2,7,5,4.5];
+方法1: toString()
+let arr1 = arr.toString();
+console.log(arr1);
+console.log(typeof arr1);
+
+方法2: join()
+let arr2 = arr.join();
+let arr3 = arr.join('-');
+let arr4 = arr.join('&');
+
+console.log(arr2);
+console.log(typeof arr2);
+
+console.log(arr3);
+console.log(typeof arr3);
+
+console.log(arr4);
+console.log(typeof arr4);

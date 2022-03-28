@@ -1,0 +1,12 @@
+let str:string = 'qwoiwoioeigeeeffgjdfg';
+let obj = {};
+for (let i=0;i<str.length;i++){
+    let eachChar:string = str.charAt(i);   //eachChar是字符串的每一个字符
+    if (obj.hasOwnProperty(eachChar)){                    
+        obj[eachChar]++;                   //obj[eachChar]得到的是属性值
+    }else{
+        obj[eachChar] = 1;
+    }
+}
+
+这里的obj[eachChar] eslint会报错，不知道为什么
