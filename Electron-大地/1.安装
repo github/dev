@@ -1,0 +1,5 @@
+npm install -g electron
+
+or
+
+npx electron .

@@ -1,0 +1,7 @@
+第一种方法：
+克隆一个仓库，快速启动项目：
+
+1.克隆仓库：git clone https://github.com/electron/electron-quick-start
+2.进入这个仓库： cd electron-quick-start
+3.安装依赖并运行：npm install && npm start
+
