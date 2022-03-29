@@ -1,0 +1,29 @@
+第一种方法：
+克隆一个仓库，快速启动项目：
+
+新建一个文件夹electron，cmd进去：
+1.克隆仓库：git clone https://github.com/electron/electron-quick-start
+2.进入这个仓库： cd electron-quick-start
+3.安装依赖并运行：npm install && npm start（等价于分别运行npm install和npm start）
+
+效果：弹出一个Hello World！页面，运行成功
+
+
+第二种方法：
+用electron-forge搭建一个electron项目：
+electron-forge相当于electron的一个脚手架，可以创建，运行和打包electron项目。
+github地址：https://github.com/electron-userland/electron-forge
+进入以上地址后，运行命令：
+1.npx create-electron-app my-new-app (npx是node自带的，不用单独安装)
+2.cd my-new-app
+3.npm start
+
+其实等价于运行以下命令：
+npm install -g @electron-forge/cli
+electron-forge init my-new-app
+cd my-new-app
+npm start
+
+
+官网地址：https://www.electronforge.io/
+         https://www.electronjs.org/docs/latest

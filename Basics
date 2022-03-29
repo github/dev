@@ -169,4 +169,9 @@ packages/serverless-common/src/lib/config.ts
       options: {
         compress: process.env.MONGODB_OPTIONS_COMPRESS ? this.toBoolean(process.env.MONGODB_OPTIONS_COMPRESS) : true,
       },
-      
+
+
+新建一个html页面：
+1.可以输入一个感叹号！，然后回车。
+2.可以输入HTML：5，然后回车。
+
