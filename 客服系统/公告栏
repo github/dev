@@ -147,3 +147,10 @@ https://test.inquiry.intares.live/login
 管理员：admin 密码：1
 其他用户你自己加吧
 另外也在这个地址里面，都测试一下其他画面功能吧，都点一下。昨天说的问题我改了一下，你再确认一下。
+
+2022/3/29
+客服项目前后台工程改为使用 nx.dev + pnpm 来管理了，工程在 https://bitbucket.teamx.tokyo/projects/INQUIRY/repos/inquiry/browse
+依赖的安装管理不用yarn或者npm，而是使用 pnpm https://pnpm.io/zh/，有空可以了解一下。
+
+具体业务代码没变，位于 apps 目录里面，api - 后台， web - 前台web
+开发步骤可以看一下 README.md
