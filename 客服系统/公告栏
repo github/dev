@@ -156,8 +156,9 @@ https://test.inquiry.intares.live/login
 开发步骤可以看一下 README.md
 
 2022/3/31
+inquiry新工程
 安装依赖 yarn intall 改为了-> pnpm install
 启动api yarn start:dev 改为了-> pnpm dev:api
 启动web yarn start 改为了-> pnpm dev:web
 同时启动 api + web 的命令是 pnpm dev
-
+使用 development分支
