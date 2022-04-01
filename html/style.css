@@ -1,0 +1,59 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 2.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px #ddd solid;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 1.8em;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+
+.quote {
+    font-style: oblique;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 1em 0;
+    border-bottom: 1px #ddd solid;
+    border-top: 1px #ddd solid;
+    color: #333;
+}
+
+img {
+    height: 280px;
+    width: 100%;
+    object-fit: cover;
+    max-width: 100%;
+    margin: 1em 0;
+    filter: grayscale() sepia(50%);
+}
+
+.first::first-letter {
+    font-size: 3em;
+    float: left;
+    padding-right: 0.15em;
+    font-style: normal;
+    margin-top: -0.3ch;
+    margin-bottom: -0.5ch;
+}
+
+.first::first-line {
+    font-style: oblique;
+}
