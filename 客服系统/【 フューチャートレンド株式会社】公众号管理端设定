@@ -1,0 +1,13 @@
+不清楚为什么这么设定的话，看一下这个文档 https://developers.weixin.qq.com/miniprogram/dev/framework/server-ability/message-push.html
+
+
+
+开发者服务器接收消息推送
+
+开发者需要按照如下步骤完成：
+
+填写服务器配置
+验证服务器地址的有效性
+据接口文档实现业务逻辑，接收消息和事件
+
+

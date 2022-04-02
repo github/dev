@@ -170,8 +170,42 @@ packages/serverless-common/src/lib/config.ts
         compress: process.env.MONGODB_OPTIONS_COMPRESS ? this.toBoolean(process.env.MONGODB_OPTIONS_COMPRESS) : true,
       },
 
-
+2022.4.1
 新建一个html页面：
 1.可以输入一个感叹号！，然后回车。
 2.可以输入HTML：5，然后回车。
 
+今天遇到一个问题
+现象:
+安装local tunnel以后执行lt命令系统不认识，说明环境变量没设对
+
+解决:
+1.yarn全局安装的bin文件夹在哪里?
+首先用yarn global bin 找出 在 C:\Users\wang.you\AppData\Local\Yarn\bin
+2.用资源管理器打开C:\Users\wang.you\AppData\Local\Yarn\bin，找到lt.cmd，打开:
+@"%~dp0\..\Data\global\node_modules\.bin\lt.cmd"   %*
+发现指向一个路径，这个路径下有另一个lt.cmd，找到并打开这个cmd文件:
+@IF EXIST "%~dp0\node.exe" (
+  "%~dp0\node.exe"  "%~dp0\..\mytunnel\bin\lt.js" %*
+) ELSE (
+  @SETLOCAL
+  @SET PATHEXT=%PATHEXT:;.JS;=;%
+  node  "%~dp0\..\mytunnel\bin\lt.js" %*
+)
+发现lt.js在..\mytunnel\bin下。
+3.把..\mytunnel\bin加到环境变量的path里面，放在最上面就Ok了。
+
+不同进制和十进制之间的转换
+其他进制的相互转换
+这里就贴代码了， 就是说先使用parseInt变为10进制， 在利用toString变为其他进制
+
+其他
+在javaScript中， toString方法是非常常见的， 在不同的使用场景的效果不一样。 原因是他们继承Object.prototype.toString。但是很多对象会重写自己的方法。 所以在以数字调用toString方法时， 会临时包装成Number对象， 然后调用Number对象上的toString方法。 即此处的结果。
+
+parseInt方法是用于将字符串转为数字的方法。 接受两个参数。 第一个要转换的字符串，第二个是可选的， 如果没有值， 默认是10进制； 如果有值， 就是以该值为转换进制
+————————————————
+版权声明：本文为CSDN博主「几面」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/qq_34178990/article/details/80657842
+
+2022.4.2
+二维码 QR码 本质是什么？

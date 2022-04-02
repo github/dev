@@ -147,6 +147,7 @@ https://test.inquiry.intares.live/login
 管理员：admin 密码：1
 其他用户你自己加吧
 另外也在这个地址里面，都测试一下其他画面功能吧，都点一下。昨天说的问题我改了一下，你再确认一下。
+测试用的公众号是 フューチャートレンド株式会社
 
 2022/3/29
 客服项目前后台工程改为使用 nx.dev + pnpm 来管理了，工程在 https://bitbucket.teamx.tokyo/projects/INQUIRY/repos/inquiry/browse
@@ -162,3 +163,30 @@ inquiry新工程
 启动web yarn start 改为了-> pnpm dev:web
 同时启动 api + web 的命令是 pnpm dev
 使用 development分支
+
+2022/4/1
+
+你要测试哪个小程序？公众号？
+我们目前只有两个测试账号，一个公众号已经接入test环境了。一个小程序现在配置的URL是 
+https://fengwentao.lt.intares.live/wechat/wxfc86370205b6128e
+
+
+你启动开发环境后把平台账号是小程序的数据 id和_id 改成 appid一样的"wxfc86370205b6128e",
+微信小程序设定数据是：
+appid： wxfc86370205b6128e
+secret：a0199aa0c5c0b6c0c896cda0600058ef
+token：inquiry
+EncodingAESkey：6ZeZSYc8N1mCoHGzNyP6N7w7clSAPyo2AA5J2ABvqVJ
+
+安装这个：https://github.com/localtunnel/localtunnel，(npm,yarn,pnpm全局安装都可以)，
+然后执行下面的命令：
+lt --subdomain fengwentao --host https://lt.intares.live --port 3000 --token j9WxPMien93WGePhotbzUhYKfRHWTC69
+(显示'your url is:https://fengwentao.lt.intares.live'就运行成功了)
+
+按田志辉说的这个来装
+
+@all 我建了一个自定义的localtunnel。大家可以用来开发的时候内网穿透。 
+安装：yarn global add https://github.com/tian-zhihui/mytunnel.git 
+使用：lt --subdomain <大家名字的拼音> --host https://lt.intares.live --port <需要代理的本地服务端口> --token j9WxPMien93WGePhotbzUhYKfRHWTC69 
+例：lt --subdomain tianzhihui --host https://lt.intares.live --port 4200 --token j9WxPMien93WGePhotbzUhYKfRHWTC69
+
