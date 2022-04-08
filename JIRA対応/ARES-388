@@ -55,7 +55,7 @@ productCodeWithSmaregiNotice: 'When binding with Smaregi, prodcut code must be n
 
 需要再改:
 
-取完代码发现没有分支可以切换
+取完代码发现没有对应的分支可以切换
 
 执行 git fetch origin
 

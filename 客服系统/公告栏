@@ -190,3 +190,15 @@ lt --subdomain fengwentao --host https://lt.intares.live --port 3000 --token j9W
 使用：lt --subdomain <大家名字的拼音> --host https://lt.intares.live --port <需要代理的本地服务端口> --token j9WxPMien93WGePhotbzUhYKfRHWTC69 
 例：lt --subdomain tianzhihui --host https://lt.intares.live --port 4200 --token j9WxPMien93WGePhotbzUhYKfRHWTC69
 
+2022.4.4
+-韬哥，进入会话和进入他人会话的按钮在什么时候出现啊？最近好久没看见了
+
+-新的访客时 可以 接入会话
+别的客服对应中的访客时 可以接入他人会话
+对应的字段是 chat room 里面的 users
+你修改这个数据就可以了
+
+2022.4.7
+客服系统添加了web浏览器中新消息通知功能，也部署到了test环境，你们可以多测测
+另外工程 README.md 更新了一版，开发上有些修改，你们看一下，是关于本地开发环境可以 https 访问客服系统web端的
+

@@ -209,3 +209,139 @@ parseInt方法是用于将字符串转为数字的方法。 接受两个参数�
 
 2022.4.2
 二维码 QR码 本质是什么？
+
+2022.4.4
+@ViewChild('materialForm', { static: false }) materialForm!: NgForm;
+@ViewChild怎么用？
+
+2022.4.5
+markAsDirty()，updateValueAndValidity()
+表单是我们实际生活中经常用到的一个功能，在填写表单的过程中，不乏有很多输入框的限制及校验，我们可以根据自己的需求自定义校验器，
+这里没有详细展开。还有在验证部分涉及到的方法也没有详细的说明，但是项目中有所涉及。
+如markAsDirty()是将表单控件值标记为已改变、markAsPristine()是将表单控件值标记为未改变，这个方法主要用在表单重置时、
+updateValueAndValidity()是重新计算表单控件的值和验证状态等。
+
+-未读消息数实时更新，test环境可以，本地环境不可以，这是代码还是环境的原因啊？
+-本地不可以的话可以查查原因
+
+对于表单页面，首次进入希望不提示错误，只有当用户修改控件内容或焦点离开时再验证，如果不合法显示错误内容。这是正常的做法。但是，如果用户进入界面后什么都不做，直接点击提交按钮，此时需要将所有控件的错误都显示处理。
+此文章介绍angualr的实现方式；
+
+<<angular表单提交处理>>
+
+首次进入
+angular的表单控制基类AbstractControl中提供了丰富的状态字段，我们只需要其中3个状态（其他可以自行查看API文档）
+
+valid：是否合法
+dirty：是否是否被修改过
+touched：是否获得过焦点
+通过这3个状态可以方便实现首次进入不显示错误
+if (!control.valid && (control.dirty || control.touched) ) {
+    // 显示错误内容
+}
+或者直接在界面上判断
+
+<div *ngIf="!control.valid && (control.dirty || control.touched)">
+    <div *ngIf="control.hasError('required')">代码必填</div>
+</div>
+提交
+提交时，需要通过代码修改所有form控制器的状态为dirty（或者touched），这样是为了防止用户没有编辑而直接点击提交也能显示出控件错误。
+form控制器基类AbstractControl提供了markAsDirty方法
+
+markAsDirty(opts?: {
+       onlySelf?: boolean;
+   }): void;
+通过此方法我们可以方便设置控制器的状态
+
+control.markAsDirty();
+但是markAsDirty方法仅会修改当前控制器和父控制器（递归父控制器，直到parent为空）的状态，并不会修改子控制器的状态，源码如下：
+
+markAsDirty(opts: {onlySelf?: boolean} = {}): void {
+  (this as{pristine: boolean}).pristine = false;
+
+  if (this._parent && !opts.onlySelf) {
+    this._parent.markAsDirty(opts);
+  }
+}
+因此提交时我们需要从Form的根控制器遍历设置子控制器的状态
+
+  private submit(): void {
+    if (!this.validateForm.valid) {
+      this.markAsDirtyDeep(this.validateForm);
+      return;
+    }
+    //submit
+  }
+
+  public markAsDirtyDeep(control: AbstractControl): void {
+    if (!control) return;
+
+    control.markAsDirty();
+
+    if (control.hasOwnProperty('controls')) {
+      let ctrl = <any>control;
+      for (let inner in ctrl.controls) {
+        this.markAsDirtyDeep(ctrl.controls[inner]);
+      }
+    }
+  }
+}
+个人更喜欢下面的写法
+
+  private submit(): void {
+    if (!this.validateForm.valid) {
+      this.markAsDirtyDeep(this.validateForm);
+      return;
+    }
+    //submit
+  }
+
+  public markAsDirtyDeep(control: AbstractControl): void {
+    if (!control) return;
+
+    control.markAsDirty();
+
+    if (control instanceof FormGroup) {
+      const ctl = <FormGroup>control;
+      for (let inner in ctl.controls) {
+        this.markAsDirtyDeep(ctl.get(inner));
+      }
+    } else if (control instanceof FormArray) {
+      const ctl = <FormArray>control;
+      for (let inner in ctl.controls)
+        this.markAsDirtyDeep(ctl.get(inner));
+    }
+  }
+}
+参考：
+1、https://github.com/angular/angular/issues/12281
+2、https://github.com/angular/angular/issues/11774
+
+2022.4.6
+Web 实时推送技术的总结
+https://zhuanlan.zhihu.com/p/59931428
+https://blog.csdn.net/u010297957/article/details/60878821
+
+1.什么是websocket
+WebSocket是一种全新的协议，随着HTML5草案的不断完善，越来越多的现代浏览器开始全面支持WebSocket技术了，它将TCP的Socket（套接字）应用在了webpage上，从而使通信双方建立起一个保持在活动状态连接通道。
+
+一旦Web服务器与客户端之间建立起WebSocket协议的通信连接，之后所有的通信都依靠这个专用协议进行。通信过程中可互相发送JSON、XML、HTML或图片等任意格式的数据。由于是建立在HTTP基础上的协议，因此连接的发起方仍是客户端，而一旦确立WebSocket通信连接，不论服务器还是客户端，任意一方都可直接向对方发送报文。
+
+初次接触 WebSocket 的人，都会问同样的问题：我们已经有了 HTTP 协议，为什么还需要另一个协议？
+
+2.HTTP的局限性
+HTTP是半双工协议，也就是说，在同一时刻数据只能单向流动，客户端向服务器发送请求(单向的)，然后服务器响应请求(单向的)。
+服务器不能主动推送数据给浏览器。这就会导致一些高级功能难以实现，诸如聊天室场景就没法实现。
+3.WebSocket的特点
+支持双向通信，实时性更强
+可以发送文本，也可以发送二进制数据
+减少通信量：只要建立起WebSocket连接，就希望一直保持连接状态。和HTTP相比，不但每次连接时的总开销减少，而且由于WebSocket的首部信息很小，通信量也相应减少了
+
+2022.4.7
+今天也是继续学习websocket的一天
+另外，nx.dev + pnpm 了解一下
+
+改了COS设定就不能上传图片是什么原理？
+
+
+
