@@ -1,0 +1,16 @@
+开源许可协议 Open Source Lisence
+
+常见的5种
+ GPL : 具有传染性的一种开源协议，不允许修改后和衍生的代码作为闭源的商业软件发布和销售。例如Linux
+
+
+ 
+ MIT : 限制最少的协议，唯一条件是:在修改后的代码或发行包中，必须包含原作者的许可信息。例如 jQuery，Node.js
+ 
+
+ BSD
+
+ Apache Licence 2.0
+
+ LGPL
+

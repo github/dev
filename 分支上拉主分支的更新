@@ -1,0 +1,8 @@
+你如果要拉主分支的代码到321，需要
+1.git pull
+2.git merge origin/master
+
+有冲突的话解决冲突
+然后commit
+
+然后在bitbucket上创建pr

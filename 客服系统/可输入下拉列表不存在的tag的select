@@ -1,0 +1,88 @@
+html:
+guest.component.ts
+    <!-- タグ -->
+    <nz-form-item>
+      <nz-form-label [nzXl]="3" [nzMd]="6" [nzXs]="24">{{ i18n.page.guest.tags }}</nz-form-label>
+      <nz-form-control [nzXl]="6" [nzMd]="6" [nzXs]="24">
+        <nz-select
+          nzAllowClear
+          nzMode="multiple"
+          [nzPlaceHolder]="'タグを選択してください'"
+          (ngModelChange)="onTagChange($event)"
+          formControlName="selectedTags"
+        >
+          <nz-option *ngFor="let tag of tagsOptions" [nzValue]="tag" [nzLabel]="tag"> </nz-option>
+        </nz-select>
+      </nz-form-control>
+    </nz-form-item>
+
+edit-component.ts
+    <!-- タグ -->
+    <nz-form-item>
+      <nz-form-label [nzXl]="3" [nzMd]="6" [nzXs]="24">{{ i18n.page.guest.tags }}</nz-form-label>
+      <nz-form-control [nzSm]="6" [nzXs]="24">
+        <nz-select
+          nzMode="tags"
+          [nzMaxTagCount]="8"
+          [nzPlaceHolder]="'タグを選択してください'"
+          [ngModel]="selectedTags"
+          (ngModelChange)="onTagChange($event)"
+          name="tags"
+        >
+          <nz-option *ngFor="let tag of tagOptionsDistinct" [nzLabel]="tag" [nzValue]="tag"></nz-option>
+        </nz-select>
+      </nz-form-control>
+    </nz-form-item>
+
+ts:
+
+selectedTags?: string[] = [];
+
+  // tag入力
+  onTagChange(tags: string[]) {
+    const newTags: string[] = [];
+    for (const tag of tags) {
+      if (tag.trim()) {
+        newTags.push(tag);
+      }
+    }
+    this.selectedTags = newTags;
+  }
+
+另外还要注意，如果是编辑页面的话，页面初始化的时候把db取的tags赋给selectedTags，然后把newTags赋给selectedTags，
+最后在插入db前把selectedTags赋给要插入db的tags。如下:
+
+页面初始化的时候把db取的tags赋给selectedTags:
+  async initGuestData() {
+    if (this.guestData) {
+      const getByIdResponse: any = await this.guestService.getGuestById(this.id).toPromise();
+      if (getByIdResponse.status === 200) {
+        this.guestData = getByIdResponse.body;
+        this.selectedTags = this.guestData.tags;
+      }
+    }
+  }
+
+在插入db前把selectedTags赋给要插入db的tags:
+    updateGuest() {
+    const guestData = new GuestData();
+    guestData.name = this.guestData.name;
+    guestData.age = this.guestData.age;
+    guestData.gender = this.guestData.gender;
+    guestData.phone = this.guestData.phone;
+    guestData.mail = this.guestData.mail;
+    guestData.wechatId = this.guestData.wechatId;
+    guestData.tags = this.selectedTags;
+
+    this.guestService.put(this.guestData.id, guestData).subscribe((result) => {
+      this.popupMessage(
+        result,
+        this.languageService.format(this.i18n.common.message.success.edit, {
+          item: this.guestData.id,
+        }),
+        this.languageService.format(this.i18n.common.message.error.edit, {
+          item: this.guestData.id,
+        })
+      );
+    });
+  }

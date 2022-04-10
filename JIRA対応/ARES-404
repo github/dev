@@ -1,0 +1,189 @@
+https://jira.teamx.tokyo/browse/ARES-404
+
+tsconfig添加内容:
+"strictNullChecks": true,
+"strictPropertyInitialization": true
+
+1.serverless-authenticate
+2.serverless-content
+3.serverless-elcom-middleware
+4.serverless-id-generator
+5.serverless-live
+6.serverless-management------王幽
+
+1.serverless-common
+2.serverless-notification
+3.serverless-notification-middleware
+4.serverless-questionnaire
+5.serverless-restaurant
+6.serverless-smaregi-middleware
+7.serverless-smaregi-order-middleware-----冮强
+
+1.serverless-payment
+2.serverless-smaregi-product-middleware
+3.serverless-stamp-rally
+4.serverless-takeout
+5.serverless-ticket
+6.serverless-util----何晋
+
+切到404，git pull
+
+修改tsconfig.ts以后，执行yarn serverless:content:build
+
+git push前要git pull
+
+null和undefined的区别:
+https://juejin.cn/post/6844903777506426893
+https://www.ruanyifeng.com/blog/2014/03/undefined-vs-null.html
+https://zhuanlan.zhihu.com/p/50058862 超哥发的
+https://www.zhihu.com/question/56841737 超哥发的
+
+严格不相等 (!==)
+
+x !== y
+!(x === y)
+
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_inequality
+
+环境变量设置参照例子:
+saslEnable: process.env.KAFKA_SASL_ENABLE
+        ? commonConfig.toBoolean(process.env.KAFKA_SASL_ENABLE)
+        : false || false,
+
+filter()
+检测数值元素，并返回符合条件所有元素的数组。
+function isBigEnough(element, index, array) { 
+   return (element >= 10); 
+} 
+          
+var passed = [12, 5, 8, 130, 44].filter(isBigEnough); 
+console.log("Test Value : " + passed ); // 12,130,44
+
+
+声明文件或模块的语法格式如下：
+declare module Module_Name {
+}
+https://www.runoob.com/typescript/ts-ambient.html
+
+
+Truthy（真值）
+https://developer.mozilla.org/zh-CN/docs/Glossary/Truthy
+Falsy
+https://developer.mozilla.org/zh-CN/docs/Glossary/Falsy
+
+可选链操作符
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining
+req?.abc
+req!.abc
+
+编译成功但还需要确认和修改的文件:
+
+serverless-content:
+
+1.content.service.ts
+L131 换行问题
+2.条件判断加在&&后面是否有问题
+
+service-live:
+1.
+
+
+serverless-authenticate
+.entity 确认
+
+
+単体テスト
+content:
+
+后台:
+1. yarn   -- 下载第三方包
+2. yarn bootstrap  -- 编译共通包
+3. yarn serverless:authenticate:dev     启动本地认证服务
+4. yarn serverless:management:dev       启动本地管理服务
+5. yarn serverless:content:dev       启动你们测试的服务      
+6. yarn web:all-submodule:build       编译所有web包
+7. ~/development/bitbucket.teamx.tokyo/ares/packages/web-management/src/environments/environment.development.ts
+   确认地址 保证本地一样
+8. yarn web:management:dev
+
+访问http://wytest.team.x:4200/login
+
+小程序:(前提:先安装taro)
+一.修改ares-taro-content-management/config/development.js
+
+1.
+修改为本地IP，如下:
+BASE_URL: JSON.stringify('http://192.168.99.50:3020'),
+
+2.
+根据需要修改小程序id，如下:
+const appId = 'wxc6a8a0756c11ac8b';
+
+二.执行命令
+
+1.先跑ares-taro-common-ui
+yarn build:component
+
+2.再跑ares-taro-content-management
+(如果要跑development或者test命令的话，就需要注释掉app.tsx的第159～162行的直播小程序插件的代码)
+所以，注释掉 ares-taro-content-management/src/app.tsx 里面的:
+    // 'live-player-plugin': {
+      //   version: '1.3.0',
+      //   provider: 'wx2b03c6e691cd7370'
+      // }
+然后执行 yarn build:weapp:development
+
+三.打开微信开发者工具，登录，导入ares-taro-content-management，点编译按钮，画面正常显示
+
+
+※超哥：
+编译的环境是默认使用development命令
+这里我描述不准确
+平时我们说test环境都是认为是云端的测试环境
+这个测试环境是由yarn build:weapp:test类似这样的命令来编译出来的
+"build:weapp:development": "cross-env BUILD_CONFIG=development CHANNEL=wechat npx taro build --type weapp",
+比如这个命令就是用来指定编译 /config/development.js这个配置文件的
+https://bitbucket.teamx.tokyo/projects/ARES-CONTENT-MANAGEMENT/repos/ares-taro-content-management/browse/config/development.js
+
+
+超哥review我的404上改的代码，提出以下指摘:
+
+https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/serverless-content/src/entities/content.entity.ts?at=refs/heads/feature/ARES-404#265
+这个是必须字段 漏了@IsNotEmpty()
+https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/serverless-content/src/entities/page.entity.ts?at=feature/ARES-404#48,78,82
+https://bitbucket.teamx.tokyo/projects/ARES/repos/ares/browse/packages/serverless-content/src/modules/miniprogram/services/theme.service.ts?at=refs/heads/feature/ARES-404#14
+像这种返回值有空值的 前台接收后使用的时候需要添加空判断，否则容易出问题
+重新建一个新的tenant，从空白开始随便跑两下，没问题就差不多了
+
+ares-taro-content-management/config/index.js:
+
+outputRoot: 'dist', 编译到dist文件夹
+
+Q:outputRoot: dist/${process.env.TARO_ENV},
+直播为什么不是dist呢，这个可以随意设定吗
+
+A:这个就是内容管理当初没有规范好的原因
+正确的做法就是应该像直播这样 不同端的编译文件分开放，
+比如：微信小程序放在 dist/weapp下，h5放在 dist/h5下，
+outputRoot: dist/${process.env.TARO_ENV}, 这里就是在设置编译后的文件放在哪里，这里面的 process.env.TARO_ENV 是从你的命令中取出来的
+https://bitbucket.teamx.tokyo/projects/ARES-CONTENT-MANAGEMENT/repos/ares-taro-content-management/browse/package.json#13
+
+    "build:weapp:development": "cross-env BUILD_CONFIG=development CHANNEL=wechat npx taro build --type weapp",
+
+这里最后的 --type weapp 就是这个process.env.TARO_ENV的值
+也可以随意设定，只要你能找到编译后的文件路径
+
+Q:这里最后的 --type weapp 就是这个process.env.TARO_ENV的值.这个属于哪一块的知识？
+
+A:就是一个命令用法 跟环境相关的
+幽姐用过shell吗
+或者也可以理解为方法的参数
+外面调用方法的时候传入参数值，这个参数的key是--type，对应的值是 weapp，这个方法拿到之后会把这个值设到一个变量里面
+然后其他地方要获取这个weapp，就通过 process.env.TARO_ENV 这种方式
+
+http://taro-docs.jd.com/taro/docs/GETTING-STARTED/#%E7%BC%96%E8%AF%91%E8%BF%90%E8%A1%8C
+在这里有说明
+
+pull request以后如果有冲突，解决冲突:
+git pull origin development
+选一个保留的版本

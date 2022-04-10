@@ -1,0 +1,23 @@
+Q1:一个功能，不知道哪部分是ts实现的，哪部分是框架实现的。
+
+Q2:async await 写的程序，如果不要这两个关键字，也是先执行跟在await关键字后面的那句，再执行下一句啊，那么要await干吗
+
+Q3:要继承父类的话需要关键字super，但是如果是不需要传参数的类的话，super里写什么？
+A3:如果父类中含有无参构造方法，子类构造方法会隐式调用了一句super()，因此对于无参构造函数，super()可写，可不写
+   参照https://www.cnblogs.com/alsf/p/9286821.html
+   但是自己实际调试的时候，发现不写不行。
+   
+Q4:原型链上面的属性会被多个实例共享，构造函数不会。什么例子可以说明这个呢？
+
+
+Q5:controller里面定义了4个API，但是只注入了1个service，只能调用这1个service的方法。怎么才能满足一个api调用一个方法？
+我觉得可能是，service里面可以定义4个方法，然后每个API可以调用相应的1个方法。对的，确实就是这样。
+
+Q6:controller获取的前台传值，怎么送到service里去？
+通过调用service里面的函数时传入，比如getInfo(id).
+
+Q7:分包是什么意思哦，没搞清楚，上回淳哥讲了没听懂common到底改了什么
+
+A7:以前 restful api 和 认证 和 token ，以及 权限、mqtt、kafka这些都是杂揉在serverless-common一个module里面的，，觉得有点臃肿了 因为serverless-takeout是graphql 所以需要按需引入 这样能减少单个子工程的依赖大小 而不是所有的都引入进来 因为有些用不着
+包括payment也是 有些只有微信 有些只有line和h5 如果全部把paymentModule引入进来了 就是相当于不管你用不用微信、line、h5 都会全部引入进来 实际上我们可能只用到其中一个 这就造成浪费了
+另一个就是 graphqlModule和restfulModule 这两个 这是两种完全不同的api需要的module 如果同时引入的话有些地方需要特别设置一下 所以还是分开比较好

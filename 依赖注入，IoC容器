@@ -1,0 +1,43 @@
+cats.service.ts
+
+import { Injectable } from '@nestjs/common';
+import { Cat } from './interfaces/cat.interface';
+
+@Injectable() //First, we define a provider. The @Injectable() decorator marks the CatsService class as a provider.
+//the @Injectable() decorator declares the CatsService class as a class that can be managed by the Nest IoC container.
+export class CatsService {
+  private readonly cats: Cat[] = [];
+
+  findAll(): Cat[] {
+    return this.cats;
+  }
+}
+
+cats.controller.ts
+
+import { Controller, Get } from '@nestjs/common';
+import { CatsService } from './cats.service';
+import { Cat } from './interfaces/cat.interface';
+
+@Controller('cats')
+export class CatsController {
+  constructor(private catsService: CatsService) {} //Then we request that Nest inject the provider into our controller class
+  //CatsController declares a dependency on the CatsService token with constructor injection
+
+  @Get()
+  async findAll(): Promise<Cat[]> {
+    return this.catsService.findAll();
+  }
+}
+
+app.module.tsJS
+
+import { Module } from '@nestjs/common';
+import { CatsController } from './cats/cats.controller';
+import { CatsService } from './cats/cats.service';
+
+@Module({
+  controllers: [CatsController],
+  providers: [CatsService], //Finally, we register the provider with the Nest IoC container
+})
+export class AppModule {}

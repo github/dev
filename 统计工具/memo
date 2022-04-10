@@ -1,0 +1,91 @@
+田哥给的几个参考:
+https://docs.nestjs.cn/8/firststeps
+https://www.npmjs.com/package/nestjs-console
+https://docs.nestjs.com/techniques/mongodb
+https://docs.nestjs.com/fundamentals/lifecycle-events
+
+nestjs初学者适用
+https://zenn.dev/morinokami/articles/nestjs-overview
+
+做统计工具要安装的
+@nestjs/config 
+npm i --save @nestjs/config
+
+@typegoose/typegoose
+npm install --save @typegoose/typegoose # install typegoose itself
+npm install --save mongoose # install peer-dependency mongoose
+
+nestjs-console
+npm install commander@^8.1.0 nestjs-console --save
+
+nestjs-typegoose
+npm install --save nestjs-typegoose
+
+先看mongoose:
+https://mongoosejs.com/docs/index.html
+
+
+再看typegoose:
+https://www.npmjs.com/package/nestjs-typegoose
+
+要安装nest/console的话需要node.js版本在14以上，目前是12.16.1，所以要装一个版本切换工具
+
+切换node版本的工具:
+
+Mac:nodenv
+使用方法:
+https://qiita.com/1000ch/items/41ea7caffe8c42c5211c
+
+Windows:nodist
+使用方法:
+https://qiita.com/satoyan419/items/56e0b5f35912b9374305
+下载exe:
+https://github.com/nullivex/nodist/releases
+
+
+nodist -v
+0.9.1
+
+0.9.1と表示されました。これでnodistのインストールが完了しました。
+
+インストール可能なNode.jsのバージョンの一覧を表示します。
+nodist dist
+
+以下のようにNode.jsのバージョンが表示されます。
+PS C:\project\ticket-count> nodist dist
+  0.1.14
+  0.1.15
+  0.1.16
+  0.1.17
+  0.1.18
+  ...
+  16.9.0
+  16.9.1
+  16.10.0
+  16.11.0
+  16.11.1
+  16.12.0
+  16.13.0
+  17.0.0
+  17.0.1
+
+  ここでは12.17.0のNode.jsをインストールします。
+  nodist + 12.17.0
+
+  次に、使用するNode.jsのバージョンを指定します。
+  nodist 12.17.0
+
+  確認のために、Node.jsのバージョンを確認してみます。
+  node -v
+  ちゃんとv12.17.0と表示されればOKです。
+
+后来才知道Windows也可以用nodenv，环境变量设置在属性的高级设置里,但是要装虚拟机WSL，还要装Ubuntu，
+太麻烦了，放弃了。就用nvm切换node。
+
+然后做法改变了，用独立应用来做:
+https://docs.nestjs.cn/8/standalone-applications
+
+
+HTTP module
+npm i --save @nestjs/axios
+

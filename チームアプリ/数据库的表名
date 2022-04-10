@@ -1,0 +1,6 @@
+content_consumer
+
+consumer表是用户表,content是项目名称
+在数据库中的表的命名格式:项目_表名,比如表:live(项目)_live_instance(表名)
+live_live_instance表,表示live项目的liveInstance实体的表,即直播票实体的表
+

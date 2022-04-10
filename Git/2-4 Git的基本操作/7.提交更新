@@ -1,0 +1,3 @@
+git commit -m "新建了index.html文件"
+
+这样，状态就从staged转到unmodified

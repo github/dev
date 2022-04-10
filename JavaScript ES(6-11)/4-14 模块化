@@ -1,0 +1,35 @@
+require(['math'], function (math) {
+　　　　math.add(2, 3); //用回调函数，math.add()与math模块加载不是同步的，浏览器不会发生假死。
+　　});
+
+import {People, a as aa, b, obj, sum} from './module'
+
+console.log(aa)
+console.log(b)
+console.log(sum(2,5))
+console.log(obj)
+let p = new People('xiecheng')
+p.showName()
+
+
+// const a=2
+// const b='imooc'
+// const sum = (x,y) => x+y
+// const obj = {
+//     name:'es'
+// }
+// class People{
+//     constructor(name){
+//         this.name = name
+//     }
+//     showName(){
+//         console.log(this.name)
+//     }
+// }
+
+// export {a,
+//     b,
+//     sum,
+//     obj,
+//     People
+// }

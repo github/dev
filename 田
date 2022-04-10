@@ -1,0 +1,5 @@
+$push的用法
+
+await this.consumerModel
+        .findByIdAndUpdate(consumerId, { $push: { favorites: contentId } }, { upsert: true })
+        .exec();

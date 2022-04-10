@@ -1,0 +1,70 @@
+NPM:Node Package Manager
+查看版本:npm -v
+
+NRM:npm registry manager
+安装:
+    Windows:npm install -g nrm
+    Mac:sudo npm install -g nrm
+作用:
+    NRM是NPM镜像源的管理工具，可以通过NRM在NPM源之间进行切换，找到当前最快的源进行安装
+
+PS C:\project\sample> nrm ls
+
+  npm ---------- https://registry.npmjs.org/
+  yarn --------- https://registry.yarnpkg.com/
+  tencent ------ https://mirrors.cloud.tencent.com/npm/
+  cnpm --------- https://r.cnpmjs.org/
+  taobao ------- https://registry.npmmirror.com/
+  npmMirror ---- https://skimdb.npmjs.com/registry/
+
+PS C:\project\sample> nrm test
+
+* npm ------ 666ms
+  yarn ----- 1164ms
+  tencent -- 2027ms
+  cnpm ----- 547ms
+  taobao --- 815ms
+  npmMirror - 2288ms
+
+PS C:\project\sample> nrm test npm
+
+* npm ------ 89ms
+
+PS C:\project\sample> nrm test yarn
+
+  yarn ----- 694ms
+
+PS C:\project\sample> nrm test taobao
+
+  taobao --- 526ms
+
+PS C:\project\sample> nrm use npm
+
+
+   Registry has been set to: https://registry.npmjs.org/
+
+PS C:\project\sample> nrm use yarn
+
+
+   Registry has been set to: https://registry.yarnpkg.com/
+
+构建开发环境
+1.npm install -g imooc-es-cli 安装imooc-es-cli包
+
+2.imooc-es-cli -h 查看当前命令包括哪些可以使用的命令
+
+3.imooc-es-cli init 初始化
+? Project name: es-demo
+New project has been initialized successfully!
+
+4.npm install 安装项目所依赖的包
+
+5.npm run start 启动项目
+
+6.访问localhost:8080
+
+
+
+
+
+

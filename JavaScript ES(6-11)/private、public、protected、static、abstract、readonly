@@ -1,0 +1,10 @@
+https://blog.csdn.net/lucky541788/article/details/107793816?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EOPENSEARCH%7Edefault-1.no_search_link&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EOPENSEARCH%7Edefault-1.no_search_link
+
+字段名	    范围
+private	    类内部
+public	   （默认）类内部和外部、及其子类都可访问
+protected	类内部和其子类（区别与public，即当前类实例化不可访问）
+static	    存在于类本身而不是类的实例上
+abstract	定义抽象类和在抽象类内部定义抽象方法，做为其它派生类的基类使用，一般不会直接被实例化
+readonly	只读属性
+————————————————

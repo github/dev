@@ -1,0 +1,42 @@
+Promise.resolve()
+
+Promise.reject()
+
+Promise.all()
+场景:
+想上传几张图片到服务器，每次只能上传一张图片。等几张图片都上传完成后，给用户一个提示。
+而图片什么时候上传完，我们是不知道的。因为这跟当前网络情况、图片大小、服务器响应时间都有关系。
+
+Promise.all()的参数是一个数组
+Promise.all([p1,p2,p3]) 数组的每一个元素都是一个promise对象
+Promise.all([p1,p2,p3]).then(res=>console.log(res),err=>console.log(err)) 当p1,p2,p3都执行完成后才执行then，res是p1,p2,p3分别返回的值组成的数组
+
+Promise.race()
+场景:
+希望给图片设置2s的加载超时时间，如果2s内不成功，显示超时
+
+function getImage(){
+    return new Promise((resolve,reject)=>{
+        let img = new Image()
+        img.onload = function(){
+        //图片加载操作
+        resolve(img)
+        }
+        img.src = 'http://www.imooc.com/static/img/index/logo.png'
+        
+    })
+    
+}
+
+function timeOut(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            reject('图片加载失败')
+        },2000)
+
+    })
+}
+
+Promise.race([getImage(),timeOut()])
+.then(res=>console.log(res))
+.catch(err=>console.log(err))

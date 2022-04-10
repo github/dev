@@ -1,0 +1,157 @@
+//五.方法装饰器
+    //它会被应用到方法的属性描述符上，可以用来监视，修改或者替换方法定义。
+    //方法装饰会在运行时传入下列3个参数:
+    //1.对于静态成员来说是类的构造函数，对于实例成员来说是类的原型对象。
+    //2.成员的名字。
+    //3.成员的属性描述符。
+
+//1.替换成有参数的方法(替换前是无参数方法)
+
+function logMethod(params:any){
+return function (target:any,methodName:any,describe:any){
+    console.log(target);
+    console.log(methodName);
+    console.log(describe.value);   //浏览器控制台输出:ƒ () {console.log('我是getData里面的方法');也就是被替换前的getData方法}
+
+    //替换装饰器的方法，把装饰器方法里面传入的所有参数改为string类型
+    //1.保存当前方法
+    var method = describe.value;
+    //2.替换当前方法
+    describe.value = function (...args:any[]) {　//★★★★★
+        args = args.map((value)=>{
+            return String(value);
+        })
+        console.log(args);       //浏览器控制台输出:['123', 'abc']。也就是被替换后的getData方法，传参后返回的新结果:
+                                 //含有两个字符串元素的数组。
+      }
+    }
+}
+
+ class HttpClient{
+     public apiUrl: string | undefined;
+     constructor(){
+     }
+     @logMethod('https://www.taobao.com')
+     getData(){
+        console.log('我是getData里面的方法');
+     }
+ }
+var http = new HttpClient();
+http.getData(123,'abc');
+
+//2.替换成其他的无参数的方法(替换前就是无参数方法)
+
+function logMethod(params:any){
+    return function (target:any,methodName:any,describe:any){
+        console.log(target);
+        console.log(methodName);
+        console.log(describe);         //{writable: true, enumerable: true, configurable: true, value: ƒ}
+                                       //configurable: true
+                                       //enumerable: true
+                                       //value: ƒ ()
+                                       //arguments: (...)
+                                       //caller: (...)
+                                       //length: 0
+                                       //name: ""
+                                       //prototype: {constructor: ƒ}
+                                       //[[FunctionLocation]]: index.js:18
+                                       //[[Prototype]]: ƒ ()
+                                       //[[Scopes]]: Scopes[1]
+                                       //writable: true
+                                       //[[Prototype]]: Object
+        console.log(describe.value);   //浏览器控制台输出:ƒ () {console.log('我是getData里面的方法');也就是被替换前的getData方法}
+    
+        //替换装饰器的方法，把装饰器方法里面传入的所有参数改为string类型
+        //1.保存当前方法
+        var method = describe.value;
+        //2.替换当前方法
+        describe.value = function ( ) {
+            console.log('我是修改后的getData里面的方法')；
+          }
+        }
+    }
+    
+     class HttpClient{
+         public apiUrl: string | undefined;
+         constructor(){
+         }
+         @logMethod('https://www.taobao.com')
+         getData(){
+            console.log('我是getData里面的方法');
+         }
+     }
+    var http = new HttpClient();
+    http.getData();
+
+//3.在保留原来方法的基础上，增加方法
+
+function logMethod(params:any){
+return function (target:any,methodName:any,describe:any){
+    console.log(target);
+    console.log(methodName);
+    console.log(describe.value);   //浏览器控制台输出:ƒ () {console.log('我是getData里面的方法');也就是被替换前的getData方法}
+
+    var method = describe.value;
+    describe.value = function (...args:any[]) {
+        args = args.map((value)=>{
+            return String(value);
+        })
+        console.log(args);       //浏览器控制台输出:['123', 'abc']。也就是被替换后的getData方法，传参后返回的新结果:
+                                 //含有两个字符串元素的数组。
+        method.apply(this,...args); //★★★★★增加方法的关键:对象冒充
+        //关于apply()的理解参照 http://blog.sina.com.cn/s/blog_76896ed90101l0wx.html
+      }
+    }
+}
+
+ class HttpClient{
+     public apiUrl: string | undefined;
+     constructor(){
+     }
+     @logMethod('https://www.taobao.com')
+     getData(){
+        console.log('我是getData里面的方法');
+     }
+ }
+var http = new HttpClient();
+http.getData(123,'abc');   //这样就不仅打印出装饰器增加的方法运行后的['123', 'abc'](console.log(args);输出的)，
+//也打印出本身方法里的'我是getData里面的方法'(console.log('我是getData里面的方法');输出的)
+
+//而同时，getData()也能接收...args:any[],如下:
+
+     @logMethod('https://www.taobao.com')
+     getData(...args:any[]){
+        console.log(args); //输出['123', 'abc']
+        console.log('我是getData里面的方法'); //输出我是getData里面的方法
+     }
+
+//六.方法参数装饰器(使用不多)
+//它能为类的原型增加一些元素数据
+
+function logParams(params:any){
+    return function (target:any,methodName:any,paramsIndex:any){
+        console.log(params);
+        console.log(target);
+        console.log(methodName);
+        console.log(paramsIndex);   //uuid的索引是0，所以这里打印0.后面参数的索引值依次1234。
+        target.apiurl = params;
+        }
+    }
+    
+     class HttpClient{
+         public apiUrl: string | undefined;
+         constructor(){
+         }
+         getData(@logParams('zzz')uuid:any){
+           console.log(uuid);
+         }
+     }
+    var http = new HttpClient();
+    http.getData(123456);
+    console.log(http.apiurl);
+
+
+//装饰器的执行顺序
+属性2 → 属性1 → 方法2 → 方法1 → 参数2 → 参数1 → 类2 → 类1
+
+也就是说，同样的装饰器的话，先执行后面的。

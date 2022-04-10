@@ -1,0 +1,32 @@
+  public async findTags(ids: string[] = []) {
+    console.log('6', ids);
+    const tagsDb = await this.guestModel
+      .aggregate()
+      .unwind('tags')
+      .project({
+        _id: 0,
+        inputValue: '$tags',
+      })
+     .group({ _id: '$inputValue' });
+    const tags = [];
+    tagsDb.map((item) => {
+      tags.push(item._id);
+    });
+    return tags;
+  }
+
+  public async findTags() {
+    const tagsDb = await this.guestModel
+      .aggregate()
+      .unwind('tags')
+      .project({
+        _id: 0,
+        inputValue: '$tags',
+      })
+      .group({ _id: '$inputValue' });
+    const tags = [];
+    tagsDb.map((item) => {
+      tags.push(item._id);
+    });
+    return tags;
+  }

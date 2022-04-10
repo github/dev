@@ -1,0 +1,7 @@
+function getData(value:any):any{
+    return value;
+}
+let value;
+console.log(value);
+console.log(getData('123')); //分别输出:undefined和123
+

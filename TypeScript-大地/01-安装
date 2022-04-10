@@ -1,0 +1,30 @@
+一.安装包管理器并安装typescript
+
+在使用npm命令前必须先安装nodejs(nodejs自带npm包管理器)
+npm install -g typescript
+
+在使用cnpm命令前必须先安装cnpm
+cnpm install -g typescript
+
+在使用cnpm命令前必须先安装yarn
+yarn global add typescript
+
+二.生成配置文件tsconfig.json
+
+先用tsc --init命令，生成配置文件tsconfig.json
+
+然后，tsconfig.json生成后
+1.设置"outDir": "./js",  /* Redirect output structure to the directory. */
+2.设置"experimentalDecorators": true,              /* Enables experimental support for ES7 decorators. */
+3.设置"emitDecoratorMetadata": true,               /* Enables experimental support for emitting type metadata for decorators. */
+
+三.配置自动编译.ts文件
+
+终端Terminal → 运行任务Run Task → typescript → tsc:监视 watch - tsconfig.json
+
+自动监视.ts文件的改变，然后自动生成相应的.js文件
+
+按照"outDir": "./js的设置，.js文件将在当前目录的js文件夹里生成
+
+
+

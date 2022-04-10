@@ -1,0 +1,12 @@
+那就是还没有把前后台打通嘛
+就是要把前后台都跑起来 在Angular里面调用后台的api 这样才会看到
+https://bitbucket.teamx.tokyo/projects/TEST/repos/dc-test-lerna/browse/packages/web-chat/src/lib/services/restful.service.ts?at=refs/heads/feature/about-interceptor
+参考这个用法 照着这个service改一下 改成适合你的代码就可以了
+主要是利用HttpClient 这个工具来调用后台api 实现前后台通信
+https://bitbucket.teamx.tokyo/projects/TEST/repos/dc-test-lerna/browse/packages/serverless-chat/src/main.ts?at=refs/heads/feature/about-interceptor#6-9
+另外就是这个地方也需要设置 这个的作用是允许跨域访问后台
+如果这里没有设置的话 前台通过http访问时候会报错 说啥子Aceess-controller-origin 不允许之类的错
+
+使用HTTP与后端服务通信
+https://angular.cn/guide/http
+ 

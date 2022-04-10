@@ -1,0 +1,95 @@
+2022.4.7
+
+在development上改的代码，需要push到INQUIRY-4上去
+
+先进行了如下操作，没起作用
+wang.you@NW20210012 MINGW64 /c/project/inquiry/inquiry (development)
+$ git push origin origin/INQUIRY-4
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create pull request for refs/remotes/origin/INQUIRY-4:
+remote:   https://bitbucket.teamx.tokyo/projects/INQUIRY/repos/inquiry/pull-requests?create&sourceBranch=refs/remotes/origin/INQUIRY-4
+remote:
+To https://bitbucket.teamx.tokyo/scm/inquiry/inquiry.git
+ * [new reference]   origin/INQUIRY-4 -> origin/INQUIRY-4
+
+
+wang.you@NW20210012 MINGW64 /c/project/inquiry/inquiry (development)
+$ git push origin origin/development:origin/INQUIRY-4
+Everything up-to-date
+
+然后田哥来一通操作搞定，以下是记录:
+
+PS C:\project\inquiry\inquiry> git status
+On branch development
+Your branch is ahead of 'origin/development' by 2 commits.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+PS C:\project\inquiry\inquiry> git push origin origin/INQUIRY-4
+Everything up-to-date
+PS C:\project\inquiry\inquiry> git pull
+Already up to date.
+Switched to a new branch 'INQUIRY-4'
+Branch 'INQUIRY-4' set up to track remote branch 'INQUIRY-4' from 'origin'.
+PS C:\project\inquiry\inquiry> git status
+On branch INQUIRY-4
+Your branch is up to date with 'origin/INQUIRY-4'.
+
+nothing to commit, working tree clean
+PS C:\project\inquiry\inquiry> git checkout development
+Switched to branch 'development'
+Your branch is ahead of 'origin/development' by 2 commits.
+  (use "git push" to publish your local commits)
+PS C:\project\inquiry\inquiry> git checkout INQUIRY-4
+Switched to branch 'INQUIRY-4'
+Your branch is up to date with 'origin/INQUIRY-4'.
+PS C:\project\inquiry\inquiry> git merge development
+Updating 06c86a9..2eb3473
+Fast-forward
+ apps/web/src/app/app-routing.module.ts             |  11 ++
+ apps/web/src/app/app.module.ts                     |   2 +
+ apps/web/src/app/i18n/en.ts                        |   1 +
+ apps/web/src/app/i18n/ja.ts                        |   1 +
+ apps/web/src/app/i18n/zh.ts                        |   1 +
+ apps/web/src/app/pages/frame/frame.component.html  |  13 ++
+ apps/web/src/app/pages/frame/frame.component.ts    |   2 +
+ .../update-profile/update-profile.component.html   |  58 +++++++++
+ .../update-profile/update-profile.component.scss   |   0
+ .../update-profile/update-profile.component.ts     | 137 +++++++++++++++++++++
+ 10 files changed, 226 insertions(+)
+ create mode 100644 apps/web/src/app/pages/update-profile/update-profile.component.html
+ create mode 100644 apps/web/src/app/pages/update-profile/update-profile.component.scss
+ create mode 100644 apps/web/src/app/pages/update-profile/update-profile.component.ts
+PS C:\project\inquiry\inquiry> git status
+On branch INQUIRY-4
+Your branch is ahead of 'origin/INQUIRY-4' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS C:\project\inquiry\inquiry> git push
+Enumerating objects: 50, done.
+Counting objects: 100% (47/47), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (20/20), done.
+Writing objects: 100% (20/20), 3.94 KiB | 1.97 MiB/s, done.
+Total 20 (delta 14), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create pull request for INQUIRY-4:
+remote:   https://bitbucket.teamx.tokyo/projects/INQUIRY/repos/inquiry/pull-requests?create&sourceBranch=refs/heads/INQUIRY-4
+remote:
+To https://bitbucket.teamx.tokyo/scm/inquiry/inquiry.git
+   06c86a9..2eb3473  INQUIRY-4 -> INQUIRY-4
+
+
+2022.4.8
+现在基本实现了，但还有一个问题就是: frame的头像和用户名在更新后没有变化。
+韬哥给出方向，用rxjs来解决，如下:
+你了解过 rxjs 吗？
+rxjs subject
+https://limeii.github.io/2019/07/rxjs-subject/
+
+2022.4.10
+然后自己找到大地老师的rxjs讲解，也可以参考一下
+https://www.bilibili.com/video/BV1bt411e71b?p=11
+
+

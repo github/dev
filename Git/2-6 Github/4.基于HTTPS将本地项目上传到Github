@@ -1,0 +1,18 @@
+1.访问方式选HTTPS
+
+2.使用终端命令创建README.md文档，并写入初始内容为# Project_JavaScript_Practice
+echo "# Project_JavaScript_Practice" >> README.md
+
+3.初始化本地Git仓库，并将文件的修改提交到本地Git仓库中
+在本地项目所在文件夹点鼠标右键，Git Bash
+然后执行 git init 生成隐藏文件夹.git，由此创建本地Git仓库成功
+然后git add README.md (把README.md放入暂存区，即让它staged)
+接下来 git commit -m "first commit" 提交README.md这个修改
+
+4.将本地仓库和远程仓库进行关联，并把远程仓库命名为origin
+git remote add origin https://github.com/uu-python3/Project_JavaScript_Practice.git
+
+5.将本地仓库中的内容推送到远程的origin仓库中
+git push -u origin master(第一次必须写这样的完整命令，以后只需要git push)
+
+刷新Github页面，看到https://github.com/uu-python3/Project_JavaScript_Practice的code已经有本地项目

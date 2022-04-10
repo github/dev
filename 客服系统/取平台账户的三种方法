@@ -1,0 +1,65 @@
+ 方法1:
+ async findAllPlatformAccounts() {
+    const query = this.getPlatformAccountsInquiryQuery();
+    this.platformAccountService.getByQuery(query).subscribe((result: any) => {
+      const platformAccounts: PlatformAccount[] = result.body.docs;
+      const tempPlatformAccounts: {
+        id: string;
+        name: string;
+        avatar: string;
+      }[] = [];
+      const tempPlatformAccountIds: { id: string }[] = [];
+      if (Array.isArray(platformAccounts) && platformAccounts.length > 0) {
+        for (const platformAccount of platformAccounts) {
+          tempPlatformAccounts.push({
+            id: platformAccount.id,
+            name: platformAccount.name,
+            avatar: platformAccount?.avatar || '',
+          });
+          tempPlatformAccountIds.push({ id: platformAccount.id });
+        }
+      }
+      this.platformAccounts = tempPlatformAccounts;
+      this.platformAccountIds = tempPlatformAccountIds;
+      console.log('1', this.platformAccountIds);
+    });
+  }
+
+　方法2:
+async findAllPlatformAccounts() {
+    const query = this.getPlatformAccountsInquiryQuery();
+    const getByQueryResponse: any = await this.platformAccountService.getByQuery(query).toPromise();
+    if (getByQueryResponse.status === 200) {
+      const platformAccounts: PlatformAccount[] = getByQueryResponse.body.docs;
+      const tempPlatformAccounts: {
+        id: string;
+        name: string;
+        avatar: string;
+      }[] = [];
+      const tempPlatformAccountIds: { id: string }[] = [];
+      if (Array.isArray(platformAccounts) && platformAccounts.length > 0) {
+        for (const platformAccount of platformAccounts) {
+          tempPlatformAccounts.push({
+            id: platformAccount.id,
+            name: platformAccount.name,
+            avatar: platformAccount?.avatar || '',
+          });
+          tempPlatformAccountIds.push({ id: platformAccount.id });
+        }
+      }
+      this.platformAccounts = tempPlatformAccounts;
+      this.platformAccountIds = tempPlatformAccountIds;
+      console.log('1', this.platformAccountIds);
+    }
+  }
+
+  方法三：只需要这样简单几步，不需要去遍历再赋值给temp变量
+  async findAllPlatformAccounts() {
+    const query = this.getPlatformAccountsInquiryQuery();
+    const getByQueryResponse: any = await this.platformAccountService.getByQuery(query).toPromise();
+    if (getByQueryResponse.status === 200) {
+      this.platformAccounts = getByQueryResponse.body.docs;
+      this.platformAccountIds = this.platformAccounts.map((platformAccount) => platformAccount.id);
+      console.log('1', this.platformAccountIds);
+    }
+  }

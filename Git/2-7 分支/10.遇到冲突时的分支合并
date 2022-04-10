@@ -1,0 +1,30 @@
+合并时遇到冲突
+
+如果在两个不同的分支中，对同一个文件进行了不同的修改，Git就没法干净地合并它们。
+此时，需要程序员打开这些包含冲突的文件然后手动解决冲突。
+
+比如:
+切到reg分支
+
+login.html
+<h2>我在reg分支修改了这个文件<h2>
+
+commit提交成功
+
+再切到master分支
+login.html
+<h2>我在master分支修改了这个文件<h2>
+
+现在在两个不同的分支中，login.html都被修改并commit提交成功
+
+接下来，希望把reg的代码合并到master分支
+
+git checkout master
+git merge reg
+
+这时就出现了冲突:CONFLICT
+这时需要手动打开冲突的文件，手动解决这个冲突。
+然后,通知Git已解决冲突:
+git add .
+git commit -m "解决了分支合并冲突的问题"
+

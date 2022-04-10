@@ -1,0 +1,16 @@
+https://www.deep-rain.com/programming/javascript/910
+
+function isEmptyKeysLength(obj){
+  return !Object.keys(obj).length;
+}
+
+function isEmptyJSON(obj){
+  return JSON.stringify(obj) === "{}";
+}
+
+function isEmptyForIn(obj){
+  for(let i in obj){
+    return false;
+  }
+  return true;
+}

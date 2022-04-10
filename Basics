@@ -1,0 +1,352 @@
+Basics
+
+培训的事情，准备按下面这个计划走。成都1，2，3 邓超 你们4个人分配一下？
+基础概念
+10/27【刘钊宇】・面向对象
+10/29【邓超】・HTTP原理、RESTful、GraphQL
+11/4【田广】・浏览器渲染原理，【王知】SPA
+11/5【周小康】・MVC、MVVM
+【顾启润】・Angular与Nestjs中的：Controller、Filter、Intercepter、Middleware、Guard
+【赵翔】・Angular与Nestjs中的Module和注入，单例模式
+【付淳】・认证和授权。CORS、跨域。加密算法等
+
+编程
+【田志辉】・await、async、promise、observer、rxjs(常用的map、tap、debounce、flatMap等)
+【张昊宇】・注解，泛型，typescript注意点（any，nullable, type guard）
+【冯文韬】・serverless相关
+预定每周三和周五下午日本时间17：30开始，半个小时
+
+
+是不是你们办公室的运营商和你屋头不一样嘛。有时候系统里头记录了原来的DNS地址以及和它完成过解析的一些地址，用来提高效率。
+但是换DNS之后，有概率DNS解析无法刷新，就把旧的清除掉。严格上来说，只能提高解析效率，连不上WiFi的话，大概率和DNS关系不大。
+如果是打不开网页，那大概率关系很大
+连不上的话，除开硬件原因，实质原因无非三条，要么认证不过；要么地址没下来；要么ARP没起来
+顺带给你说一下其他几个命令
+ipconfig/registerdns，清除掉DNS相关的所有东西，等于重置
+ipconfig/renew，重新获取一个IP
+netsh winsock reset，直接重置所有当前网络配置
+
+
+JSON Parse Online:可以把JSON格式化
+debug:vscode左边第四个
+launch.
+设置断点
+shop-menu.resolver.ts shop-menu.service.ts
+
+nodenv Win 10 安装和使用指南
+
+【node.js】Windowsにnodenvを導入してみる。(前編)
+https://72ko-weblog.site/js/windows-nodenv01/
+
+【node.js】Windowsにnodenvを導入してみる。(後編)
+https://72ko-weblog.site/tool/windows-nodenv02/
+
+node版本切换工具nvm，安装和使用方法
+2021.3找的
+https://juejin.cn/post/6844904025503039496
+
+2021.11找的
+https://juejin.cn/post/7011398696999288839
+
+// 安装nodejs 12.13.0
+nvm install 12.13.0
+// 查看已安装的nodejs
+nvm ls
+// 切换 nodejs
+nvm use 12.13.0
+
+
+nodist のアンインストール方法
+
+設定 ＞ アプリ ＞ Nodist から「アンインストール」します。
+/c/Program Files (x86)/Nodist を削除します。
+/c/Users/（ユーザ名）/.npmrc を削除します。
+/c/Users/（ユーザ名）/AppData/Roaming/npm_cache を削除します。
+
+安装之前的操作
+
+
+请注意： 在安装nvm for windows之前，你需要卸载任何现有版本的node.js。
+并且需要删除现有的nodejs安装目录（例如："C:\Program Files\nodejs’）。
+因为，nvm生成的symlink（符号链接/超链接)不会覆盖现有的（甚至是空的）安装目录。
+你还需要删除现有的npm安装位置（例如“C:\Users\lmq28\AppData\Roaming\npm”），以便正确使用nvm安装位置。
+
+package.jsonのdependenciesとdevDependencies
+https://qiita.com/chihiro/items/ca1529f9b3d016af53ec
+
+
+
+~1.2.3 代表 1.2.3 <= 版本号 < 1.3.0
+
+^1.2.3 代表 1.2.3 <= 版本号 < 2.0.0
+
+null和undefined
+https://juejin.cn/post/6844903777506426893
+
+wang.you@NW20210012 MINGW64 /c/project/ares-mono/ares (feature/ARES-404)
+$ git pull
+remote: Enumerating objects: 446, done.
+remote: Counting objects: 100% (222/222), done.
+remote: Compressing objects: 100% (107/107), done.
+remote: Total 110 (delta 87), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (110/110), 14.11 KiB | 1.41 MiB/s, done.
+Resolving deltas: 100% (87/87), completed with 70 local objects.
+From https://bitbucket.teamx.tokyo/scm/ares/ares
+   4dafb5b1..deade4ea  feature/ARES-404 -> origin/feature/ARES-404
+   5d0bb442..3d62483f  bugfix/ARES-402  -> origin/bugfix/ARES-402
+   56b0fd94..6359caff  bugfix/ARES-403  -> origin/bugfix/ARES-403
+   36b8cb5f..ef732bab  development      -> origin/development
+Updating 4dafb5b1..deade4ea
+Fast-forward
+ packages/serverless-common/src/lib/config.ts       |  18 +--
+ .../serverless-common/src/lib/nestjs/bootstrap.ts  |  11 +-
+ .../src/lib/nestjs/common.module.ts                |   6 +-
+ .../core/decorator/client-real-ip.decorator.ts     |   4 +-
+ .../decorator/mangement-controller.decorator.ts    |   2 +-
+ .../nestjs/core/decorator/shop-code.decorator.ts   |   6 +-
+ .../lib/nestjs/core/decorator/shop-id.decorator.ts |   3 +
+ .../lib/nestjs/core/decorator/shops.decorator.ts   |  62 ++++----
+ .../core/decorator/test-controller.decorator.ts    |   2 +-
+ .../core/entities/active-access-token.entity.ts    |   8 +-
+ .../src/lib/nestjs/core/entities/history.entity.ts |  12 +-
+ .../core/entities/language-setting.entity.ts       |  10 +-
+ .../src/lib/nestjs/core/entities/role.entity.ts    |   4 +-
+ .../src/lib/nestjs/core/entities/shop.entity.ts    |  38 ++---
+ .../src/lib/nestjs/core/entities/token.entity.ts   |  16 +--
+ .../src/lib/nestjs/core/entities/user.entity.ts    |   4 +-
+ .../src/lib/nestjs/core/guards/auth.guard.ts       |  29 ++--
+ .../nestjs/core/mongoose/mongoose.base.entity.ts   |  16 +--
+ .../nestjs/core/mongoose/mongoose.middleware.ts    |   4 +-
+ .../lib/nestjs/core/mongoose/mongoose.module.ts    |   4 +-
+ .../lib/nestjs/core/mongoose/mongoose.service.ts   |   4 +-
+ .../core/mongoose/plugins/bulk-write.plugin.ts     |   2 +-
+ .../nestjs/core/mongoose/plugins/mongoose.query.ts |  22 +--
+ .../core/mongoose/plugins/operator.plugin.ts       |   2 +-
+ .../core/mongoose/plugins/paginate.plugin.ts       |  24 ++--
+ .../src/lib/nestjs/core/services/audit.service.ts  |  10 +-
+ .../src/lib/nestjs/core/services/auth.service.ts   |  24 ++--
+ .../src/lib/nestjs/core/services/http.service.ts   |   4 +-
+ .../src/lib/nestjs/core/services/i18n.service.ts   |   4 +-
+ .../nestjs/core/services/id-generator.service.ts   |  20 +--
+ .../core/services/language-setting.service.ts      |  14 +-
+ .../src/lib/nestjs/core/services/logger.service.ts |   4 +-
+ .../src/lib/nestjs/core/services/sentry.service.ts |   2 +-
+ .../src/lib/nestjs/core/typeorm/base.entity.ts     |  12 +-
+ .../src/lib/nestjs/core/typeorm/base.repository.ts |   4 +-
+ .../src/lib/nestjs/core/typeorm/page.ts            |   6 +-
+ .../utils/elasticsearch/elasticsearch.stream.ts    |   2 +-
+ .../nestjs/core/utils/express/request-context.ts   |   2 +-
+ .../src/lib/nestjs/cos/services/file.service.ts    |  18 +--
+ .../src/lib/nestjs/graphql/config.ts               |   2 +-
+ .../src/lib/nestjs/graphql/dto/paginate.input.ts   |   4 +-
+ .../nestjs/graphql/scalars/big-number.scalar.ts    |   2 +-
+ .../src/lib/nestjs/graphql/scalars/date.scalar.ts  |   2 +-
+ .../services/base-middleware.service.ts            |   6 +-
+ .../lib/nestjs/printer/services/printer.service.ts |  45 +++---
+ .../src/lib/nestjs/rbac/guards/rbac.guard.ts       |   2 +-
+ .../src/lib/nestjs/rbac/rbac.module.ts             |   2 +-
+ .../pipes/available-shop-validation.pipe.ts        |  62 ++++----
+ .../lib/nestjs/restful/pipes/validation.pipe.ts    | 157 ---------------------
+ packages/serverless-common/tsconfig.json           |   4 +-
+ 50 files changed, 313 insertions(+), 414 deletions(-)
+ delete mode 100644 packages/serverless-common/src/lib/nestjs/restful/pipes/validation.pipe.ts
+
+
+http://*.team.x
+或
+http://*.team.x:4200
+冯:本地开发请使用以上域名格式，以避免 ares 开发时文件上传时禁止跨域的问题
+
+
+数据库
+packages/serverless-common/src/lib/config.ts
+
+    return {
+      hostname: process.env.MONGODB_HOSTNAME || 'mongo.teamx.tokyo',
+      port: Number(process.env.MONGODB_PORT) || 27017,
+      user: process.env.MONGODB_USER || 'testmymongodb',
+      password: process.env.MONGODB_PASSWORD || 'Atswda1F',
+      socketTimeoutMS: Number(process.env.MONGODB_SOCKET_TIMEOUT) || 1000 * 20,
+      debug: process.env.MONGODB_DEBUG ? this.toBoolean(process.env.MONGODB_DEBUG) : false,
+      options: {
+        compress: process.env.MONGODB_OPTIONS_COMPRESS ? this.toBoolean(process.env.MONGODB_OPTIONS_COMPRESS) : true,
+      },
+
+2022.4.1
+新建一个html页面：
+1.可以输入一个感叹号！，然后回车。
+2.可以输入HTML：5，然后回车。
+
+今天遇到一个问题
+现象:
+安装local tunnel以后执行lt命令系统不认识，说明环境变量没设对
+
+解决:
+1.yarn全局安装的bin文件夹在哪里?
+首先用yarn global bin 找出 在 C:\Users\wang.you\AppData\Local\Yarn\bin
+2.用资源管理器打开C:\Users\wang.you\AppData\Local\Yarn\bin，找到lt.cmd，打开:
+@"%~dp0\..\Data\global\node_modules\.bin\lt.cmd"   %*
+发现指向一个路径，这个路径下有另一个lt.cmd，找到并打开这个cmd文件:
+@IF EXIST "%~dp0\node.exe" (
+  "%~dp0\node.exe"  "%~dp0\..\mytunnel\bin\lt.js" %*
+) ELSE (
+  @SETLOCAL
+  @SET PATHEXT=%PATHEXT:;.JS;=;%
+  node  "%~dp0\..\mytunnel\bin\lt.js" %*
+)
+发现lt.js在..\mytunnel\bin下。
+3.把..\mytunnel\bin加到环境变量的path里面，放在最上面就Ok了。
+
+不同进制和十进制之间的转换
+其他进制的相互转换
+这里就贴代码了， 就是说先使用parseInt变为10进制， 在利用toString变为其他进制
+
+其他
+在javaScript中， toString方法是非常常见的， 在不同的使用场景的效果不一样。 原因是他们继承Object.prototype.toString。但是很多对象会重写自己的方法。 所以在以数字调用toString方法时， 会临时包装成Number对象， 然后调用Number对象上的toString方法。 即此处的结果。
+
+parseInt方法是用于将字符串转为数字的方法。 接受两个参数。 第一个要转换的字符串，第二个是可选的， 如果没有值， 默认是10进制； 如果有值， 就是以该值为转换进制
+————————————————
+版权声明：本文为CSDN博主「几面」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/qq_34178990/article/details/80657842
+
+2022.4.2
+二维码 QR码 本质是什么？
+
+2022.4.4
+@ViewChild('materialForm', { static: false }) materialForm!: NgForm;
+@ViewChild怎么用？
+
+2022.4.5
+markAsDirty()，updateValueAndValidity()
+表单是我们实际生活中经常用到的一个功能，在填写表单的过程中，不乏有很多输入框的限制及校验，我们可以根据自己的需求自定义校验器，
+这里没有详细展开。还有在验证部分涉及到的方法也没有详细的说明，但是项目中有所涉及。
+如markAsDirty()是将表单控件值标记为已改变、markAsPristine()是将表单控件值标记为未改变，这个方法主要用在表单重置时、
+updateValueAndValidity()是重新计算表单控件的值和验证状态等。
+
+-未读消息数实时更新，test环境可以，本地环境不可以，这是代码还是环境的原因啊？
+-本地不可以的话可以查查原因
+
+对于表单页面，首次进入希望不提示错误，只有当用户修改控件内容或焦点离开时再验证，如果不合法显示错误内容。这是正常的做法。但是，如果用户进入界面后什么都不做，直接点击提交按钮，此时需要将所有控件的错误都显示处理。
+此文章介绍angualr的实现方式；
+
+<<angular表单提交处理>>
+
+首次进入
+angular的表单控制基类AbstractControl中提供了丰富的状态字段，我们只需要其中3个状态（其他可以自行查看API文档）
+
+valid：是否合法
+dirty：是否是否被修改过
+touched：是否获得过焦点
+通过这3个状态可以方便实现首次进入不显示错误
+if (!control.valid && (control.dirty || control.touched) ) {
+    // 显示错误内容
+}
+或者直接在界面上判断
+
+<div *ngIf="!control.valid && (control.dirty || control.touched)">
+    <div *ngIf="control.hasError('required')">代码必填</div>
+</div>
+提交
+提交时，需要通过代码修改所有form控制器的状态为dirty（或者touched），这样是为了防止用户没有编辑而直接点击提交也能显示出控件错误。
+form控制器基类AbstractControl提供了markAsDirty方法
+
+markAsDirty(opts?: {
+       onlySelf?: boolean;
+   }): void;
+通过此方法我们可以方便设置控制器的状态
+
+control.markAsDirty();
+但是markAsDirty方法仅会修改当前控制器和父控制器（递归父控制器，直到parent为空）的状态，并不会修改子控制器的状态，源码如下：
+
+markAsDirty(opts: {onlySelf?: boolean} = {}): void {
+  (this as{pristine: boolean}).pristine = false;
+
+  if (this._parent && !opts.onlySelf) {
+    this._parent.markAsDirty(opts);
+  }
+}
+因此提交时我们需要从Form的根控制器遍历设置子控制器的状态
+
+  private submit(): void {
+    if (!this.validateForm.valid) {
+      this.markAsDirtyDeep(this.validateForm);
+      return;
+    }
+    //submit
+  }
+
+  public markAsDirtyDeep(control: AbstractControl): void {
+    if (!control) return;
+
+    control.markAsDirty();
+
+    if (control.hasOwnProperty('controls')) {
+      let ctrl = <any>control;
+      for (let inner in ctrl.controls) {
+        this.markAsDirtyDeep(ctrl.controls[inner]);
+      }
+    }
+  }
+}
+个人更喜欢下面的写法
+
+  private submit(): void {
+    if (!this.validateForm.valid) {
+      this.markAsDirtyDeep(this.validateForm);
+      return;
+    }
+    //submit
+  }
+
+  public markAsDirtyDeep(control: AbstractControl): void {
+    if (!control) return;
+
+    control.markAsDirty();
+
+    if (control instanceof FormGroup) {
+      const ctl = <FormGroup>control;
+      for (let inner in ctl.controls) {
+        this.markAsDirtyDeep(ctl.get(inner));
+      }
+    } else if (control instanceof FormArray) {
+      const ctl = <FormArray>control;
+      for (let inner in ctl.controls)
+        this.markAsDirtyDeep(ctl.get(inner));
+    }
+  }
+}
+参考：
+1、https://github.com/angular/angular/issues/12281
+2、https://github.com/angular/angular/issues/11774
+
+2022.4.6
+Web 实时推送技术的总结
+https://zhuanlan.zhihu.com/p/59931428
+https://blog.csdn.net/u010297957/article/details/60878821
+
+1.什么是websocket
+WebSocket是一种全新的协议，随着HTML5草案的不断完善，越来越多的现代浏览器开始全面支持WebSocket技术了，它将TCP的Socket（套接字）应用在了webpage上，从而使通信双方建立起一个保持在活动状态连接通道。
+
+一旦Web服务器与客户端之间建立起WebSocket协议的通信连接，之后所有的通信都依靠这个专用协议进行。通信过程中可互相发送JSON、XML、HTML或图片等任意格式的数据。由于是建立在HTTP基础上的协议，因此连接的发起方仍是客户端，而一旦确立WebSocket通信连接，不论服务器还是客户端，任意一方都可直接向对方发送报文。
+
+初次接触 WebSocket 的人，都会问同样的问题：我们已经有了 HTTP 协议，为什么还需要另一个协议？
+
+2.HTTP的局限性
+HTTP是半双工协议，也就是说，在同一时刻数据只能单向流动，客户端向服务器发送请求(单向的)，然后服务器响应请求(单向的)。
+服务器不能主动推送数据给浏览器。这就会导致一些高级功能难以实现，诸如聊天室场景就没法实现。
+3.WebSocket的特点
+支持双向通信，实时性更强
+可以发送文本，也可以发送二进制数据
+减少通信量：只要建立起WebSocket连接，就希望一直保持连接状态。和HTTP相比，不但每次连接时的总开销减少，而且由于WebSocket的首部信息很小，通信量也相应减少了
+
+2022.4.7
+今天也是继续学习websocket的一天
+另外，nx.dev + pnpm 了解一下
+
+改了COS设定就不能上传图片是什么原理？
+
+2022.4.9
+try/catch块怎么使用的？
+
+
+

@@ -1,0 +1,55 @@
+各小程序访问URL：
+
+内容管理：
+
+tenant:furano
+
+Wechat:
+    内容管理二维码
+LINE：
+	https://liff.line.me/1653852388-M88LY0nE
+H5:
+	https://test.mini.intares.jp/content/h5/pages/index/index
+
+卖票:
+
+Wechat:
+    tenant:furano
+    旅游预约体验版二维码
+LINE:
+	tenant:skytree
+    https://liff.line.me/1653852388-PAG3ojMr
+    https://liff.line.me/1655169016-vZBQL1Yk
+
+问卷:
+
+Wechat:
+    从内容管理进，需要在内容管理后台的「遷移先」设置link，需要先在问卷的应用里生成问卷id
+LINE:
+	https://liff.line.me/1653852388-OK0PA3pV?tenantId=furano&questionnaireInstanceId=5f87f0f07f3671000ca795e3
+H5:
+	https://test.mini.intares.jp/questionnaire/h5/pages/index/index?tenantId=furano&questionnaireInstanceId=5f87f0f07f3671000ca795e3
+
+集章:
+
+Wechat:
+    从内容管理进，需要在内容管理后台的「遷移先」设置link，需要先在集章的应用里生成id
+LINE:
+	https://liff.line.me/1653852388-wzK8GQ5R/?tenantId=furano&activityInstanceId=5f86946f50921d000b50158e
+H5:
+	https://test.mini.intares.jp/stamp-rally/h5/pages/index/index?tenantId=furano&activityInstanceId=5f86946f50921d000b50158e
+
+优惠券:
+LINE:
+	https://liff.line.me/1653852388-Ao87D4nx?tenantId=furano
+H5:
+	https://test.mini.intares.jp/coupon/h5/pages/index/index?tenantId=furano
+
+点餐
+Wechat:
+    扫码即可。二维码在后台的テーブル管理里面生成
+App:
+　　安装apk
+
+我们以后用的Line URL只会是
+https://liff.line.me/1653852388-wzK8GQ5R

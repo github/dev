@@ -1,0 +1,9 @@
+获取帮助信息
+比如想打开git config的帮助信息:
+git help config 无需联网即可在浏览器中打开帮助手册
+git config -h   如果不想查看完整的手册那么可以用-h选项获得更简明的help输出
+
+
+
+
+

@@ -1,0 +1,12 @@
+
+1.未被Git管理(状态1) untracked
+比如本地新建文件
+
+
+2.已被Git管理
+其中包括:
+未修改(状态2) unmodified
+已修改(状态3) modified
+已暂存(状态4) staged
+
+状态4的情况下运行git commit，就回到状态2

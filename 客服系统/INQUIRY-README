@@ -1,0 +1,35 @@
+# Inquiry
+
+## 开发前准备（推荐）
+
+安装 [mkcert](https://github.com/FiloSottile/mkcert)
+
+在工程根目录的 tmp 文件夹中执行 `mkcert localhost` 命令生成证书，以便在浏览器以 https 的方式访问 web 端系统，也方便使用[浏览器通知](https://developer.mozilla.org/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)功能。
+
+> 域名及证书没有特别要求，可以自行生成想要的域名及证书，但是需要相应修改 package.json 的 scripts 中的 dev:web 命令的证书路径
+
+## 1.安装依赖
+
+使用 pnpm 管理依赖，安装依赖命令： `pnpm install`
+
+## 2. apps 下各工程说明
+
+### 2.1 `api` 后端代码
+
+开发环境启动命令： `npm run dev:api` 或者 `yarn dev:api`
+
+端口：3000
+
+### 2.2 `web` web 前端代码
+
+开发环境启动命令： `npm run dev:web` 或者 `yarn dev:web`
+
+端口：4200
+
+### 2.3 api 和 web 同时开发
+
+开发环境启动命令： `npm run dev` 或者 `yarn dev`
+
+
+
+"HTTPS=true SSL_CRT_FILE=localhost.pem SSL_KEY_FILE=localhost-key.pem react-scripts start"

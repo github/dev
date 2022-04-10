@@ -1,0 +1,141 @@
+１.更新时间的颜色不对　〇 nz-table加上 [nzScroll]="{ x: '1100px' }"就可以了
+
+２.第二条数据编辑页面没取到值　〇 手动改了db的数据,导致id和_id不一样。实际上没问题
+
+-３.tag还没按设计做好
+
+-４.年龄 设置范围 {age: {$gte: min, $lte: max}}
+                $gte ---- 大于等于
+                $lte ---- 小于等于  〇
+
+５.检索条件前面三个不能入力了 〇 原因是nz-Gutter设置得太大(设置的是200)，具体原理还要去研究一下
+
+６.Wechat ID的冒号没显示出来　〇 原因是Wechat ID的label宽度不够，冒号被挤在里面了
+
+７.編集 ミュート 变为button 〇 不用变，就用<a></a>,和ares一致。
+
+８.头像还没取到。在db里面头像是怎样存储的？只存储一个url就行了吗? 〇 db存储没问题，没取到是因为nzsrc没赋初值
+[nzSrc]="data.thumbnail "　改成→　[nzSrc]="data.thumbnail ?? ''"   就OK了
+
+９.「操作」前面的竖线，标题和数据的没对齐　〇
+
+-１０.还没正确显示「データの表示順番は券種期間限定の終了日時の降順です。」，字体太大
+
+１１.条件检索的布局还没调好 〇 label+form=24，在这个基础上再去个别调整
+
+-１２.guest-list查询数据还没做降序排序
+
+-１３.按降序排列的提示信息 样式改成如下不起作用
+class="ares-table-extra-description-container" 
+
+  &-table-extra-description-container {
+    margin-top: 20px;
+    .ant-alert-message {
+      font-size: smaller;
+      line-height: inherit;
+      color: rgba(0, 0, 0, 0.85);
+    }
+    .ant-alert-description {
+      font-size: smaller;
+      line-height: inherit;
+      color: rgba(0, 0, 0, 0.85);
+    }
+  }
+
+-１４.xl以外尺寸的size设定还没确认好
+
+-１５.findGuestByOpenId　→　findGuestById 命名不对，需要修改，但是还有其他程序在用guest.service，所以暂时不能改。以后统一改。
+
+-１６.王幽 下拉列表的tag可以直接取出该租户该用户所属平台账号（客服主管的话是所有平台账号，普通客服的话是所属平台账号）下的所有访客的tag
+不需要额外的tag表
+
+-１７.查询条件加上平台账号的选择框　〇
+
+-１８.编辑页面的性别改成选择框　〇
+
+-１９.访客编辑页面的tag改成 用数组生成一组标签，可以动态添加和删除。参照内容管理hot-word　×　対応不要
+
+-２０.名字以外都是非必入力 〇
+
+-２１.不用单独的tagservice，不需要单独的tag表，从guest表里找tag的数据 
+后台写查询语句的话就这样写:guestModel.find(...).select(['tag']).exec()
+那么前台呢?应该怎么写? 〇前台只是拼查询语句，查询方法是在后台做的
+
+-２２.用inquiryQuery共通查询　〇
+
+-２３.年龄不能为负数　〇
+
+-２４.「クリア」以后性别不能是unknown(なし)
+
+-２５.「クリア」以后アカウント不能清除　〇
+
+-２６.<input nz-input formControlName="guestName" id="guestName" />这里的id="guestName"可以删除吗?
+
+-２７.年龄输入框还有问题，右边跟着左边被选 〇超哥说没问题，暂不对应
+
+-２８.编辑 改成button
+
+-２９.现在不是都用共通query了吗，之前手动去分页的应该不用了吧　〇
+
+-３０.性别 目前存进数据库的是显示的内容，应该是枚举的数值　〇性别的三个option写死，没用ngfor，分别value和lable
+
+-３１.名字link跳转 + 编辑按钮跳转
+
+-３２.https://www.npmjs.com/package/animal-avatar-generator
+https://roma-lukashik.github.io/animal-avatar-generator/dist/
+根据传入的seed 和 size，它就会自动生成svg头像
+只有当你们的实体 avatar 字段没有值的时候，显示它就行
+
+-３３.做表单验证之前，文本字段的统一 trim() 了再做验证就好　〇　
+
+-３４.guest-list表格的性别应显示汉字而不是字母
+
+-３５.i18n结构是不是不对 我看别人都是写在 i18n的 page 里面的 〇　
+
+-３６.絞り込み&クリア按钮右移 〇　
+
+-３７.list表格的头像偏大　〇
+
+-３８.nzValue 可以写成 genderEnum.unknown genderEnum.female. genderEnum.male
+以防gender枚举keyvalue变了这快漏了修改，gender枚举keyvalue变了的话 genderEnum.unknown 的方式编译会报错的
+ 〇 ts里面 import Gender from xxx ; genderEnum = Gender ;
+
+-３９.还有，这个方法应该有参数的，租户id 和 平台账号id,不限制的话就会取到别的租户别的平台账户访客的tag,属于数据不安全了
+
+-４０.API 的意思是取tags，怎么路径写成 Get('tag') ? 〇
+
+-４１.还有方法名，一会 findxxx 一会 getxxx,要做统一，我们一般是用 getxxxx　〇
+
+-４２.理解客服系统的租户，用户以及权限的关系
+
+-４３.tag检索条件输入了值，点一次检索按钮，然后点 “clear” 按钮，再次检索，发现query 条件里面还有这个 in 条件
+
+-４４.tag检索条件的值 不能模糊匹配是吗？/是的，tag的检索条件是in，不是模糊匹配，因为tag是一个数组，检索结果是含有输入条件的数据。
+/做不了的话，就不让用户输入自定义值了。 〇　
+　
+-４５.首先，是先获取平台账号列表是吧？作为平台账号下拉列表的数据。所以ngInit 里面取tags就用这些平台ids作为条件。
+每当用户操作平台下拉列表时，可以拿到change事件之类的吧？在这个事件里面先清空当前tags下拉列表数据，
+再用平台账号列表选择的平台ids作为条件重新获取tags
+
+还有一种做法，是在init里面根据取得的所有用户所属平台id列表作为条件去取所有tags（带有平台账号id），保存一份数据backup在前台，
+然后用户选择了平台id以后在onchage事件里根据选择的平台id去数据backup过滤取tags。
+两种方法有利有弊，
+第一种可以获取数据库最新的tags，不好的地方就是需要一直发request
+第二种可以只发一次request，但是不能实时获取数据库中最新tags
+x现在选择第二种来做
+
+-４６.平台账户改成多选下拉框　〇　
+
+‐４７.【BUG！！】tag检索条件输入了值，点一次检索按钮，然后点 “clear” 按钮，再次检索，发现query 条件里面还有这个 in 条件
+
+-４８.查询结果和件数的变量全局改为共通
+export class PageResponse<T> {
+  public docs!: T[];
+  public totalDocs!: number;
+}
+
+-４９.增加tag下拉选择的过滤平台账户事件 韬哥认为两边的过滤都不需要，可以去掉这个功能
+
+-５０.访客列表能抽出访客表里租户正确但平台账户表里租户不正确的数据，这个不正常，要修改
+
+―５１.素材管理表格的タイプ表头有点短，显示テキスト要换行

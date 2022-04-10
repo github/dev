@@ -1,0 +1,32 @@
+var定义的变量a能输出window.a，这样的话变量定义多了以后会污染全局变量
+所以ES6引入let
+
+let a=5
+console.log(a)
+console.log(window.a) //输出undefined，不再是顶层对象window的属性
+
+输出：
+5
+2-1.js:13 undefined
+index.js?b635:2 9
+
+如果要上线，就编译打包：npm run build
+生成dist文件夹
+dist文件夹只有上线才会用到
+
+let不能重复定义变量
+
+let a
+let b
+
+
+var能变量提升,let不能
+
+分号可不写
+
+let具有块级作用域
+
+想要打包上线，输入以下命令
+npm run build 
+
+多出dist文件夹，

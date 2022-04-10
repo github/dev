@@ -1,0 +1,13 @@
+1.用记事本打开id_rsa.pub文件，复制里面的文本内容
+2.在浏览器中登录Github，点击头像 → Settings → SSH and GPG Keys → New SSH key 
+3.将id_rsa.pub文件中的内容，粘贴到Key对应的文本框中
+4.在Title文本框中任意填写一个名称，来标识这个Key从何而来，可以写个my key，然后点击add SSH key 
+
+然后就可以用SSH key来进行身份认证，不需要每次输入账户和密码了
+
+
+以下是我配置的SSH key
+title-1
+SHA256:nSoQR9AwFRw7wTnit36C7o4uH34cnreDxS7DpYI2nR8
+Added on 10 Apr 2022
+Never used — Read/write

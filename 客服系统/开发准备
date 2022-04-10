@@ -1,0 +1,51 @@
+
+工程url:
+https://bitbucket.teamx.tokyo/projects/INQUIRYMANAGEMENT/repos/inquiry-management/browse
+
+工程clone:
+git clone https://bitbucket.teamx.tokyo/scm/inquirymanagement/inquiry-management.git
+
+启动服务:
+package.json
+
+yarn bootstrap-only
+yarn common:build
+
+serverless:
+yarn api:common:build
+yarn api:authenticate:dev
+yarn api:management:dev
+
+web:
+yarn web:common:build
+yarn web:management:dev
+
+以上已作废
+
+
+新工程如下:
+工程url:
+https://bitbucket.teamx.tokyo/projects/INQUIRY/repos/inquiry-server/browse
+https://bitbucket.teamx.tokyo/projects/INQUIRY/repos/inquiry-web/browse
+
+
+
+
+
+
+
+Q:现在在ares里面，把guest.entity.ts放在serverless-management下面了，但是工程里面没有这个文件，应该怎么加上这个文件呢？加在哪里？
+
+A:先把这行删了
+找到报错的地方
+鼠标放上去 根据提示点 quick fix
+选择 从serverless-common里面导入
+
+
+
+Q:访客列表要排序。类似MongoDBFiledSort的东西好像没有搬过来
+A:你直接把排序条件传到后台的聚合里面就行了吧
+
+
+面包屑
+page-header.component

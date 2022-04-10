@@ -1,0 +1,64 @@
+在class内部定义属性是通过get和set去定义的
+
+在class内部，通过get定义的顶层属性，和constructor内部的属性有什么差异呢？
+-在class外给p1.sex赋值，报错'不能设置属性，只能获取值'，说明get方法是只读的
+
+ES6明确规定，在class内部只能定义静态方法，并没有静态属性。比如 static count = 0 ×
+
+class People {
+    constructor(name,age){
+          this.name = name
+          this.age = age
+          this._sex = -1
+    }
+    get sex(){
+        if (this._sex === 1){
+            return 'male'
+        }else if (this._sex === 0){
+            return 'female'
+        }else{
+            return 'error'}
+    }
+    set sex(val){
+        if (val === 1 || val ===0){
+            this._sex = val
+        }
+    }
+    showName(){
+        console.log(this.name)
+    }
+    static getCount(){ //定义一个静态方法:ES6 新关键字 static
+        return 5
+    }
+}
+let p1 = new People('wangyou',37)
+let p2 = new People('zhangsan',18)
+console.log(p1)
+console.log(p2)
+p1.sex = 1
+p2.sex = 0
+console.log(p1.sex)
+console.log(p2.sex)
+console.log(People.getCount()) //静态方法不能被实例调用，只能被类调用。例: console.log(p1.getCount()) ×
+
+
+class Coder extends People{
+    constructor(name,age,company){
+        super (name,age)
+        this.company = company
+    }
+    showCompany(){
+        console.log(this.company)
+    }
+}
+let c1 = new Coder('lisi',26,'SCCN')
+console.log(c1)
+c1.showName()
+c1.showCompany()
+c1.sex = 0
+console.log(c1.sex) //父类顶层定义的属性也能继承过来
+console.log(Coder.getCount()) //静态方法可以被子类继承，但是不能被实例调用
+
+
+
+

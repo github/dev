@@ -1,0 +1,423 @@
+Lesson 1
+10/27【刘钊宇】・面向对象
+培训资料
+https://docs.google.com/presentation/d/1cuR1aQPF5_r5kVMyUUWJ3_hUIIXdywVUGPOGPVL7zJk/edit#slide=id.p
+
+interfaceとtypeの違い、そして何を使うべきかについて
+https://zenn.dev/luvmini511/articles/6c6f69481c2d17
+
+五子棋小游戏，可以怎么创建对象？
+Fanclub的直播功能，可以怎么创建对象？
+
+课后作业
+https://docs.google.com/presentation/d/1gnxxHijgghJ5ggQ7nVTvbyjg9MGbnPG9WUPNhciCWxE/edit#slide=id.p
+
+1.三角形，圆形和矩形是三种不同的几何图形，都能够计算面积和周长，而计算方式各有不同。请用面向对象的方式，使能实现
+三角形能根据三边长后能计算出面积和周长
+圆形能根据半径算出面积和周长
+矩形能根据长宽算出面积和周长
+（提示：三角形三边算面积可以使用海伦公式）
+
+矩形 rectangle
+   边长1 side1
+   边长2 side2
+   面积 area 
+   周长 perimeter
+
+三角形 triangle
+   边长1 side1
+   边长2 side2
+   边长3 side3
+   面积  area
+   周长  perimeter
+
+圆 circle
+   半径 radius
+   面积 area
+   周长 circumference
+
+加上继承，并修改语法以后:
+class Graph{
+  getArea(){
+
+  }
+  getPerimeter(){
+
+  }
+}
+
+class Rectangle extends Graph{
+  side1:number;
+  side2:number;
+
+  constructor(side1:number,side2:number){
+      super();
+      this.side1 = side1;
+      this.side2 = side2;
+  }
+  getArea():number{
+      let area:number;
+      return area = this.side1 * this.side2;
+  }
+  getPerimeter():number{
+      let perimeter:number;
+      return perimeter = (this.side1 + this.side2)*2 
+  }
+}
+class Circle extends Graph{
+      radius:number;
+  constructor(radius:number){
+      super();
+      this.radius = radius;
+  }
+  getArea():number{
+      let area:number;
+      return area = Math.PI * Math.pow(this.radius,2);
+  }
+  getPerimeter():number{
+      let circumference:number;
+      return circumference = 2 * Math.PI * this.radius;
+  }
+}
+class Triangle extends Graph{
+      side1:number;
+      side2:number;
+      side3:number;
+  constructor(side1:number,side2:number,side3:number){
+      super();
+      this.side1 = side1;
+      this.side2 = side2;
+      this.side3 = side3;
+  }
+  getArea():number{
+      let area:number;
+      let p:number;
+      p = 1/2 * (this.side1 + this.side2 + this.side3);
+      return area = Math.sqrt(p*(p-this.side1)*(p-this.side2)*(p-this.side3));
+  }
+  getPerimeter(){
+      let perimeter:number;
+      return perimeter = this.side1 + this.side2 + this.side3;
+  }
+}
+let rectangle:any = new Rectangle(675,1673); //矩形的两条边
+let circle:any = new Circle(5);         //圆的半径
+let triangle:any = new Triangle(10,20,30); //三角形的三条边
+
+console.log(`长方形面积是${rectangle.getArea()}`);
+console.log(`长方形周长是${rectangle.getPerimeter()}`);
+console.log(`圆面积是${circle.getArea()}`);
+console.log(`圆周长是${circle.getPerimeter()}`);
+
+let resOfTriangle:number;
+resOfTriangle = triangle.getArea();
+if(resOfTriangle !== 0){
+  console.log(`三角形面积是${triangle.getArea()}`);
+}else{
+  console.log(`请确认后重新输入。`)
+}
+
+console.log(`三角形周长是${triangle.getPerimeter()}`);
+
+
+
+2.日本新干线东海道线往返于东京和新大阪，设计有三种级别的列车，分别为kodama（下图蓝色线），hikari（下图红色线）以及nozomi（下图黄色线）。
+其中hikari还会细分成两种，一种除圆圈标注的必停站以外，还停靠浜松，静冈，热海，三岛，另一种则停靠米原，岐阜羽岛，丰桥，小田原。
+请根据上面的描述和下图，抽出实体，定义列车的类，并使列车的对象能够按顺序输出自己的停靠站。(图片见课件)
+
+之前自己写的:
+class Train {
+    lineName:string;
+    constructor(lineName:string){
+        this.lineName = lineName;
+    }
+    getStation(this.lineName):any{
+        if(this.lineName === 'のぞみ'){
+        let stationName1:string[]=['東京','品川','新横浜','名古屋','京都','新大阪'];
+            return stationName1;
+        } else if(this.lineName === 'ひかり１'){
+            let stationName2:string[]=['東京','品川','新横浜','小田原','豊橋','名古屋',
+            '岐阜羽島','米原','京都','新大阪'];
+            return stationName2;
+        } else if(this.lineName === 'ひかり２'){
+            let stationName3:string[]=['東京','品川','新横浜','熱海',
+            '三島','静岡','浜松','名古屋','京都','新大阪'];
+            return stationName3;
+                }else if(this.lineName === 'こだま'){
+                    let stationName4:string[]=['東京','品川','新横浜','小田原','熱海',
+                    '三島','新富士','静岡','掛川','浜松','豊橋','三河安城','名古屋',
+                    '岐阜羽島','米原','京都','新大阪'];
+                    return stationName4;
+            }else{
+                return 'error';
+            }
+    } 
+}   
+
+let t:any = new Train('こだま'); //のぞみ、ひかり１、ひかり２、こだまを選択
+let res:any = t.getStation();
+let flag:number = 0; //0:東京→新大阪　1:新大阪→東京
+
+if((typeof res)==='object'&&flag === 0){
+     let printStation:string[] = t.getStation();
+    printStation.forEach(function(value){
+        console.log(value);
+    })
+}else if((typeof res)==='object'&&flag === 1){
+    let printStation:string[] = t.getStation();
+    for(let i = printStation.length-1; i >= 0; i--) {
+        console.log(printStation[i]);
+        }
+    }else{
+        console.log(res);
+    }
+-----------------------
+劉さん指导后修改的:
+-----------------------
+class Train {
+  stationName:string[]=[];
+    getStation(){
+    return this.stationName;
+  }
+}
+class Nozomi extends Train {
+  constructor(){
+    super();
+    this.stationName=['東京','品川','新横浜','名古屋','京都','新大阪'];
+  }
+}
+class Kodame extends Train {
+  constructor(){
+    super();
+    this.stationName=['東京','品川','新横浜','小田原','熱海',
+    '三島','新富士','静岡','掛川','浜松','豊橋','三河安城','名古屋',
+    '岐阜羽島','米原','京都','新大阪'];
+  }
+}
+class Hikari extends Train {
+    constructor(kubun=0){
+      super();
+      if(kubun === 0){
+        this.stationName=['東京','品川','新横浜','小田原','豊橋','名古屋',
+        '岐阜羽島','米原','京都','新大阪'];
+      }else if(kubun === 1){
+        this.stationName=['東京','品川','新横浜','熱海',
+        '三島','静岡','浜松','名古屋','京都','新大阪'];
+      }
+    }
+}
+let nozomi = new Nozomi();
+nozomi.getStation().forEach(function(value:any){
+    console.log(`のぞみ線:${value}`);
+})
+let hikari = new Hikari(1);
+hikari.getStation().forEach(function(value:any){
+  console.log(`ひかり線:${value}`);
+})
+let kodame = new Kodame();
+kodame.getStation().forEach(function(value:any){
+  console.log(`こだめ線:${value}`);
+})
+
+-------------------------
+用get和set方法实现
+-------------------------
+试了一下，用get和set不容易实现
+
+例子如下，调试失败:
+
+class Train {
+      _line : number;
+  constructor(){
+        this._line = -1;
+  }
+  get line(){
+      if (this._line === 0){
+          return ['東京','品川','新横浜','名古屋','京都','新大阪'];
+      }else if (this._line === 1){
+          return ['東京','品川','新横浜','小田原','熱海',
+          '三島','新富士','静岡','掛川','浜松','豊橋','三河安城','名古屋',
+          '岐阜羽島','米原','京都','新大阪'];
+      }else if (this._line === 2){
+          return ['東京','品川','新横浜','小田原','豊橋','名古屋',
+          '岐阜羽島','米原','京都','新大阪'];}
+      }
+
+  set line(val){
+      if (val == 0 || val ==1|| val ==2){
+          this._line = val;
+      }
+  }
+let train = new Train();
+train.line = 1;
+console.log(train.line);
+
+※目前没有做到把站名的番号打印出来，只打印了名字。以后改进。
+
+3.一个消息系统会从另一个消息系统接收到如下格式的信息，信息有存入mongoDB的需求，请为此类数据定义合适的类。
+（参考typegoose）
+{
+ “massageId”: “29363414197572109884427213413”,
+ “createdAt” : “2021-06-10T12:57:54.124Z”,
+ “operationResult”: [
+        {
+         “productId”: “5ed7a7b4db6ae0000ac13b29”,
+         “operation”: “delete”,
+         “result”: “true”,
+        },
+        {
+         “productId”: “5ed7a7b4db6ae6000fc13b29”,
+         “operation”: “create”,
+         “result”: “true”,
+        },
+    ] ,
+}
+
+练习如下:
+
+class Temp{
+    messageId ?: number;
+    createdAt ?: string;
+    operationResult ?: [
+           {
+            productId ?: string,
+            operation ?: string,
+            result ?: boolean,
+           },
+           {
+            productId ?: string,
+            operation ?: string,
+            result ?: boolean,
+           },
+       ] ;
+}
+
+以上没用typegoose
+
+以下用typegoose完成作业
+
+class Temp {
+  @prop()
+  public messageId?: number;
+
+  @prop()
+  public createdAt?: string;
+
+  @prop({ type: Number, ref: Product })  //Product的主键是number型，所以type: Number
+  public operationResult: Array<Ref<Product, Object>>;
+}
+
+class Product {
+  @prop()
+  public productId?: string;
+
+  @prop()
+  public operation?: string;
+
+  @prop()
+  public result?: boolean;
+}
+
+超哥点评：
+
+是的 Product 本身是一个Object，但是引用的时候我们是存字符串
+mysql里面创建外键的时候也是根据要关联的表的主键类型来的
+这么理解吧 Ref<Product, string> 第一个参数是要引用的类 Product 第二个参数是引用的类的主键
+在这里 Product 这个类的主键应该是productId 它的类型是string 那么第二个参数就应该是string
+多表关联查询时候都是通过主键来查找的 所以第二个参数就是表的主键的类型
+
+如果这里Product表的主键productId: number的话 那么operationResult: Array<Ref<Product, number>>;
+另外就是表的主键不能为空 必须存在 所以'public productId?: string;' 这里的问号(?)不应该有
+
+
+@prop({ type: () => [String], ref: Category })
+public children?: Array<Ref<Category, string>>;
+
+Q:type: () => [String]这个是什么意思啊
+A:就是指children从数据库中返回的类型是字符串的数组
+
+{ type: String, ref: Category } 这里代表这个字段在db中的存储类型是String 他是一个引用类型 引用的目标类型是 Category
+
+
+Q：type: String代表这个字段在db中的存储类型是String，type: () => [String]从数据库中返回的类型是字符串的数组，
+存储类型和返回类型有什么区别呢，没理解到返回类型的概念
+A：哦哦 这里没解释清楚 @prop({ type: String, ref: Product }) 这里描述的是你这个数组中的每一项的存储类型是string，
+不对，这里的type: String 指的是存放的productId 也就是Product这个表的主键 不是Product里面每个字段的类型
+引用的是Product类，type: () => [String] operationResult这个字段不是个数组嘛，数据库中存储的类似
+temp { operationResult: ["productId1","productId2"] } 
+那operationResult的值就是一个字符串数组["productId1","productId2"]
+
+例如：
+  @prop({ type: () => [String], ref: 'TicketInstance' })
+  public ticketInstances?: Array<Ref<TicketInstance, string>>;
+
+http://mongo.teamx.tokyo:8081/db/nishikawa/restaurant_order/"6180c7fd6a26f7001322d750"
+拿这个举例 suborders指代的是表restaurant_suborder的_id，关联查询的时候通过这个_id主键查询suborder数据
+但是在这个restaurant_order表里面就只需要存放表restaurant_suborder的_id，可以节省很多空间 也变得灵活
+我们在查询suborder数据的时候 是不是先拿到orderId去查询order，
+然后拿到suborders里面的值作为表restaurant_suborder的_id去查找suborder数据
+
+
+
+
+超哥点评后修改如下:
+
+class Message {
+  @prop()
+  public messageId?: number;
+
+  @prop()
+  public createdAt?: string;
+
+  @prop({ type: 这里还不知道写什么, ref: Product })
+  public operationResult?: Array<Ref<Product, number>>;
+}
+
+class Product {
+  @prop()
+  public productId: number;
+
+  @prop()
+  public operation?: string;
+
+  @prop()
+  public result?: boolean;
+}
+
+Ref<PopulatedType, RawId>参考这里:
+https://typegoose.github.io/typegoose/docs/api/types/ref-type/
+
+
+typegoose参考这里:
+https://typegoose.github.io/typegoose/docs/guides/quick-start-guide
+
+-------------------------
+How to use Typegoose
+-------------------------
+**************************************************
+Let's say you have a Mongoose model like this one:
+**************************************************
+
+const kittenSchema = new mongoose.Schema({
+  name: String
+});
+
+const KittenModel = mongoose.model('Kitten', kittenSchema);
+
+let document = await KittenModel.create({ name: 'Kitty' });
+// "document" has no types
+
+
+******************************************************
+With Typegoose, it can be converted to something like:
+******************************************************
+
+class KittenClass {
+  @prop()
+  public name?: string;
+}
+
+const KittenModel = getModelForClass(KittenClass);
+
+let document = await KittenModel.create({ name: 'Kitty' });
+// "document" has proper types of KittenClass

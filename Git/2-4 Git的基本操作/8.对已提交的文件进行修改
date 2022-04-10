@@ -1,0 +1,5 @@
+状态变为modified，但是还是unstaged。用git status查看的话，状态是红色的M
+
+所以需要放入暂存区，即unstaged→staged
+
+然后git commit，状态就又回到unmodified了

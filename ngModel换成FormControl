@@ -1,0 +1,7 @@
+https://qiita.com/seteen/items/6cf6772aa2b0bfe858b2
+
+クラス	    役割
+FormControl	<input> などの入力要素一つに対応するクラス
+FormGroup	<form> 要素に対応するクラス
+FormBuilder	FormGroup, FormControl を作成するクラス
+

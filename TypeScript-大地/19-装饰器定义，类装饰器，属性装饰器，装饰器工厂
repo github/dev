@@ -1,0 +1,155 @@
+装饰器的写法
+1.普通装饰器(无法传参)
+2.装饰器工厂(可传参)
+
+装饰器就是一个方法，可以注入到类，属性，方法参数上来扩展类，属性，方法的功能。
+
+类装饰器
+1.可以增加类的功能。
+2.可以重载构造函数，也就是，用装饰器来修改当前的构造函数。
+
+由于有装饰器，把下面这个配置添加到tsconfig.ts里才能编译通过
+{
+	"resource": "/c:/project/sample/decorator.ts",
+	"owner": "typescript",
+	"code": "1219",
+	"severity": 8,
+	"message": "Experimental support for decorators is a feature that is subject to change in a future release. Set the 'experimentalDecorators' option in your 'tsconfig' or 'jsconfig' to remove this warning.",
+	"source": "ts",
+	"startLineNumber": 10,
+	"startColumn": 7,
+	"endLineNumber": 10,
+	"endColumn": 17
+}
+
+然而实际上还是没编译过
+
+最后是添加这句就编译通过了
+    "experimentalDecorators": true,              /* Enables experimental support for ES7 decorators. */
+
+//一.普通的类装饰器 (不传参)
+
+function logClass(params:any){         //默认把写在@logClass下面的类传入params。params就是形参，名字随便取。
+    console.log(params);               //parmas就是当前类。浏览器控制台输出:f HpptClient(){}
+    params.prototype.apiUrl = 'qqq';   //增加一个属性。这里apiUrl可以随便命名
+    params.prototype.run=function(){   //增加一个函数。这里run可以随便命名
+          console.log('我是一个run方法')
+    }
+}
+
+@logClass
+class HttpClient{
+   constructor(){
+
+   }
+   geteData(){
+
+   }
+}
+
+let http:any = new HttpClient();
+console.log(http.apiUrl);             //浏览器控制台输出:zzzz
+http.run();                           //浏览器控制台输出:我是一个run方法
+　　　　　　　　　　　　　　　　　　　　 //这样就实现了增加原来类不具有的属性和方法的功能
+
+//二.类的装饰器工厂 (可传参)
+
+function logClass(params:string){     //形参，随便命名。接收的是@logClass('params')里面的'http://www.google.com'。
+    return function(target:any){      //形参，随便命名。接收的是@logClass('params')下面写的HttpClient类。
+        console.log(params);          //浏览器控制台输出:http://www.google.com
+        console.log(target);          //浏览器控制台输出:f HpptClient(){}
+        target.prototype.apiUrl = params;
+    }     
+    
+}
+
+@logClass('http://www.google.com')    //这里传什么，装饰器工厂就加工什么。
+class HttpClient{
+   constructor(){
+
+   }
+   geteData(){
+
+   }
+}
+
+let http:any = new HttpClient();
+console.log(http.apiUrl);           //浏览器控制台输出:http://www.google.com
+
+
+
+//三.类装饰器重载构造函数
+
+function logClass(target:any){
+   console.log(target);
+   return class extends target{            //返回一个继承target类(也就是HttpClient类)的子类.Q:为什么不像增加类的功能一样返回一个function呢
+      apiUrl:any = '我是修改后的url';       //重载属性
+      getData(){
+         this.apiUrl = this.apiUrl+'-----'; //重载方法
+         console.log(this.apiUrl);          //Q:既然属性和方法都重载，那继承干什么呢？直接新定义一个也行啊！(好像比较麻烦，而且这样更好地体现了重载)
+      }
+   }
+}
+
+@logClass
+class HttpClient{
+
+    public apiUrl: string | undefined;
+    constructor(){
+       this.apiUrl='我是构造函数里面的apiUrl';
+    }
+
+    getData(){
+       console.log(this.apiUrl);
+    }
+}
+var http = new HttpClient;
+http.getData();
+
+运行结果:
+HttpClient(){
+    this.apiUrl = '我是构造函数里面的apiUrl';
+}
+我是修改后的url-----
+________________________________________________________________
+
+以上是类装饰器重载构造函数的一个例子，除了重载还可以增加功能,这里就不举例子了。
+________________________________________________________________
+
+//四.属性装饰器
+
+//类装饰器
+function logClass(params:string){
+        return function(target:any){
+            console.log(params);      //浏览器控制台输出:xxx
+            console.log(target);      //浏览器控制台输出:ƒ HttpClient() { }。  这是构造函数
+        }
+ }
+ 
+ //属性装饰器
+function logProperty(params:string){
+    return function(target:any,attr:string){ //属性装饰器表达式在运行时当做函数被调用，传入2个参数
+                                             //第一个参数:对于静态成员来说是类的构造函数，对于实例成员来说是类的原型对象。
+                                             //第二个参数:成员的名字。
+        console.log(target);         //浏览器控制台输出:{getData: ƒ, constructor: ƒ}。 这是类的原型对象。
+        console.log(attr);           //浏览器控制台输出:apiUrl。也就是当前类的属成员名字。
+        target[attr] = params;       //不知道为什么要写成 target[attr]，而不是 target.attr
+    }
+
+}
+
+ @logClass('xxx')
+ class HttpClient{
+     @logProperty('https://www.baidu.com')  //这个属性装饰器，装饰的是 apiUrl 这个属性
+     public apiUrl: string | undefined;
+     constructor(){
+     }
+     getData(){
+        console.log(this.apiUrl);
+     }
+ }
+let http = new HttpClient();
+http.getData();
+
+
+

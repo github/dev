@@ -1,0 +1,11 @@
+变量，方法和类都可以export
+可以分别export
+也可以集体统一export
+
+如果只有一个模块需要export的话，可以用default
+
+export default在一个模块里只能用一次
+
+
+module(db.ts(带增删改查的类)) → model(user.ts(根据userClass创建userModel)) → 
+index.ts(实例化userClass并用实例model去使用db.ts的类的增删改查方法)

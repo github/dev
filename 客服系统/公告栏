@@ -1,0 +1,204 @@
+1.用户是管理者时可以管理所属租户下的所有数据
+用户是普通用户时只以管理所属租户和所绑定的平台账号下的数据
+用户是超级管理员时没有任何限制
+所以你们做的列表画面检索条件那里有 平台账号 这个条件的话，有没有考虑这个条件的数据。 zhaoxiang 这个API是你提供的吗？
+
+用户是普通用户时只以管理所属租户和所绑定的平台账号下的数据
+这个没有去考虑
+
+2.这样，翔哥，小程序和公众号的URL都是 https://API地址/wechat/平台账号地址
+中间就不按小程序 公众号 作区分了
+
+https://i-isc.team.x:3000/wechat/eb93e698-0e2e-4bf0-a764-f8baed7c9364
+出来就这种嘛
+id会不会有点长哦
+
+id无所谓，这点长度没关系，能缩少最好，现在是UUID吧？
+
+是的，就那个共通的util生成的
+
+2022/02/21
+
+问题共通部分：
+1.html的样式要放到以该html最上层的class{}中去
+2.列表画面的表格行操作按钮，只保留编辑按钮，按钮样式参考素材管理画面
+3.列表画面的表格行至少用名字作为link跳转 + 编辑按钮跳转
+4.实体删除操作都放到编辑画面中去
+5.删除不必要的 component，比如：
+ src/app/pages/platform-account/platform-account.component.ts
+ src/app/pages/tenant/tenant.component.ts
+ src/app/pages/user/user.component.ts
+6.关键的代码块或变量适当写一些注释
+
+
+具体问题
+用户列表画面；
+1.检索没有使用InquiryQuery的方式
+2.表格行数据中头像无有效数据时显示默认用户头像 /assets/avatar/inquiry.png
+3.表格行数据中关联的平台账户列表显示优化一下吧
+
+用户编辑画面：
+1.打开平台账户选项画面，选中平台账户后，点击”确认“按钮。 重复多次这个操作，用户绑定平台账户列表会无限追加所选的平台账户
+2.用户头像上传限制容量大小就可以了吧，不用限制分辨率
+3.添加用户的时候，角色单选那里默认都不选中，让操作者自己选
+4.关联平台账户选择画面：
+4.1 全选按钮选中时，没有产生全选效果
+4.2 有多个平台账户时，只选中其中一个，全选按钮也被选中了，这块建议参考chat的按平台账户过滤会话功能
+    代码位置：src/app/pages/chat/components/chat-room-platform-account-filter/chat-room-platform-account-filter.component.ts
+4.3 平台账号类型显示不对
+4.4 已经选择了的平台账号在选择画面中的checkbox没有被勾选上
+5.关联平台账户的删除confirm按钮文言以及提示都不对
+6.关联平台账户的显示部分现在是小程序和公众号分开做的两部分html，以后要是有其他类型的平台账户，又得修改html，建议做成共通component
+
+访客列表画面：
+1.表哥行数据中头像无有效数据时按性别区分显示默认访客头像 /assets/avatar/unknown或male或female.png
+  可参考chat 的访客信息画面 src/app/pages/chat/components/chat-guest-info/chat-guest-info.component.html 中 nz-avatar 的部分 〇
+2.表格列“更新时间”可以不要，还有行数据无有效值的部分显示为“-” 〇
+3.表格行数据操作按钮不要“ミュート”按钮　〇
+4.检索条件“Wechat ID”不是模糊匹配，另外输入存在的Wechat ID也检索不到数据　〇
+5.检索条件“タグ”，不是单选，改为多选，另外也改成访客编辑面的tag的方式（可多选已存在的tags，也可以输入别的tag）〇
+6.检索条件“年龄”，没有能按输入的条件值获取到正确的检索结果。另外这是两个输入组件，会有以下5种行为：
+6.1 只输入左边的组件，这时候数据过滤条件是 >=左边输入数值　〇
+6.2 只输入右边的组件，这时候数据过滤条件是 <=右边输入数值　〇
+6.3 输入左右两边的组件，左边 = 右边，这时候数据过滤条件是  =左边输入数值（右边输入数值）　〇
+6.4 输入左右两边的组件，左边 < 右边，这时候数据过滤条件是  >=左边输入数值且<=右边输入数值　〇
+6.5 输入左右两边的组件，左边 > 右边，这时候数据过滤条件是  >=右边输入数值且<=左边输入数值　〇
+7.检索条件“性別”，不是单选，改为多选　〇
+
+访客编辑画面：
+1.名前，电话，email，tag等文本字段不可以只输入空格，需要手动trim() 〇
+  validate(): boolean {
+    for (const key of Object.keys(this.guestForm.controls)) {
+      if (key === 'guestName' || key === 'wechatid' || key === 'telephone' || key === 'email') {
+        this.guestForm.controls[key].setValue(this.guestForm.controls[key].value.trim());
+      }
+      this.guestForm.controls[key].markAsDirty();
+      this.guestForm.controls[key].updateValueAndValidity();
+    }
+
+    return this.guestForm.valid!;
+  }
+2.表单添加email合法性check 〇
+
+
+inquiry-manager-role 客服主管
+management-platform-account 管理平台账户
+management-user 管理用户
+management-media-material 管理素材
+management-guest 管理访客
+
+tenant-manager-role 租户管理员
+management-tenant 管理租户
+management-platform-account 管理平台账户
+management-user 管理用户
+management-media-material 管理素材
+management-guest 管理访客
+
+
+
+
+
+
+类似这样的规范：
+1.必须有值时 require:true string的话有@IsNotEmpty注解
+2.非必须有值时 require:false 然后指定默认值，比如string时 default:''
+  @ApiProperty({ required: true, description: '访客名字' })
+  @IsString()
+  @IsNotEmpty()
+  @prop({ required:true  })
+  public name!: string;
+
+  @ApiProperty({ required: false, description: '电话号码' })
+  @IsString()
+  @prop({ required:false ,default: '' })
+  public phone?: string;
+
+
+vscode 装这个插件 
+mike-co.import-sorter
+这个插件的 import 排版比较合理
+它的配置文件对应的是工程根目录下面的 import-sorter.json 文件
+
+web 那里加了个 avatar 的 pipe
+<div  [innerHTML]="要传的字符串 | avatar: 头像大小（像素）"></div>
+
+比如： <div [innerHTML]="guest.id | avatar: 64"></div>
+
+素材管理:
+小程序： 文本 图片
+公众号：文本 图片 视频 音频
+
+韬哥，超级管理员这个角色是是怎么创建的呢？
+准备是第一次部署应用的时候，自动生成的一个租户和一个超级管理员数据
+
+    officialAccount: {
+        appId: 'U2FsdGVkX1/J+ypt6F/cLs1jF8xid7CzSq6LETOx044=',
+        appSecret: 'U2FsdGVkX193E0gQzHxrm9lqW+vSM20tW1CgOGNuCAY=',
+        serverUrl: 'http://i-isc.team.x:3000/wechat/5fe469d88e400000',
+        token: 'test0316',
+        encodingAesKey: 'test0316test0316test0316test0316test0316tes'
+    },
+    这里appId和appSecret不是页面输入的值，这是因为敏感信息存db加密了。
+    敏感信息存db加密，使用时解密
+
+
+王幽 你用下面的地址登录管理员或者普通客服，关联上这个平台账号。然后微信扫上面的二维码，可以发送信息。做客服会话功能测试
+https://test.inquiry.intares.live/login
+管理员：admin 密码：1
+其他用户你自己加吧
+另外也在这个地址里面，都测试一下其他画面功能吧，都点一下。昨天说的问题我改了一下，你再确认一下。
+测试用的公众号是 フューチャートレンド株式会社
+
+2022/3/29
+客服项目前后台工程改为使用 nx.dev + pnpm 来管理了，工程在 https://bitbucket.teamx.tokyo/projects/INQUIRY/repos/inquiry/browse
+依赖的安装管理不用yarn或者npm，而是使用 pnpm https://pnpm.io/zh/，有空可以了解一下。
+
+具体业务代码没变，位于 apps 目录里面，api - 后台， web - 前台web
+开发步骤可以看一下 README.md
+
+2022/3/31
+inquiry新工程
+安装依赖 yarn intall 改为了-> pnpm install
+启动api yarn start:dev 改为了-> pnpm dev:api
+启动web yarn start 改为了-> pnpm dev:web
+同时启动 api + web 的命令是 pnpm dev
+使用 development分支
+
+2022/4/1
+
+你要测试哪个小程序？公众号？
+我们目前只有两个测试账号，一个公众号已经接入test环境了。一个小程序现在配置的URL是 
+https://fengwentao.lt.intares.live/wechat/wxfc86370205b6128e
+
+
+你启动开发环境后把平台账号是小程序的数据 id和_id 改成 appid一样的"wxfc86370205b6128e",
+微信小程序设定数据是：
+appid： wxfc86370205b6128e
+secret：a0199aa0c5c0b6c0c896cda0600058ef
+token：inquiry
+EncodingAESkey：6ZeZSYc8N1mCoHGzNyP6N7w7clSAPyo2AA5J2ABvqVJ
+
+安装这个：https://github.com/localtunnel/localtunnel，(npm,yarn,pnpm全局安装都可以)，
+然后执行下面的命令：
+lt --subdomain fengwentao --host https://lt.intares.live --port 3000 --token j9WxPMien93WGePhotbzUhYKfRHWTC69
+(显示'your url is:https://fengwentao.lt.intares.live'就运行成功了)
+
+按田志辉说的这个来装
+
+@all 我建了一个自定义的localtunnel。大家可以用来开发的时候内网穿透。 
+安装：yarn global add https://github.com/tian-zhihui/mytunnel.git 
+使用：lt --subdomain <大家名字的拼音> --host https://lt.intares.live --port <需要代理的本地服务端口> --token j9WxPMien93WGePhotbzUhYKfRHWTC69 
+例：lt --subdomain tianzhihui --host https://lt.intares.live --port 4200 --token j9WxPMien93WGePhotbzUhYKfRHWTC69
+
+2022.4.4
+-韬哥，进入会话和进入他人会话的按钮在什么时候出现啊？最近好久没看见了
+
+-新的访客时 可以 接入会话
+别的客服对应中的访客时 可以接入他人会话
+对应的字段是 chat room 里面的 users
+你修改这个数据就可以了
+
+2022.4.7
+客服系统添加了web浏览器中新消息通知功能，也部署到了test环境，你们可以多测测
+另外工程 README.md 更新了一版，开发上有些修改，你们看一下，是关于本地开发环境可以 https 访问客服系统web端的
+

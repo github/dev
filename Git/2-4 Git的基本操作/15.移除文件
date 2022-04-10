@@ -1,0 +1,12 @@
+两种方式:
+
+第一种方式:
+从Git仓库和工作区中同时移除指定文件
+比如:
+git rm -f index.html
+
+第二种方式:
+只从Git仓库中移除，但保留工作区中对应的文件
+比如:
+git rm --cached index.html
+

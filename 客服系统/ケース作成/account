@@ -1,0 +1,5 @@
+account编辑页面：
+应该trim的项目没有trim
+计划回复timer设定，x小时x分x秒，单选框下拉数字显示不全
+AppID、AppSecret、 maxlength="1000"是不是太长(対応不要)
+タイプ是不是改成accountタイプ、免得和素材タイプ混淆(対応不要)

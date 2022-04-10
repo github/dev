@@ -1,0 +1,61 @@
+//7.任意类型(any) 和ES5的不指定类型有点相似
+var num : any = 123
+num = "string" //定义的是任意类型，所以重新赋值后不报错，赋值成功
+
+//8.null和undefined 其他(never)数据类型的子类型
+
+var num : number
+console.log(num) //变量定义没赋值，所以输出undefined，但编译会报错 Variable 'num' is used before being assigned.
+
+var num : undefined
+console.log(num) //变量定义没赋值，所以输出undefined
+
+var num : number | undefined
+console.log(num) //变量定义没赋值，所以输出undefined
+
+var num : number | undefined
+num = 3
+console.log(num) //变量赋值3，所以输出3
+
+var num : null
+num = 1           //报错，数字类型不能赋值给null类型。index.ts:2:1 - error TS2322: Type '1' is not assignable to type 'null'.
+console.log(num)  //能输出1
+
+var num : null   //报错，num还没赋值就使用了。index.ts:2:13 - error TS2454: Variable 'num' is used before being assigned.
+console.log(num) //输出undefined
+
+
+var num : null
+num = null
+console.log(num)  //输出null
+
+var num : number | null | undefined
+num = 8
+console.log(num)  //输出8
+
+var num : number | null | undefined
+console.log(num)  //输出undefined,编译不报错
+
+//9.void类型 表示没有任何类型，一般用于定义方法的时候方法没有返回值
+//ES5的定义方法
+function run(){
+    console.log(run)
+}
+
+//TypeScript里改成写下面这样，void表示方法没返回任何类型
+function run():void{
+    console.log('run')
+}
+run();
+
+//10.never类型:是其他类型(包括null和undefined的子类型)，代表从不会出现的值
+//这意味着声明never的变量只能被never类型所赋值
+var a : never;
+a = (()=>{
+    throw new Error('错误!')；
+})()
+
+浏览器运行结果:
+index.js:4 Uncaught Error: 错误
+    at index.js:4
+    at index.js:5

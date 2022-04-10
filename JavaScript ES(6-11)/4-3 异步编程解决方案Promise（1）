@@ -1,0 +1,34 @@
+promise的精髓在于对于异步操作的状态管理
+promise的参数是一个函数，然后在这个函数里面，对应两个参数，一个resolve，一个reject:
+let p = new Promise ((resolve,reject)=>{})
+
+
+//状态管理
+//resolve:当前异步操作执行成功的回调函数
+//reject:当前异步操作执行失败的回调函数
+
+let p = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        console.log('imooc')
+        //reject('失败')
+        resolve('成功')
+
+    },2000)
+}).then(res=>{  //then方法的参数是两个函数，一个正常，一个异常，第二个参数异常可以不写
+    console.log(res)
+},err=>{
+    console.log(err)
+})
+
+
+let p = new Promise ((resolve,reject)=>{
+    console.log(1) 
+    resolve()
+})
+p.then(res=>(console.log(3))) //先输出1，后输出2，说明promise是立即执行.最后输出3，因为回调函数是异步性的.then相当于是promise的微任务
+                              //微任务是异步操作里面的一个概念，then是跟promise相关的一个任务，会先执行宏任务，即console.log(1)，再执行
+                              //微任务then
+console.log(2)
+
+let q = new Promise ((resolve,reject)=>{}
+console.log(q)

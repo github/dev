@@ -1,0 +1,73 @@
+1.ares下git pull,切到orgin-ARES-361，然后:
+yarn
+yarn bootstrap
+yarn serverless:takeout:dev
+
+2.ares-web-takeout取到本地
+https://bitbucket.teamx.tokyo/projects/ARES-TAKEOUT/repos/ares-web-takeout/browse
+
+https://bitbucket.teamx.tokyo/projects/ARES/repos/ares-taro-live/browse
+
+然后:
+切到development分支
+yarn
+yarn bootstrap
+yarn ssr //启动web服务
+
+3.修改hosts文件
+C:\WINDOWS\system32\drivers\etc\hosts
+192.168.105.167 chengdutest.com gangqiang.teamx.tokyo (每次启动服务的时候都检查一下)
+
+4.snappy禁掉
+serverless-takeout\.env
+.env的末尾加这两句:
+MANAGEMENT_MONGODB_OPTIONS_COMPRESS=false
+MONGODB_OPTIONS_COMPRESS=false
+
+5.安装插件
+
+参照:https://github.com/localtunnel/localtunnel
+npm install -g localtunnel
+正常安装
+lt --port 3100
+运行不正常
+运行情况如下:
+wang.you@NW20210012 MINGW64 /c/project/ares (ARES-361)
+$ lt --port 3100
+your url is: https://perfect-grasshopper-37.loca.lt
+Assertion failed: new_time >= loop->time, file c:\ws\deps\uv\src\win\core.c, line 309
+
+wang.you@NW20210012 MINGW64 /c/project/ares (ARES-361)
+$ Assertion failed: new_time >= loop->time, file c:\ws\deps\uv\src\win\core.c, line 309
+
+★★★★★这一步失败
+
+安装这个插件的意义在于，外网可以访问我的本地服务端。
+
+6.改.ENV的sonypay
+PAYMENT_SONYPAY_ENDPOINTS_POST_URL=https://tender-husky-6.loca.lt/order/cb
+★★★★★具体还不清楚咋个改
+
+7.访问https://gangqiang.teamx.tokyo/?shopCode=001
+这里的shopCode是后台管理系统的【店铺コード】
+这里的gangqiang.teamx.tokyo是【テナント名】
+url里面，租户和shopCode改成不同的店铺コード，即可访问不同店铺的页面。
+
+8.クレジットカード情報入力
+开发模式console，粘进去，然后回车
+$$('input[name="k_cardNo1"]')[0].value = "4123";
+$$('input[name="k_cardNo2"]')[0].value = "0000";
+$$('input[name="k_cardNo3"]')[0].value = "0000";
+$$('input[name="k_cardNo4"]')[0].value = "0300";
+$$('select[name="k_cardYukoKigenMonth"]')[0].value = 12;
+$$('select[name="k_cardYukoKigenYear"]')[0].value = 28;
+$$('input[name="k_securityCode"]')[0].value = 8888;
+
+就不用手动输入了
+
+
+
+
+
+
+

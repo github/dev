@@ -1,0 +1,510 @@
+先预习一下
+
+http原理
+https://developer.mozilla.org/zh-CN/docs/Web/HTTP
+
+主要介绍内容
+1.HTTP guide/Overview of HTTP
+2.HTTP guide/HTTP Message
+3.HTTP authentication
+4.HTTP caching
+5.HTTP redirects
+6.HTTP headers
+7.HTTP request methods(GET POST PUT OPTIONS PATCH)
+8.HTTP response status codes(200 301 400 401 403 404 500 )
+
+https://confluence.teamx.tokyo/pages/viewpage.action?pageId=32934424
+
+课件位置
+https://confluence.teamx.tokyo/pages/viewpage.action?pageId=32934424
+
+
+辅助视频教程:
+GraphQl视频教程_Express Koa结合GraphQl实现服务器端Api并且在Vue Angular React中请求GraphQl Server Api
+https://www.bilibili.com/video/BV18b411B758
+
+Node.js RESTful API
+https://www.runoob.com/nodejs/nodejs-restful-api.html
+
+
+RPC 和 REST还有RESTFul到底是个什么玩意？
+https://cloud.tencent.com/developer/article/1687563
+
+
+不好意思哈 之前的课后作业我考虑不全 描述也不清楚 现在重新发一下restful的课后作业哈
+
+GET 可以根据contentId获取以下数据结构
+content{
+	contentId: "20200819163438",
+	category: "5f3ce20d434857000b6dc0dd"
+	subCategory: "5f3ce234434857000b6dc0df",
+	longitude: 142.388441,
+	latitude: 43.3453149,
+	openTimeEnd: "02:00",
+	phoneNumber: "167-22-3956",
+	isShowInDetail: true,
+	tag: ["test"],
+	createdAt: "2020-08-19 08:58:44"
+}
+GET 可以根据以下query结构查询content结果列表(选做)
+query{
+	category: "123456",
+	subCategory: "Aa1234",
+	tag: "test",
+	sort: "createdAt,DESC"
+}
+
+PUT 可以接收以下结构数据进行数据更新
+content{
+	contentId: "20200819163438",
+	category: "5f3ce20d434857000b6dc0dd"
+	subCategory: "5f3ce234434857000b6dc0df",
+	longitude: 142.388441,
+	latitude: 43.3453149,
+	openTimeEnd: "02:00",
+	phoneNumber: "167-22-3956",
+	isShowInDetail: true,
+	tag: ["test"],
+	createdAt: "2020-08-19 08:58:44"
+}
+
+PATCH 可以接收以下结构数据进行部分数据更新(category、subCategory)
+content{
+	contentId: "20200819163438",
+	category: "5f3ce20d434857000b6dc0dd"
+	subCategory: "5f3ce234434857000b6dc0df",
+}
+
+DELETE 可以接收contentId删除指定content
+
+
+可以用类似ares下面的test里面的.http文件那样的东西，用REST Client来发起request，测试一下，感受一下
+
+body传是加密的，query传不加密且url长度有限制
+
+超哥说:
+GET 里面没有Body哈 虽然我们说http的请求和响应的时候 是由 起始行、headers、body构成的 但是在rest中 接收传过来的Body的时候叫query
+post put patch delete没有query 因为query是get使用的 这些方式应该使用Body接收
+
+这个controller里面 同一个请求方式的 它的URI是唯一的
+因为URI是标识资源的 一个URI标识一个资源 是唯一的 也就是说不存在不同资源使用同一个URI去标识
+所以findOne和findSome这两个URI 它的标识应该是不一样的 按照现在的样子 当前台调用api使用GET方式的时候 始终会调用findOne这个URI findSome永远调用不到
+当我们定义好URI后 前台调用时 是通过路由解析器去寻找目的URI的 找到就执行URI对应的方法了
+URI可以理解成我们平时说的URL哈
+
+
+2021.11.9 17:30写的:
+content.controller.ts
+
+import {
+  Controller,
+  Get,
+  Query,
+  Param,
+  Body,
+  Put,
+  Patch,
+  Delete,
+} from '@nestjs/common';
+import { UpdateContent, UpdateSomeContent } from './content.dto';
+import { ContentService } from './content.service';
+
+@Controller('content')
+export class ContentController {
+  constructor(private contentService: ContentService) {}
+
+  @Get()
+  index() {
+    return 'Content Homepage';
+  }
+
+  @Get('some')
+  findSome(@Query() query) {
+    console.log(query);
+    return this.contentService.getContentInfo(query);
+  }
+
+  @Get(':id')
+  findOne(@Param() contentId: number) {
+    return this.contentService.getContentById(contentId);
+  }
+//有一个隐藏问题：@Get(':id') 这个api的传入参数：contentId: number 前台传入的时候是number，但是这里接收的时候真的是一个number类型的值吗？还是一个纯数字的字符串？
+//因为纯数字的字符串在使用的时候 只要不是严格的类型判断或赋值时是不会报出问题来的
+//前台传递的参数 在调用http前会把参数json序列化成字符串，然后后台接收到api调用的时候 会把这个json序列化的字符串进行反序列化 再取值
+//这时候拿到的其实是一个纯数字字符串 不过我没去仔细研究 以前做java时候就是这样 导致类型强检查时候报错
+//这个可以注意一下 我们接收的时候可以用string接收 然后转化成我们需要的类型
+//比如说 你需要的是个number类型的 但是你接收到的是个string类型的 那么就需要将string转化为number类型
+//Number(value?: any)
+
+  @Put()
+  update(@Body() updateContent: UpdateContent) {
+    return this.contentService.updateContent(updateContent);
+  }
+
+  @Patch()
+  updateSome(@Body() updateSomeContent: UpdateSomeContent) {
+    return this.contentService.updateSomeContent(updateSomeContent);
+  }
+
+  @Delete(':id')
+  remove(@Param() contentId: number) {
+    return this.contentService.deleteOne(contentId);
+  }
+}
+
+content.service.ts
+
+import { UpdateContent, UpdateSomeContent } from './content.dto';
+
+import { Injectable } from '@nestjs/common';
+
+@Injectable()
+export class ContentService {
+  getContentById(contentId: number): object {
+    return [
+      {
+        contentId: '20200819163437',
+        category: '5f3ce20d434857000b6dc0dd',
+        subCategory: '5f3ce234434857000b6dc0df',
+        longitude: '142.388441',
+        latitude: '43.3453149',
+        openTimeEnd: '02:00',
+        phoneNumber: '167-22-3956',
+        isShowInDetail: 'true',
+        tag: '[test]',
+        createdAt: '2020-08-19 08:58:44',
+      },
+    ];
+  }
+  getContentInfo(query: object): object {
+    return [
+      {
+        contentId: '20200819163440',
+        category: '123456',
+        subCategory: 'Aa1234',
+        longitude: 142.388441,
+        latitude: 43.3453149,
+        openTimeEnd: '02:00',
+        phoneNumber: '167-22-3956',
+        isShowInDetail: true,
+        tag: 'test',
+        createdAt: '2020-08-20 08:58:44',
+      },
+      {
+        contentId: '20200819163439',
+        category: '123456',
+        subCategory: 'Aa1234',
+        longitude: 142.388441,
+        latitude: 43.3453149,
+        openTimeEnd: '02:00',
+        phoneNumber: '167-22-3956',
+        isShowInDetail: true,
+        tag: 'test',
+        createdAt: '2020-08-19 08:58:44',
+      },
+    ];
+  }
+  updateContent(updateContent: UpdateContent): object {
+    return [
+      {
+        contentId: '20200819163438',
+        category: '5f3ce20d434857000b6dc0dd',
+        subCategory: '5f3ce234434857000b6dc0df',
+        longitude: '142.388441',
+        latitude: '43.3453149',
+        openTimeEnd: '02:00',
+        phoneNumber: '167-22-3956',
+        isShowInDetail: 'true',
+        tag: '[test]',
+        createdAt: '2020-08-19 08:58:44,',
+      },
+    ];
+  }
+  updateSomeContent(updateSomeContent: UpdateSomeContent): object {
+    return [
+      {
+        category: '5f3ce20d434857000b6dc0dd',
+        subCategory: '5f3ce234434857000b6dc0df',
+      },
+    ];
+  }
+  deleteOne(contentId: number): boolean {
+    return true;
+  }
+}
+
+content.dto.ts
+
+export class UpdateContent {
+  contentId: number;
+  category: string;
+  subCategory: string;
+  longitude: number;
+  latitude: number;
+  openTimeEnd: string;
+  phoneNumber: string;
+  isShowInDetail: boolean;
+  tag: string[];
+  createdAt: string;
+}
+
+export class UpdateSomeContent {
+  contentId: number;
+  category: string;
+  subCategory: string;
+}
+
+
+
+Number(value?: any) 这是这个Number这个方法允许接收一个参数值，这个参数值不是必须传入的，如果传入了，这个参数值的类型是any类型
+我们调用的时候直接传值就行了
+
+比如说 Number(5) 会返回一个数字5
+Number('5') 也会返回一个数字5
+Number('5a') 会报一个错
+这就像我们定义了一个方法，规定允许传入什么参数，别人在使用的时候按照我们定义的规则使用就好了
+
+是这样的 一般参数少的 结构简单的 比如id之类的就直接使用@Param()接收
+参数多 结构复杂的 就使用@Query()传递
+使用@Query()传递的时候 前台发送请求时 是把这部分参数塞进了request的body的
+
+2021.11.9 20:51写的:
+
+content.controller.ts
+
+import {
+  Controller,
+  Get,
+  Query,
+  Param,
+  Body,
+  Put,
+  Patch,
+  Delete,
+} from '@nestjs/common';
+import { UpdateContent, UpdateSomeContent, ContentQuery } from './content.dto';
+import { ContentService } from './content.service';
+
+@Controller('content')
+export class ContentController {
+  constructor(private contentService: ContentService) {}
+
+  @Get()
+  index() {
+    return 'Content Homepage';
+  }
+
+  @Get('some')
+  findSome(@Query() query: ContentQuery) {
+    console.log(query);
+    return this.contentService.getContentInfo(query);
+  }
+
+  @Get(':id')
+  findOne(@Param() contentId: string) {
+    return this.contentService.getContentById(Number(contentId));
+  }
+
+  @Put()
+  update(@Body() updateContent: UpdateContent) {
+    return this.contentService.updateContent(updateContent);
+  }
+
+  @Patch()
+  updateSome(@Body() updateSomeContent: UpdateSomeContent) {
+    return this.contentService.updateSomeContent(updateSomeContent);
+  }
+
+  @Delete(':id')
+  remove(@Param() contentId: string) {
+    return this.contentService.deleteOne(Number(contentId));
+  }
+}
+
+content.service.ts
+
+import { ContentQuery, UpdateContent, UpdateSomeContent } from './content.dto';
+
+import { Injectable } from '@nestjs/common';
+
+@Injectable()
+export class ContentService {
+  getContentById(contentId: number) {
+    return {
+      contentId: 20200819163437,
+      category: '5f3ce20d434857000b6dc0dd',
+      subCategory: '5f3ce234434857000b6dc0df',
+      longitude: 142.388441,
+      latitude: 43.3453149,
+      openTimeEnd: '02:00',
+      phoneNumber: '167-22-3956',
+      isShowInDetail: true,
+      tag: ['test'],
+      createdAt: '2020-08-19 08:58:44',
+    };
+  }
+  getContentInfo(query: ContentQuery) {
+    return [
+      {
+        contentId: 20200819163440,
+        category: '123456',
+        subCategory: 'Aa1234',
+        longitude: 142.388441,
+        latitude: 43.3453149,
+        openTimeEnd: '02:00',
+        phoneNumber: '167-22-3956',
+        isShowInDetail: true,
+        tag: ['test'],
+        createdAt: '2020-08-20 08:58:44',
+      },
+      {
+        contentId: 20200819163439,
+        category: '123456',
+        subCategory: 'Aa1234',
+        longitude: 142.388441,
+        latitude: 43.3453149,
+        openTimeEnd: '02:00',
+        phoneNumber: '167-22-3956',
+        isShowInDetail: true,
+        tag: ['test'],
+        createdAt: '2020-08-19 08:58:44',
+      },
+    ];
+  }
+  updateContent(updateContent: UpdateContent) {
+    return {
+      contentId: '20200819163438',
+      category: '5f3ce20d434857000b6dc0dd',
+      subCategory: '5f3ce234434857000b6dc0df',
+      longitude: 142.388441,
+      latitude: 43.3453149,
+      openTimeEnd: '02:00',
+      phoneNumber: '167-22-3956',
+      isShowInDetail: 'true',
+      tag: ['test'],
+      createdAt: '2020-08-19 08:58:44,',
+    };
+  }
+  updateSomeContent(updateSomeContent: UpdateSomeContent) {
+    return [
+      {
+        category: '5f3ce20d434857000b6dc0dd',
+        subCategory: '5f3ce234434857000b6dc0df',
+      },
+    ];
+  }
+  deleteOne(contentId: number): boolean {
+    return true;
+  }
+}
+
+content.dto.ts
+
+export class UpdateContent {
+  contentId: number;
+  category: string;
+  subCategory: string;
+  longitude: number;
+  latitude: number;
+  openTimeEnd: string;
+  phoneNumber: string;
+  isShowInDetail: boolean;
+  tag: string[];
+  createdAt: string;
+}
+
+export class UpdateSomeContent {
+  contentId: number;
+  category: string;
+  subCategory: string;
+}
+
+export class ContentQuery {
+  category: string;
+  subCategory: string;
+  tag: string;
+}
+
+2021.11.10 GraphQL-超哥
+
+相关网上资料:
+https://qiita.com/Gma_Gama/items/90b98e046e1b66a71c22 晋哥推荐攻略
+https://github.com/nestjs/graphql
+https://docs.nestjs.com/graphql/quick-start
+https://graphql.cn/graphql-js/graphql-clients/
+
+可以参考ares-takeout
+schema.graphql
+通过data.xx获取get的数据
+
+田哥举的例子，要向下面这样写，不过不知道啥意思:
+name:string nullable:true
+password?:string
+
+组装是什么意思
+
+takeout里面有哪些是GraphQL做的
+获取店铺设定
+
+
+用框架的好处是少写代码，少出bug
+
+RESTful:
+OPTION GET
+OPTION POST
+OPTION UPDATE
+OPTION DELETE
+每次访问调2次后台API，以上共8次
+
+GraphQL:
+OPTION (GET,POST,UPDATE,DELETE)
+1次访问调2次后台，节约6次
+
+
+Q:RouterModule.forRoutes(routes), 这个是起什么作用呢？
+只知道controller的@Get()可以设置路由。上面这个也是设置路由吗？
+A:是的 这个是在设置子模块的路由
+这样的好处是可以将不同功能模块的放到一个module里面，最后添加到appModule里面
+
+
+超哥给的测试的例子:
+
+POST http://localhost:3090/graphql
+Content-Type: application/json
+tenant-id: chengdutest
+shop-code: 00001
+shop-id: 5fa27651e587d7000b5664c1
+X-REQUEST-TYPE: GraphQL
+Accept-Language: ja_JP
+
+query {
+  checkOrderStatus(orderId: "29648036813702351794257041472") {
+    orderId
+    status
+  }
+}
+
+
+2021.12.10复习
+1.
+@Controller('content')
+export class ContentController {
+  constructor(private contentService: ContentService) {}
+
+  @Get()
+  index() {
+    return 'Content Homepage';
+  }
+
+  @Get('some')
+  findSome(@Query() query: ContentQuery) {
+    console.log(query);
+    console.log(1);
+    return this.contentService.getContentInfo(query);
+  }
+
+  这里访问 http://localhost:5000/content/some?category=1&subcategory=2&tag=3
+  那么:
+  console.log(query);的结果是: { category: '1', subcategory: '2', tag: '3' }
+
+2.

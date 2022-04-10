@@ -1,0 +1,197 @@
+Electron 打包 Angular 应用
+https://blog.csdn.net/zxcvqwer19900720/article/details/103404090?spm=1035.2023.3001.6557&utm_medium=distribute.pc_relevant_bbs_down_v2.none-task-blog-2~default~OPENSEARCH~Rate-3.pc_relevant_bbs_down_cate&depth_1-utm_source=distribute.pc_relevant_bbs_down_v2.none-task-blog-2~default~OPENSEARCH~Rate-3.pc_relevant_bbs_down_cate
+
+本文将介绍，如何将 Angular 项目嵌入到 Electron 中做成一个桌面应用程序。
+
+        首先我们需要明白的是，我们打包给出去的程序中，angular 部分肯定是编译之后的文件（比如使用 ng build --prod 打包之后的文件），我们不能把项目的源码打包到最终的应用程序中（然而你在网上能找到的资料，有不少都犯了这个错误）。
+
+        关于 electron 的打包工具，官方推荐有 electron-forge/electron-builder 等，本文使用的是 electron-packager，这个插件打包出来的是应用所包含的所有文件（electron-builder 打包出来只有一个 exe），这样方便后续用 NSIS 之类的工具做成 exe 安装包。
+
+         总体思路：使用 ng build --prod 产生编译之后的文件，然后用 electron-packager 打包编译后的angular项目文件成为一个 electron 应用。
+
+1. 创建&开发项目
+
+        使用你习惯的方式创建一个 angular 项目，然后进行功能的开发，这一步需要做的事情跟你以前做的一摸一样。
+
+2. 安装 electron/electron-packager 依赖
+
+npm install electron --save-dev
+npm install electron-packager --save-dev
+
+这里面需要注意你使用的 electron-packager 版本号，本人使用 13.1.1 版本，用最新的 14.1.1 版本会报错，这可能跟你的 electron 版本有关。
+
+3. 在项目的 src 目录下建立 el-main.js 和 package.json 这两个文件。el-main.js 就是 electron 的主进程文件，这里我们需要知道一个关键点就是 electron 要能正常运行，主进程文件（el-main.js）的同级目录下必须有一个 package.json 文件，在这个 package.json 文件中描述运行的 electron 主进程文件是哪个，在主进程文件中再决定运行的主页面是哪个。
+
+项目主要文件结构：
+
+electron-test
+|--src/
+|--src/app/
+|--src/assets/
+|--src/el-main.js
+|--src/package.json
+|--src/...
+|-- ...
+|--angular.json
+|--package.json
+|-- ...
+根目录下的 package.json 文件就是项目的依赖描述文件，src下的 package.json 文件就是 electron 描述文件。把 el-main.js 和 package.json 放到 src 目录下的原因是方便在 ng-build 时拷贝这两个文件到编译输出的目录下。当然你使用其他的打包工具的话，也需要做这个事情，目标就是使得最后 electron-packager 打包的目标目录中有 el-main.js 和 package.json 文件。
+
+src/package.json文件内容如下，
+
+{
+    "name": "electron-test",
+    "version": "1.0.0",
+    "main": "el-main.js",
+    "description": "",
+    "author": "walli"
+}
+
+el-main.js：
+
+const { app, BrowserWindow } = require('electron');
+ 
+ 
+// 保持对window对象的全局引用，如果不这么做的话，当JavaScript对象被
+// 垃圾回收的时候，window对象将会自动的关闭
+let win
+ 
+function createWindow() {
+  // 创建浏览器窗口。
+  win = new BrowserWindow({
+    width: 800,
+    height: 600,
+    minWidth: 500,
+    minHeight: 500,
+    webPreferences: {
+      nodeIntegration: true
+    }
+  })
+ 
+  // 加载index.html文件
+  win.loadFile('index.html')  // 这个路径可以根据你实际的项目目录结构进行修正
+ 
+  // 打开开发者工具
+  win.webContents.openDevTools()
+  logger.info('esraeder main start at ', new Date());
+ 
+  // 当 window 被关闭，这个事件会被触发。
+  win.on('closed', () => {
+    // 取消引用 window 对象，如果你的应用支持多窗口的话，
+    // 通常会把多个 window 对象存放在一个数组里面，
+    // 与此同时，你应该删除相应的元素。
+    win = null
+  })
+}
+ 
+// Electron 会在初始化后并准备
+// 创建浏览器窗口时，调用这个函数。
+// 部分 API 在 ready 事件触发后才能使用。
+app.on('ready', createWindow)
+ 
+// 当全部窗口关闭时退出。
+app.on('window-all-closed', () => {
+  // 在 macOS 上，除非用户用 Cmd + Q 确定地退出，
+  // 否则绝大部分应用及其菜单栏会保持激活。
+  if (process.platform !== 'darwin') {
+    app.quit()
+  }
+})
+ 
+app.on('activate', () => {
+  // 在macOS上，当单击dock图标并且没有其他窗口打开时，
+  // 通常在应用程序中重新创建一个窗口。
+  if (win === null) {
+    createWindow()
+  }
+})
+ 
+// 在这个文件中，你可以续写应用剩下主进程代码。
+// 也可以拆分成几个文件，然后用 require 导入。
+
+4. 在项目根目录下的 package.json 文件中增加编译命令
+
+{
+  "name": "electron-test",
+  "version": "1.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "package": "ng build --delete-output-path --prod && electron-packager ./dist/electron-test electron-test --platform=win32 --arch=x64 --icon=./src/favicon.ico --app-version=1.0.0 --asar --overwrite --out=./dist"
+  },
+  "private": true,
+  "dependencies": {
+    ...
+  },
+  "devDependencies": {
+    ...
+    "electron": "^6.1.3",
+    "electron-packager": "^13.1.1",
+    ...
+  }
+}
+
+至于 electron-packager 命令参数，请参考github：https://github.com/electron/electron-packager
+
+5. 修改项目根目录下的 angular.json 文件，增加打包时同时打包 src/el-main.js，src/package.json 这两个文件
+
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "electron-test": {
+      ...
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/electron-test", // 这行指定了输出目录
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.app.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              "src/el-main.js",  // 下面两句就是拷贝需要的文件
+              "src/package.json",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "output": "/assets/"
+              }
+            ],
+            ...
+          },
+          ...
+        },
+        ...
+      }
+    },
+    ...
+  }
+}
+
+6. 打包
+
+npm run package
+打包结束之后，你可以在项目的 dist 目录下找到两个文件夹
+
+|--dist
+|--dist/electron-test
+|--dist/electron-test-win32-x64
+electron-test 目录即为 ng build 之后产生的目录，electron-test-win32-x64 目录即为 electron-packager 打包之后产生的目录，运行这个目录下 electron-test.exe 文件，即可打开我们编译完成的应用。
+
+ 
+
+ 
+
+
+————————————————
+版权声明：本文为CSDN博主「_Walli_」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/zxcvqwer19900720/article/details/103404090

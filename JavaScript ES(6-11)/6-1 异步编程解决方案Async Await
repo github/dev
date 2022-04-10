@@ -1,0 +1,27 @@
+// async function foo(){
+//     return 'imooc'
+// }
+// console.log(foo()) //返回的是一个promise对象 Promise{<fulfilled>:'imooc'}
+
+// async function foo(){
+//     let result = await 'imooc'
+//     console.log(result)
+// }
+// foo()
+
+function timeout(){
+    return new Promise(resolve => {
+        setTimeout(()=>{
+            console.log(1)
+            resolve()
+        },1000)
+        
+    })
+}
+
+async function foo(){
+    await timeout() //等await后面的函数执行完了以后再执行后面的
+    console.log(2)
+}
+foo()
+

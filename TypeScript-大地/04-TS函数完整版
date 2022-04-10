@@ -1,0 +1,76 @@
+//ES5定义函数的方法
+  //函数声明类
+  function run(){
+      return 'run';
+  }
+  //匿名函数
+  var run2 = function(){
+      return 'run2';
+  }
+
+//TS中定义函数的方法
+  //函数声明
+  function() run3() : string{
+      return 'run3'
+  }
+  //匿名函数
+  var run4 = function() : string{
+      return 'run4';
+  }
+需要传参数的，参数也要带类型
+
+
+//ES5里方法的形参和实参不一样。但是TS中必须一样，如果不一样需要配置可选参数
+function getInfo(name : string, age ?: number) : string{
+    if (age){
+        return `${name}------${age}`;
+    }else{
+        return `${name}------年龄保密`;
+    }
+}
+alert(getInfo('zhangsan')) //年龄可以不传
+
+//默认参数
+//ES5里面没法设置默认参数，ES6和TS可以设置
+
+function getInfo(name : string, age : number=20) : string{
+    if (age){
+        return `${name}------${age}`;
+    }else{
+        return `${name}------年龄保密`;
+    }
+}
+alert(getInfo('zhangsan'))
+
+//剩余参数
+function sum(a:number,b:number,c:number,d:number):number{
+    return a+b+c+d;
+}
+alert(sum(1,2,3,4));
+
+//三点运算符 ES6的语法 接受新参数传过来的值
+function sum(...result:number[]):number{
+    var sum = 0;
+    for (var i=0;i<result.length;i++);{
+         sum += result[i];
+    }
+    return sum
+}
+alert(sum(1,2,3,4,5));
+
+//TS中的重载——同样的函数，传入的参数不一样，实现的功能不一样
+function getInfo(name:string):string; 
+function getInfo(age:number):string;
+//以上两行不要也一样啊，意义在哪里？参数校验？那为什么不要这个校验也没什么影响呢？
+
+function getInfo(str:any):any{
+    if(typeof str==='string'){
+        return '我叫:'+str;
+    }else{
+        return '我的年龄是:'+str;
+    }
+}
+alert(getInfo('张三'));
+alert(getInfo(35));
+
+//箭头函数

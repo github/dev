@@ -1,0 +1,14 @@
+GET
+1.选择请求的方法GET
+2.填写请求的URL地址
+4.填写请求的参数(KEY VALUE)没有就不填
+5.点击Send按钮发起GET请求
+6.查看服务器响应的结果
+
+POST
+1.选择请求的方法POST
+2.填写请求的URL地址
+3.选择Body面板并勾选数据格式:x-www-form-uniencoded ※
+4.填写要发送到服务器的数据:KEY VALUE 
+5.点击Send按钮发起POST请求
+6.查看服务器响应的结果
