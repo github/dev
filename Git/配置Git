@@ -1,0 +1,8 @@
+1.配置用户信息:
+git config --global user.name "wangyou"
+git config --global user.email "youw829@gmail.com"
+配置信息通常在用户文件夹下的.gitconfig里，但也有例外，比如我这台电脑的这个路径下没找到这个配置文件
+
+2.查看指定的全局配置:
+git config --global user.name
+git config --global user.email

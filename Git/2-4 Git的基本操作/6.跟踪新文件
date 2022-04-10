@@ -1,0 +1,5 @@
+git add
+
+例如:
+git add index.html
+这样，index.html就从untracked转为committed了

@@ -1,0 +1,8 @@
+vscode里可以点-号
+
+命令的话就是：
+git reset HEAD 要移除的文件名称
+
+移除多个暂存区文件到工作区的话就是:
+git reset HEAD .
+
