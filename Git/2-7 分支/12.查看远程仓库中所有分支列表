@@ -1,0 +1,6 @@
+查看远程仓库中所有分支列表
+
+git remote show 远程仓库名称
+
+例如:
+git remote show origin

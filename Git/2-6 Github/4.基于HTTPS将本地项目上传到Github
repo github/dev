@@ -13,4 +13,6 @@ echo "# Project_JavaScript_Practice" >> README.md
 git remote add origin https://github.com/uu-python3/Project_JavaScript_Practice.git
 
 5.将本地仓库中的内容推送到远程的origin仓库中
-git push -u origin master
+git push -u origin master(第一次必须写这样的完整命令，以后只需要git push)
+
+刷新Github页面，看到https://github.com/uu-python3/Project_JavaScript_Practice的code已经有本地项目

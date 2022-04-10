@@ -1,0 +1,7 @@
+合并分支
+1.切换到master分支
+git checkout master
+2.在master分支上运行git merge命令，将功能分支的代码合并到master分支
+git merge feature分支
+
+以上都是本地分支操作

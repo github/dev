@@ -1,0 +1,39 @@
+作用:实现本地仓库和Github之间免登录的加密数据传输
+
+SSH key由两部分组成，分别是:
+1.id_rsa(私钥文件，存放于客户端的电脑中即可)
+2.id_rsa.pub(公钥文件，需要配置到Github中)
+
+如何在自己电脑上生成这两个SSH key呢？
+1.打开Git Bash
+2.粘贴如下命令，并将your_email@example.com替换为注册Github账号时填写的邮箱:
+   ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+需要连续敲击3次回车。
+
+命令执行情况如下:
+wang.you@NW20210012 MINGW64 /c/project/typescript_demo (master)
+$ ssh-keygen -t rsa -b 4096 -C "youw829@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/wang.you/.ssh/id_rsa):
+Created directory '/c/Users/wang.you/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/wang.you/.ssh/id_rsa
+Your public key has been saved in /c/Users/wang.you/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:nSoQR9AwFRw7wTnit36C7o4uH34cnreDxS7DpYI2nR8 youw829@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|    +B*+         |
+|    .o*o         |
+|   ...+.         |
+|    .o.. . .     |
+|    .o .S o      |
+|    ..=  .       |
+| .o+.E. .        |
+|o+.=% B..        |
+|.+**==.=         |
++----[SHA256]-----+
+
+3.查看到，在C:\Users\用户名文件夹\.ssh目录中生成id_rsa和id_pub两个文件

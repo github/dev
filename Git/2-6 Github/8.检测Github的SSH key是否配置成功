@@ -1,0 +1,12 @@
+打开Git Bash，输入如下命令
+
+ssh -T git@github.com
+
+运行结果如下:
+wang.you@NW20210012 MINGW64 /c/project/typescript_demo (master)
+$ ssh -T git@github.com
+The authenticity of host 'github.com (52.69.186.44)' can't be established.
+ECDSA key fingerprint is SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com,52.69.186.44' (ECDSA) to the list of known hosts.
+Hi uu-python3! You've successfully authenticated, but GitHub does not provide shell access.

@@ -1,0 +1,6 @@
+例如在本地新增一个index.js文件
+git status -s
+git add .
+git status -s 
+git commit -m "新增了index.js文件"
+git push(第2次及第2次以后不用写git push -u origin master)

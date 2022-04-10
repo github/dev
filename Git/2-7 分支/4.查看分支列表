@@ -1,0 +1,8 @@
+git branch
+
+*表示当前所处的分支
+
+PS C:\project\inquiry\inquiry> git branch
+  INQUIRY-4
+* development
+  master
