@@ -1,0 +1,17 @@
+nav a{
+    margin-left: 1.2em;
+    font-weight: 900;
+    background: #3399ff;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    transition: 0.6s ease-in-out;
+}
+nav a:hover{
+    box-shadow: 0 0 8px fuchsia;
+    background: fuchsia;
+    transform: scale(1.2);
+}
+nav a:nth-of-type(1){
+    margin-left: 60vw;
+}

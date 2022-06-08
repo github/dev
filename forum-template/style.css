@@ -1,0 +1,65 @@
+@font-face {
+    font-family: "Circular";
+    font-weight: 100;
+    src: url(CircularStd-Light.otf);
+}
+@font-face {
+    font-family: "Circular";
+    font-weight: 400;
+    src: url(CircularStd-Medium.otf);
+}
+@font-face {
+    font-family: "Circular";
+    font-weight: 700;
+    src: url(CircularStd-Bold.otf);
+}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap%27");
+body{
+    font-family: "Circular";
+}
+
+a{
+    text-decoration: none;
+}
+nav{
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    margin:-10px;
+    padding: 20px;
+    background: #333;
+    color: white;
+}
+nav h1{
+    margin: 5px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+div[data-axis=x]{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+img[src="ac-world.svg"]{
+    z-index:1;
+    width: 200px;
+}
+dialog{
+    border: linear-gradient(#3399ff, fuchsia);
+    background: white;
+    backdrop-filter: blur(8px);
+    padding: 50px;
+    border-radius: 20px;
+    
+    
+}
+img[src="sm-cross.svg"]{
+    width: 20px;
+    position: absolute;
+    top:15px;
+    right: 15px;
+}
+
