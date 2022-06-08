@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Template</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <nav>
+        <h1>Forum Template</h1>
+        
+
+  	<div class="sec-center"> 	
+	  	<input class="dropdown" type="checkbox" id="dropdown" name="dropdown"/>
+	  	<label class="for-dropdown" for="dropdown">Your Account <ion-icon name="person-circle-outline"></ion-icon></label>
+  		<div class="section-dropdown"> 
+  			<a href="profile.html"><span><ion-icon name="person-circle"></ion-icon>&nbsp;Profile</span></a>
+  			<a href="#"><span><ion-icon name="person"></ion-icon>&nbsp;Account</span></a>
+  			<a href="#"><span><ion-icon name="cog"></ion-icon>&nbsp;Settings</span></a>
+        <a href="#"><span><ion-icon name="chatbox"></ion-icon>&nbsp;Your Posts</span></a>
+        <a href="#"><span><ion-icon name="chatbubbles"></ion-icon>&nbsp;Your Comments</span></a>
+        <a href="#"><span><ion-icon name="create"></ion-icon>&nbsp;New Post</span></a>
+  		</div>
+  	</div>
+    </nav>
+    <br><br><br><br><br><br><br><br>
+    <div data-axis="x">
+        <h1>The entire world's opinions, at your fingertips</h1>
+        <img src="ac-world.svg">
+    </div>
+    <dialog id="favDialog">
+        
+            <img src="sm-cross.svg" onclick="$( '#favDialog' ).hide(); location.reload();">
+        
+        <h2>Successfully Logged In!</h2>
+      </dialog>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+      
+      function addDarkmodeWidget() {
+        new Darkmode().showWidget();
+      }
+      window.addEventListener('load', addDarkmodeWidget);
+    </script>
+    <script>
+    $(document).ready(function(){
+      $(".profile").hover(function(){
+        $(".dropdown").slideToggle();
+      });
+    });
+    
+
+    </script>
+</body>
+</html>
