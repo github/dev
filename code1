@@ -1,0 +1,5 @@
+select  distinct ACCOUNT, 
+	    UPPER (USERNAME) as Username,
+	    IIF (USERNAME not like '%mayo.edu%', 'External', 'Internal') as user_type
+
+	from [QUALITY_METRICS].[USER_ACCOUNT_MAP]
