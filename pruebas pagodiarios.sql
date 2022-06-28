@@ -112,3 +112,22 @@ select  YEAR(GETDATE()-1) gestion, month(GETDATE()-1) Mes , (DATEPART(week,Fecha
  year(FechaEmitido) = YEAR(GETDATE()-1) and month(FechaEmitido) = MONTH(GETDATE()-1) 
  and DAY(FechaEmitido) between datepart( weekday,1) and Day(GetDate()-1) 
   group by   (DATEPART(week,FechaEmitido)), idSucursal  )
+
+
+
+
+  -------------------------------------------------------------------
+ create proc SP_sacardiaLunes
+as
+ 
+set language spanish
+declare @Diasemana int = 1
+declare @contador as int =6
+ while DATEPART(weekday,GETDATE()-@contador)<> @Diasemana
+ set @contador = @contador -1
+
+ select GetDate()- @contador as fecha , 
+ datename(weekday,GETDATE()-@contador)as diasemanal
+
+
+ exec SP_sacardiaLunes
