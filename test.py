@@ -1,3 +1,7 @@
 import datetime from datetime
 
-print(datetime.today())
+today = datetime.today()
+now = datetime.now()
+
+print(today)
+print(now)
