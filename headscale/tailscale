@@ -1,12 +1,13 @@
 install:
     apt update -y && \
     apt upgrade -y && \
-    apt install -y curl \
+    apt install -y curl  && \
     curl -fsSL https://tailscale.com/install.sh | sh
 
 login:
     tailscale up  --login-server=https://tailscale.rickietangmyspace.top:8080/
-
+    with Preauth Keys:
+        tailscale up  --login-server=https://tailscale.rickietangmyspace.top:8080/ --auth-key 719d22115b751923f0a9d059b7e4c42f123f57b882104358 
 
 
 

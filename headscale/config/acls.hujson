@@ -2,20 +2,20 @@
   // groups are collections of users having a common scope. A user can be in multiple groups
   // groups cannot be composed of groups
   "groups": {
-	"group:me": ["manager"],
-    "group:slave": ["dogyun", "oracle","upvps","vsixnode","woiden","hax","serverfactory","scaleway","euserv","pacificrack","racknerd","cloudcone","tencent","google"],
+	"group:me": ["me"],
+  "group:rickietangmyspace": ["rickietangmyspace"],
 	"group:local": ["local"],
   },
   "tagOwners": {
-  	 "tag:rancher-server": ["group:slave"],
-	 "tag:kubernetes-agent": ["group:slave"],
-	 "tag:kubernetes-server": ["group:slave"],
-	 "tag:kubernetes-kubeedge-cloud": ["group:slave"],
-	 "tag:kubernetes-kubeedge-node": ["group:slave"],
+  	 "tag:rancher-server": ["group:rickietangmyspace"],
+	   "tag:kubernetes-agent": ["group:rickietangmyspace"],
+	   "tag:kubernetes-server": ["group:rickietangmyspace"],
+	   "tag:kubernetes-kubeedge-cloud": ["group:rickietangmyspace"],
+	   "tag:kubernetes-kubeedge-node": ["group:rickietangmyspace"],
 	 
-	 "tag:localslave": ["group:local"],
+	   "tag:localslave": ["group:local"],
 	 
-	 "tag:me": ["group:me"],
+	   "tag:me": ["group:me"],
 	 "tag:office-pc": ["group:me"],
   },
   // hosts should be defined using its IP ad`dresses and a subnet mask.
@@ -31,14 +31,23 @@
     {
       "action": "accept",
       "src": ["tag:me"],
-      "dst": [ "group:slave:*"],
+      "dst": [ "group:rickietangmyspace:*"],
     },   {
       "action": "accept",
       "src": ["tag:me"],
       "dst": [ "tag:office-pc:*"],
     },
     //-----------------------me
-	
+
+    //-----------------------test ping 
+     {
+      "action": "accept",
+      "src": ["group:rickietangmyspace"],
+      "proto": "icmp",
+      "dst": [ "group:rickietangmyspace:*"],
+    }, 
+   //-----------------------test ping 
+  
     //-----------------------link https://docs.rancher.cn/docs/rancher2/installation/requirements/ports/_index/
 	{
       "action": "accept",
