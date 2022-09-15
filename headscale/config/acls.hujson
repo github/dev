@@ -1,0 +1,71 @@
+{
+  // groups are collections of users having a common scope. A user can be in multiple groups
+  // groups cannot be composed of groups
+  "groups": {
+	"group:me": ["manager"],
+    "group:slave": ["dogyun", "oracle","upvps","vsixnode","woiden","hax","serverfactory","scaleway","euserv","pacificrack","racknerd","cloudcone","tencent","google"],
+	"group:local": ["local"],
+  },
+  "tagOwners": {
+  	 "tag:rancher-server": ["group:slave"],
+	 "tag:kubernetes-agent": ["group:slave"],
+	 "tag:kubernetes-server": ["group:slave"],
+	 "tag:kubernetes-kubeedge-cloud": ["group:slave"],
+	 "tag:kubernetes-kubeedge-node": ["group:slave"],
+	 
+	 "tag:localslave": ["group:local"],
+	 
+	 "tag:me": ["group:me"],
+	 "tag:office-pc": ["group:me"],
+  },
+  // hosts should be defined using its IP ad`dresses and a subnet mask.
+  // to define a single host, use a /32 mask. You cannot use DNS entries here,
+  // as they're prone to be hijacked by replacing their IP addresses.
+  // see https://github.com/tailscale/tailscale/issues/3800 for more information.
+  "Hosts": {
+    "uat.icris.cr.gov.hk": "10.10.0.55/32",
+    "www.uat.mobile-cr.gov.hk": "10.10.0.55/32"
+  },
+  "acls": [
+    //-----------------------me
+    {
+      "action": "accept",
+      "src": ["tag:me"],
+      "dst": [ "group:slave:*"],
+    },   {
+      "action": "accept",
+      "src": ["tag:me"],
+      "dst": [ "tag:office-pc:*"],
+    },
+    //-----------------------me
+	
+    //-----------------------link https://docs.rancher.cn/docs/rancher2/installation/requirements/ports/_index/
+	{
+      "action": "accept",
+      "src": ["tag:kubernetes-server"],
+      "dst": [ "tag:rancher-server:80,443,6443,8472,10250"],
+    },
+	{
+      "action": "accept",
+      "src": ["tag:rancher-server"],
+      "dst": [ "tag:kubernetes-server:6443"],
+    },
+	//-----------------------k8s server -> rancher server 
+	
+	{
+      "action": "accept",
+      "src": ["tag:kubernetes-kubeedge-node"],
+      "dst": [ "tag:kubernetes-kubeedge-cloud:10000-10004"],
+    },
+	
+	//-----------------------local dev test
+	{
+      "action": "accept",
+      "src": ["tag:localslave"],
+      "dst": [ "tag:localslave:*"],
+    },
+	//-----------------------local dev test
+
+
+  ]
+}

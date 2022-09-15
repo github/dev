@@ -1,0 +1,14 @@
+install:
+    apt update -y && \
+    apt upgrade -y && \
+    apt install -y curl \
+    curl -fsSL https://tailscale.com/install.sh | sh
+
+login:
+    tailscale up  --login-server=https://tailscale.rickietangmyspace.top:8080/
+
+
+
+
+log:
+    journalctl -u tailscaled --since "5 min ago"    
