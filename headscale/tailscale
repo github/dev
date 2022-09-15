@@ -7,7 +7,7 @@ install:
 login:
     tailscale up  --login-server=https://tailscale.rickietangmyspace.top:8080/
     with Preauth Keys:
-        tailscale up  --login-server=https://tailscale.rickietangmyspace.top:8080/ --auth-key 719d22115b751923f0a9d059b7e4c42f123f57b882104358 
+        tailscale up  --login-server=https://tailscale.rickietangmyspace.top:8080/ --auth-key ac0bc6569d36773ae0ea70249ba49579cb89a692e6a8d090  
 
 
 
