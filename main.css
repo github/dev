@@ -5,4 +5,5 @@ header {
 .list {
     background-color: red;
     font-size: larger;
+    width: 33%;
 }
