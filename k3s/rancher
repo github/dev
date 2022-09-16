@@ -1,0 +1,26 @@
+link: http://longrm.com/2021/06/23/2021-06-23-rancher-k3s-deploy/
+install helm:
+    wget https://get.helm.sh/helm-v3.9.0-linux-amd64.tar.gz
+    tar -zxvf helm-v3.9.0-linux-amd64.tar.gz
+    mv linux-amd64/helm /usr/local/bin/helm
+set helm init:
+    helm repo add rancher-stable https://releases.rancher.com/server-charts/stable
+    kubectl create namespace cattle-system
+    export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+
+ //--set  spec.nodeSelector.rancher-master=true
+install rancher server: 
+    helm install rancher rancher-stable/rancher \
+        --namespace cattle-system \
+        --set hostname=greencloud-vps1.rickietangmyspace.top \
+        --set replicas=1 \
+        --set ingress.tls.source=secret  \
+        --set endpoint.IP=10.10.0.1
+    kubectl -n cattle-system rollout status deploy/rancher
+
+set ssl:
+    cd /usr/rickiehome/rancher/cert
+    kubectl -n cattle-system create secret tls tls-rancher-ingress \
+    --cert=fullchain.pem \
+    --key=privkey.pem
+

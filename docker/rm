@@ -1,0 +1,6 @@
+guide:
+  link https://docs.docker.com/engine/reference/commandline/rm/
+
+rm all exit:
+  docker rm $(docker ps --filter status=exited -q)
+
