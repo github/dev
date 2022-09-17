@@ -1,0 +1,69 @@
+.calculator {
+    background-color: black;
+    width: 50%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1 {
+    text-align: center;
+}
+
+#numBox {
+    background-color: black;
+    color: white;
+    position: relative;
+    font-size: 90px;
+    text-align: right;
+    width:82%;
+    height: 100px;
+    margin: 0 auto;
+    padding: 5px 0 0 0;
+    display: block;
+}
+.buttonTable {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 0 0 0;
+    display: block;
+
+}
+.circleButton{
+    background-color: rgb(94, 90, 90);
+    color: white;
+    font-weight: bolder;
+    width: 25%;
+    height: auto;
+    padding: 10%;
+    border-radius: 50%;
+}
+.circleButtonUtil{
+    background-color: rgb(255, 171, 16);
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    width: 25%;
+    height: auto;
+    padding: 10%;
+    border-radius: 50%;
+}
+.circleButtonThing{
+    background-color: lightgre;
+    color: black;
+    font-weight: bolder;
+    text-align: center;
+    width: 25%;
+    height: auto;
+    padding: 10%;
+    border-radius: 50%;
+}
+
+.circleButton0{
+    background-color: rgb(94, 90, 90);
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    width: 50%;
+    padding: 10%;
+    border-radius: 25%;
+}
