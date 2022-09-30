@@ -1,0 +1,17 @@
+{
+    "files.autoGuessEncoding": true,
+    "workbench.experimental.editSessions.enabled": true,
+    "editor.suggest.shareSuggestSelections": true,
+    "diffEditor.codeLens": true,
+    "workbench.editor.autoLockGroups": {
+        "terminalEditor": false
+    },
+    "workbench.editor.enablePreviewFromCodeNavigation": true,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "window.commandCenter": false,
+    "debug.autoExpandLazyVariables": true,
+    "testing.alwaysRevealTestOnStateChange": true,
+    "testing.automaticallyOpenPeekViewDuringAutoRun": true,
+    "scm.alwaysShowActions": true,
+    "scm.alwaysShowRepositories": true
+}
