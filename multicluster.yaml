@@ -13,15 +13,25 @@ spec:
   - title: Install the Multicluster Engine for Kubernetes operator
     description: |-
       ### Follow these steps to create an application.
+
       1. In the OpenShift Container Platform web console navigation select the **Administrator** perspective from the dropdown menu at the top.
+
       2. Navigate to the **Operators > OperatorHub**.
+
       3. To start with basic cluster lifecycle management search for **Multicluster Engine for Kubernetes**. This operator support is included in the OpenShift subscription you’ve already purchased.
+
       4. In the side panel click **“install”**.
+
       5. On the install Operator page leave the default settings and click **install**.
+
       6. Once the operator is installed you will be prompted to install the operand, click **Create MultiClusterEngine**.
+
       7. On the Create MulticlusterEngine page click **Create**, this will use the default settings. For more customizations see documentation [Link].
+
       8. Once installation is complete (this may take a few minutes) you will be prompted to refresh your web console in a toast notification in the top right.
+
       <img src="https://www.patternfly.org/v4/images/pf4-logo.9537d7e7fbe83c92625af8ac0ab5350b.svg"></img>
+
       9. In the top left corner of the navigation there is now a cluster switcher, select **“all clusters”** to navigate to the new cluster management UI.
 
       <img src="https://www.patternfly.org/v4/images/pf4-logo.9537d7e7fbe83c92625af8ac0ab5350b.svg"></img>
