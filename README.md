@@ -1,15 +1,57 @@
-# What is this?
 
-The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+- ## Project Name
 
-There are two ways to go directly to a VS Code environment in your browser and start coding:
+- Student Database
 
-* Press the . key on any repository or pull request.
-* Swap `.com` with `.dev` in the URL. For example, this repo https://github.com/github/dev becomes http://github.dev/github/dev
 
-Preview the gif below to get a quick demo of github.dev in action.
+- ### Create Table 
 
-![github dev](https://user-images.githubusercontent.com/856858/130119109-4769f2d7-9027-4bc4-a38c-10f297499e8f.gif)
+```Sql
+Create TABLE Students(
+sql
+    "Id" Integer,
+    "Name" VARCHAR (20),
+    "City" Text
+):
+```
 
-# Why?
-It’s a quick way to edit and navigate code. It's especially useful if you want to edit multiple files at a time or take advantage of all the powerful code editing features of Visual Studio Code when making a quick change. For more information, see our [documentation](https://github.co/codespaces-editor-help).
+- ### INSERT DATA
+```Sql 
+INSERT INTO 
+       Students 
+VALUES 
+(1,'Shaik','Sharuf'),
+(2,'Shaik','Shahida'),
+(3,'Shaik','Siddik'),
+(4,'Shaik','Shabber'),
+(5,'Shaik','Masthan').
+```
+
+- ### Students Data
+ | Id | Name | City |
+ |----|------|------|
+ |1   |Sharuf|Ongole|
+ |2   |Shahida|Hyderabad|
+ |3   |Siddik |Hyderabad|
+ |4   |Shammy |Guntur|
+ |5   |Zakeer |Guntur|
+
+
+
+- ## FRIENDS
+1. **Zakeer** 
+1. **Sharuf**
+1. **Shaik**
+
+- # Myself
+
+
+- ![My_Image](https://thumbs.dreamstime.com/z/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg)
+
+- **I am living in [Ongole](https://www.google.com/search?q=ongole+beach&sxsrf=ALiCzsaOOyb2esTi3mUEb7JBuNyl-DBU0Q%3A1669751459902&ei=o2KGY6zcNtPTz7sPrqOSuAY&oq=ongole&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQARgDMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADSgQIQRgASgQIRhgAUABYAGCDK2gBcAF4AIABAIgBAJIBAJgBAMgBCMABAQ&sclient=gws-wiz-serp) , AP ,  India**
+
+- __Name__ : **Sharuf**
+- __City__ : __Ongole__
+- **Designation** : **Full Stack** **Web Developer**
+- [ Git_Website](https://github.com/Sharuf95)
+- [@Ash Github Profile](https://github.com/Sharuf95)
