@@ -1,4 +1,8 @@
-#BEGINSIING GETTING STARTED GETS CONFIGURATION FROM .it.git;@ZachryTWoodAdministrator;@.it.git :
+#BEGIN
+#!/User/bin/Bash ENV RUN !#/usr/bin/bash'@bitore.sig/Paradice CONSTRUCTION_script:Build :Name ::
+:Name::Automates.yml::/:TiltleChangeLog.md LAUTOMATE ::AUTOMATES :AUTOMATE :AUTOMATE :::Automatically ::-on, "Run":, ::
+:Automates.yml :
+GETTING STARTED GETS CONFIGURATION FROM .it.git;@ZachryTWoodAdministrator;@.it.git :
 This report doesn't include the pay back amount of deferred Employee Social Security Tax." Commission Employer Customized Report 
 Internal Revenue Service Submission Procceing Center 
 United States Department of the Treasury 
