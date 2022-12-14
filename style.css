@@ -1,0 +1,371 @@
+.img{
+    background-image: url();
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  }
+  .over {
+    background: #598DCB;
+  color: #1db8e8;
+  border-radius: 50px;
+  }
+  
+  ul{
+  text-align: center;
+  }
+  
+  
+  .container-map{
+  
+  width: 100%;
+  height: auto;
+  top:0px;
+  left:0;
+  bottom:0;
+  right:0;
+  margin: auto;
+  }
+  
+  
+  
+  .mappa,
+  .mappa-transparent{
+    position: absolute;
+    top: 0px;
+    left: -3px;
+    width: 100%;
+    height: auto;
+    mix-blend-mode:multiply;
+  }
+  
+  .section-1,
+  .section-2,
+  .section-3,
+  .section-4,
+  .section-5,
+  .section-6,
+  .section-7,
+  .section-8,
+  .section-9,
+  .section-10,
+  .section-11,
+  .section-12 {
+  display: none;
+  z-index:0;
+  }
+  
+  #section{
+  fill: transparent;
+  z-index:2;
+  cursor: pointer;
+  }
+  
+  .ico{
+  background: #fff;
+  color: #1db8e8;
+  border-radius: 50px;
+  }
+  
+  
+  
+  
+  
+  
+  .menu-bar {
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(83, 83, 83, 0.4);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+  }
+  .menu-bar .left {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: auto;
+    margin-left: 20px;
+  }
+  .menu-bar .left .apple-logo {
+    transform: scale(1);
+  }
+  .menu-bar .left .menus {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 14px;
+  }
+  .menu-bar .left .active {
+    font-weight: bold;
+    color: #fff !important;
+  }
+  .menu-bar .right {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 380px;
+    margin-right: 20px;
+  }
+  .menu-bar .right .vol {
+    transform: scale(0.6);
+    margin-right: -10px;
+  }
+  .menu-bar .right .menu-time {
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+  .menu-bar .right .menu-ico {
+    height: 100%;
+    width: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menu-bar .right .menu-ico2 {
+    height: 100%;
+    width: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menu-bar .right .menu-ico .control-center {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    transform: scale(0.5);
+  }
+  .menu-bar .right .menu-ico .siri {
+    transform: scale(0.7);
+    object-fit: fill;
+  }
+  
+  .menu-bar .right .menu-ico2 .control-center {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    transform: scale(0.5);
+  }
+  
+  .menu-bar .right .menu-ico .siri {
+    transform: scale(0.7);
+    object-fit: fill;
+  }
+  
+  .menu-bar .right .menu-ico2 .siri {
+    transform: scale(0.7);
+    object-fit: fill;
+  }
+  .menu-bar .right .menu-ico i {
+    display: contents;
+    font-size: 16px;
+    color: #fff;
+  }
+  
+  @media (min-width:1000px) and (max-width:1500px){
+  .dock {
+  width: 1000px;
+  }
+  .dock .dock-container {
+  width: 1000px;
+  }
+  }
+  @media (min-width:1501px){
+  .dock {
+  width: auto;
+  }
+  .dock .dock-container {
+  width: auto;
+  }
+  }
+  .dock {
+    height: 60px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+  }
+  .dock .dock-container {
+    padding: 3px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: #BAD0E8;
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(13px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  .dock .dock-container .li-bin {
+    margin-left: 20px;
+    border-left: 1.5px solid rgba(255, 255, 255, 0.4);
+    padding: 0px 0px;
+  }
+  .dock .dock-container .li-1::after {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    content: "";
+    bottom: 2px;
+  }
+  .dock .dock-container li {
+    list-style: none;
+    display: flow-root;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    vertical-align: bottom;
+    transition: 0.2s;
+    transform-origin: 50% 100%;
+  }
+  .dock .dock-container li:hover {
+    margin: 0px 30px 0px 30px;
+  }
+  .dock .dock-container li .name {
+    position: absolute;
+    top: -120px;
+    background: #3458A0;
+    color: rgba(255, 255, 255, 0.9);
+    height: auto;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    visibility: hidden;
+    flex-direction: column;
+  }
+  .dock .dock-container li .name2 {
+    position: absolute;
+    top: -120px;
+    background: #D2CE69;
+    color: rgba(255, 255, 255, 0.9);
+    height: auto;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    visibility: hidden;
+    flex-direction: column;
+  }
+  .dock .dock-container li .name::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: 0;
+    height: 0;
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(13px);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid  #3458A0;;
+  }
+  .dock .dock-container li .ico {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.2s;
+      border: solid 2px;
+      border-radius: 36px;
+      border-color: #3458A0;
+  }
+  .dock .dock-container li .name2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: 0;
+    height: 0;
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(13px);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid  #D2CE69;;
+  }
+  
+  .dock .dock-container li .ico2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.2s;
+      border: solid 2px;
+      border-radius: 36px;
+      border-color: #D2CE69;
+  }
+  .dock .dock-container li .ico-bin {
+    width: 94% !important;
+    height: 94% !important;
+    object-fit: cover;
+    transition: 0.2s;
+  }
+  
+  .dock .dock-container li .ico-bin:hover {
+    margin-left: 10px;
+  }
+  .li-1:hover .name {
+    visibility: visible !important;
+  }
+  .li-2:hover .name {
+    visibility: visible !important;
+  }
+  .li-3:hover .name {
+    visibility: visible !important;
+  }
+  .li-4:hover .name {
+    visibility: visible !important;
+  }
+  .li-5:hover .name {
+    visibility: visible !important;
+  }
+  .li-6:hover .name {
+    visibility: visible !important;
+  }
+  .li-7:hover .name {
+    visibility: visible !important;
+  }
+  .li-8:hover .name {
+    visibility: visible !important;
+  }
+  .li-9:hover .name2 {
+    visibility: visible !important;
+  }
+  .li-10:hover .name2 {
+    visibility: visible !important;
+  }
+  .li-11:hover .name2{
+    visibility: visible !important;
+  }.li-12:hover .name2{
+    visibility: visible !important;
+  }
+  
+  .li-13:hover .name2{
+    visibility: visible !important;
+  }
+  
+  
+  @media (min-width:1200px) and (max-width:1400px){
+  .dock {
+  width: 1000px !important;
+  }
+  }
+  
+  
+  
+  
+  
