@@ -10,5 +10,6 @@ int main(){
         n=r;
     }while(n!=0);
     printf("以上两数的最大公因子：%d\n",m);
+    
 
 }
