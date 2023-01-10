@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation ('org.junit.jupiter:junit-jupiter-api:5.8.1',
+            "org.json:json:20220320",
+            'com.googlecode.json-simple:json-simple:1.1.1',
+            'io.cucumber:cucumber-java:6.10.4'
+    )
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'io.rest-assured:rest-assured:5.3.0'
+    implementation 'org.apache.groovy:groovy-all:4.0.7'
+
+}
+
+test {
+    useJUnitPlatform()
+}
