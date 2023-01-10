@@ -1,15 +1,33 @@
 # What is this?
 
-The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+MVF Tech Test to test a Github API with an arbitrary Github username, and be presented with a best guess of the Github user's favourite programming language.
+This is computed by using the Github API to fetch all of the user's public Github repos, each of which includes the name of the dominant language for the repository.
 
-There are two ways to go directly to a VS Code environment in your browser and start coding:
+# Instalation
 
-* Press the . key on any repository or pull request.
-* Swap `.com` with `.dev` in the URL. For example, this repo https://github.com/github/dev becomes http://github.dev/github/dev
+- Java version 16 and up: [for mac](https://www.java.com/en/download/apple.jsp), [for windows](https://www.java.com/en/download/help/windows_manual_download.html)
+- Install [IntelliJ for mac](https://www.jetbrains.com/idea/download/#section=mac) & [Documentation](https://www.jetbrains.com/help/idea/getting-started.html) 
+- Install [Gradle](https://gradle.org/install/) (version 6.9 and up)
+- Install [Maven](https://www.baeldung.com/install-maven-on-windows-linux-mac)
+- Maven/Gradle dependencies with Versions can be found [here](https://mvnrepository.com/)
 
-Preview the gif below to get a quick demo of github.dev in action.
+# Test Scenario 
 
-![github dev](https://user-images.githubusercontent.com/856858/130119109-4769f2d7-9027-4bc4-a38c-10f297499e8f.gif)
+Scenario Outline: Get the favourite/mostly used language by a Github user
+Given I send a request to get the "<user>" information
+Then I can print the favourite language of that "<user>"
 
-# Why?
-It’s a quick way to edit and navigate code. It's especially useful if you want to edit multiple files at a time or take advantage of all the powerful code editing features of Visual Studio Code when making a quick change. For more information, see our [documentation](https://github.co/codespaces-editor-help).
+Expected Result:
+
+- I am able to fetch user's Github repository; 
+- I am able to list all languages Github user used for all of their public projects;
+- I am able to filter and print the favourite language if it exists;
+- I am able to filter and print "has no Languages available" if there are no languages used.
+
+# Running & Testing
+ 
+To run the test select the file GetLanguages.feature BDD and run it.
+
+# Test result
+
+![Successful test result](https://drive.google.com/uc?export=view&id=10lA1HmIZ3VO7hhSXgzM6LwWQcsZyolIV)
