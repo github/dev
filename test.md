@@ -47,7 +47,7 @@ foierjorjf
 [^1]: This is the first footnote.<br>
 
 
-~~ it is not true ~~<br>
+~~it is not true~~ <br>
 
 
 
