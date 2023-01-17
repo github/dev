@@ -25,4 +25,23 @@ no-order list
 * seconde <br>
     ![test image](https://github.com/liuziche/hello-world/blob/main/红楼梦人物关系.gif)
 - first
-- Second
+- Second<br>
+        ```python
+        code sample
+        ```<br>
+split line
+***
+
+
+table<br>
+
+| a | c | a |
+|---|---|---|
+| a | a | a |
+| a | a | a |<br>
+
+
+how to use footnote<br>
+this is nothing [^1]
+foierjorjf
+[^1]: This is the first footnote.
