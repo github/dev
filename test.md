@@ -44,4 +44,13 @@ table<br>
 how to use footnote<br>
 this is nothing [^1]
 foierjorjf
-[^1]: This is the first footnote.
+[^1]: This is the first footnote.<br>
+
+
+~~ it is not true ~~<br>
+
+
+
+
+
+
