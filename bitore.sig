@@ -3,22 +3,17 @@ BEGIN
 Runs::/::On:-::on:'
 BEGIN
 GLOW4
-GLOW7 :'.'Docx''
-'
-                                                                                                                                                                                                                                                                                                                 
-(IRS USE ONLY)          CP              575A       B       WOOD       9999999999       1725                    20220139                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
-                                                                                                   
+GLOW7 :'.'Docx''                                                                                                                                                                                                                                                                                                                
+(IRS USE ONLY)          CP              575A       B       WOOD       9999999999       1725                    20220139                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 Employeer :  
 Employer's Identification Number (EIN) XXXXX4661  
 INTU 
 2700 C
-
 Employee :  
 Employee's 
 Social Security Number :xxx- xx- 1725 
 ZACH T WOO
 5222  B                                                                                                                                                    Request Date : 07/29/2022
-
 Submission Type :. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Original document 
 Wages, Tips and Other Compensation :. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .5105000.00 
 Federal Income Tax Withheld :. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1881380.00 
