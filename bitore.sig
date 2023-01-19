@@ -1,5 +1,6 @@
 [PATCH--@.diff@--./-.it.git a/bitore.sig b/Build and Deployee > Export > Settings > make: > file.mkdir > = > Rakefile.IU > BEGIN > Run > Name > Build and Deploy > starts > On:: > -on : > -on : > :
--on :
+BEGIN
+Runs::/::On:-::on:'
 BEGIN
 GLOW4
 GLOW7 :'.'Docx''
