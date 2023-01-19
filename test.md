@@ -4,6 +4,11 @@ a single line.  <br>
 It is **bold**. <br> 
 It is *italic*. <br>
 It is ***Bold and italic***. <br>
+
+<font size=4> bigger </font>
+<font size=5> bigger </font>
+<font size=6> bigger </font><br>
+
 > Quote 
 >
 Quote end <br>
