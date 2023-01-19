@@ -1,6 +1,7 @@
-'#'' 'dev''
-'#'' 'N'@'N'.i'' ':''
-BEGIN
+'#'' ':'#''#''#'':'
+'BEGIN'
+'GLOW4''
+'require' ': 'test'' :
 #This_Repositorys :WORKSFLOW :'::WORKFLOW :::''
 GLOW
 usr/bin/env .sh RU&
@@ -15,7 +16,527 @@ BEGIN :
 GLOW4 :
 Balancing Your Account                
 Update Your Account Register Compare: Check Off: Add to Your Account Register Balance: Subtract From Your Account Register Balance:                
-                
+Effective Date Intragovernmental Holdings Public Debt Total Debt																																						
+01/12/2021 $6,100,723,496,587.72 $21,578,677,363,278.05 $27,679,400,859,865.77																																						
+01/11/2021 $6,117,872,742,410.37 $21,578,917,911,758.87 $27,696,790,654,169.24																																						
+01/10/2021 $6,110,077,560,304.61 $21,578,169,824,451.13 $27,688,247,384,755.74	06/20/2020																																					
+01/07/2021 $6,104,606,780,437.34 $21,578,440,452,769.64 $27,683,047,233,206.98	$0.00																																					
+01/06/2021 $6,104,491,176,445.28 $21,578,759,710,032.75 $27,683,250,886,478.03	Gross Wages	Employee taxes								Rename these to match your employee state and local taxes. As needed, add and rename additional columns to report other state and local taxes.				Employer taxes									Rename these to match your employee state and local taxes. As needed, add and rename additional columns to report other state and local taxes.				Pre-tax deductions/contributions						COVID-19 emergency leave					
+01/05/2021 $6,103,266,615,616.80 $21,595,719,334,374.14 $27,698,985,949,990.94		Federal Income Tax		Employee Social Security Tax		Employee Medicare		State Income Tax		(Other State/Local Tax, if applicable)		(Other State/Local Tax, if applicable)		Employer Social Security Tax			Employer Medicare		State Unemployment Tax		Federal Unemployment Tax		(Other State/Local Tax, if applicable)		(Other State/Local Tax, if applicable)		Example: Health Insurance		Example: Dental Insurance		Example: 401K		"Emergency paid sick leave - 
+Caring for self"		"Emergency paid sick leave - 
+Caring for others"		Emergency family and medical leave	
+01/04/2021 $6,104,160,478,628.53 $21,593,996,935,176.88 $27,698,157,413,805.41		Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	"Have you deferred these taxes?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Employee Deduction	Employer Contribution	Employee Deduction	Employer Contribution	Employee Deduction	Employer Contribution	Wage	Hours	Wage	Hours	Wage	Hours
+01/03/2021 $6,084,954,082,438.08 $21,593,320,887,989.85 $27,678,274,970,427.93	2	$0.00	Yes	$0.00		$0.00		$0.00		$0.00		$0.00		$0.00			$0.00		$0.00		$0.00		$0.00		$0.00		$0.00	$0.00	$0.00	$0.00	$0.00	$0.00	$0.00	0	$0.00	0	$0.00	0
+12/30/2020 $6,115,379,043,563.53 $21,632,418,904,104.24 $27,747,797,947,667.77	$0.00	$0.00	Yes	$0.00		$0.00		$0.00		$0.00		$0.00		$0.00			$0.00		$0.00		$0.00		$0.00		$0.00		$0.00	$0.00	$0.00	$0.00	$0.00	$0.00	$0.00	0	$0.00	0	$0.00	0
+12/29/2020 $6,092,040,322,428.54 $21,468,468,575,442.99 $27,560,508,897,871.53	$0.00	$0.00	Yes	$0.00		$0.00		$0.00		$0.00		$0.00		$0.00			$0.00		$0.00		$0.00		$0.00		$0.00		$0.00	$0.00	$0.00	$0.00	$0.00	$0.00	$0.00	0	$0.00	0	$0.00	0
+12/28/2020 $6,082,369,779,075.99 $21,468,460,859,105.23 $27,550,830,638,181.22																																						
+12/27/2020 $6,073,609,510,177.27 $21,468,928,694,819.93 $27,542,538,204,997.20																																						
+12/23/2020 $6,070,482,202,955.65 $21,445,028,388,848.74 $27,515,510,591,804.39	MM/DD/YYYY																																					
+12/22/2020 $6,068,569,641,613.23 $21,448,157,219,574.36 $27,516,726,861,187.59	$0.00																																					
+12/21/2020 $6,074,489,832,877.40 $21,447,826,256,733.93 $27,522,316,089,611.33	Gross Wages	Employee taxes								Rename these to match your employee state and local taxes. As needed, add and rename additional columns to report other state and local taxes.				Employer taxes									Rename these to match your employee state and local taxes. As needed, add and rename additional columns to report other state and local taxes.				Pre-tax deductions/contributions						COVID-19 emergency leave					
+12/20/2020 $6,065,291,889,748.70 $21,447,615,134,294.27 $27,512,907,024,042.97		Federal Income Tax		Employee Social Security Tax		Employee Medicare		State Income Tax		(Other State/Local Tax, if applicable)		(Other State/Local Tax, if applicable)		Employer Social Security Tax			Employer Medicare		State Unemployment Tax		Federal Unemployment Tax		(Other State/Local Tax, if applicable)		(Other State/Local Tax, if applicable)		Example: Health Insurance		Example: Dental Insurance		Example: 401K		"Emergency paid sick leave - 
+Caring for self"		"Emergency paid sick leave - 
+Caring for others"		Emergency family and medical leave	
+12/17/2020 $6,044,940,933,359.78 $21,446,525,279,996.38 $27,491,466,213,356.16		Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	"Have you deferred these taxes?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Employee Deduction	Employer Contribution	Employee Deduction	Employer Contribution	Employee Deduction	Employer Contribution	Wage	Hours	Wage	Hours	Wage	Hours
+12/16/2020 $6,060,426,761,349.15 $21,446,462,125,522.42 $27,506,888,886,871.57	$0.00	$0.00		$0.00		$0.00		$0.00		$0.00		$0.00		$0.00			$0.00		$0.00		$0.00		$0.00		$0.00		$0.00	$0.00	$0.00	$0.00	$0.00	$0.00	$0.00	0	$0.00	0	$0.00	0
+12/15/2020 $6,052,616,977,063.35 $21,447,890,639,089.95 $27,500,507,616,153.30	$0.00	$0.00		$0.00		$0.00		$0.00		$0.00		$0.00		$0.00			$0.00		$0.00		$0.00		$0.00		$0.00		$0.00	$0.00	$0.00	$0.00	$0.00	$0.00	$0.00	0	$0.00	0	$0.00	0
+12/14/2020 $6,064,721,314,363.99 $21,448,041,180,088.84 $27,512,762,494,452.83	$0.00	$0.00		$0.00		$0.00		$0.00		$0.00		$0.00		$0.00			$0.00		$0.00		$0.00		$0.00		$0.00		$0.00	$0.00	$0.00	$0.00	$0.00	$0.00	$0.00	0	$0.00	0	$0.00	0
+12/13/2020 $6,039,724,690,213.91 $21,350,931,649,169.06 $27,390,656,339,382.97																																						
+12/10/2020 $6,034,286,365,098.85 $21,351,136,018,070.62 $27,385,422,383,169.47																																						
+12/09/2020 $6,034,408,359,881.83 $21,351,415,809,631.68 $27,385,824,169,513.51	MM/DD/YYYY																																					
+12/08/2020 $6,050,902,700,094.36 $21,354,173,060,785.25 $27,405,075,760,879.61	$0.00																																					
+12/07/2020 $6,068,352,181,713.39 $21,354,421,153,858.66 $27,422,773,335,572.05	Gross Wages	Employee taxes								Rename these to match your employee state and local taxes. As needed, add and rename additional columns to report other state and local taxes.				Employer taxes									Rename these to match your employee state and local taxes. As needed, add and rename additional columns to report other state and local taxes.				Pre-tax deductions/contributions						COVID-19 emergency leave					
+12/06/2020 $6,060,042,400,918.53 $21,354,702,143,101.98 $27,414,744,544,020.51		Federal Income Tax		Employee Social Security Tax		Employee Medicare		State Income Tax		(Other State/Local Tax, if applicable)		(Other State/Local Tax, if applicable)		Employer Social Security Tax			Employer Medicare		State Unemployment Tax		Federal Unemployment Tax		(Other State/Local Tax, if applicable)		(Other State/Local Tax, if applicable)		Example: Health Insurance		Example: Dental Insurance		Example: 401K		"Emergency paid sick leave - 
+Caring for self"		"Emergency paid sick leave - 
+Caring for others"		Emergency family and medical leave	
+12/03/2020 $6,058,423,451,462.27 $21,355,692,695,821.43 $27,414,116,147,283.70		Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	"Have you deferred these taxes?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Employee Deduction	Employer Contribution	Employee Deduction	Employer Contribution	Employee Deduction	Employer Contribution	Wage	Hours	Wage	Hours	Wage	Hours
+12/02/2020 $6,057,825,407,206.36 $21,356,282,431,555.87 $27,414,107,838,762.23	$0.00	$0.00		$0.00		$0.00		$0.00		$0.00		$0.00		$0.00			$0.00		$0.00		$0.00		$0.00		$0.00		$0.00	$0.00	$0.00	$0.00	$0.00	$0.00	$0.00	0	$0.00	0	$0.00	0
+12/01/2020 $6,070,387,141,183.46 $21,341,926,023,922.18 $27,412,313,165,105.64	$0.00	$0.00		$0.00		$0.00		$0.00		$0.00		$0.00		$0.00			$0.00		$0.00		$0.00		$0.00		$0.00		$0.00	$0.00	$0.00	$0.00	$0.00	$0.00	$0.00	0	$0.00	0	$0.00	0
+11/30/2020 $6,063,882,707,263.37 $21,342,192,975,117.14 $27,406,075,682,380.51	$0.00	$0.00		$0.00		$0.00		$0.00		$0.00		$0.00		$0.00			$0.00		$0.00		$0.00		$0.00		$0.00		$0.00	$0.00	$0.00	$0.00	$0.00	$0.00	$0.00	0	$0.00	0	$0.00	0
+11/29/2020 $6,096,816,614,939.36 $21,349,471,573,310.81 $27,446,288,188,250.17																																						
+12,2020-12-27T20:23:11-08:00,2020-12-26T23:47:50-08:00,,Zachry Wood,StringType,,,,,,,,,,9127963A5,2020-11-19,,US Treasury Debt,,0,1,US Treasury Debt,SECURITES AND EXCHANGES, 100 F 23 NE St , Washington D.C 20005,,,,,,,Zachry Tyler Wood, 4503 lake ave , Dallas tx , apt 308,,,,,,true,,FEDEX,,,NeedToPrint,NotSet,Foiapa@sec.gov,,,,,2,9127963A5,,,,,,,,,,,,,,false,29,USD,,,,,,,6674623438.0,SubTotalLineDetail,,,,,,,,,,,,,,,																																						
+OtherTransaction Id,Updated at,Created at,Date,Doc number,Transaction type,Currency ID,Tax code ID,Exchange rate,OtherTransaction Line Id,Amount,Description,Detail type,Posting type,Account ID,Class ID,Department ID,Entity ID,Entity type,Tax code ID,Tax amount	MM/DD/YYYY																																					
+26,2020-12-29T19:39:32-0800,2020-12-29T19:39:32-0800,2020-12-31,2965,Payroll Check,,,,,3090156.23,Payroll Check: Pay Period: 12/24/2020-12/30/2020,JournalEntryLineDetail,Credit,32,,,8,Employee,,	$0.00																																					
+26,2020-12-29T19:39:32-0800,2020-12-29T19:39:32-0800,2020-12-31,2965,Payroll Check,,,,,2097403.67,Payroll Check: Federal Taxes (941/944),JournalEntryLineDetail,Credit,61,,,8,Employee,,	Gross Wages	Employee taxes								Rename these to match your employee state and local taxes. As needed, add and rename additional columns to report other state and local taxes.				Employer taxes									Rename these to match your employee state and local taxes. As needed, add and rename additional columns to report other state and local taxes.				Pre-tax deductions/contributions						COVID-19 emergency leave					
+26,2020-12-29T19:39:32-0800,2020-12-29T19:39:32-0800,2020-12-31,2965,Payroll Check,,,,,42.0,Payroll Check: Federal Unemployment (940),JournalEntryLineDetail,Credit,60,,,8,Employee,,		Federal Income Tax		Employee Social Security Tax		Employee Medicare		State Income Tax		(Other State/Local Tax, if applicable)		(Other State/Local Tax, if applicable)		Employer Social Security Tax			Employer Medicare		State Unemployment Tax		Federal Unemployment Tax		(Other State/Local Tax, if applicable)		(Other State/Local Tax, if applicable)		Example: Health Insurance		Example: Dental Insurance		Example: 401K		"Emergency paid sick leave - 
+Caring for self"		"Emergency paid sick leave - 
+Caring for others"		Emergency family and medical leave	
+26,2020-12-29T19:39:32-0800,2020-12-29T19:39:32-0800,2020-12-31,2965,Payroll Check,,,,,576.9,Payroll Check: TX Unemployment Tax,JournalEntryLineDetail,Credit,59,,,8,Employee,,		Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	"Have you deferred these taxes?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Tax amount	"Have you paid these taxes already?
+
+Type ""Yes"" or ""No"""	Employee Deduction	Employer Contribution	Employee Deduction	Employer Contribution	Employee Deduction	Employer Contribution	Wage	Hours	Wage	Hours	Wage	Hours
+26,2020-12-29T19:39:32-0800,2020-12-29T19:39:32-0800,2020-12-31,2965,Payroll Check,,,,,83178.8,Payroll Check: Employer Taxes,JournalEntryLineDetail,Debit,57,,,8,Employee,,	$0.00	$0.00		$0.00		$0.00		$0.00		$0.00		$0.00		$0.00			$0.00		$0.00		$0.00		$0.00		$0.00		$0.00	$0.00	$0.00	$0.00	$0.00	$0.00	$0.00	0	$0.00	0	$0.00	0
+26,2020-12-29T19:39:32-0800,2020-12-29T19:39:32-0800,2020-12-31,2965,Payroll Check,,,,,5105000.0,Payroll Check: Gross Pay - This is not a legal pay stub,JournalEntryLineDetail,Debit,56,,,8,Employee,,	$0.00	$0.00		$0.00		$0.00		$0.00		$0.00		$0.00		$0.00			$0.00		$0.00		$0.00		$0.00		$0.00		$0.00	$0.00	$0.00	$0.00	$0.00	$0.00	$0.00	0	$0.00	0	$0.00	0
+29,2021-01-01T00:05:33-0800,2021-01-01T00:05:33-0800,2020-12-31,101,Payroll Check,,,,,145754.45,Payroll Check: Pay Period: 12/24/2020-12/30/2020,JournalEntryLineDetail,Credit,32,,,13,Employee,,	$0.00	$0.00		$0.00		$0.00		$0.00		$0.00		$0.00		$0.00			$0.00		$0.00		$0.00		$0.00		$0.00		$0.00	$0.00	$0.00	$0.00	$0.00	$0.00	$0.00	0	$0.00	0	$0.00	0
+29,2021-01-01T00:05:33-0800,2021-01-01T00:05:33-0800,2020-12-31,101,Payroll Check,,,,,42.0,Payroll Check: Federal Unemployment (940),JournalEntryLineDetail,Credit,58,2600000000000203252,,13,Employee,,																																						
+29,2021-01-01T00:05:33-0800,2021-01-01T00:05:33-0800,2020-12-31,101,Payroll Check,,,,,576.9,Payroll Check: TX Unemployment Tax,JournalEntryLineDetail,Credit,58,2600000000000203252,,13,Employee,,																																						
+29,2021-01-01T00:05:33-0800,2021-01-01T00:05:33-0800,2020-12-31,101,Payroll Check,,,,,116549.98,Payroll Check: Federal Taxes (941/944),JournalEntryLineDetail,Credit,58,2600000000000203252,,13,Employee,,																																						
+29,2021-01-01T00:05:33-0800,2021-01-01T00:05:33-0800,2020-12-31,101,Payroll Check,,,,,12783.33,Payroll Check: Employer Taxes,JournalEntryLineDetail,Debit,55,2600000000000203252,,13,Employee,,																																						
+29,2021-01-01T00:05:33-0800,2021-01-01T00:05:33-0800,2020-12-31,101,Payroll Check,,,,,250140.0,Payroll Check: Gross Pay - This is not a legal pay stub,JournalEntryLineDetail,Debit,56,2600000000000203252,,13,Employee,,																																						
+41,2020-12-31T18:24:11-0800,2020-12-31T18:24:11-0800,2020-12-30,START,Inventory Starting V																																						JPM JPMorgan Chase & Co.
+
+Following
+337.09K followers
+$136.57
+-4.23 (-3.00%)
+4:00 PM 01/18/23
+NYSE | $USD | Post-Market: $136.07 -0.50 (-0.37%) 7:59 PM
+Income Statement
+Period
+
+Quarterly
+View
+
+Absolute
+Order
+
+Latest on the Left
+Currency
+
+United States Dollar (USD)
+Dec 2022
+Sep 2022
+Jun 2022
+Mar 2022
+Dec 2021
+Sep 2021
+Jun 2021
+Mar 2021
+Dec 2020
+Sep 2020
+Jun 2020
+Interest Revenue
+Interest Income On Loans                33,054.0        25,611.0        18,646.0        15,496.0        15,019.0        -        
+Total Interest Income                33,054.0        25,611.0        18,646.0        15,496.0        15,019.0        -        
+Interest On Deposits                12,862.0        8,093.0        3,518.0        1,624.0        1,418.0        -        
+Total Interest Expense                12,862.0        8,093.0        3,518.0        1,624.0        1,418.0        -        
+Net Interest Income                20,192.0        17,518.0        15,128.0        13,872.0        13,601.0        -        
+Non-Interest Revenue
+Trust Income                5,006.0        5,069.0        5,240.0        5,362.0        5,549.0        -        
+Total Mortgage Banking Activities                98.0        314.0        378.0        460.0        315.0        -        
+Income From Trading Activities                4,434.0        5,383.0        4,990.0        5,105.0        2,182.0        -        
+Gain (Loss) on Sale of Assets                -        -        -        -        (7.0)        -        
+Gain (Loss) on Sale of Invest. & Securities                (874.0)        (1,035.0)        (540.0)        (18.0)        233.0        -        
+Total Other Non Interest Income                5,691.0        5,467.0        5,519.0        5,936.0        7,377.0        -        
+Total Non Interest Income                14,355.0        15,198.0        15,587.0        16,845.0        15,649.0        -        
+Revenue
+Revenue Before Loan Losses                34,547.0        32,716.0        30,715.0        30,717.0        29,250.0        -        
+Provision For Loan Losses                2,288.0        1,537.0        1,101.0        1,463.0        (1,288.0)        -        
+Total Revenues                32,259.0        31,179.0        29,614.0        29,254.0        30,538.0        -        
+Non Interest Operating Expenses
+Salaries And Other Employee Benefits                10,009.0        9,855.0        9,482.0        9,981.0        8,401.0        -        
+Total Selling General & Admin Expenses                7,272.0        7,710.0        7,674.0        7,792.0        7,977.0        -        
+Total Other Non Interest Expense                1,714.0        1,566.0        1,520.0        1,299.0        1,366.0        -        
+Total Non Interest Expense                18,995.0        19,131.0        18,676.0        19,072.0        17,744.0        -        
+Earnings from Continuing Operations
+EBT, Excl. Unusual Items                13,264.0        12,048.0        10,938.0        10,182.0        12,794.0        -        
+Legal Settlements                (27.0)        (47.0)        (73.0)        (119.0)        (137.0)        -        
+EBT, Incl. Unusual Items                13,237.0        12,001.0        10,865.0        10,063.0        12,657.0        -        
+Income Tax Expense                2,229.0        2,264.0        2,216.0        1,781.0        2,258.0        -        
+Earnings From Continuing Operations                11,008.0        9,737.0        8,649.0        8,282.0        10,399.0        -        
+Net Income
+Net Income to Company                11,008.0        9,737.0        8,649.0        8,282.0        10,399.0        -        
+Net Income                11,008.0        9,737.0        8,649.0        8,282.0        10,399.0        -        
+Preferred Dividend and Other Adjustments                410.0        482.0        454.0        437.0        472.0        -        
+Net Income to Common Incl Extra Items                10,598.0        9,255.0        8,195.0        7,845.0        9,927.0        -        
+Net Income to Common Excl. Extra Items                10,598.0        9,255.0        8,195.0        7,845.0        9,927.0        -        
+Supplemental Items
+Revenue Per Share                $10.89        $10.53        $10.00        $9.83        $10.26        -        
+Basic EPS                $3.58        $3.13        $2.77        $2.64        $3.33        -        
+Basic EPS - Continuing Ops                $3.58        $3.13        $2.77        $2.64        $3.33        -        
+Basic Weighted Average Shares Outst.                2,962.9        2,961.2        2,962.2        2,977.0        2,977.3        -        
+Diluted EPS                $3.57        $3.12        $2.76        $2.63        $3.33        -        
+Diluted EPS - Continuing Ops                $3.57        $3.12        $2.76        $2.63        $3.33        -        
+Diluted Weighted Average Shares Outst.                2,967.1        2,965.4        2,966.3        2,981.0        2,981.8        -        
+Normalized Basic EPS                $2.80        $2.54        $2.31        $2.14        $2.69        -        
+Normalized Diluted EPS                $2.79        $2.54        $2.30        $2.13        $2.68        -        
+Dividend Per Share                $1.00        $1.00        $1.00        $1.00        $1.00        -        
+Payout Ratio                -        35.04%        38.66%        41.42%        32.56%        -        
+Effective Tax Rate                16.8%        18.9%        20.4%        17.7%        17.8%        -        
+Normalized Net Income                8,290.0        7,530.0        6,836.3        6,363.8        7,996.3        -        
+Interest on Long-Term Debt                -        2,405.0        1,561.0        1,076.0        -        -        
+Foreign Sales                -        16,414.0        16,253.0        17,844.0        -        -        
+Total Shares Purchased - Quarter                -        -        5.0        18.1        -        -        
+Average Price paid per Share                -        -        0.0        0.0        -        -        
+In Millions of United States Dollar (USD) except per share items
+
+JPM JPMorgan Chase & Co.
+
+Following
+337.09K followers
+$136.57
+-4.23 (-3.00%)
+4:00 PM 01/18/23
+NYSE | $USD | Post-Market: $136.07 -0.50 (-0.37%) 7:59 PM
+Balance Sheet
+Period
+
+Quarterly
+View
+
+Absolute
+Order
+
+Latest on the Right
+Currency
+
+United States Dollar (USD)
+Jun 2020
+Sep 2020
+Dec 2020
+Mar 2021
+Jun 2021
+Sep 2021
+Dec 2021
+Mar 2022
+Jun 2022
+Sep 2022
+Dec 2022
+Cash & Investments
+Cash And Equivalents                
+-        721,201.0        723,732.0        641,879.0        617,101.0        343,289.0
+Investment Securities                
+-        748,393.0        768,181.0        776,168.0        725,007.0        1,170,699.0
+Trading Asset Securities                
+-        433,575.0        511,528.0        465,577.0        506,487.0        453,799.0
+Mortgage Backed Securities                
+-        197,164.0        213,154.0        209,687.0        195,103.0        -
+Total Investments                
+-        1,379,132.0        1,492,863.0        1,451,432.0        1,426,597.0        1,624,498.0
+Loans and PP&E
+Gross Loans                
+-        1,128,707.0        1,135,364.0        1,157,820.0        1,164,507.0        1,138,855.0
+Allowance For Loan Losses                
+-        (16,386.0)        (17,192.0)        (17,750.0)        (18,185.0)        (19,726.0)
+Net Loans                
+-        1,112,321.0        1,118,172.0        1,140,070.0        1,146,322.0        1,119,129.0
+Net Property Plant And Equipment                
+-        44,623.0        42,716.0        40,970.0        40,099.0        27,734.0
+Other Assets
+Goodwill                
+-        50,315.0        50,298.0        50,697.0        51,461.0        51,662.0
+Other Intangibles                
+-        882.0        893.0        1,224.0        1,205.0        1,224.0
+Loans Held For Sale                
+-        8,688.0        6,425.0        4,709.0        3,073.0        46,049.0
+Accrued Interest Receivable                
+-        42,889.0        83,703.0        87,068.0        88,958.0        75,932.0
+Restricted Cash                
+-        19,700.0        30,800.0        27,400.0        27,100.0        -
+Other Current Assets                
+-        206,071.0        224,852.0        202,393.0        193,216.0        185,369.0
+Real Estate Owned And Foreclosed                
+-        134.0        148.0        154.0        149.0        527.0
+Other Long-Term Assets                
+-        157,611.0        180,085.0        193,318.0        178,603.0        190,330.0
+Total Assets                
+-        3,743,567.0        3,954,687.0        3,841,314.0        3,773,884.0        3,665,743.0
+Deposits
+Accounts Payable                
+-        67,594.0        299,864.0        292,178.0        289,079.0        300,141.0
+Accrued Expenses                
+-        178,972.0        10,100.0        10,600.0        152.0        -
+Interest Bearing Deposits                
+-        1,703,690.0        1,812,264.0        1,730,083.0        1,693,694.0        1,668,272.0
+Institutional Deposits                
+-        93,505.0        -        -        -        -
+Non-Interest Bearing Deposits                
+-        665,108.0        748,943.0        741,461.0        714,921.0        671,907.0
+Total Deposits                
+-        2,462,303.0        2,561,207.0        2,471,544.0        2,408,615.0        2,340,179.0
+Other Liabilities
+Short-Term Borrowings                
+-        303,650.0        339,247.0        333,558.0        344,508.0        297,781.0
+Curr. Port. of Long-Term Debt                
+-        22,776.0        -        -        -        -
+Long-Term Debt                
+-        233,987.0        292,275.0        287,749.0        288,454.0        308,475.0
+Federal Home Loan Bank Debt                
+-        53,017.0        11,108.0        11,103.0        11,098.0        -
+Trust Preferred Securities                
+-        1,975.0        -        -        -        -
+Other Current Liabilities                
+-        114,577.0        144,280.0        137,891.0        133,175.0        126,835.0
+Other Non Current Liabilities                
+-        2,261.0        2,358.0        2,222.0        2,551.0        -
+Total Liabilities                
+-        3,449,440.0        3,668,788.0        3,555,171.0        3,485,866.0        3,373,411.0
+Preferred Equity
+Preferred Stock Redeemable                
+-        34,838.0        32,838.0        32,838.0        32,838.0        27,404.0
+Total Preferred Equity                
+-        34,838.0        32,838.0        32,838.0        32,838.0        27,404.0
+Common Equity
+Common Stock                
+-        4,105.0        4,105.0        4,105.0        4,105.0        4,105.0
+Additional Paid In Capital                
+-        88,415.0        88,260.0        88,614.0        88,865.0        89,044.0
+Retained Earnings                
+-        272,268.0        277,177.0        282,445.0        288,776.0        296,456.0
+Treasury Stock                
+-        (105,415.0)        (106,914.0)        (107,490.0)        (107,432.0)        (107,336.0)
+Comprehensive Income and Other                
+-        (84.0)        (9,567.0)        (14,369.0)        (19,134.0)        (17,341.0)
+Total Common Equity                
+-        259,289.0        253,061.0        253,305.0        255,180.0        264,928.0
+Stockholders' Equity
+Total Equity                
+-        294,127.0        285,899.0        286,143.0        288,018.0        292,332.0
+Liabilities & Equity
+Total Liabilities And Equity                
+-        3,743,567.0        3,954,687.0        3,841,314.0        3,773,884.0        3,665,743.0
+Supplemental Items
+Total Shares Out. on Filing Date                
+-        2,952.8        2,937.1        2,932.6        2,933.2        2,934.3
+Total Common Shares Outstanding                
+-        2,944.1        2,937.1        2,932.6        2,933.2        2,934.3
+Book Value / Share                
+-        $88.07        $86.16        $86.38        $87.00        $90.29
+Tangible Book Value                
+-        208,092.0        201,870.0        201,384.0        202,514.0        212,042.0
+Tangible Book Value Per Share                
+-        $70.68        $68.73        $68.67        $69.04        $72.26
+Total Debt                
+-        623,733.0        650,979.0        640,736.0        652,294.0        606,256.0
+Net Debt                
+-        (792,674.0)        (886,156.0)        (788,857.0)        (773,158.0)        (730,369.0)
+Full Time Employees                
+-        271,025        273,948        278,494        288,474        293,723
+Total Employees                
+-        271,025        273,948        278,494        288,474        293,723
+In Millions of United States Dollar (USD) except per share items
+Seeking Alpha - Power to Investors
+Power to Investors
+RSS Feed
+Sitemap
+Affiliate Program
+About Us
+Careers
+Contact Us
+Terms Of Use
+Privacy
+Do Not Sell My Personal Information
+Market Data Sources
+© 2023 Seeking Alpha
+
+JPM JPMorgan Chase & Co.
+
+Following
+337.09K followers
+$136.57
+-4.23 (-3.00%)
+4:00 PM 01/18/23
+NYSE | $USD | Post-Market: $136.07 -0.50 (-0.37%) 7:59 PM
+Cash Flow
+Period
+
+Quarterly
+View
+
+Absolute
+Order
+
+Latest on the Right
+Currency
+
+United States Dollar (USD)
+Mar 2020
+Jun 2020
+Sep 2020
+Dec 2020
+Mar 2021
+Jun 2021
+Sep 2021
+Dec 2021
+Mar 2022
+Jun 2022
+Sep 2022
+Net Income
+Net Income                
+-        11,687.0        10,399.0        8,282.0        8,649.0        9,737.0
+Cash Flow From Operating Activities
+Depreciation, Depletion & Amortization                
+-        1,928.0        1,931.0        1,820.0        1,789.0        1,771.0
+Total Depreciation & Amortization                
+-        1,928.0        1,931.0        1,820.0        1,789.0        1,771.0
+Provision for Credit Losses                
+-        (1,527.0)        (1,288.0)        1,463.0        1,101.0        1,537.0
+Net (Increase)/Decrease in Loans Orig/Sold                
+-        9,643.0        2,742.0        9,296.0        4,611.0        3,924.0
+Change in Other Net Operating Assets                
+-        (26,847.0)        (27,073.0)        12,333.0        (238.0)        18,088.0
+Other Operating Activities                
+-        (1,813.0)        6,012.0        1,083.0        (197.0)        514.0
+Cash from Operations                
+-        23,331.0        85,095.0        (41,917.0)        66,018.0        (18,204.0)
+Cash Flow From Investing Activities
+Net Cash from Investments                
+-        (24,004.0)        (79,944.0)        (20,806.0)        6,198.0        36,515.0
+Net (Increase) Decrease in Loans Originated / Sold - Investing                
+-        (13,232.0)        (36,905.0)        (8,198.0)        (37,419.0)        (14,335.0)
+Total Other Investing Activities                
+-        (25,039.0)        16,691.0        (43,604.0)        (21,982.0)        17,342.0
+Cash from Investing                
+-        (62,275.0)        (100,158.0)        (72,608.0)        (53,203.0)        39,522.0
+Cash Flow From Financing Activities
+Short Term Debt Issued                
+-        -        -        4,300.0        -        -
+Long-Term Debt Issued                
+-        -        -        50,303.0        -        -
+Total Debt Issued                
+-        21,846.0        (23,553.0)        54,603.0        26,030.0        36,263.0
+Long-Term Debt Repaid                
+-        -        -        (13,094.0)        -        -
+Total Debt Repaid                
+-        (13,742.0)        (32,105.0)        (13,094.0)        (12,897.0)        (16,292.0)
+Repurchase of Common Stock                
+-        (5,286.0)        (2,122.0)        (2,455.0)        (707.0)        0.0
+Issuance of Preferred Stock                
+-        2,000.0        0.0        -        -        -
+Repurchase of Preferred Stock                
+-        0.0        0.0        (2,000.0)        0.0        0.0
+Common & Preferred Stock Dividends Paid                
+-        (3,158.0)        (3,386.0)        (3,430.0)        (3,344.0)        (3,412.0)
+Common & Preferred Stock Dividends Paid                
+-        (3,158.0)        (3,386.0)        (3,430.0)        (3,344.0)        (3,412.0)
+Net Increase (Decrease) in Deposit Accounts                
+-        96,138.0        59,048.0        99,691.0        (93,850.0)        (50,177.0)
+Other Financing Activities                
+-        (751.0)        96.0        (543.0)        966.0        735.0
+Cash from Financing                
+-        97,047.0        (2,022.0)        132,772.0        (83,802.0)        (32,883.0)
+Change In Cash & Equivalents
+Foreign Exchange Rate Adjustments                
+-        (3,655.0)        (1,950.0)        (4,549.0)        (14,285.0)        (13,508.0)
+Net Change in Cash                
+-        54,448.0        (19,035.0)        13,698.0        (85,272.0)        (25,073.0)
+Supplemental Items
+Cash Interest Paid                
+-        1,421.0        1,260.0        1,088.0        3,369.0        6,618.0
+Cash Income Tax Paid                
+-        3,901.0        1,120.0        705.0        2,395.0        -
+Free Cash Flow / Share                
+-        $7.78        $28.58        ($14.08)        $22.29        ($6.15)
+Net Debt Issued / Repaid                
+-        8,104.0        (55,658.0)        41,509.0        13,133.0        19,971.0
+In Millions of United States Dollar (USD) except per share items
+Seeking Alpha - Power to Investors
+Power to Investors
+RSS Feed
+Sitemap
+Affiliate Program
+About Us
+Careers
+Contact Us
+Terms Of Use
+Privacy
+Do Not Sell My Personal Information
+Market Data Sources
+© 2023 Seeking Alpha
+
+																																						
+																																						
 Update Your Statement Information                
                 
 Step 1:                
