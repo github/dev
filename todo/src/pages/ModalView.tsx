@@ -24,7 +24,10 @@ function ModalView() {
       tasks:[]
     }
    
-    let existingCategory = categoriesData.find(category=>  category.title === newCategory.title)
+    let existingCategory = categoriesData.find(category=>  category.title.toLowerCase() === newCategory.title.toLowerCase());
+    if (existingCategory || newCategory.title == '') {
+      return
+    }
     categoriesData.push(newCategory)
     navigate('/')
   }

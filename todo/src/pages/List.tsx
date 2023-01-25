@@ -24,7 +24,7 @@ function List() {
               })
             }   
         </div>
-        <button className='w-[80px] h-[80px] rounded-full flex items-center justify-center bg-yellow-600 absolute bottom-[5px] text-[30px]' onClick={()=>navigate('/newTask')}><i className="fa-solid fa-plus"></i></button>
+        <button className='w-[80px] h-[80px] rounded-full flex items-center justify-center bg-yellow-600 fixed bottom-[50px] text-[30px]' onClick={()=>navigate('/newTask')}><i className="fa-solid fa-plus" ></i></button>
     </div>
   )
 }
