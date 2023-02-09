@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+const Http = new XMLHttpRequest();
+const url='https://api.spotify.com/v1/artists/1vCWHaC5f2uS3yhpwWbIA6/albums?album_type=SINGLE&offset=20&limit=10';
+Http.open("POST", url);
+Http.setRequestHeader("Accept", "application/json");
+Http.setRequestHeader("Content-Type", "application/json");
+var token = "Authorization: Bearer BQAs4bFYRk739EomWLdqSktGyb6dAsgeacT6U6ZS_aLjqANCN6lr8iMIhhpUhYlGXJc9HPmzQy2-r8DRsIok233TPP0gJI7y74lrLr5oN-5brrevYGN2XzO9fxdP1sF-5P8WzjOWLwEy5YVeQnVS8RzHEsj4kUtqyfS61r76GSTaz3xkV-HWqvTD96scpIZa39hJ6ryyBztb"
+Http.send(token);
+
+Http.onreadystatechange = (e) => {
+  document.getElementById("console").innerHTML = Http.responseText
+}
+    </script>
+</body>
+</html>
