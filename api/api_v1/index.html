@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+
+        //https://demopublic.magnolia-cms.com/.rest/delivery/tours/v1/magnolia-travels/A-Taste-of-Malaysia
+        //https://demoauthor.magnolia-cms.com/.rest/delivery/tours/v1
+        //var usrId = window.staticData.unMaskedUserId;
+        //var yetVisited = localStorage[usrId+'visited'];
+	    //var baseURL = window.staticData.appUris.baseUri;
+	    //var accessTkn = window.parent.staticData.apiPaths.search.esbApiToken;
+       console.log("Hallo JS v1");
+
+	    apiContent();
+		
+	    function apiContent(){
+
+				var xhr = new XMLHttpRequest();
+
+				
+				xhr.open('GET', 'https://demoauthor.magnolia-cms.com/.rest/delivery/tours/v1');
+			
+				//xhr.setRequestHeader('sumtauth-header', accessTkn);
+				xhr.send(null);	
+
+				xhr.onload = function () {
+
+					// Process our return data
+					if (xhr.status >= 200 && xhr.status < 300) {
+						// Runs when the request is successful
+						console.log(xhr.responseText);
+						ausgabe_text = JSON.parse(xhr.responseText);
+                        //console.log(ausgabe_text.username);
+                       // console.log(ausgabe_text.username);
+                        //console.log(ausgabe_text.firstName);
+                        console.log(ausgabe_text.results);
+                        console.log(ausgabe_text.results[1].name);
+
+                        var i = 0;
+                        while (i < ausgabe_text.results.length) {
+                            console.log(ausgabe_text.results[i].name);
+                            document.getElementById("demo").innerHTML += ausgabe_text.results[i].name+"<br>"; 
+                            i++;
+                        }
+
+                        //document.getElementById("demo").innerHTML = "I have api data! : "+ausgabe_text.total; 
+						
+					} else {
+						// Runs when it's not
+						console.log(xhr.responseText);
+						
+					}
+
+				};
+		
+	    }
+        </script>
+    </head>
+    <bod>
+        <div>
+            Api Test
+        </div>
+        <div id="demo">
+            
+        </div>
+    </bod>
+</html>
