@@ -3,6 +3,11 @@
 name: reusable workflow
 on: 
   workflow_call:
+   inputs:
+      node-version:
+        required: false
+        default: 'lts/*'
+        type: string
 
 jobs:
   run-npm-test:
@@ -13,7 +18,7 @@ jobs:
         - name : setup node
           uses: actions/setup-node@v3
           with:
-            node-version: 'lts/*'
+            node-version: ${{inputs.node-version}}
         - name: run test
           shell: bash
           run: |
