@@ -4,5 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  call-workflow-1-in-local-repo:
+  call-workflow-in-local-repo:
     uses: Serchgalarza/dev/.github/workflows/ex4.yml@main
+    with:
+      node-version: 14
