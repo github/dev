@@ -1,0 +1,12 @@
+name: Reusable Workflow Main
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call-workflow-in-local-repo:
+    uses: Serchgalarza/dev/.github/workflows/ex4.yml@main
+     #uses: {owner}/{repo}/.github/workflows/{myreusable-workflow.yaml}@main #remote
+     #uses: ./.github/workflows/{myreusable-workflow.yaml}@main
+    with:
+      node-version: 14

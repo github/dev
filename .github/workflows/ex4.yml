@@ -1,0 +1,27 @@
+# This is a basic workflow that is manually triggered
+
+name: reusable workflow
+on: 
+  workflow_call:
+   inputs:
+      node-version:
+        required: false
+        default: 'lts/*'
+        type: string
+
+jobs:
+  run-npm-test:
+    runs-on: ubuntu-latest
+    steps:
+        - name: checkout
+          uses: actions/checkout@v3
+        - name : setup node
+          uses: actions/setup-node@v3
+          with:
+            node-version: ${{inputs.node-version}}
+        - name: run test
+          shell: bash
+          run: |
+            node -v
+            npm install
+            npm test

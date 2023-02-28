@@ -1,0 +1,32 @@
+name: npm test                    #Nombre del flujo de trabajo
+on: 
+  workflow_dispatch:
+               
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3.3.0
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - name: Install NPM
+        run: |
+          npm install
+          npm test
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+      - name: Install NPM
+        run: |
+          npm update 
+          npm install
+          npm test
+          
+      
