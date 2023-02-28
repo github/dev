@@ -2,7 +2,7 @@
 
 name: reusable workflow
 on: 
-  workflow_dispatch:
+  workflow_call:
 
 jobs:
   run-npm-test:
