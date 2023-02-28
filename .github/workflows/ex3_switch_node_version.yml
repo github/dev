@@ -1,6 +1,6 @@
 name: Switch Node version
 on: 
-  pull_request:
+  pull_request: push
 
 env:
   NODE_VERSION=14
