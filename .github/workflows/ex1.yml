@@ -15,7 +15,7 @@ jobs:
       - name: Install NPM
         run: npm install
   job2:
-    runs-on: ubuntu-latest
+    runs-on: alpine-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
