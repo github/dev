@@ -13,9 +13,9 @@ jobs:
         with:
           node-version: '16'
       - name: Install NPM
-        run: npm install
+        run: npm install, npm test
   job2:
-    runs-on: alpine-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
