@@ -9,7 +9,6 @@ jobs:
   run-npm-test:
     runs-on: ubuntu-latest
     steps:
-        - id: job
         - name: checkout
           uses: actions/checkout@v3
         - name : setup node
