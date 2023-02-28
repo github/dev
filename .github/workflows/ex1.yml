@@ -13,7 +13,9 @@ jobs:
         with:
           node-version: '16'
       - name: Install NPM
-        run: npm install, npm test
+        run: |
+          npm install
+          npm test
   job2:
     runs-on: ubuntu-latest
     steps:
