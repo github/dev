@@ -2,19 +2,19 @@ name: Switch Node version
 on: 
   pull_request: 
 
-env:
-  NODE_VERSION:14
-
 jobs:
   run-npm-test:
     runs-on: ubuntu-latest
+    outputs:
+      version: ${{14}} 
     steps:
+        - id: job
         - name: checkout
           uses: actions/checkout@v3
         - name : setup node
           uses: actions/setup-node@v3
           with:
-            node-version: "${{env.NODE_VERSION}}"
+            node-version: "$version"
         - name: run test
           shell: bash
           run: |
