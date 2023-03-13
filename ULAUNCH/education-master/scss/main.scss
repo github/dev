@@ -1,0 +1,29 @@
+
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+
+//
+// Grid mixins
+//
+
+@import "bootstrap/mixins/breakpoints";
+
+
+// including variables and mixins
+@import "theme/variables";
+@import "theme/mixins";
+@import "theme/flexbox";
+@import "theme/reset";
+
+
+// Custom Scss 
+@import "theme/elements";
+@import "theme/header";
+@import "theme/home";
+@import "theme/about";
+@import "theme/courses";
+@import "theme/events";
+@import "theme/gallery";
+@import "theme/blog";
+@import "theme/contact";
+@import "theme/footer";

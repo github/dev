@@ -1,0 +1,268 @@
+/* =================================== */
+
+
+/*  Courses Page Styles
+/* =================================== */
+
+
+/*-------- Start courses page Area ------------*/
+
+.courses-page {
+    .single-popular-carusel {
+        margin-bottom: 40px;
+    }
+    .primary-btn {
+        border: 1px solid transparent;
+        &:hover {
+            background: transparent;
+            border-color: $primary-color;
+            color: $primary-color;
+        }
+    }
+}
+
+
+/*-------- End courses page Area ------------*/
+
+
+/*-------- Start Course page details Area ------------*/
+
+.left-contents {
+    .jq-tab-wrapper {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        padding-top: 50px;
+    }
+    .jq-tab-wrapper.horizontal-tab {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .jq-tab-menu {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        @media(max-width:413px){
+            display: initial!important;
+        }
+    }
+    .jq-tab-menu .jq-tab-title {
+        color: #000;
+        font-size: 12px;
+        font-weight: 500;
+        border: none;
+        cursor: pointer;
+        padding: 6px 25px;
+        text-align: center;
+        @include transition();
+        @media(max-width: 504px) {
+            padding: .9em .9em;
+            font-size: 10px;
+        }
+    }
+    .jq-tab-menu .jq-tab-title:hover,
+    .jq-tab-menu .jq-tab-title.active {
+        color: $primary-color;
+        background: transparent;
+        border-bottom: 1px solid $primary-color;
+    }
+    .horizontal-tab .jq-tab-menu {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+    }
+    .jq-tab-content-wrapper {
+        -webkit-box-flex: 4;
+        -ms-flex: 4;
+        flex: 4;
+    }
+    .jq-tab-content {
+        display: none;
+        padding: 1em 1.8em;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    #verticalTab .jq-tab-content-wrapper {
+        border: 1px solid #eee;
+    }
+    #horizontalTab .jq-tab-content-wrapper {
+        background: #f9f9ff;
+    }
+    .jq-tab-content.active {
+        display: block;
+    }
+    @media(max-width:413px){
+        .comment-wrap{
+            padding:0px !important; 
+        }
+        
+    }
+
+    .course-list {
+        li {
+            margin-bottom: 20px;
+            .primary-btn {
+                background: $white;
+                color: $black;
+                &:hover {
+                    background: $primary-color;
+                    color: $white;
+                }
+            }
+            
+            @media(max-width:414px){
+                font-size:8px;
+            }
+        }
+    }
+    .comments-area {
+        padding: 0px 20px;
+        margin-top: 50px;
+        background: transparent!important;
+        border: none!important;
+        @media(max-width: 414px) {
+            padding: 50px 8px;
+        }
+        h4 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: 600;
+        }
+        a {
+            color: $black;
+        }
+        .comment-list {
+            padding-bottom: 30px;
+            &:last-child {
+                padding-bottom: 0px;
+            }
+            &.left-padding {
+                padding-left: 25px;
+            }
+            @media(max-width:414px) {
+                .single-comment {
+                    h5 {
+                        font-size: 12px;
+                    }
+                    .date {
+                        font-size: 11px;
+                    }
+                    .comment {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+        .thumb {
+            margin-right: 20px;
+        }
+        .desc {
+            h5 {
+                font-weight: 600;
+                @include transition();
+                &:hover {
+                    a {
+                        color: $primary-color!important;
+                    }
+                }
+            }
+        }
+        .date {
+            font-size: 13px;
+            color: #cccccc;
+        }
+        .comment {
+            color: #777777;
+            margin-bottom: 0px;
+        }
+        .btn-reply {
+            background-color: #fcfaff;
+            color: $black;
+            font-weight: 400;
+            padding: 8px 30px;
+            display: block;
+            @include transition();
+            &:hover {
+                background: $primary-color;
+                color: $white;
+            }
+        }
+    }
+    .comment-form {
+        border: none;
+    }
+    .star {
+        .checked {
+            color: $primary-color;
+        }
+    }
+    .reviews{
+        span,.star{
+            width:25%;
+            margin-bottom:10px;
+        }
+    }
+    .avg-review{
+        background:#04091e;
+        text-align:center;
+        color:$white;
+        font-size:14px;
+        font-weight:600;
+        padding:20px 0px;
+        span{
+            font-size:18px;
+            color:$primary-color;
+        }
+        @media(max-width:991px){
+            margin-bottom:20px;
+        }
+    }   
+
+    .single-reviews{
+        h5{
+            display:inline-flex;
+            .star{
+                margin-left:10px;
+            }
+        }
+    } 
+}
+
+.right-contents {
+    ul {
+        li {
+            background: $offwhite;
+            padding: 10px 22px;
+            margin-bottom: 10px;
+            a {
+                color: $black;
+                text-align: left;
+                font-size: 14px;
+                font-weight: 400;
+                p {
+                    margin-bottom: 0px;
+                }
+            }
+            .or {
+                color: $primary-color!important;
+            }
+        }
+    }
+    .primary-btn {
+        margin-top: 10px;
+        width: 100%;
+        background: $black;
+        text-align: center;
+    }
+    @media(max-width:991px){
+        margin-top:30px;
+    }
+}
+
+
+/*-------- End Course page details Area ------------*/

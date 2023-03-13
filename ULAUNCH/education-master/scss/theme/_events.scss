@@ -1,0 +1,122 @@
+/* =================================== */
+/*  Events Page Styles
+/* =================================== */
+
+
+.event-page-lists{
+    .single-carusel{
+        margin-bottom: 50px;
+    }
+
+    .primary-btn{
+        border: 1px solid transparent;
+        &:hover{
+            color:$primary-color;
+            border-color:$primary-color;
+            background: transparent;
+        }
+    }
+}
+
+
+
+.event-details-area{
+    .details-content{
+        h4{
+            margin:20px 0px;
+        }
+    }
+    .social-nav{
+        padding-top:50px;
+        .focials{
+            li{
+                text-align: right;  
+                display: inline-block;   
+                a{
+                    color: #fff;
+                    .fa-facebook{
+                        width: 30px;
+                        display: block;
+                        text-align: center;
+                        padding: 8px 0px;                        
+                        background:#4b6eaa;
+                    }
+                    .fa-twitter{
+                        width: 30px;
+                        display: block;
+                        text-align: center;
+                        padding: 8px 0px;                        
+                        background:#00c7f8;
+                    }  
+                    .fa-dribbble{
+                        width: 30px;
+                        display: block;
+                        text-align: center;
+                        padding: 8px 0px;                        
+                        background:#f982aa;
+                    }
+                    .fa-behance{
+                        width: 30px;
+                        display: block;
+                        text-align: center;
+                        padding: 8px 0px;                        
+                        background:#0b8eff;
+                    }                                                          
+                }
+            }
+        }
+        .navs{
+            text-align:right;
+            a{
+                background:$offwhite;
+                color:$black;
+                padding:10px 25px;
+                @include transition();
+                font-size: 14px;
+                @media(max-width:414px){
+                    font-size:12px;
+                }
+                font-weight: 300;
+                text-transform: uppercase;
+                &:hover{
+                    background:$primary-color;
+                    color:$white;
+                }
+            }
+
+            .nav-prev .lnr{
+                margin-right: 5px;
+            }
+            .nav-next .lnr{
+                margin-left: 5px;
+            }
+            @media(max-width:767px){
+                margin-top:30px; 
+                text-align:left;
+            }            
+        }
+    }
+
+    .event-details-right{
+        @media(max-width: 991px){
+            margin-top:30px;
+        }
+        .single-event-details{
+            background:#f9f9ff;
+            padding:30px;
+            margin-bottom:30px;
+            ul{
+                li{
+                    font-size:14px;
+                    border-bottom:1px solid #eee;
+                    padding:5px 0px; 
+                    &:last-child{
+                        border-bottom:none;
+                    }
+                }
+            }
+        }
+    }
+
+
+}

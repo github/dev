@@ -1,0 +1,140 @@
+
+//    Mixins
+
+@mixin transition($args: all 0.3s ease 0s) {
+  -webkit-transition: $args;
+     -moz-transition: $args;
+       -o-transition: $args;
+          transition: $args;
+}
+
+@mixin transition-duration($args1, $args2) {
+  -webkit-transition-duration: $args1, $args2;
+     -moz-transition-duration: $args1, $args2;
+       -o-transition-duration: $args1, $args2;
+          transition-duration: $args1, $args2;
+}
+
+@mixin transition-delay($args1, $args2) {
+  -webkit-transition-delay: $args1, $args2;
+     -moz-transition-delay: $args1, $args2;
+       -o-transition-delay: $args1, $args2;
+          transition-delay: $args1, $args2;
+}
+
+@mixin transition-property($args1, $args2) {
+  -webkit-transition-property: $args1, $args2;
+     -moz-transition-property: $args1, $args2;
+       -o-transition-property: $args1, $args2;
+          transition-property: $args1, $args2;
+}
+
+
+  // background: -moz-linear-gradient(0deg, #91d1ff, #a387ff);
+  // background: -webkit-linear-gradient(0deg, #91d1ff, #a387ff);
+  // background: -ms-linear-gradient(0deg, #91d1ff, #a387ff);
+
+
+
+@mixin gradient($args1,$args2){
+    -webkit-linear-gradient:(0deg, $args1, $args2);
+       -moz-linear-gradient:(0deg, $args1, $args2);
+         -o-linear-gradient:(0deg, $args1, $args2);
+           -linear-gradient:(0deg, $args1, $args2);
+}
+
+
+@mixin filter($filter-type,$filter-amount) { 
+  -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+  -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+  -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+  -o-filter: $filter-type+unquote('(#{$filter-amount})');
+  filter: $filter-type+unquote('(#{$filter-amount})');
+}
+
+
+
+@mixin transform($transform) {
+    -webkit-transform: $transform;
+       -moz-transform: $transform;
+        -ms-transform: $transform;
+         -o-transform: $transform;
+            transform: $transform;
+}
+
+@mixin transform-origin($value) {
+    -webkit-transform-origin: $value;
+       -moz-transform-origin: $value;
+        -ms-transform-origin: $value;
+         -o-transform-origin: $value;
+            transform-origin: $value;
+}
+
+@mixin backface-visibility($value) {
+    -webkit-backface-visibility: $value;
+       -moz-backface-visibility: $value;
+            backface-visibility: $value;
+}
+
+@mixin calc ( $property, $expression ) {
+    #{$property}: -webkit-calc(#{$expression});
+    #{$property}: -moz-calc(#{$expression});
+    #{$property}: calc(#{$expression});
+}
+
+@mixin keyframes ( $animation-name ) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name}  {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation ($args) {
+  -webkit-animation: $args;
+     -moz-animation: $args;
+       -o-animation: $args;
+          animation: $args;
+}
+
+// Medium Layout: 1280px 
+@mixin medium {
+  @media (min-width: 992px) and (max-width: 1400px) {
+    @content;
+  }
+}
+
+// Tablet Layout: 768px 
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 1200px) {
+    @content;
+  }
+}
+
+// Mobile Layout: 320px 
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+// Wide Mobile Layout: 480px 
+@mixin wide-mobile {
+  @media (min-width: 480px) and (max-width: 767px) {
+    @content;
+  }
+}
+
+
+@mixin cmq ($min, $max) {
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}

@@ -1,0 +1,343 @@
+/* =================================== */
+/*  About Page Styles
+/* =================================== */
+
+
+/*-------- Start Info area Style  -------------*/
+
+.info-area{
+  .info-area-left{
+    img{
+        width:100%;
+    }
+  }  
+  .info-area-right{
+    padding-left:80px;
+    h1{
+        max-width: 400px;
+        margin-bottom:20px;
+    }
+    p{
+        max-width: 450px;
+        margin-bottom:0px;
+    }
+    @media(max-width:1024px) and (min-width: 991px){
+        h1{
+            font-size:23px;
+        }
+    }    
+    @media(max-width:1024px){
+        padding-left:15px;
+    }
+    @media(max-width:991px){
+        h1,p{
+            max-width:100%;
+        }
+    }
+    @media(max-width:991px){
+        margin-top:50px;
+    }    
+  }  
+}
+
+/*--------  End Info area Style  -------------*/
+
+/*--------  Start course-mission area Style  -------------*/
+
+.accordion > dt {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.accordion > dt > a {
+    display: block;
+    position: relative;
+    color: #222222;
+    text-decoration: none;
+    padding: 8px 20px;
+    background: $offwhite;
+}
+
+.accordion > dt > a:hover {
+    text-decoration: none;
+}
+
+.accordion > dt > a.active {
+    color: #fff;
+    border-color: #ddd;
+    background:$primary-color;
+    cursor: default;
+}
+
+.accordion > dt > a:after {
+    content: "\f107";
+    width: 15px;
+    height: 15px;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    font-family: 'FontAwesome';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+    color: #111;
+    -webkit-font-smoothing: antialiased;
+}
+
+.accordion > dt > a.active:after,
+.accordion > dt > a.active:hover:after {
+    content: "\f106";
+    color: #fff;
+}
+
+.accordion > dt > a:hover:after {
+    color: #444;
+}
+
+.accordion > dd {
+    margin-bottom: 10px;
+    padding: 10px 20px 20px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #777;
+}
+
+.accordion > dt > a,
+.accordion > dt > a:after,
+.toggle > dt > a,
+.toggle > dt > a:after {
+    -webkit-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    -moz-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    -o-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    -ms-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+}
+
+dl.accordion.time-line {
+    position: relative;
+}
+
+dl.accordion.time-line:before {
+    border-left: 1px dashed #cecece;
+    bottom: 10px;
+    content: "";
+    left: 15px;
+    position: absolute;
+    top: 25px;
+    z-index: 0;
+}
+
+.accordion.time-line > dd {
+    margin-bottom: 10px;
+    padding: 10px 20px 20px 40px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #777;
+}
+
+.accordion.time-line > dt > a:after {
+    content: "\e648";
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: -15px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: bold;
+    font-variant: normal;
+    text-transform: none;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    background: #222;
+    padding-left: 3px;
+}
+
+.accordion.time-line > dt > a.active:after,
+.accordion.time-line > dt > a.active:hover:after {
+    content: "\e641";
+    color: #fff;
+}
+
+.accordion.time-line > dt > a {
+    display: block;
+    position: relative;
+    color: #222222;
+    text-decoration: none;
+    padding: 14px 20px 14px 40px;
+    border: none;
+    letter-spacing: 3px;
+}
+
+.accordion.time-line > dt > a:hover,
+.accordion.time-line > dt > a.active {
+    background: none !important;
+}
+
+.toggle > dt {
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.toggle > dt > a {
+    display: block;
+    position: relative;
+    color: #222222;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.toggle > dt > a:hover {
+    text-decoration: none;
+    border-color: #e8e8e8;
+}
+
+.toggle > dt > a.active {
+    color: $primary-color;
+    border-color: $primary-color;
+}
+
+.toggle > dt > a:after {
+    content: "\f107";
+    width: 15px;
+    height: 15px;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    font-family: 'FontAwesome';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+    color: #999;
+    -webkit-font-smoothing: antialiased;
+}
+
+.toggle > dt > a.active:after,
+.toggle > dt > a.active:hover:after {
+    content: "\f106";
+    color: $primary-color;
+}
+
+.toggle > dt > a:hover:after {
+    color: #444;
+}
+
+.toggle > dd {
+    margin-bottom: 10px;
+    padding: 10px 20px 20px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #777;
+}
+
+dl.toggle.time-line {
+    position: relative;
+}
+
+dl.toggle.time-line:before {
+    /*background-color: #d1d1d1;*/
+    border-left: 1px dashed #cecece;
+    bottom: 10px;
+    content: "";
+    left: 15px;
+    position: absolute;
+    top: 25px;
+    /*width: 1px;*/
+    z-index: 0;
+}
+
+.toggle.time-line > dd {
+    margin-bottom: 10px;
+    padding: 10px 20px 20px 40px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #777;
+}
+
+.toggle.time-line > dt > a:after {
+    content: "\e648";
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: -15px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: bold;
+    font-variant: normal;
+    text-transform: none;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    background: #222;
+    padding-left: 3px;
+}
+
+.toggle.time-line > dt > a.active:after,
+.toggle.time-line > dt > a.active:hover:after {
+    content: "\e641";
+    color: #fff;
+}
+
+.toggle.time-line > dt > a {
+    display: block;
+    position: relative;
+    color: #222222;
+    text-decoration: none;
+    padding: 14px 20px 14px 40px;
+    border: none;
+    letter-spacing: 3px;
+}
+
+.toggle.time-line > dt > a:hover,
+.toggle.time-line > dt > a.active {
+    background: none !important;
+}
+
+.jq-tab-menu .jq-tab-title:first-child {
+    border-top: none;
+}
+
+
+.video-right{
+    background:url(../img/video-bg.jpg) no-repeat center;
+    background-size:cover;
+    height:330px;
+    .overlay-bg{
+        background-color:rgba(#222, .2);
+    }
+    .play-btn{
+        z-index: 2;
+    }
+    @media(max-width:767px){
+        margin-top:50px;
+    }
+}
+
+
+
+/*--------  End course-mission area Style  -------------*/
