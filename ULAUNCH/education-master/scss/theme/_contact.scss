@@ -1,0 +1,75 @@
+/* =================================== */
+/*  Contact Page Styles
+/* =================================== */
+
+.contact-page-area {
+    background: #f9f9ff;
+    .map-wrap {
+        margin-bottom: 120px;
+        @media(max-width: 991px) {
+            margin-bottom: 50px;
+        }
+    }
+    .contact-btns {
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        padding: 40px;
+        color: $white;
+        margin-bottom: 30px;
+        &:hover {
+            color: $white;
+        }
+    }
+    .form-area {
+        .form-control{
+            &:focus{
+                box-shadow: none!important;
+                border-color:#ced4da!important;
+            }
+        }
+        input {
+            padding: 15px;
+        }
+        input,
+        textarea {
+            border-radius: 0;
+            font-size: 13px!important;
+        }
+        textarea {
+            height: 190px;
+            margin-top: 0px;
+            padding: 15px;
+        }
+        .genric-btn {
+            @include transition();
+            border-radius: 0!important;
+            font-size: 14px;
+            text-transform: uppercase!important;
+            &:hover {
+                border: 1px solid $primary-color;
+                color: $primary-color!important;
+            }
+        }
+    }
+    .address-wrap{
+        @media(max-width:991px){
+            margin-bottom:30px;
+        }
+        .single-contact-address {
+            margin-bottom: 8px;
+            h5 {
+                font-weight: 300;
+                font-size: 16px;
+                margin-bottom: 5px;
+            }
+            .lnr {
+                font-size: 30px;
+                font-weight: 500;
+                color: $primary-color;
+                margin-right: 30px;
+            }
+        }
+    }
+}
+

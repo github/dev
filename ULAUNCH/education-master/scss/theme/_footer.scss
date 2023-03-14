@@ -1,0 +1,150 @@
+/* =================================== */
+/*  Footer Styles
+/* =================================== */
+
+
+/*-------- start footer Area -------------*/
+
+.footer-area {
+    background-color: #04091e;
+}
+
+
+.single-footer-widget {
+    h4{
+        color: $white;
+        margin-bottom: 25px;
+        font-weight: 500;
+    }    
+    .form-control{
+        border: none;
+        width: 80%!important;
+        font-weight: 300;
+        background: #f9f9ff;
+        padding-left: 20px;
+        border-radius: 0;
+        font-size: 14px;
+        line-height: normal!important;
+        color:$black;
+        &:focus {
+           box-shadow: none;
+           color:$black;
+        }
+    }
+    ul li {
+        margin-bottom: 10px;
+        a {
+            color: $text-color;
+            @include transition();
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+    .bb-btn {
+        color: $primary-color;
+        color: #fff;
+        font-weight: 300;
+        border-radius: 0;
+        z-index: 9999;
+        cursor: pointer;
+    }
+    .info { 
+        margin-top: 25px;
+        color: #fff;
+        font-size: 12px;
+        &.valid {
+            color: green;
+        }
+        &.error {
+            color: red;
+        }
+    }
+    .btn{
+       font-size: 1.2rem;
+       border-radius:0;
+       background:$primary-color;
+       color:$white;
+       .lnr{
+        line-height:inherit;
+        font-size:13px;
+        padding: 0px 4px;        
+       }
+    }
+    ::-moz-selection {
+        /* Code for Firefox */
+        background-color: #191919!important;
+        color: $text-color;
+    }
+    ::selection {
+        background-color: #191919!important;
+        color: $text-color;
+    }
+    ::-webkit-input-placeholder {
+        /* WebKit, Blink, Edge */
+        color: $text-color;
+        font-weight: 300;
+    }
+    :-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: $text-color;
+        opacity: 1;
+        font-weight: 300;
+    }
+    ::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: $text-color;
+        opacity: 1;
+        font-weight: 300;
+    }
+    :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: $text-color;
+        font-weight: 300;
+    }
+    ::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: $text-color;
+        font-weight: 300;
+    }
+    @include media-breakpoint-down(md) {
+        margin-bottom: 30px;
+    }
+}
+
+.footer-bottom{
+    padding-top:50px;
+    .footer-social{
+        text-align: right;
+        @media(max-width: 991px){
+            text-align:left;
+            margin-top:30px;
+        }
+    }
+    .lnr,a{
+        color:$primary-color;
+    }
+
+    .footer-social{
+        a{
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            text-align: center;
+            @include transition();
+            i{
+                vertical-align: bottom;
+            }
+            &:hover{
+                background-color:$primary-color;
+            }
+        }
+    }
+}
+
+
+
+
+/*-------- end footer Area -------------*/
