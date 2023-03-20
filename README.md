@@ -1,8 +1,8 @@
 # What is this?
 
-The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+O editor baseado na web github.dev é uma experiência de edição leve que é executada inteiramente em seu navegador. Você pode navegar por arquivos e repositórios de código-fonte do GitHub e fazer e confirmar alterações de código.
 
-There are two ways to go directly to a VS Code environment in your browser and start coding:
+Existem duas maneiras de ir diretamente para um ambiente VS Code em seu navegador e começar a codificar:
 
 * Press the . key on any repository or pull request.
 * Swap `.com` with `.dev` in the URL. For example, this repo https://github.com/github/dev becomes http://github.dev/github/dev
