@@ -1,0 +1,4 @@
+3
+id:200 tag:Toledo
+id:400 tag:Valladolid
+id:600 tag:Palencia

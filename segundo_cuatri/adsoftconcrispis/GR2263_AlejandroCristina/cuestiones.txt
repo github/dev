@@ -1,0 +1,10 @@
+1. Ejecuta el programa con distintos tipos de parámetros (numéricos o no, negativos, etc.), sin parámetros, o con más de
+uno. ¿Qué sucede? ¿Ves algún problema o mejora a implementar en el código?
+
+Si no se introduce ningún argumento, no tenemos salida; si se introducen números negativos, la salida nos indica error, y si introducimos varios numeros positivos, 
+generará la secuencia, el siguiente elemento y la secuencia final. 
+
+2. El método esSecuencia de este apartado ¿es de clase o de objeto? Justifica tu respuesta, indicando por qué ese diseño
+es adecuado.
+
+Es un método de un objeto ya que hacen que el dato SecuenciaSkiponacci sea útil.

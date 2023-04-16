@@ -1,0 +1,9 @@
+4
+id:1 tag:Madrid
+id:2 tag:Toledo
+id:3 tag:Avila
+id:4 tag:Segovia
+1 2
+1 3
+2 4
+4 3

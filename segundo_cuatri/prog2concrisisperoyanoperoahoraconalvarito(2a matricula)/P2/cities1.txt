@@ -1,0 +1,5 @@
+4
+id:100 tag:Madrid
+id:300 tag:Segovia
+id:500 tag:Burgos
+id:700 tag:Santander

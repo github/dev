@@ -1,0 +1,6 @@
+castilla_y_leon vacuna_pfizer
+4
+id:200 tag:Valladolid
+id:100 tag:Burgos
+id:400 tag:Salamanca
+id:550 tag:Leon

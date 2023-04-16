@@ -1,0 +1,16 @@
+7
+id:100 tag:Madrid
+id:200 tag:Toledo
+id:300 tag:Segovia
+id:400 tag:Valladolid
+id:500 tag:Burgos
+id:600 tag:Palencia
+id:700 tag:Santander
+100 200
+100 300
+300 400
+300 500
+400 600
+500 600
+500 700
+600 700
