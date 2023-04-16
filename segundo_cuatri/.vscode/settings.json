@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "cstdio": "c",
-        "types.h": "c",
-        "file_utils.h": "c",
-        "enunciao": "cpp",
-        "monitor.h": "c"
-    }
-}
