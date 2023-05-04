@@ -1,0 +1,37 @@
+GEThttp://hn.algolia.com/api/v1/items/:id
+{
+    id: 1,
+    created_at: "2006-10-09T18:21:51.00Z",
+    author: "pg",
+    title: "Y Combinator",
+    url: "http://ycombinator.com",
+    text: null,
+    points: 57,
+    parent_id: null,
+    children:
+    [
+        {
+            id: 15,
+            created_at: "2006-10-09T19:51:01.000Z",
+            author: "sama",
+            text: "&#34;the rising star of venture capital&#34; -unkown VC eating lunch on SHR",
+            points: 5,
+            parent_id: 1,
+            children:
+            [
+                {id:17,
+                created_at: "2006-10-09T19:52:45,000Z",
+                points: 5,
+                parent_id: 15,
+                children: [ ]
+                }
+            ]
+        }
+    ]
+}
+
+                }
+            ]
+        }
+    ]
+}
