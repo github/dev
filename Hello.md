@@ -7,14 +7,13 @@
 
 Regular **Markdown** here.
 
-```
+```plantuml
 @startuml firstDiagram
 
 Alice -> Bob: Hello
 Bob -> Alice: Hi!
 		
 @enduml
-
 ```
 
 ![](firstDiagram.svg)
@@ -22,7 +21,7 @@ Bob -> Alice: Hi!
 Some more markdown.
 
 
-java -jar plantuml-1.2023.6.jar -tsvg firstDiagram.svg
+java -jar plantuml-1.2023.6.jar -tsvg firstDiagram.pantuml
 
 ![](/images/firstDiagram.svg)
 
