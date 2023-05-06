@@ -1,0 +1,1 @@
+> Life is like a journey
