@@ -25,3 +25,5 @@ Some more markdown.
 java -jar plantuml-1.2023.6.jar -tsvg firstDiagram.svg
 
 ![](/images/firstDiagram.svg)
+
+https://plantuml.com/zh/command-line
