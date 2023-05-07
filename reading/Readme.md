@@ -1,0 +1,1 @@
+> Reading is a journey through the mind, books are the ladders of process and also a tool for creating our soul.

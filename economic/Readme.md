@@ -1,0 +1,1 @@
+> The economic base determines the superstructure.
