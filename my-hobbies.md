@@ -1,5 +1,5 @@
  My hobbies:
-Run
-Bodybuilding
-Watching movies
+Run,
+Bodybuilding,
+Watching movies.
 
