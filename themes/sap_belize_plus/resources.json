@@ -1,0 +1,105 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"size": 611,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "AnchorBar.less",
+			"size": 1265,
+			"designtime": true,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "ObjectPageHeader.less",
+			"size": 487,
+			"designtime": true,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "ObjectPageHeaderContent.less",
+			"size": 619,
+			"designtime": true,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "ObjectPageLayout.less",
+			"size": 3218,
+			"designtime": true,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "ObjectPageSection.less",
+			"size": 365,
+			"designtime": true,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "ObjectPageSubSection.less",
+			"size": 291,
+			"designtime": true,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "css_variables.css",
+			"size": 1576,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "css_variables.less",
+			"size": 144811,
+			"designtime": true,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "css_variables.source.less",
+			"size": 144441,
+			"designtime": true,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "library-RTL.css",
+			"size": 106911,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "library-parameters.json",
+			"module": "sap/uxap/themes/sap_belize_plus/library-parameters.json",
+			"size": 548,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "library.css",
+			"size": 106903,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "library.less",
+			"size": 7210,
+			"designtime": true,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "library.source.less",
+			"size": 538,
+			"designtime": true,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "library_skeleton-RTL.css",
+			"size": 109562,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "library_skeleton.css",
+			"size": 109554,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "resources.json",
+			"size": 1934
+		}
+	]
+}

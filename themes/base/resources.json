@@ -1,0 +1,117 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"size": 64,
+			"theme": "base"
+		},
+		{
+			"name": "AnchorBar.less",
+			"size": 8610,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "BreadCrumbs.less",
+			"size": 1533,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "HierarchicalSelect.less",
+			"size": 4422,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ObjectPageHeader.less",
+			"size": 10844,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ObjectPageHeaderContent.less",
+			"size": 9056,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ObjectPageLayout.less",
+			"size": 7463,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ObjectPageSection.less",
+			"size": 3217,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ObjectPageSubSection.less",
+			"size": 5898,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "css_variables.css",
+			"size": 472,
+			"theme": "base"
+		},
+		{
+			"name": "css_variables.less",
+			"size": 234,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "css_variables.source.less",
+			"size": 137666,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "library-RTL.css",
+			"size": 51101,
+			"theme": "base"
+		},
+		{
+			"name": "library-parameters.json",
+			"module": "sap/uxap/themes/base/library-parameters.json",
+			"size": 165,
+			"theme": "base"
+		},
+		{
+			"name": "library.css",
+			"size": 51098,
+			"theme": "base"
+		},
+		{
+			"name": "library.less",
+			"size": 52079,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "library.source.less",
+			"size": 533,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "library_skeleton-RTL.css",
+			"size": 51499,
+			"theme": "base"
+		},
+		{
+			"name": "library_skeleton.css",
+			"size": 51496,
+			"theme": "base"
+		},
+		{
+			"name": "resources.json",
+			"size": 1938
+		}
+	]
+}

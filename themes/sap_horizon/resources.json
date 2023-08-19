@@ -1,0 +1,117 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"size": 90,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "AnchorBar.less",
+			"size": 12438,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "HierarchicalSelect.less",
+			"size": 5613,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "IconTabBar.less",
+			"size": 398,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "ObjectPageHeader.less",
+			"size": 4481,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "ObjectPageHeaderContent.less",
+			"size": 3653,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "ObjectPageLayout.less",
+			"size": 2936,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "ObjectPageSection.less",
+			"size": 2443,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "ObjectPageSubSection.less",
+			"size": 2483,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "css_variables.css",
+			"size": 1910,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "css_variables.less",
+			"size": 144566,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "css_variables.source.less",
+			"size": 144204,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "library-RTL.css",
+			"size": 84863,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "library-parameters.json",
+			"module": "sap/uxap/themes/sap_horizon/library-parameters.json",
+			"size": 722,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "library.css",
+			"size": 84856,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "library.less",
+			"size": 35528,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "library.source.less",
+			"size": 586,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "library_skeleton-RTL.css",
+			"size": 87514,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "library_skeleton.css",
+			"size": 87507,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "resources.json",
+			"size": 2080
+		}
+	]
+}
