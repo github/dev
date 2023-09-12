@@ -1,0 +1,30 @@
+2023-08-25 16:16:01.229 [info] Extension host with pid 311 started
+2023-08-25 16:16:01.232 [error] Error: EEXIST: file already exists, open '/workspace/.vscode-remote/data/User/workspaceStorage/5f9a2fd1/vscode.lock'
+2023-08-25 16:16:01.237 [info] Lock '/workspace/.vscode-remote/data/User/workspaceStorage/5f9a2fd1/vscode.lock': Could not acquire lock, checking if the file is stale.
+2023-08-25 16:16:01.238 [info] Lock '/workspace/.vscode-remote/data/User/workspaceStorage/5f9a2fd1/vscode.lock': The pid 308 appears to be gone.
+2023-08-25 16:16:01.238 [info] Lock '/workspace/.vscode-remote/data/User/workspaceStorage/5f9a2fd1/vscode.lock': Deleting a stale lock.
+2023-08-25 16:16:01.251 [info] Lock '/workspace/.vscode-remote/data/User/workspaceStorage/5f9a2fd1/vscode.lock': Lock acquired.
+2023-08-25 16:16:01.388 [info] ExtensionService#_doActivateExtension gitpod.gitpod-web, startup: false, activationEvent: 'onAuthenticationRequest:gitpod'
+2023-08-25 16:16:02.143 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2023-08-25 16:16:02.307 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2023-08-25 16:16:02.307 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2023-08-25 16:16:02.609 [info] Eager extensions activated
+2023-08-25 16:16:02.609 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2023-08-25 16:16:02.609 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2023-08-25 16:16:02.610 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onStartupFinished', root cause: GitHub.vscode-pull-request-github
+2023-08-25 16:16:02.777 [info] ExtensionService#_doActivateExtension GitHub.vscode-pull-request-github, startup: false, activationEvent: 'onStartupFinished'
+2023-08-25 16:16:03.435 [warning] [Decorations] CAPPING events from decorations provider vscode.git 266
+2023-08-25 16:16:03.788 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2023-08-25 16:16:03.788 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2023-08-25 16:16:03.789 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2023-08-25 16:16:04.064 [warning] [Decorations] CAPPING events from decorations provider vscode.git 266
+2023-08-25 16:16:04.880 [warning] [Decorations] CAPPING events from decorations provider vscode.git 266
+2023-08-25 16:16:28.520 [warning] [Decorations] CAPPING events from decorations provider vscode.git 267
+2023-08-25 16:16:31.207 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onTerminalQuickFixRequest:ms-vscode.npm-command'
+2023-08-25 16:16:37.522 [warning] [Decorations] CAPPING events from decorations provider vscode.git 267
+2023-08-25 16:21:04.561 [warning] [Decorations] CAPPING events from decorations provider vscode.git 268
+2023-08-25 16:26:05.122 [warning] [Decorations] CAPPING events from decorations provider vscode.git 269
+2023-08-25 16:31:05.683 [warning] [Decorations] CAPPING events from decorations provider vscode.git 269
+2023-08-25 16:36:06.202 [warning] [Decorations] CAPPING events from decorations provider vscode.git 271
+2023-08-25 16:41:06.888 [warning] [Decorations] CAPPING events from decorations provider vscode.git 271
+2023-08-25 16:46:07.489 [warning] [Decorations] CAPPING events from decorations provider vscode.git 271

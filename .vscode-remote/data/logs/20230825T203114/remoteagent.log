@@ -1,0 +1,56 @@
+2023-08-25 20:31:14.242 [info] 
+
+
+
+
+2023-08-25 20:31:14.275 [info] Extension host agent started.
+2023-08-25 20:31:14.383 [info] Extension 'github.vscode-pull-request-github' v0.70.0 is already installed. Use '--force' option to update to latest version or provide '@<version>' to install a specific version, for example: 'github.vscode-pull-request-github@1.2.3'.
+2023-08-25 20:31:15.820 [info] Installing builtin extension 'gitpod.gitpod-theme'...
+2023-08-25 20:31:15.838 [info] Getting Manifest... gitpod.gitpod-theme
+2023-08-25 20:31:16.099 [info] [192.168.83.201][f63d502b][ManagementConnection] New connection established.
+2023-08-25 20:31:16.432 [info] [192.168.14.74][70ea95b0][ExtensionHostConnection] New connection established.
+2023-08-25 20:31:16.444 [info] [192.168.14.74][70ea95b0][ExtensionHostConnection] <306> Launched Extension Host Process.
+2023-08-25 20:31:16.449 [info] Installing extension: gitpod.gitpod-theme
+2023-08-25 20:31:16.997 [info] Extension installed successfully: gitpod.gitpod-theme
+2023-08-25 20:31:16.999 [info] Extension 'gitpod.gitpod-theme' v0.0.2 was successfully installed.
+2023-08-25 20:34:34.239 [info] [192.168.14.74][70ea95b0][ExtensionHostConnection] The client has reconnected.
+2023-08-25 20:34:34.244 [info] [192.168.14.74][f63d502b][ManagementConnection] The client has reconnected.
+2023-08-25 20:35:34.956 [info] [192.168.29.138][f63d502b][ManagementConnection] The client has reconnected.
+2023-08-25 20:35:34.962 [info] [192.168.29.138][70ea95b0][ExtensionHostConnection] The client has reconnected.
+2023-08-25 20:38:59.560 [info] [192.168.29.138][f63d502b][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-08-25 20:38:59.561 [error] Error: Throttler is disposed
+    at c.queue (/ide/out/vs/server/node/server.main.js:70:13612)
+    at /ide/out/vs/server/node/server.main.js:70:15183
+    at /ide/out/vs/server/node/server.main.js:70:14822
+    at runNextTicks (node:internal/process/task_queues:61:5)
+    at listOnTimeout (node:internal/timers:528:9)
+    at processTimers (node:internal/timers:502:7)
+2023-08-25 20:38:59.563 [error] Error: Throttler is disposed
+    at c.queue (/ide/out/vs/server/node/server.main.js:70:13612)
+    at /ide/out/vs/server/node/server.main.js:70:15183
+    at /ide/out/vs/server/node/server.main.js:70:14822
+2023-08-25 20:38:59.563 [error] Error: Throttler is disposed
+    at c.queue (/ide/out/vs/server/node/server.main.js:70:13612)
+    at /ide/out/vs/server/node/server.main.js:70:15183
+    at /ide/out/vs/server/node/server.main.js:70:14822
+2023-08-25 20:38:59.563 [error] Error: Throttler is disposed
+    at c.queue (/ide/out/vs/server/node/server.main.js:70:13612)
+    at /ide/out/vs/server/node/server.main.js:70:15183
+    at /ide/out/vs/server/node/server.main.js:70:14822
+2023-08-25 20:38:59.563 [error] Error: Throttler is disposed
+    at c.queue (/ide/out/vs/server/node/server.main.js:70:13612)
+    at /ide/out/vs/server/node/server.main.js:70:15183
+    at /ide/out/vs/server/node/server.main.js:70:14822
+2023-08-25 20:38:59.563 [error] Error: Throttler is disposed
+    at c.queue (/ide/out/vs/server/node/server.main.js:70:13612)
+    at /ide/out/vs/server/node/server.main.js:70:15183
+    at /ide/out/vs/server/node/server.main.js:70:14822
+2023-08-25 20:38:59.563 [error] Error: Throttler is disposed
+    at c.queue (/ide/out/vs/server/node/server.main.js:70:13612)
+    at /ide/out/vs/server/node/server.main.js:70:15183
+    at /ide/out/vs/server/node/server.main.js:70:14822
+2023-08-25 20:38:59.563 [error] Error: Throttler is disposed
+    at c.queue (/ide/out/vs/server/node/server.main.js:70:13612)
+    at /ide/out/vs/server/node/server.main.js:70:15183
+    at /ide/out/vs/server/node/server.main.js:70:14822
+2023-08-25 20:38:59.626 [info] [192.168.29.138][70ea95b0][ExtensionHostConnection] <306> Extension Host Process exited with code: 0, signal: null.

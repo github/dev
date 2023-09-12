@@ -1,0 +1,31 @@
+2023-08-28 11:06:22.817 [info] Extension host with pid 307 started
+2023-08-28 11:06:22.828 [info] Lock '/workspace/.vscode-remote/data/User/workspaceStorage/5f9a2fd1/vscode.lock': Lock acquired.
+2023-08-28 11:06:23.081 [info] ExtensionService#_doActivateExtension gitpod.gitpod-web, startup: false, activationEvent: 'onAuthenticationRequest:gitpod'
+2023-08-28 11:06:24.082 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2023-08-28 11:06:24.405 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2023-08-28 11:06:24.405 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2023-08-28 11:06:25.276 [info] Eager extensions activated
+2023-08-28 11:06:25.276 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2023-08-28 11:06:25.276 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2023-08-28 11:06:25.277 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onStartupFinished', root cause: GitHub.vscode-pull-request-github
+2023-08-28 11:06:25.468 [info] ExtensionService#_doActivateExtension GitHub.vscode-pull-request-github, startup: false, activationEvent: 'onStartupFinished'
+2023-08-28 11:06:25.885 [warning] [Decorations] CAPPING events from decorations provider vscode.git 275
+2023-08-28 11:06:26.414 [warning] [Decorations] CAPPING events from decorations provider vscode.git 275
+2023-08-28 11:06:26.808 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2023-08-28 11:06:26.808 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2023-08-28 11:06:26.809 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2023-08-28 11:06:29.193 [warning] [Decorations] CAPPING events from decorations provider vscode.git 275
+2023-08-28 11:07:33.055 [warning] [Decorations] CAPPING events from decorations provider vscode.git 275
+2023-08-28 11:07:41.630 [warning] [Decorations] CAPPING events from decorations provider vscode.git 273
+2023-08-28 11:07:47.144 [warning] [Decorations] CAPPING events from decorations provider vscode.git 273
+2023-08-28 11:07:52.657 [warning] [Decorations] CAPPING events from decorations provider vscode.git 273
+2023-08-28 11:11:10.090 [warning] [Decorations] CAPPING events from decorations provider vscode.git 275
+2023-08-28 11:11:17.057 [warning] [Decorations] CAPPING events from decorations provider vscode.git 275
+2023-08-28 11:11:23.252 [warning] [Decorations] CAPPING events from decorations provider vscode.git 275
+2023-08-28 11:11:29.036 [warning] [Decorations] CAPPING events from decorations provider vscode.git 275
+2023-08-28 11:16:29.544 [warning] [Decorations] CAPPING events from decorations provider vscode.git 276
+2023-08-28 11:21:30.174 [warning] [Decorations] CAPPING events from decorations provider vscode.git 277
+2023-08-28 11:26:30.703 [warning] [Decorations] CAPPING events from decorations provider vscode.git 277
+2023-08-28 11:31:31.198 [warning] [Decorations] CAPPING events from decorations provider vscode.git 277
+2023-08-28 11:36:31.795 [warning] [Decorations] CAPPING events from decorations provider vscode.git 279
+2023-08-28 11:41:32.301 [warning] [Decorations] CAPPING events from decorations provider vscode.git 279

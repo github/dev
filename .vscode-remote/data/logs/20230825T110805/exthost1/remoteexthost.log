@@ -1,0 +1,19 @@
+2023-08-25 11:08:10.657 [info] Extension host with pid 309 started
+2023-08-25 11:08:10.660 [error] Error: EEXIST: file already exists, open '/workspace/.vscode-remote/data/User/workspaceStorage/5f9a2fd1/vscode.lock'
+2023-08-25 11:08:10.668 [info] Lock '/workspace/.vscode-remote/data/User/workspaceStorage/5f9a2fd1/vscode.lock': Could not acquire lock, checking if the file is stale.
+2023-08-25 11:08:10.668 [info] Lock '/workspace/.vscode-remote/data/User/workspaceStorage/5f9a2fd1/vscode.lock': The lock looks stale, waiting for 2s.
+2023-08-25 11:08:11.787 [info] ExtensionService#_doActivateExtension gitpod.gitpod-web, startup: false, activationEvent: 'onAuthenticationRequest:gitpod'
+2023-08-25 11:08:12.672 [info] Lock '/workspace/.vscode-remote/data/User/workspaceStorage/5f9a2fd1/vscode.lock': The lock looks stale even after waiting for 2s.
+2023-08-25 11:08:12.672 [info] Lock '/workspace/.vscode-remote/data/User/workspaceStorage/5f9a2fd1/vscode.lock': Deleting a stale lock.
+2023-08-25 11:08:12.682 [info] Lock '/workspace/.vscode-remote/data/User/workspaceStorage/5f9a2fd1/vscode.lock': Lock acquired.
+2023-08-25 11:08:12.788 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2023-08-25 11:08:12.969 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2023-08-25 11:08:12.969 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2023-08-25 11:08:14.006 [info] Eager extensions activated
+2023-08-25 11:08:14.007 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2023-08-25 11:08:14.007 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2023-08-25 11:08:14.008 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onStartupFinished', root cause: GitHub.vscode-pull-request-github
+2023-08-25 11:08:14.181 [info] ExtensionService#_doActivateExtension GitHub.vscode-pull-request-github, startup: false, activationEvent: 'onStartupFinished'
+2023-08-25 11:08:16.007 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2023-08-25 11:08:16.007 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2023-08-25 11:08:16.008 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'

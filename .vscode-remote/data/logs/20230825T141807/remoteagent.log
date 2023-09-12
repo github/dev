@@ -1,0 +1,21 @@
+2023-08-25 14:18:07.534 [info] 
+
+
+
+
+2023-08-25 14:18:07.564 [info] Extension host agent started.
+2023-08-25 14:18:07.647 [info] Extension 'github.vscode-pull-request-github' v0.70.0 is already installed. Use '--force' option to update to latest version or provide '@<version>' to install a specific version, for example: 'github.vscode-pull-request-github@1.2.3'.
+2023-08-25 14:18:08.902 [info] [192.168.29.138][ca3ada92][ManagementConnection] New connection established.
+2023-08-25 14:18:08.913 [info] Installing builtin extension 'gitpod.gitpod-theme'...
+2023-08-25 14:18:08.933 [info] Getting Manifest... gitpod.gitpod-theme
+2023-08-25 14:18:09.258 [info] [192.168.29.138][fcec6e74][ExtensionHostConnection] New connection established.
+2023-08-25 14:18:09.268 [info] [192.168.29.138][fcec6e74][ExtensionHostConnection] <306> Launched Extension Host Process.
+2023-08-25 14:18:09.525 [info] Installing extension: gitpod.gitpod-theme
+2023-08-25 14:18:10.016 [info] Extension installed successfully: gitpod.gitpod-theme
+2023-08-25 14:18:10.019 [info] Extension 'gitpod.gitpod-theme' v0.0.2 was successfully installed.
+2023-08-25 14:23:01.357 [info] [192.168.14.74][ca3ada92][ManagementConnection] The client has reconnected.
+2023-08-25 14:23:01.359 [info] [192.168.14.74][fcec6e74][ExtensionHostConnection] The client has reconnected.
+2023-08-25 14:42:24.099 [info] [192.168.14.74][ca3ada92][ManagementConnection] The client has reconnected.
+2023-08-25 14:42:24.102 [info] [192.168.14.74][fcec6e74][ExtensionHostConnection] The client has reconnected.
+2023-08-25 14:48:27.718 [info] [192.168.83.201][ca3ada92][ManagementConnection] The client has reconnected.
+2023-08-25 14:48:27.718 [info] [192.168.83.201][fcec6e74][ExtensionHostConnection] The client has reconnected.
