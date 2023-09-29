@@ -1,2 +1,2 @@
 <?php
-echo "Test coding in the brower";
+echo "Test coding in the browser";
