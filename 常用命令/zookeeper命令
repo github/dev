@@ -1,0 +1,23 @@
+zookeeper安装步骤，
+1，wget:zookeeper下载地址
+2，tar -zxvf 解压文件
+3，cd /usr/local/zookeeper/conf 将zoo_sample.cfg配置文件，cp为zoo.cfg 创建tmp文件，修改zoocfg dataDir=tmp文件路径，再tmp下面创建myid（myid为集群服务器id(1,2,3)）
+4，zoocfg创建集群添加：
+server.1=主机名：2888:3888
+server.2=主机名：2888:3888
+server.3=主机名：2888:3888
+5，配置环境变量
+export ZOOKEEPER_HOME=/usr/local/zookeeper
+系统环境变量读取路径：export PATH=$PATH:$JAVA_HOME/bin:$ZOOKEEPER_HOME/bin(以冒号为开始点)
+source /etc/profile 是配置立即生效，不用重启
+
+zookeeper启动命令：./zkServer.sh start
+zookeeper默认端口：2181
+
+查询已在zookeeper上注册的服务：ls /services 
+
+
+怎样去面试：首先你的弄清楚公司需要什么样的人，学历，经验都是为了公司能找到适合公司的人，你要将你的努力，已经做的成就拿出来让公司看到你是可以生胜任这份工作的
+
+
+单体建构-垂直架构-分布式架构-soa架构-微服务架构

@@ -1,0 +1,110 @@
+System V init 命令	systemctl 命令	作用
+chkconfig foo on	systemctl enable foo.service	开机自动启动
+chkconfig foo off	systemctl disable foo.service	开机不自动启动
+chkconfig foo	systemctl is-enabled foo.service	查看特定服务是否为 开机自动启动
+chkconfig --list	systemctl list-unit-files --type=service	查看各个级别下服务 的启动与禁用情况
+附录:
+查看tcp,udp端口：netstat -tunlp
+查看端口占用：netstat -tunlp | grep 端口号
+根据进程查看端口：netstat -anop | grep 进程号
+通过端口号查看进程：lsof -i : 端口号
+
+
+
+
+
+经常使用服务介绍
+
+1amd：           # 自己主动安装网络文件系统守侯进程
+2apmd:           # 高级电源管理
+3Arpwatch：      # 记录日志并构建一个在LAN接口上看到的以太网地址和IP地址对数据库
+4Autofs：        # 自己主动安装管理进程automount。与NFS相关，依赖于NIS
+5Bootparamd：    # 引导參数server。为LAN上的无盘工作站提供引导所需的相关信息
+6crond：         # 计划任务
+7Dhcpd：         # 启动一个动态IP地址分配server
+8Gated：         # 网关路由守候进程，使用动态的OSPF路由选择协议
+9Httpd：         # WEBserver
+10Inetd：         # 支持多种网络服务的核心守候程序
+11Innd：          # Usenet新闻server
+12Linuxconf：     # 同意使用本地WEBserver作为用户接口来配置机器
+13Lpd：           # 打印server
+14Mars-nwe：      # mars-nwe文件和用于Novell的打印server
+15Mcserv：        # Midnight命令文件server
+16named：         # DNSserver
+17netfs：         # 安装NFS、Samba和NetWare网络文件系统
+18network：       # 激活已配置网络接口的脚本程序
+19nfs：           # 打开NFS服务
+20nscd：          # nscdserver，用于NIS一个支持服务，它快速缓存用户口令和组成成员关系
+21portmap：       # RPC portmap管理器，与inetd相似，它管理基于RPC服务的连接
+22postgresql：    # 一种SQL数据库server。
+23routed：        # 路由守候进程，使用动态RIP路由选择协议
+24rstatd：        # 一个为LAN上的其他机器收集和提供系统信息的守候程序
+25ruserd：        # 这是一个基于RPC的服务。它提供关于当前记录到LAN上一个机器日志中的用户信息
+26rwalld：        # 这是一项基于RPC的服务。同意用户给每一个注冊到LAN机器的其他终端写消息
+27rwhod：         # 激活rwhod服务进程。它支持LAN的rwho和ruptime服务
+28sendmail：      # 邮件serversendmail
+29smb：           # Samba文件共享/打印服务
+30snmpd：         # 本地简单网络管理候进程
+31squid：         # 激活代理serversquid
+32syslog：        # 一个让系统引导时起动syslog和klogd系统日志守候进程的脚本
+33xfs：           # X Window字型server，为本地和远程Xserver提供字型集
+34xntpd：         # 网络时间server
+35ypbind：        # 为NIS（网络信息系统）客户机激活ypbind服务进程
+36yppasswdd：     # NIS口令server
+37ypserv：        # NIS主server
+38gpm：           # 管鼠标的服务
+39identd：        # AUTH服务。在提供用户信息方面与finger相似
+
+
+linux目录用途
+
+常用目录及用途
+/bin 存放二进制可执行文件（ls,cat,mkdir等），常用命令一般都在这里。
+
+/etc 存放系统管理和配置文件
+
+/home 存放所有用户文件的根目录，是用户主目录的基点，比如用户user的主目录就是/home/user，可以用~user表示
+
+/usr 用于存放系统应用程序，比较重要的目录/usr/local 本地系统管理员软件安装目录（安装系统级的应用）。这是最庞大的目录，要用到的应用程序和文件几乎都在这个目录。
+
+/usr/x11r6 存放x window的目录
+
+/usr/bin 众多的应用程序  
+
+/usr/sbin 超级用户的一些管理程序  
+
+/usr/doc linux文档  
+
+/usr/include linux下开发和编译应用程序所需要的头文件  
+
+/usr/lib 常用的动态链接库和软件包的配置文件  
+
+/usr/man 帮助文档  
+
+/usr/src 源代码，linux内核的源代码就放在/usr/src/linux里  
+
+/usr/local/bin 本地增加的命令  
+
+/usr/local/lib 本地增加的库
+
+/opt 额外安装的可选应用程序包所放置的位置。一般情况下，我们可以把tomcat等都安装到这里。
+
+/proc 虚拟文件系统目录，是系统内存的映射。可直接访问这个目录来获取系统信息。
+
+/root 超级用户（系统管理员）的主目录（特权阶级^o^）
+
+/sbin 存放二进制可执行文件，只有root才能访问。这里存放的是系统管理员使用的系统级别的管理命令和程序。如ifconfig等。
+
+/dev 用于存放设备文件。
+
+/mnt 系统管理员安装临时文件系统的安装点，系统提供这个目录是让用户临时挂载其他的文件系统。
+
+/boot 存放用于系统引导时使用的各种文件
+
+/lib 存放跟文件系统中的程序运行所需要的共享库及内核模块。共享库又叫动态链接共享库，作用类似windows里的.dll文件，存放了根文件系统程序运行所需的共享文件。
+
+/tmp 用于存放各种临时文件，是公用的临时文件存储点。
+
+/var 用于存放运行时需要改变数据的文件，也是某些大文件的溢出区，比方说各种服务的日志文件（系统启动日志等。）等。
+
+/lost+found 每个分区默认都有一个 lost+found 目录，用来存放 fsck 过程中部分修复的文件的。
