@@ -1,0 +1,7 @@
+日志格式：logging.pattern.console=%d{HH:mm:ss.SSS}%clr(%-5level)---[%-15thread] %cyan(%-50logger{50}):%msg%n
+开启所有监控端点：management.endpoints.web.exposure.include=*
+
+# 日志格式
+logging:
+  pattern:
+    console: '%d{HH:mm:ss.SSS} %clr(%-5level) --- [%-15thread] %cyan(%-50logger{50}):%msg%n'
