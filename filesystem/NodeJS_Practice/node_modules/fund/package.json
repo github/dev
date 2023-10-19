@@ -1,0 +1,19 @@
+{
+  "name": "fund",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Velg03961485/qingse.git"
+  },
+  "author": "liuxu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Velg03961485/qingse/issues"
+  },
+  "homepage": "https://github.com/Velg03961485/qingse#readme"
+}

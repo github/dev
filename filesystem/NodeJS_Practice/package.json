@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "fund": "^1.0.0",
+    "zeromq": "^5.2.0"
+  }
+}
