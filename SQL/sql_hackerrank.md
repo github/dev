@@ -1,3 +1,3 @@
-## Questions to repeat
+# Questions to repeat
 
-# https://www.hackerrank.com/challenges/earnings-of-employees/problem?isFullScreen=true
+## https://www.hackerrank.com/challenges/earnings-of-employees/problem?isFullScreen=true
