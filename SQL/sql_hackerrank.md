@@ -1,5 +1,7 @@
 # Questions to repeat
 
+##### Note :  My sql and SQLite does not support full join
+
 ### Aggregation Query SQL
 #### https://www.hackerrank.com/challenges/earnings-of-employees/problem?isFullScreen=true
 
