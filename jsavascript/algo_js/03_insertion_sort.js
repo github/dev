@@ -4,7 +4,7 @@
 
 // using for loop and break statement
 
-// let a = [1,20,34,12,45,60,75,50,100,2,79,700]
+// let a = [1,20,34,12,45,60,75,50,100,2,79,700,-90]
 let a = [-6,20,8]
 let n = a.length
 for(let i = 1; i < n; i++ ){
