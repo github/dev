@@ -11,3 +11,15 @@ var climbStairs = function(n) {
     memo[n] = climbStairs(n-1) + climbStairs(n-2)
     return memo[n]
 };
+
+
+// more memory efficinet way
+
+
+var climbStairs = function(n) {
+    noOfWays = [1,2]
+    for (let i = 2; i < n; i++){
+        noOfWays[i] = noOfWays[i-1] + noOfWays[i-2]
+    }
+    return noOfWays[n-1]
+};
