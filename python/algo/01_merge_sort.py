@@ -1,3 +1,6 @@
+# Time Complexity O(NlogN)
+
+
 def mergeSort(arr):
     if len(arr) < 2 :
         return arr
