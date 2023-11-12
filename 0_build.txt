@@ -1,0 +1,416 @@
+2023-11-12T19:15:05.4396303Z Requested labels: ubuntu-latest
+2023-11-12T19:15:05.4396600Z Job defined at: rockysosaenterprise/silver-happiness/.github/workflows/azure-webapps-node.yml@refs/heads/owner
+2023-11-12T19:15:05.4396714Z Waiting for a runner to pick up this job...
+2023-11-12T19:15:06.0727685Z Job is waiting for a hosted runner to come online.
+2023-11-12T19:15:09.2189900Z Job is about to start running on the hosted runner: GitHub Actions 1 (hosted)
+2023-11-12T19:15:11.6132302Z ##[debug]Starting: build
+2023-11-12T19:15:11.6163368Z ##[debug]Cleaning runner temp folder: /home/runner/work/_temp
+2023-11-12T19:15:11.6520224Z ##[debug]Starting: Set up job
+2023-11-12T19:15:11.6521002Z Current runner version: '2.311.0'
+2023-11-12T19:15:11.6553317Z ##[group]Operating System
+2023-11-12T19:15:11.6554143Z Ubuntu
+2023-11-12T19:15:11.6554573Z 22.04.3
+2023-11-12T19:15:11.6555089Z LTS
+2023-11-12T19:15:11.6555577Z ##[endgroup]
+2023-11-12T19:15:11.6556043Z ##[group]Runner Image
+2023-11-12T19:15:11.6556774Z Image: ubuntu-22.04
+2023-11-12T19:15:11.6557337Z Version: 20231030.2.0
+2023-11-12T19:15:11.6558689Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20231030.2/images/linux/Ubuntu2204-Readme.md
+2023-11-12T19:15:11.6560763Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20231030.2
+2023-11-12T19:15:11.6561968Z ##[endgroup]
+2023-11-12T19:15:11.6562487Z ##[group]Runner Image Provisioner
+2023-11-12T19:15:11.6563240Z 2.0.312.1
+2023-11-12T19:15:11.6563923Z ##[endgroup]
+2023-11-12T19:15:11.6565188Z ##[group]GITHUB_TOKEN Permissions
+2023-11-12T19:15:11.6567468Z Contents: read
+2023-11-12T19:15:11.6568148Z Metadata: read
+2023-11-12T19:15:11.6568959Z ##[endgroup]
+2023-11-12T19:15:11.6573008Z Secret source: Actions
+2023-11-12T19:15:11.6574195Z ##[debug]Primary repository: rockysosaenterprise/silver-happiness
+2023-11-12T19:15:11.6575237Z Prepare workflow directory
+2023-11-12T19:15:11.6659572Z ##[debug]Creating pipeline directory: '/home/runner/work/silver-happiness'
+2023-11-12T19:15:11.6663852Z ##[debug]Creating workspace directory: '/home/runner/work/silver-happiness/silver-happiness'
+2023-11-12T19:15:11.6665839Z ##[debug]Update context data
+2023-11-12T19:15:11.6670788Z ##[debug]Evaluating job-level environment variables
+2023-11-12T19:15:11.7400044Z ##[debug]Evaluating job container
+2023-11-12T19:15:11.7403831Z ##[debug]Evaluating job service containers
+2023-11-12T19:15:11.7406800Z ##[debug]Evaluating job defaults
+2023-11-12T19:15:11.7496672Z Prepare all required actions
+2023-11-12T19:15:11.7701238Z Getting action download info
+2023-11-12T19:15:12.0458225Z Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
+2023-11-12T19:15:12.0506883Z ##[debug]Copied action archive '/opt/actionarchivecache/actions_checkout/f43a0e5ff2bd294095638e18286ca9a3d1956744.tar.gz' to '/home/runner/work/_actions/_temp_ccdf1f98-9986-492a-b0db-9fc6519e73ff/50704877-2be2-4203-928a-e85537d70f05.tar.gz'
+2023-11-12T19:15:12.1667389Z ##[debug]Unwrap 'actions-checkout-f43a0e5' to '/home/runner/work/_actions/actions/checkout/v3'
+2023-11-12T19:15:12.1802080Z ##[debug]Archive '/home/runner/work/_actions/_temp_ccdf1f98-9986-492a-b0db-9fc6519e73ff/50704877-2be2-4203-928a-e85537d70f05.tar.gz' has been unzipped into '/home/runner/work/_actions/actions/checkout/v3'.
+2023-11-12T19:15:12.1948557Z Download action repository 'actions/setup-node@v3' (SHA:1a4442cacd436585916779262731d5b162bc6ec7)
+2023-11-12T19:15:12.2164671Z ##[debug]Copied action archive '/opt/actionarchivecache/actions_setup-node/1a4442cacd436585916779262731d5b162bc6ec7.tar.gz' to '/home/runner/work/_actions/_temp_01ae4017-fd5f-41be-9b87-f7bd68f05a25/ec3bedbd-5198-4ce2-a00b-7bb02ea8c999.tar.gz'
+2023-11-12T19:15:12.3147180Z ##[debug]Unwrap 'actions-setup-node-1a4442c' to '/home/runner/work/_actions/actions/setup-node/v3'
+2023-11-12T19:15:12.3424952Z ##[debug]Archive '/home/runner/work/_actions/_temp_01ae4017-fd5f-41be-9b87-f7bd68f05a25/ec3bedbd-5198-4ce2-a00b-7bb02ea8c999.tar.gz' has been unzipped into '/home/runner/work/_actions/actions/setup-node/v3'.
+2023-11-12T19:15:12.3476470Z Download action repository 'actions/upload-artifact@v3' (SHA:a8a3f3ad30e3422c9c7b888a15615d19a852ae32)
+2023-11-12T19:15:12.3503493Z ##[debug]Copied action archive '/opt/actionarchivecache/actions_upload-artifact/a8a3f3ad30e3422c9c7b888a15615d19a852ae32.tar.gz' to '/home/runner/work/_actions/_temp_5c4820aa-3717-4d83-a67d-5fc198679cab/3d7e4c94-1883-4fa0-ab9b-26a3210b6586.tar.gz'
+2023-11-12T19:15:12.3686089Z ##[debug]Unwrap 'actions-upload-artifact-a8a3f3a' to '/home/runner/work/_actions/actions/upload-artifact/v3'
+2023-11-12T19:15:12.3745288Z ##[debug]Archive '/home/runner/work/_actions/_temp_5c4820aa-3717-4d83-a67d-5fc198679cab/3d7e4c94-1883-4fa0-ab9b-26a3210b6586.tar.gz' has been unzipped into '/home/runner/work/_actions/actions/upload-artifact/v3'.
+2023-11-12T19:15:12.3818062Z ##[debug]action.yml for action: '/home/runner/work/_actions/actions/checkout/v3/action.yml'.
+2023-11-12T19:15:12.5015145Z ##[debug]action.yml for action: '/home/runner/work/_actions/actions/setup-node/v3/action.yml'.
+2023-11-12T19:15:12.5091131Z ##[debug]action.yml for action: '/home/runner/work/_actions/actions/upload-artifact/v3/action.yml'.
+2023-11-12T19:15:12.5202266Z ##[debug]Set step '__actions_checkout' display name to: 'Run actions/checkout@v3'
+2023-11-12T19:15:12.5205739Z ##[debug]Set step '__actions_setup-node' display name to: 'Set up Node.js'
+2023-11-12T19:15:12.5207697Z ##[debug]Set step '__run' display name to: 'npm install, build, and test'
+2023-11-12T19:15:12.5210153Z ##[debug]Set step '__actions_upload-artifact' display name to: 'Upload artifact for deployment job'
+2023-11-12T19:15:12.5211812Z Complete job name: build
+2023-11-12T19:15:12.5233359Z ##[debug]Collect running processes for tracking orphan processes.
+2023-11-12T19:15:12.5468198Z ##[debug]Finishing: Set up job
+2023-11-12T19:15:12.5713149Z ##[debug]Evaluating condition for step: 'Run actions/checkout@v3'
+2023-11-12T19:15:12.5771599Z ##[debug]Evaluating: success()
+2023-11-12T19:15:12.5778504Z ##[debug]Evaluating success:
+2023-11-12T19:15:12.5808391Z ##[debug]=> true
+2023-11-12T19:15:12.5817535Z ##[debug]Result: true
+2023-11-12T19:15:12.5885017Z ##[debug]Starting: Run actions/checkout@v3
+2023-11-12T19:15:12.6026670Z ##[debug]Register post job cleanup for action: actions/checkout@v3
+2023-11-12T19:15:12.6153344Z ##[debug]Loading inputs
+2023-11-12T19:15:12.6163647Z ##[debug]Evaluating: github.repository
+2023-11-12T19:15:12.6164969Z ##[debug]Evaluating Index:
+2023-11-12T19:15:12.6167416Z ##[debug]..Evaluating github:
+2023-11-12T19:15:12.6169112Z ##[debug]..=> Object
+2023-11-12T19:15:12.6184407Z ##[debug]..Evaluating String:
+2023-11-12T19:15:12.6185432Z ##[debug]..=> 'repository'
+2023-11-12T19:15:12.6190080Z ##[debug]=> 'rockysosaenterprise/silver-happiness'
+2023-11-12T19:15:12.6192327Z ##[debug]Result: 'rockysosaenterprise/silver-happiness'
+2023-11-12T19:15:12.6197600Z ##[debug]Evaluating: github.token
+2023-11-12T19:15:12.6198194Z ##[debug]Evaluating Index:
+2023-11-12T19:15:12.6198693Z ##[debug]..Evaluating github:
+2023-11-12T19:15:12.6199225Z ##[debug]..=> Object
+2023-11-12T19:15:12.6199679Z ##[debug]..Evaluating String:
+2023-11-12T19:15:12.6200188Z ##[debug]..=> 'token'
+2023-11-12T19:15:12.6201142Z ##[debug]=> '***'
+2023-11-12T19:15:12.6201835Z ##[debug]Result: '***'
+2023-11-12T19:15:12.6216828Z ##[debug]Loading env
+2023-11-12T19:15:12.6357887Z ##[group]Run actions/checkout@v3
+2023-11-12T19:15:12.6358507Z with:
+2023-11-12T19:15:12.6359009Z   repository: rockysosaenterprise/silver-happiness
+2023-11-12T19:15:12.6360064Z   token: ***
+2023-11-12T19:15:12.6360482Z   ssh-strict: true
+2023-11-12T19:15:12.6360951Z   persist-credentials: true
+2023-11-12T19:15:12.6361457Z   clean: true
+2023-11-12T19:15:12.6361895Z   sparse-checkout-cone-mode: true
+2023-11-12T19:15:12.6362430Z   fetch-depth: 1
+2023-11-12T19:15:12.6362865Z   fetch-tags: false
+2023-11-12T19:15:12.6363296Z   lfs: false
+2023-11-12T19:15:12.6363685Z   submodules: false
+2023-11-12T19:15:12.6364119Z   set-safe-directory: true
+2023-11-12T19:15:12.6364600Z env:
+2023-11-12T19:15:12.6365003Z   AZURE_WEBAPP_NAME: your-app-name
+2023-11-12T19:15:12.6365561Z   AZURE_WEBAPP_PACKAGE_PATH: .
+2023-11-12T19:15:12.6366072Z   NODE_VERSION: 14.x
+2023-11-12T19:15:12.6366494Z ##[endgroup]
+2023-11-12T19:15:12.9132562Z ##[debug]GITHUB_WORKSPACE = '/home/runner/work/silver-happiness/silver-happiness'
+2023-11-12T19:15:12.9134713Z ##[debug]qualified repository = 'rockysosaenterprise/silver-happiness'
+2023-11-12T19:15:12.9135954Z ##[debug]ref = 'refs/heads/owner'
+2023-11-12T19:15:12.9137540Z ##[debug]commit = 'de3860c07cf1d5ae51ce8c33d9e1c49b759652b1'
+2023-11-12T19:15:12.9138606Z ##[debug]clean = true
+2023-11-12T19:15:12.9139365Z ##[debug]fetch depth = 1
+2023-11-12T19:15:12.9140154Z ##[debug]fetch tags = false
+2023-11-12T19:15:12.9140939Z ##[debug]lfs = false
+2023-11-12T19:15:12.9141706Z ##[debug]submodules = false
+2023-11-12T19:15:12.9142553Z ##[debug]recursive submodules = false
+2023-11-12T19:15:12.9145414Z ##[debug]GitHub Host URL = 
+2023-11-12T19:15:12.9147273Z ::add-matcher::/home/runner/work/_actions/actions/checkout/v3/dist/problem-matcher.json
+2023-11-12T19:15:12.9267238Z ##[debug]Added matchers: 'checkout-git'. Problem matchers scan action output for known warning or error strings and report these inline.
+2023-11-12T19:15:12.9280715Z Syncing repository: rockysosaenterprise/silver-happiness
+2023-11-12T19:15:12.9282616Z ::group::Getting Git version info
+2023-11-12T19:15:12.9284217Z ##[group]Getting Git version info
+2023-11-12T19:15:12.9285339Z Working directory is '/home/runner/work/silver-happiness/silver-happiness'
+2023-11-12T19:15:12.9286880Z ##[debug]Getting git version
+2023-11-12T19:15:12.9287410Z [command]/usr/bin/git version
+2023-11-12T19:15:12.9311852Z git version 2.42.0
+2023-11-12T19:15:12.9355327Z ##[debug]0
+2023-11-12T19:15:12.9356071Z ##[debug]git version 2.42.0
+2023-11-12T19:15:12.9356908Z ##[debug]
+2023-11-12T19:15:12.9358048Z ##[debug]Set git useragent to: git/2.42.0 (github-actions-checkout)
+2023-11-12T19:15:12.9359875Z ::endgroup::
+2023-11-12T19:15:12.9360311Z ##[endgroup]
+2023-11-12T19:15:12.9375171Z ::add-mask::***
+2023-11-12T19:15:12.9377418Z Temporarily overriding HOME='/home/runner/work/_temp/029eb8e3-69ae-4530-a636-4a4339483834' before making global git config changes
+2023-11-12T19:15:12.9379211Z Adding repository directory to the temporary git global config as a safe directory
+2023-11-12T19:15:12.9381716Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/silver-happiness/silver-happiness
+2023-11-12T19:15:12.9407715Z ##[debug]0
+2023-11-12T19:15:12.9408453Z ##[debug]
+2023-11-12T19:15:12.9418739Z Deleting the contents of '/home/runner/work/silver-happiness/silver-happiness'
+2023-11-12T19:15:12.9423424Z ::group::Initializing the repository
+2023-11-12T19:15:12.9424077Z ##[group]Initializing the repository
+2023-11-12T19:15:12.9428024Z [command]/usr/bin/git init /home/runner/work/silver-happiness/silver-happiness
+2023-11-12T19:15:12.9516067Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-11-12T19:15:12.9517795Z hint: is subject to change. To configure the initial branch name to use in all
+2023-11-12T19:15:12.9519474Z hint: of your new repositories, which will suppress this warning, call:
+2023-11-12T19:15:12.9520537Z hint: 
+2023-11-12T19:15:12.9521584Z hint: 	git config --global init.defaultBranch <name>
+2023-11-12T19:15:12.9522624Z hint: 
+2023-11-12T19:15:12.9523830Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-11-12T19:15:12.9525603Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-11-12T19:15:12.9526947Z hint: 
+2023-11-12T19:15:12.9527574Z hint: 	git branch -m <name>
+2023-11-12T19:15:12.9529642Z Initialized empty Git repository in /home/runner/work/silver-happiness/silver-happiness/.git/
+2023-11-12T19:15:12.9534617Z ##[debug]0
+2023-11-12T19:15:12.9536281Z ##[debug]Initialized empty Git repository in /home/runner/work/silver-happiness/silver-happiness/.git/
+2023-11-12T19:15:12.9537408Z ##[debug]
+2023-11-12T19:15:12.9541016Z [command]/usr/bin/git remote add origin https://github.com/rockysosaenterprise/silver-happiness
+2023-11-12T19:15:12.9615899Z ##[debug]0
+2023-11-12T19:15:12.9617857Z ##[debug]
+2023-11-12T19:15:12.9619202Z ::endgroup::
+2023-11-12T19:15:12.9619580Z ##[endgroup]
+2023-11-12T19:15:12.9620602Z ::group::Disabling automatic garbage collection
+2023-11-12T19:15:12.9621353Z ##[group]Disabling automatic garbage collection
+2023-11-12T19:15:12.9622858Z [command]/usr/bin/git config --local gc.auto 0
+2023-11-12T19:15:12.9659849Z ##[debug]0
+2023-11-12T19:15:12.9660999Z ##[debug]
+2023-11-12T19:15:12.9662142Z ::endgroup::
+2023-11-12T19:15:12.9662516Z ##[endgroup]
+2023-11-12T19:15:12.9663438Z ::group::Setting up auth
+2023-11-12T19:15:12.9663912Z ##[group]Setting up auth
+2023-11-12T19:15:12.9667955Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-11-12T19:15:12.9702945Z ##[debug]1
+2023-11-12T19:15:12.9704015Z ##[debug]
+2023-11-12T19:15:12.9709419Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-11-12T19:15:13.0161657Z ##[debug]0
+2023-11-12T19:15:13.0162432Z ##[debug]
+2023-11-12T19:15:13.0163706Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-11-12T19:15:13.0187194Z ##[debug]1
+2023-11-12T19:15:13.0188279Z ##[debug]
+2023-11-12T19:15:13.0192552Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-11-12T19:15:13.0449679Z ##[debug]0
+2023-11-12T19:15:13.0450968Z ##[debug]
+2023-11-12T19:15:13.0458270Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-11-12T19:15:13.0495900Z ##[debug]0
+2023-11-12T19:15:13.0497026Z ##[debug]
+2023-11-12T19:15:13.0505564Z ::endgroup::
+2023-11-12T19:15:13.0505960Z ##[endgroup]
+2023-11-12T19:15:13.0507019Z ::group::Fetching the repository
+2023-11-12T19:15:13.0507596Z ##[group]Fetching the repository
+2023-11-12T19:15:13.0516653Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +de3860c07cf1d5ae51ce8c33d9e1c49b759652b1:refs/remotes/origin/owner
+2023-11-12T19:15:13.5004967Z remote: Enumerating objects: 8, done.        
+2023-11-12T19:15:13.5006101Z remote: Counting objects:  12% (1/8)        
+2023-11-12T19:15:13.5006799Z remote: Counting objects:  25% (2/8)        
+2023-11-12T19:15:13.5007365Z remote: Counting objects:  37% (3/8)        
+2023-11-12T19:15:13.5007901Z remote: Counting objects:  50% (4/8)        
+2023-11-12T19:15:13.5008526Z remote: Counting objects:  62% (5/8)        
+2023-11-12T19:15:13.5009639Z remote: Counting objects:  75% (6/8)        
+2023-11-12T19:15:13.5010654Z remote: Counting objects:  87% (7/8)        
+2023-11-12T19:15:13.5011402Z remote: Counting objects: 100% (8/8)        
+2023-11-12T19:15:13.5012278Z remote: Counting objects: 100% (8/8), done.        
+2023-11-12T19:15:13.5013112Z remote: Compressing objects:  16% (1/6)        
+2023-11-12T19:15:13.5013896Z remote: Compressing objects:  33% (2/6)        
+2023-11-12T19:15:13.5014721Z remote: Compressing objects:  50% (3/6)        
+2023-11-12T19:15:13.5015520Z remote: Compressing objects:  66% (4/6)        
+2023-11-12T19:15:13.5016513Z remote: Compressing objects:  83% (5/6)        
+2023-11-12T19:15:13.5017889Z remote: Compressing objects: 100% (6/6)        
+2023-11-12T19:15:13.5018846Z remote: Compressing objects: 100% (6/6), done.        
+2023-11-12T19:15:13.5367153Z remote: Total 8 (delta 0), reused 3 (delta 0), pack-reused 0        
+2023-11-12T19:15:13.5422843Z From https://github.com/rockysosaenterprise/silver-happiness
+2023-11-12T19:15:13.5424370Z  * [new ref]         de3860c07cf1d5ae51ce8c33d9e1c49b759652b1 -> origin/owner
+2023-11-12T19:15:13.5453028Z ##[debug]0
+2023-11-12T19:15:13.5454429Z ##[debug]
+2023-11-12T19:15:13.5455653Z ::endgroup::
+2023-11-12T19:15:13.5456194Z ##[endgroup]
+2023-11-12T19:15:13.5457201Z ::group::Determining the checkout info
+2023-11-12T19:15:13.5457924Z ##[group]Determining the checkout info
+2023-11-12T19:15:13.5459299Z ::endgroup::
+2023-11-12T19:15:13.5459671Z ##[endgroup]
+2023-11-12T19:15:13.5460706Z ::group::Checking out the ref
+2023-11-12T19:15:13.5461252Z ##[group]Checking out the ref
+2023-11-12T19:15:13.5462899Z [command]/usr/bin/git checkout --progress --force -B owner refs/remotes/origin/owner
+2023-11-12T19:15:13.5521373Z Switched to a new branch 'owner'
+2023-11-12T19:15:13.5522302Z branch 'owner' set up to track 'origin/owner'.
+2023-11-12T19:15:13.5530185Z ##[debug]0
+2023-11-12T19:15:13.5531879Z ##[debug]branch 'owner' set up to track 'origin/owner'.
+2023-11-12T19:15:13.5532684Z ##[debug]
+2023-11-12T19:15:13.5533717Z ::endgroup::
+2023-11-12T19:15:13.5534232Z ##[endgroup]
+2023-11-12T19:15:13.5576249Z ##[debug]0
+2023-11-12T19:15:13.5577969Z ##[debug]commit de3860c07cf1d5ae51ce8c33d9e1c49b759652b1
+2023-11-12T19:15:13.5579038Z ##[debug]Author: Rocky Sosanavongsa <150569198+rockysosaenterprise@users.noreply.github.com>
+2023-11-12T19:15:13.5579970Z ##[debug]Date:   Sun Nov 12 09:52:35 2023 -0800
+2023-11-12T19:15:13.5580625Z ##[debug]
+2023-11-12T19:15:13.5581081Z ##[debug]    Create azure-webapps-node.yml
+2023-11-12T19:15:13.5581621Z ##[debug]
+2023-11-12T19:15:13.5582899Z [command]/usr/bin/git log -1 --format='%H'
+2023-11-12T19:15:13.5615014Z 'de3860c07cf1d5ae51ce8c33d9e1c49b759652b1'
+2023-11-12T19:15:13.5617875Z ##[debug]0
+2023-11-12T19:15:13.5619238Z ##[debug]'de3860c07cf1d5ae51ce8c33d9e1c49b759652b1'
+2023-11-12T19:15:13.5619867Z ##[debug]
+2023-11-12T19:15:13.5623209Z ##[debug]Unsetting HOME override
+2023-11-12T19:15:13.5633995Z ::remove-matcher owner=checkout-git::
+2023-11-12T19:15:13.5661247Z ##[debug]Removed matchers: 'checkout-git'
+2023-11-12T19:15:13.5879466Z ##[debug]Node Action run completed with exit code 0
+2023-11-12T19:15:13.6041759Z ##[debug]Save intra-action state isPost = true
+2023-11-12T19:15:13.6042824Z ##[debug]Save intra-action state setSafeDirectory = true
+2023-11-12T19:15:13.6044094Z ##[debug]Save intra-action state repositoryPath = /home/runner/work/silver-happiness/silver-happiness
+2023-11-12T19:15:13.6059019Z ##[debug]Finishing: Run actions/checkout@v3
+2023-11-12T19:15:13.6077377Z ##[debug]Evaluating condition for step: 'Set up Node.js'
+2023-11-12T19:15:13.6081665Z ##[debug]Evaluating: success()
+2023-11-12T19:15:13.6082766Z ##[debug]Evaluating success:
+2023-11-12T19:15:13.6083585Z ##[debug]=> true
+2023-11-12T19:15:13.6084598Z ##[debug]Result: true
+2023-11-12T19:15:13.6085751Z ##[debug]Starting: Set up Node.js
+2023-11-12T19:15:13.6119976Z ##[debug]Register post job cleanup for action: actions/setup-node@v3
+2023-11-12T19:15:13.6140351Z ##[debug]Loading inputs
+2023-11-12T19:15:13.6145231Z ##[debug]Evaluating: env.NODE_VERSION
+2023-11-12T19:15:13.6145884Z ##[debug]Evaluating Index:
+2023-11-12T19:15:13.6146562Z ##[debug]..Evaluating env:
+2023-11-12T19:15:13.6147244Z ##[debug]..=> Object
+2023-11-12T19:15:13.6147789Z ##[debug]..Evaluating String:
+2023-11-12T19:15:13.6148423Z ##[debug]..=> 'NODE_VERSION'
+2023-11-12T19:15:13.6152078Z ##[debug]=> '14.x'
+2023-11-12T19:15:13.6152726Z ##[debug]Result: '14.x'
+2023-11-12T19:15:13.6175686Z ##[debug]Evaluating: (((github.server_url == 'https://github.com') && github.token) || '')
+2023-11-12T19:15:13.6176733Z ##[debug]Evaluating Or:
+2023-11-12T19:15:13.6182677Z ##[debug]..Evaluating And:
+2023-11-12T19:15:13.6188442Z ##[debug]....Evaluating Equal:
+2023-11-12T19:15:13.6190591Z ##[debug]......Evaluating Index:
+2023-11-12T19:15:13.6191174Z ##[debug]........Evaluating github:
+2023-11-12T19:15:13.6191960Z ##[debug]........=> Object
+2023-11-12T19:15:13.6192679Z ##[debug]........Evaluating String:
+2023-11-12T19:15:13.6193285Z ##[debug]........=> 'server_url'
+2023-11-12T19:15:13.6194108Z ##[debug]......=> 'https://github.com'
+2023-11-12T19:15:13.6194773Z ##[debug]......Evaluating String:
+2023-11-12T19:15:13.6195485Z ##[debug]......=> 'https://github.com'
+2023-11-12T19:15:13.6201084Z ##[debug]....=> true
+2023-11-12T19:15:13.6202024Z ##[debug]....Evaluating Index:
+2023-11-12T19:15:13.6202608Z ##[debug]......Evaluating github:
+2023-11-12T19:15:13.6203497Z ##[debug]......=> Object
+2023-11-12T19:15:13.6204026Z ##[debug]......Evaluating String:
+2023-11-12T19:15:13.6204615Z ##[debug]......=> 'token'
+2023-11-12T19:15:13.6205852Z ##[debug]....=> '***'
+2023-11-12T19:15:13.6206737Z ##[debug]..=> '***'
+2023-11-12T19:15:13.6208025Z ##[debug]=> '***'
+2023-11-12T19:15:13.6216040Z ##[debug]Expanded: ((('https://github.com' == 'https://github.com') && '***') || '')
+2023-11-12T19:15:13.6217151Z ##[debug]Result: '***'
+2023-11-12T19:15:13.6220486Z ##[debug]Loading env
+2023-11-12T19:15:13.6363779Z ##[group]Run actions/setup-node@v3
+2023-11-12T19:15:13.6364258Z with:
+2023-11-12T19:15:13.6364550Z   node-version: 14.x
+2023-11-12T19:15:13.6364907Z   cache: npm
+2023-11-12T19:15:13.6365226Z   always-auth: false
+2023-11-12T19:15:13.6365574Z   check-latest: false
+2023-11-12T19:15:13.6366294Z   token: ***
+2023-11-12T19:15:13.6366597Z env:
+2023-11-12T19:15:13.6366899Z   AZURE_WEBAPP_NAME: your-app-name
+2023-11-12T19:15:13.6367369Z   AZURE_WEBAPP_PACKAGE_PATH: .
+2023-11-12T19:15:13.6367792Z   NODE_VERSION: 14.x
+2023-11-12T19:15:13.6368129Z ##[endgroup]
+2023-11-12T19:15:13.9011608Z ##[debug]isExplicit: 
+2023-11-12T19:15:13.9022388Z ##[debug]explicit? false
+2023-11-12T19:15:13.9023670Z ##[debug]isExplicit: 14.21.3
+2023-11-12T19:15:13.9024560Z ##[debug]explicit? true
+2023-11-12T19:15:13.9025614Z ##[debug]isExplicit: 16.20.2
+2023-11-12T19:15:13.9026492Z ##[debug]explicit? true
+2023-11-12T19:15:13.9027520Z ##[debug]isExplicit: 18.18.2
+2023-11-12T19:15:13.9028482Z ##[debug]explicit? true
+2023-11-12T19:15:13.9029831Z ##[debug]isExplicit: 20.9.0
+2023-11-12T19:15:13.9030490Z ##[debug]explicit? true
+2023-11-12T19:15:13.9031132Z ##[debug]evaluating 4 versions
+2023-11-12T19:15:13.9053388Z ##[debug]matched: 14.21.3
+2023-11-12T19:15:13.9054599Z ##[debug]checking cache: /opt/hostedtoolcache/node/14.21.3/x64
+2023-11-12T19:15:13.9055910Z ##[debug]Found tool in cache node 14.21.3 x64
+2023-11-12T19:15:13.9056557Z Found in cache @ /opt/hostedtoolcache/node/14.21.3/x64
+2023-11-12T19:15:13.9066239Z ::group::Environment details
+2023-11-12T19:15:13.9066674Z ##[group]Environment details
+2023-11-12T19:15:15.7397515Z node: v14.21.3
+2023-11-12T19:15:15.7398623Z npm: 6.14.18
+2023-11-12T19:15:15.7400062Z yarn: 1.22.19
+2023-11-12T19:15:15.7401046Z ::endgroup::
+2023-11-12T19:15:15.7401412Z ##[endgroup]
+2023-11-12T19:15:15.7413076Z [command]/opt/hostedtoolcache/node/14.21.3/x64/bin/npm config get cache
+2023-11-12T19:15:16.0489147Z /home/runner/.npm
+2023-11-12T19:15:16.0565960Z ##[debug]npm's cache folder "/home/runner/.npm" configured for the root directory
+2023-11-12T19:15:16.0610981Z ##[error]Dependencies lock file is not found in /home/runner/work/silver-happiness/silver-happiness. Supported file patterns: package-lock.json,npm-shrinkwrap.json,yarn.lock
+2023-11-12T19:15:16.0663845Z ##[debug]Node Action run completed with exit code 1
+2023-11-12T19:15:16.0669013Z ##[debug]Save intra-action state SETUP_NODE_CACHE_PACKAGE_MANAGER = npm
+2023-11-12T19:15:16.0669904Z ##[debug]Save intra-action state CACHE_PATHS = ["/home/runner/.npm"]
+2023-11-12T19:15:16.0672206Z ##[debug]Set output node-version = v14.21.3
+2023-11-12T19:15:16.0676071Z ##[debug]Finishing: Set up Node.js
+2023-11-12T19:15:16.0701461Z ##[debug]Evaluating condition for step: 'npm install, build, and test'
+2023-11-12T19:15:16.0703790Z ##[debug]Evaluating: success()
+2023-11-12T19:15:16.0704404Z ##[debug]Evaluating success:
+2023-11-12T19:15:16.0705028Z ##[debug]=> false
+2023-11-12T19:15:16.0705585Z ##[debug]Result: false
+2023-11-12T19:15:16.0713119Z ##[debug]Evaluating condition for step: 'Upload artifact for deployment job'
+2023-11-12T19:15:16.0714631Z ##[debug]Evaluating: success()
+2023-11-12T19:15:16.0715199Z ##[debug]Evaluating success:
+2023-11-12T19:15:16.0715763Z ##[debug]=> false
+2023-11-12T19:15:16.0716302Z ##[debug]Result: false
+2023-11-12T19:15:16.0723193Z ##[debug]Evaluating condition for step: 'Post Set up Node.js'
+2023-11-12T19:15:16.0724466Z ##[debug]Evaluating: success()
+2023-11-12T19:15:16.0725029Z ##[debug]Evaluating success:
+2023-11-12T19:15:16.0725587Z ##[debug]=> false
+2023-11-12T19:15:16.0726112Z ##[debug]Result: false
+2023-11-12T19:15:16.0734986Z ##[debug]Evaluating condition for step: 'Post Run actions/checkout@v3'
+2023-11-12T19:15:16.0737482Z ##[debug]Evaluating: always()
+2023-11-12T19:15:16.0738039Z ##[debug]Evaluating always:
+2023-11-12T19:15:16.0739183Z ##[debug]=> true
+2023-11-12T19:15:16.0739987Z ##[debug]Result: true
+2023-11-12T19:15:16.0740740Z ##[debug]Starting: Post Run actions/checkout@v3
+2023-11-12T19:15:16.0782381Z ##[debug]Loading inputs
+2023-11-12T19:15:16.0783631Z ##[debug]Evaluating: github.repository
+2023-11-12T19:15:16.0784169Z ##[debug]Evaluating Index:
+2023-11-12T19:15:16.0784596Z ##[debug]..Evaluating github:
+2023-11-12T19:15:16.0785026Z ##[debug]..=> Object
+2023-11-12T19:15:16.0785404Z ##[debug]..Evaluating String:
+2023-11-12T19:15:16.0785843Z ##[debug]..=> 'repository'
+2023-11-12T19:15:16.0786372Z ##[debug]=> 'rockysosaenterprise/silver-happiness'
+2023-11-12T19:15:16.0787066Z ##[debug]Result: 'rockysosaenterprise/silver-happiness'
+2023-11-12T19:15:16.0789286Z ##[debug]Evaluating: github.token
+2023-11-12T19:15:16.0789812Z ##[debug]Evaluating Index:
+2023-11-12T19:15:16.0790228Z ##[debug]..Evaluating github:
+2023-11-12T19:15:16.0790649Z ##[debug]..=> Object
+2023-11-12T19:15:16.0791028Z ##[debug]..Evaluating String:
+2023-11-12T19:15:16.0791445Z ##[debug]..=> 'token'
+2023-11-12T19:15:16.0792320Z ##[debug]=> '***'
+2023-11-12T19:15:16.0792872Z ##[debug]Result: '***'
+2023-11-12T19:15:16.0803447Z ##[debug]Loading env
+2023-11-12T19:15:16.0809991Z Post job cleanup.
+2023-11-12T19:15:16.1888484Z ##[debug]Getting git version
+2023-11-12T19:15:16.1904913Z [command]/usr/bin/git version
+2023-11-12T19:15:16.1957170Z git version 2.42.0
+2023-11-12T19:15:16.1987081Z ##[debug]0
+2023-11-12T19:15:16.1988306Z ##[debug]git version 2.42.0
+2023-11-12T19:15:16.1988684Z ##[debug]
+2023-11-12T19:15:16.1990349Z ##[debug]Set git useragent to: git/2.42.0 (github-actions-checkout)
+2023-11-12T19:15:16.1991648Z ::add-mask::***
+2023-11-12T19:15:16.2012934Z Temporarily overriding HOME='/home/runner/work/_temp/9123be3d-a5e8-4a81-a81f-d302f79afa01' before making global git config changes
+2023-11-12T19:15:16.2017606Z Adding repository directory to the temporary git global config as a safe directory
+2023-11-12T19:15:16.2026582Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/silver-happiness/silver-happiness
+2023-11-12T19:15:16.2068428Z ##[debug]0
+2023-11-12T19:15:16.2069052Z ##[debug]
+2023-11-12T19:15:16.2079501Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-11-12T19:15:16.2114812Z ##[debug]1
+2023-11-12T19:15:16.2115665Z ##[debug]
+2023-11-12T19:15:16.2121387Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-11-12T19:15:16.2387381Z ##[debug]0
+2023-11-12T19:15:16.2388307Z ##[debug]
+2023-11-12T19:15:16.2393562Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-11-12T19:15:16.2425434Z http.https://github.com/.extraheader
+2023-11-12T19:15:16.2433567Z ##[debug]0
+2023-11-12T19:15:16.2434491Z ##[debug]http.https://github.com/.extraheader
+2023-11-12T19:15:16.2435018Z ##[debug]
+2023-11-12T19:15:16.2451275Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-11-12T19:15:16.2487262Z ##[debug]0
+2023-11-12T19:15:16.2488155Z ##[debug]
+2023-11-12T19:15:16.2494039Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-11-12T19:15:16.2748036Z ##[debug]0
+2023-11-12T19:15:16.2748993Z ##[debug]
+2023-11-12T19:15:16.2749806Z ##[debug]Unsetting HOME override
+2023-11-12T19:15:16.2815259Z ##[debug]Node Action run completed with exit code 0
+2023-11-12T19:15:16.2818303Z ##[debug]Finishing: Post Run actions/checkout@v3
+2023-11-12T19:15:16.2996041Z ##[debug]Starting: Complete job
+2023-11-12T19:15:16.2998420Z Uploading runner diagnostic logs
+2023-11-12T19:15:16.3078274Z ##[debug]Starting diagnostic file upload.
+2023-11-12T19:15:16.3078887Z ##[debug]Setting up diagnostic log folders.
+2023-11-12T19:15:16.3081892Z ##[debug]Creating diagnostic log files folder.
+2023-11-12T19:15:16.3104864Z ##[debug]Copying 1 worker diagnostic logs.
+2023-11-12T19:15:16.3125133Z ##[debug]Copying 1 runner diagnostic logs.
+2023-11-12T19:15:16.3126932Z ##[debug]Zipping diagnostic files.
+2023-11-12T19:15:16.3200352Z ##[debug]Uploading diagnostic metadata file.
+2023-11-12T19:15:16.3228520Z ##[debug]Diagnostic file upload complete.
+2023-11-12T19:15:16.3229445Z Completed runner diagnostic log upload
+2023-11-12T19:15:16.3229939Z Cleaning up orphan processes
+2023-11-12T19:15:16.3578322Z ##[debug]Finishing: Complete job
+2023-11-12T19:15:16.3726908Z ##[debug]Finishing: build

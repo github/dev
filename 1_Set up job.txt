@@ -1,0 +1,54 @@
+2023-11-12T19:15:11.6520176Z ##[debug]Starting: Set up job
+2023-11-12T19:15:11.6520996Z Current runner version: '2.311.0'
+2023-11-12T19:15:11.6553284Z ##[group]Operating System
+2023-11-12T19:15:11.6554136Z Ubuntu
+2023-11-12T19:15:11.6554561Z 22.04.3
+2023-11-12T19:15:11.6555084Z LTS
+2023-11-12T19:15:11.6555572Z ##[endgroup]
+2023-11-12T19:15:11.6556038Z ##[group]Runner Image
+2023-11-12T19:15:11.6556769Z Image: ubuntu-22.04
+2023-11-12T19:15:11.6557332Z Version: 20231030.2.0
+2023-11-12T19:15:11.6558682Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20231030.2/images/linux/Ubuntu2204-Readme.md
+2023-11-12T19:15:11.6560757Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20231030.2
+2023-11-12T19:15:11.6561963Z ##[endgroup]
+2023-11-12T19:15:11.6562470Z ##[group]Runner Image Provisioner
+2023-11-12T19:15:11.6563235Z 2.0.312.1
+2023-11-12T19:15:11.6563918Z ##[endgroup]
+2023-11-12T19:15:11.6565182Z ##[group]GITHUB_TOKEN Permissions
+2023-11-12T19:15:11.6567286Z Contents: read
+2023-11-12T19:15:11.6568142Z Metadata: read
+2023-11-12T19:15:11.6568900Z ##[endgroup]
+2023-11-12T19:15:11.6572980Z Secret source: Actions
+2023-11-12T19:15:11.6574187Z ##[debug]Primary repository: rockysosaenterprise/silver-happiness
+2023-11-12T19:15:11.6575232Z Prepare workflow directory
+2023-11-12T19:15:11.6659537Z ##[debug]Creating pipeline directory: '/home/runner/work/silver-happiness'
+2023-11-12T19:15:11.6663840Z ##[debug]Creating workspace directory: '/home/runner/work/silver-happiness/silver-happiness'
+2023-11-12T19:15:11.6665831Z ##[debug]Update context data
+2023-11-12T19:15:11.6670761Z ##[debug]Evaluating job-level environment variables
+2023-11-12T19:15:11.7399967Z ##[debug]Evaluating job container
+2023-11-12T19:15:11.7403798Z ##[debug]Evaluating job service containers
+2023-11-12T19:15:11.7406779Z ##[debug]Evaluating job defaults
+2023-11-12T19:15:11.7496645Z Prepare all required actions
+2023-11-12T19:15:11.7701148Z Getting action download info
+2023-11-12T19:15:12.0458160Z Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
+2023-11-12T19:15:12.0506849Z ##[debug]Copied action archive '/opt/actionarchivecache/actions_checkout/f43a0e5ff2bd294095638e18286ca9a3d1956744.tar.gz' to '/home/runner/work/_actions/_temp_ccdf1f98-9986-492a-b0db-9fc6519e73ff/50704877-2be2-4203-928a-e85537d70f05.tar.gz'
+2023-11-12T19:15:12.1667355Z ##[debug]Unwrap 'actions-checkout-f43a0e5' to '/home/runner/work/_actions/actions/checkout/v3'
+2023-11-12T19:15:12.1802041Z ##[debug]Archive '/home/runner/work/_actions/_temp_ccdf1f98-9986-492a-b0db-9fc6519e73ff/50704877-2be2-4203-928a-e85537d70f05.tar.gz' has been unzipped into '/home/runner/work/_actions/actions/checkout/v3'.
+2023-11-12T19:15:12.1948533Z Download action repository 'actions/setup-node@v3' (SHA:1a4442cacd436585916779262731d5b162bc6ec7)
+2023-11-12T19:15:12.2164580Z ##[debug]Copied action archive '/opt/actionarchivecache/actions_setup-node/1a4442cacd436585916779262731d5b162bc6ec7.tar.gz' to '/home/runner/work/_actions/_temp_01ae4017-fd5f-41be-9b87-f7bd68f05a25/ec3bedbd-5198-4ce2-a00b-7bb02ea8c999.tar.gz'
+2023-11-12T19:15:12.3147156Z ##[debug]Unwrap 'actions-setup-node-1a4442c' to '/home/runner/work/_actions/actions/setup-node/v3'
+2023-11-12T19:15:12.3424914Z ##[debug]Archive '/home/runner/work/_actions/_temp_01ae4017-fd5f-41be-9b87-f7bd68f05a25/ec3bedbd-5198-4ce2-a00b-7bb02ea8c999.tar.gz' has been unzipped into '/home/runner/work/_actions/actions/setup-node/v3'.
+2023-11-12T19:15:12.3476449Z Download action repository 'actions/upload-artifact@v3' (SHA:a8a3f3ad30e3422c9c7b888a15615d19a852ae32)
+2023-11-12T19:15:12.3503460Z ##[debug]Copied action archive '/opt/actionarchivecache/actions_upload-artifact/a8a3f3ad30e3422c9c7b888a15615d19a852ae32.tar.gz' to '/home/runner/work/_actions/_temp_5c4820aa-3717-4d83-a67d-5fc198679cab/3d7e4c94-1883-4fa0-ab9b-26a3210b6586.tar.gz'
+2023-11-12T19:15:12.3686069Z ##[debug]Unwrap 'actions-upload-artifact-a8a3f3a' to '/home/runner/work/_actions/actions/upload-artifact/v3'
+2023-11-12T19:15:12.3745060Z ##[debug]Archive '/home/runner/work/_actions/_temp_5c4820aa-3717-4d83-a67d-5fc198679cab/3d7e4c94-1883-4fa0-ab9b-26a3210b6586.tar.gz' has been unzipped into '/home/runner/work/_actions/actions/upload-artifact/v3'.
+2023-11-12T19:15:12.3818044Z ##[debug]action.yml for action: '/home/runner/work/_actions/actions/checkout/v3/action.yml'.
+2023-11-12T19:15:12.5015127Z ##[debug]action.yml for action: '/home/runner/work/_actions/actions/setup-node/v3/action.yml'.
+2023-11-12T19:15:12.5091112Z ##[debug]action.yml for action: '/home/runner/work/_actions/actions/upload-artifact/v3/action.yml'.
+2023-11-12T19:15:12.5202215Z ##[debug]Set step '__actions_checkout' display name to: 'Run actions/checkout@v3'
+2023-11-12T19:15:12.5205724Z ##[debug]Set step '__actions_setup-node' display name to: 'Set up Node.js'
+2023-11-12T19:15:12.5207689Z ##[debug]Set step '__run' display name to: 'npm install, build, and test'
+2023-11-12T19:15:12.5210125Z ##[debug]Set step '__actions_upload-artifact' display name to: 'Upload artifact for deployment job'
+2023-11-12T19:15:12.5211787Z Complete job name: build
+2023-11-12T19:15:12.5233345Z ##[debug]Collect running processes for tracking orphan processes.
+2023-11-12T19:15:12.5468165Z ##[debug]Finishing: Set up job
