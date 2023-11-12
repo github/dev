@@ -4,6 +4,162 @@ The github.dev web-based editor is a lightweight editing experience that runs en
 
 There are two ways to go directly to a VS Code environment in your browser and start coding:
 
+# What is this?
+
+The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+
+There are two ways to go directly to a VS Code environment in your browser and start coding:
+
+is?
+
+The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+
+There are two ways to go directly to a VS Code environment in your browser and start coding:
+
+is?
+
+The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+
+There are two ways to go directly to a VS Code environment in your browser and start coding:
+
+is?
+
+The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+
+There are two ways to go directly to a VS Code environment in your browser and start coding:
+
+# What is this?
+
+The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+
+There are two ways to go directly to a VS Code environment in your browser and start coding:
+
+# What is this?
+
+The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+
+There are two ways to go directly to a VS Code environment in your browser and start coding:
+
+this?
+
+The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+
+There are two ways to go directly to a VS Code environment in your browser and start coding:
+
+this?
+
+The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+
+There are two ways to go directly to a VS Code environment in your browser and start coding:
+
+this?
+
+The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+
+There are two ways to go directly to a VS Code environment in your browser and start coding:
+
+# What is this?
+
+The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+
+There are two ways to go directly to a VS Code environment in your browser and start coding:
+
+
+
+The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+
+There are two ways to go directly to a VS Code environment in your browser and start coding:
+
+
+
+The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+
+There are two ways to go directly to a VS Code environment in your browser and start coding:
+
+
+
+The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+
+There are two ways to go directly to a VS Code environment in your browser and start coding:
+
+s?
+
+The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+
+There are two ways to go directly to a VS Code environment in your browser and start coding:
+
+s?
+
+The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+
+There are two ways to go directly to a VS Code environment in your browser and start coding:
+
+s?
+
+The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+
+There are two ways to go directly to a VS Code environment in your browser and start coding:
+
+# What is this?
+
+The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+
+There are two ways to go directly to a VS Code environment in your browser and start coding:
+
+# What is this?
+
+The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+
+There are two ways to go directly to a VS Code environment in your browser and start coding:
+
+ this?
+
+The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+
+There are two ways to go directly to a VS Code environment in your browser and start coding:
+
+ this?
+
+The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+
+There are two ways to go directly to a VS Code environment in your browser and start coding:
+
+ this?
+
+The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+
+There are two ways to go directly to a VS Code environment in your browser and start coding:
+
+
+
+The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+
+There are two ways to go directly to a VS Code environment in your browser and start coding:
+
+
+
+The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+
+There are two ways to go directly to a VS Code environment in your browser and start coding:
+
+
+
+The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+
+There are two ways to go directly to a VS Code environment in your browser and start coding:
+
+# What is this?
+
+The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+
+There are two ways to go directly to a VS Code environment in your browser and start coding:
+
+ this?
+
+The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+
+There are two ways to go directly to a VS Code environment in your browser and start coding:
+
 * Press the . key on any repository or pull request.
 * Swap `.com` with `.dev` in the URL. For example, this repo https://github.com/github/dev becomes http://github.dev/github/dev
 
