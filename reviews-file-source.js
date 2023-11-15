@@ -1184,7 +1184,7 @@ const productData = {
 			comment: "This gaming mouse is a great find for its price. The RGB lighting adds a cool factor, and the macro programming is a handy feature for gamers. With 6 programmable keys, it's versatile enough to handle various gaming scenarios."
 		}]
 	},
-    "Smart V-Face Massager, Sculpt Your Jawline with Ease!": { 
+    "Smart V-Face Massager, Sculpt Your Jawline with Ease": { 
         averageRating: 4.8,
         reviews: [
             {
