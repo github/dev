@@ -1414,11 +1414,11 @@ function loadProductReviews(e, a = 4) {
 				const i = Array.from({
 						length: e.rating
 					}, (() => '<i class="fas fa-star" style="color: #e49e21;"></i>')).join(""),
-					n = e.image ? `<img src="${e.image}" alt="review image's review image" class="review-image">` : "";
+					n = e.image ? `<img src="${e.image}" alt="review image of {{ product.name }}" class="review-image">` : "";
 				a.innerHTML = `\n            <p><i style="color:cornflowerblue; margin-right:4px;" class="fa fa-check-circle"></i><strong>${e.name}</strong></p>\n            <p>Rating: ${i}</p>\n            <p>${e.comment}</p>\n            ${n}\n          `, t.appendChild(a)
 			}))
 		})), t.appendChild(e)
-	}
+	} 
 	console.log("Product reviews loaded successfully (HTML and JSON-LD).")
 }
 const initialProductName = document.getElementById("product-name").textContent;
