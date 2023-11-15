@@ -1184,14 +1184,14 @@ const productData = {
 			comment: "This gaming mouse is a great find for its price. The RGB lighting adds a cool factor, and the macro programming is a handy feature for gamers. With 6 programmable keys, it's versatile enough to handle various gaming scenarios."
 		}]
 	},
-    "Smart V-Face Massager, Sculpt Your Jawline with Ease": { 
+    "Smart V-Face Massager, Sculpt Your Jawline with Ease": {  
         averageRating: 4.8,
         reviews: [
             {
                 name: "Paca T.",
                 rating: 5,
                 comment: "The Intelligent Facial Massager has become an integral part of my beauty routine. Its innovative design effortlessly targets the V-face, providing a soothing and effective massage. After just a few weeks of consistent use, I've noticed a significant improvement in my jawline definition and a more sculpted appearance. It's a must-have for anyone seeking a non-invasive solution for a thin chin and a defined jawline.",
-                image: "https://i.postimg.cc/qRNGnCXR/b477ce62-8df5-41f7-a2f2-4678dec379b3-1.webp",
+                image: "https://i.postimg.cc/qRNGnCXR/b477ce62-8df5-41f7-a2f2-4678dec379b3-1.webp"
             },
             {
                 name: "Marta H.",
