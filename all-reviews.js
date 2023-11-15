@@ -1255,6 +1255,28 @@ const productData = {
 		  }
 		]
 	  }, 
+	  "Gaming Power Combo": {
+		averageRating: 4.9,
+		reviews: [
+		  {
+			name: "Aiden R.",
+			rating: 5,
+			comment: "Incredible gaming combo. Rainbow LED keyboard adds a cool aesthetic. Headset delivers immersive sound. Mice are precise, and the pad completes the setup perfectly.",
+			image:"https://i.postimg.cc/NjPv25HC/1edee757-ff07-4b62-a52f-7f96b0f38796-1.webp"
+		},
+		  {
+			name: "Zara B.",
+			rating: 5,
+			comment: "Impressed with the gaming power combo. Rainbow LED keyboard is a visual delight. The headset provides clear audio. Mice are responsive, and the pad is a nice addition for a complete gaming experience."
+		  },
+		  {
+			name: "Carter M.",
+			rating: 4,
+			comment: "Solid gaming set. Rainbow LED keyboard is vibrant. Headset offers good sound quality. Mice are comfortable, and the pad adds a professional touch to the setup."
+		  }
+		]
+	  },
+	  
 	"Xiaomi Redmi G24: 165Hz 23.8 Esports Gaming Monitor": {
 		averageRating: 4.5,
 		reviews: [{
