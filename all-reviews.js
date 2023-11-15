@@ -1219,7 +1219,41 @@ const productData = {
 			comment: "Compact marvel in Taylor's skincare routine. Sleek design, targeted massage for a V-face and defined jawline. Portable for on-the-go beauty."
 		}]
 	},
-    
+	"Intelligent Vacuum Cupping Massager: Electric Heating, Scraping, Suction Cups for Relaxation and Hea": {
+		averageRating: 4.7, 
+		reviews: [
+		  {
+			name: "Elena M.",
+			rating: 4,
+			comment: "Impressed with the features. Electric heating adds a nice touch. Suction cups provide a relaxing experience. Great for relaxation and heat therapy."
+		  },
+		  {
+			name: "Kevin L.",
+			rating: 5,
+			comment: "Fantastic massager. The scraping function is a game-changer. Combined with electric heating, it offers a soothing experience. Suction cups are a great addition."
+		  },
+		  {
+			name: "Sophia G.",
+			rating: 4,
+			comment: "Effective and versatile massager. Electric heating is a plus, and scraping function feels rejuvenating. Suction cups provide a unique and enjoyable sensation."
+		  },
+		  {
+			name: "Alexandre B.",
+			rating: 5,
+			comment: "Reliable and powerful massager. Electric heating adds a comforting element. Scraping function is therapeutic. Suction cups make it a well-rounded relaxation device."
+		  },
+		  {
+			name: "Grace H.",
+			rating: 4,
+			comment: "Enjoying the benefits. Electric heating is a standout feature. Scraping and suction cups contribute to a comprehensive and effective massaging experience."
+		  },
+		  {
+			name: "Dylan K.",
+			rating: 5,
+			comment: "A versatile and advanced massager. Electric heating provides warmth, scraping offers a unique sensation, and suction cups enhance the overall relaxation. Highly recommended."
+		  }
+		]
+	  }, 
 	"Xiaomi Redmi G24: 165Hz 23.8 Esports Gaming Monitor": {
 		averageRating: 4.5,
 		reviews: [{
