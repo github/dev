@@ -303,17 +303,17 @@ const productData = {
 			name: "Rachel H.",
 			rating: 5,
 			comment: "A great addition to my home automation setup. It provides convenient control over my devices, and the setup process was straightforward. I use it daily to simplify my life.",
-			iamge: "https://i.postimg.cc/zB0NBXJL/5146-J0-QXGh-L.webp"
+			image: "https://i.postimg.cc/zB0NBXJL/5146-J0-QXGh-L.webp"
 		}, {
 			name: "John D.",
 			rating: 4,
 			comment: "The Smart Wi-Fi Socket works well for most applications, but it can be a bit finicky with certain devices. Nonetheless, it's a valuable tool to have for controlling various appliances.",
-			iamge: "https://i.postimg.cc/ryH6YHzL/Webppro-out-212f68f78cd01fd64d21ff5bea0af842.webp"
+			image: "https://i.postimg.cc/ryH6YHzL/Webppro-out-212f68f78cd01fd64d21ff5bea0af842.webp"
 		}, {
 			name: "Sophie L.",
 			rating: 5,
 			comment: "Impressed with the performance of this smart socket. It responds quickly to my commands, and I love the remote control feature. It has made my life more convenient.",
-			iamge: "https://i.postimg.cc/htTfGxNf/Webppro-out-776b5e484db120f821a9a6712e500c2e.webp"
+			image: "https://i.postimg.cc/htTfGxNf/Webppro-out-776b5e484db120f821a9a6712e500c2e.webp" 
 		}, {
 			name: "Robert M.",
 			rating: 4,
