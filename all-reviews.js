@@ -1225,8 +1225,9 @@ const productData = {
 		  {
 			name: "Elena M.",
 			rating: 4,
-			comment: "Impressed with the features. Electric heating adds a nice touch. Suction cups provide a relaxing experience. Great for relaxation and heat therapy."
-		  },
+			comment: "Impressed with the features. Electric heating adds a nice touch. Suction cups provide a relaxing experience. Great for relaxation and heat therapy.",
+			image: "https://i.postimg.cc/NGbTXcd2/03ec92b7-3932-4501-8345-07770d58a80e-1.webp"
+		}, 
 		  {
 			name: "Kevin L.",
 			rating: 5,
