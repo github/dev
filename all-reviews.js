@@ -1255,7 +1255,7 @@ const productData = {
 		  }
 		]
 	  }, 
-	  "Gaming Power Combo": {
+	  "Gaming Power Combo: Rainbow LED Keyboard, Headset, Mice, and Pad": {
 		averageRating: 4.9,
 		reviews: [
 		  {
@@ -1276,7 +1276,7 @@ const productData = {
 		  }
 		]
 	  },
-	  
+
 	"Xiaomi Redmi G24: 165Hz 23.8 Esports Gaming Monitor": {
 		averageRating: 4.5,
 		reviews: [{
