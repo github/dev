@@ -1277,6 +1277,38 @@ const productData = {
 		]
 	  },
 
+	  "Effortless Mixing: Automatic Multi-functional Electric Mixer Cup": {
+
+		averageRating: 4.7,
+		reviews: [
+		  {
+			name: "Olivia S.",
+			rating: 5,
+			comment: "Love this mixer cup! Effortless mixing for my morning coffee. The automatic functionality is a game-changer. Easy to clean, making it a must-have for coffee enthusiasts.",
+			image:"https://i.postimg.cc/nLCjqjwX/5afc5422-7ff3-4a01-929e-55daa8daaaf3.webp"
+			
+		},
+		  {
+			name: "Ethan W.",
+			rating: 4,
+			comment: "Impressive electric mixer cup. Perfect for blending my morning milks. The multi-functional features make it versatile. Quick and efficient, saving me time in the morning routine.",
+			image:"https://i.postimg.cc/5Ng6GqhH/838e861f-655a-43c1-bce9-cd21c4493ff8.webp",
+			image:"https://i.postimg.cc/WbN4Mqds/8333cc01-f11e-40d3-a2c1-7c72a0f8dee0.webp" 
+			
+		},
+		  {
+			name: "Sophie L.",
+			rating: 5,
+			comment: "Effortless mixing indeed! This electric mixer cup is a lifesaver for perfectly blended coffee. The automatic function is a time-saver, and it's surprisingly quiet. A must-buy for coffee lovers."
+		  },
+		  {
+			name: "Caleb M.",
+			rating: 4,
+			comment: "Great addition to my kitchen. The multi-functional electric mixer cup works well for blending various drinks. Coffee, milks, you name it. Easy to use and clean. Solid product."
+		  }
+		]
+	  },
+
 	"Xiaomi Redmi G24: 165Hz 23.8 Esports Gaming Monitor": {
 		averageRating: 4.5,
 		reviews: [{
