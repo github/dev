@@ -1184,42 +1184,41 @@ const productData = {
 			comment: "This gaming mouse is a great find for its price. The RGB lighting adds a cool factor, and the macro programming is a handy feature for gamers. With 6 programmable keys, it's versatile enough to handle various gaming scenarios."
 		}]
 	},
-    "Smart V-Face Massager, Sculpt Your Jawline with Ease": {  
-        averageRating: 4.8,
-        reviews: [
-            {
-                name: "Paca T.",
-                rating: 5,
-                comment: "The Intelligent Facial Massager has become an integral part of my beauty routine. Its innovative design effortlessly targets the V-face, providing a soothing and effective massage. After just a few weeks of consistent use, I've noticed a significant improvement in my jawline definition and a more sculpted appearance. It's a must-have for anyone seeking a non-invasive solution for a thin chin and a defined jawline.",
-                image: "https://i.postimg.cc/qRNGnCXR/b477ce62-8df5-41f7-a2f2-4678dec379b3-1.webp"
-            },
-            {
-                name: "Marta H.",
-                rating: 5,
-                comment: "This facial massager is a game-changer in the world of beauty tools. The intelligent design and targeted functionality make it stand out. The V-face and face-lifting benefits are apparent, and the massager is easy to use. The thin chin and defined jawline I've achieved speak volumes about the effectiveness of this product. It's a small investment for remarkable results.",
-            },
-            {
-                name: "Relaxing and Effective",
-                rating: 5,
-                comment: "Using the Intelligent Facial Massager has become a relaxing ritual for me. The gentle yet powerful vibrations make the massage not only effective for achieving a V-face but also incredibly soothing. The ergonomic design ensures a comfortable experience, and the results are noticeable. My face feels lifted, and my jawline looks more defined. I highly recommend this beauty tool for those looking to enhance their facial features effortlessly.",
-            },
-            {
-                name: "Say Goodbye to Double Chin",
-                rating: 5,
-                comment: "I've struggled with a double chin for years, and the Intelligent Facial Massager has been a game-changer. It specifically targets the areas I want to improve, providing a noticeable lift. The thin chin and defined jawline are no longer elusive goals. The massager's intelligent features make it easy to incorporate into my daily routine, and the results speak for themselves. I couldn't be happier with this purchase.",
-            },
-            {
-                name: "A Spa-Like Experience at Home",
-                rating: 5,
-                comment: "This facial massager is like bringing the spa to the comfort of my own home. The intelligent technology and thoughtful design make the experience both luxurious and effective. I've noticed a visible improvement in the firmness of my skin, especially around the jawline. If you're looking for a beauty tool that combines relaxation with results, the Intelligent Facial Massager is the way to go.",
-            },
-            {
-                name: "Compact Beauty Marvel",
-                rating: 5,
-                comment: "The Intelligent Facial Massager is a compact marvel that has found a permanent place in my skincare routine. Its sleek design makes it easy to handle, and the targeted massage is perfect for achieving a V-face and a defined jawline. The portability is a major plus, allowing me to take this beauty tool with me wherever I go. If you're in search of an intelligent and effective solution for facial sculpting, look no further.",
-            }
-        ],
-    },
+	"Smart V-Face Massager, Sculpt Your Jawline with Ease": {
+		averageRating: 4.8,
+		reviews: [
+		  {
+			name: "Alex K.",
+			rating: 5,
+			comment: "Integral part of Alex's routine. Noticed a significant improvement in jawline definition and appearance. Must-have for a sculpted look.",
+			image: "https://i.postimg.cc/qRNGnCXR/b477ce62-8df5-41f7-a2f2-4678dec379b3-1.webp"
+		  },
+		  {
+			name: "Emily S.",
+			rating: 5,
+			comment: "Game-changer in beauty tools. Easy to use, achieved a thin chin and defined jawline. Small investment for remarkable results."
+		  },
+		  {
+			name: "Chris M.",
+			rating: 5,
+			comment: "A relaxing ritual for Chris. Powerful vibrations for a lifted face and a more defined jawline. Highly recommended for effortless enhancement."
+		  },
+		  {
+			name: "Lindsay B.",
+			rating: 5,
+			comment: "Struggled with a double chin for years. Game-changer for Lindsay. Specifically targets areas for noticeable lift. Easy to incorporate into a daily routine."
+		  },
+		  {
+			name: "Jordan W.",
+			rating: 5,
+			comment: "Bringing the spa home for Jordan. Luxurious and effective experience. Visible improvement in skin firmness, especially around the jawline."
+		  },
+		  {
+			name: "Taylor L.",
+			rating: 5,
+			comment: "Compact marvel in Taylor's skincare routine. Sleek design, targeted massage for a V-face and defined jawline. Portable for on-the-go beauty."
+		}]
+	},
     
 	"Xiaomi Redmi G24: 165Hz 23.8 Esports Gaming Monitor": {
 		averageRating: 4.5,
