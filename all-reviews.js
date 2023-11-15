@@ -1292,8 +1292,6 @@ const productData = {
 			rating: 4,
 			comment: "Impressive electric mixer cup. Perfect for blending my morning milks. The multi-functional features make it versatile. Quick and efficient, saving me time in the morning routine.",
 			image:"https://i.postimg.cc/5Ng6GqhH/838e861f-655a-43c1-bce9-cd21c4493ff8.webp",
-			image:"https://i.postimg.cc/WbN4Mqds/8333cc01-f11e-40d3-a2c1-7c72a0f8dee0.webp" 
-
 		},
 		  {
 			name: "Sophie L.",
