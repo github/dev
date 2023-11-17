@@ -48,8 +48,7 @@ const productData = {
 	},
 	"iWatch Series 8 (45mm)": {
 		averageRating: 4.7,
-		reviews: [
-			{
+		reviews: [{
 				name: "Bella T.",
 				rating: 5,
 				comment: "Love this watch, looks cool, and didn't break the bank. Arrived super quickly too!",
@@ -327,7 +326,7 @@ const productData = {
 			name: "Sophie L.",
 			rating: 5,
 			comment: "Impressed with the performance of this smart socket. It responds quickly to my commands, and I love the remote control feature. It has made my life more convenient.",
-			image: "https://i.postimg.cc/htTfGxNf/Webppro-out-776b5e484db120f821a9a6712e500c2e.webp" 
+			image: "https://i.postimg.cc/htTfGxNf/Webppro-out-776b5e484db120f821a9a6712e500c2e.webp"
 		}, {
 			name: "Robert M.",
 			rating: 4,
@@ -1022,7 +1021,7 @@ const productData = {
 			comment: "This indoor/outdoor mini camera is a worthwhile investment in home security. The night vision capability and versatility make it a strong choice. A more adjustable mounting option would be a nice enhancement, but it's a dependable addition to your security setup."
 		}]
 	},
-	"HarmonyFlow Pro: Precision Wireless Sports Earbuds": { 
+	"HarmonyFlow Pro: Precision Wireless Sports Earbuds": {
 		averageRating: 4.6,
 		reviews: [{
 			name: "John W.",
@@ -1200,125 +1199,122 @@ const productData = {
 	},
 	"Smart V-Face Massager, Sculpt Your Jawline with Ease": {
 		averageRating: 4.8,
-		reviews: [
-		  {
-			name: "Alex K.",
-			rating: 5,
-			comment: "Integral part of Alex's routine. Noticed a significant improvement in jawline definition and appearance. Must-have for a sculpted look.",
-			image: "https://i.postimg.cc/qRNGnCXR/b477ce62-8df5-41f7-a2f2-4678dec379b3-1.webp"
-		  },
-		  {
-			name: "Emily S.",
-			rating: 5,
-			comment: "Game-changer in beauty tools. Easy to use, achieved a thin chin and defined jawline. Small investment for remarkable results."
-		  },
-		  {
-			name: "Chris M.",
-			rating: 5,
-			comment: "A relaxing ritual for Chris. Powerful vibrations for a lifted face and a more defined jawline. Highly recommended for effortless enhancement."
-		  },
-		  {
-			name: "Lindsay B.",
-			rating: 5,
-			comment: "Struggled with a double chin for years. Game-changer for Lindsay. Specifically targets areas for noticeable lift. Easy to incorporate into a daily routine."
-		  },
-		  {
-			name: "Jordan W.",
-			rating: 5,
-			comment: "Bringing the spa home for Jordan. Luxurious and effective experience. Visible improvement in skin firmness, especially around the jawline."
-		  },
-		  {
-			name: "Taylor L.",
-			rating: 5,
-			comment: "Compact marvel in Taylor's skincare routine. Sleek design, targeted massage for a V-face and defined jawline. Portable for on-the-go beauty."
-		}]
+		reviews: [{
+				name: "Alex K.",
+				rating: 5,
+				comment: "Integral part of Alex's routine. Noticed a significant improvement in jawline definition and appearance. Must-have for a sculpted look.",
+				image: "https://i.postimg.cc/qRNGnCXR/b477ce62-8df5-41f7-a2f2-4678dec379b3-1.webp"
+			},
+			{
+				name: "Emily S.",
+				rating: 5,
+				comment: "Game-changer in beauty tools. Easy to use, achieved a thin chin and defined jawline. Small investment for remarkable results."
+			},
+			{
+				name: "Chris M.",
+				rating: 5,
+				comment: "A relaxing ritual for Chris. Powerful vibrations for a lifted face and a more defined jawline. Highly recommended for effortless enhancement."
+			},
+			{
+				name: "Lindsay B.",
+				rating: 5,
+				comment: "Struggled with a double chin for years. Game-changer for Lindsay. Specifically targets areas for noticeable lift. Easy to incorporate into a daily routine."
+			},
+			{
+				name: "Jordan W.",
+				rating: 5,
+				comment: "Bringing the spa home for Jordan. Luxurious and effective experience. Visible improvement in skin firmness, especially around the jawline."
+			},
+			{
+				name: "Taylor L.",
+				rating: 5,
+				comment: "Compact marvel in Taylor's skincare routine. Sleek design, targeted massage for a V-face and defined jawline. Portable for on-the-go beauty."
+			}
+		]
 	},
-	"Intelligent Vacuum Cupping Massager": { 
-		averageRating: 4.7, 
-		reviews: [
-		  {
-			name: "Elena M.",
-			rating: 4,
-			comment: "Impressed with the features. Electric heating adds a nice touch. Suction cups provide a relaxing experience. Great for relaxation and heat therapy.",
-			image: "https://i.postimg.cc/NGbTXcd2/03ec92b7-3932-4501-8345-07770d58a80e-1.webp"
-		}, 
-		  {
-			name: "Kevin L.",
-			rating: 5,
-			comment: "Fantastic massager. The scraping function is a game-changer. Combined with electric heating, it offers a soothing experience. Suction cups are a great addition."
-		  },
-		  {
-			name: "Sophia G.",
-			rating: 4,
-			comment: "Effective and versatile massager. Electric heating is a plus, and scraping function feels rejuvenating. Suction cups provide a unique and enjoyable sensation."
-		  },
-		  {
-			name: "Alexandre B.",
-			rating: 5,
-			comment: "Reliable and powerful massager. Electric heating adds a comforting element. Scraping function is therapeutic. Suction cups make it a well-rounded relaxation device."
-		  },
-		  {
-			name: "Grace H.",
-			rating: 4,
-			comment: "Enjoying the benefits. Electric heating is a standout feature. Scraping and suction cups contribute to a comprehensive and effective massaging experience."
-		  },
-		  {
-			name: "Dylan K.",
-			rating: 5,
-			comment: "A versatile and advanced massager. Electric heating provides warmth, scraping offers a unique sensation, and suction cups enhance the overall relaxation. Highly recommended."
-		  }
-		]
-	  }, 
-	  "Gaming Power Combo: Rainbow LED Keyboard, Headset, Mice, and Pad": {
-		averageRating: 4.9,
-		reviews: [
-		  {
-			name: "Aiden R.",
-			rating: 5,
-			comment: "Incredible gaming combo. Rainbow LED keyboard adds a cool aesthetic. Headset delivers immersive sound. Mice are precise, and the pad completes the setup perfectly.",
-			image:"https://i.postimg.cc/NjPv25HC/1edee757-ff07-4b62-a52f-7f96b0f38796-1.webp"
-		},
-		  {
-			name: "Zara B.",
-			rating: 5,
-			comment: "Impressed with the gaming power combo. Rainbow LED keyboard is a visual delight. The headset provides clear audio. Mice are responsive, and the pad is a nice addition for a complete gaming experience."
-		  },
-		  {
-			name: "Carter M.",
-			rating: 4,
-			comment: "Solid gaming set. Rainbow LED keyboard is vibrant. Headset offers good sound quality. Mice are comfortable, and the pad adds a professional touch to the setup."
-		  }
-		]
-	  },
-
-	  "Effortless Mixing: Automatic Multi-functional Electric Mixer Cup for Perfectly Blended Coffee, Milks": {
+	"Intelligent Vacuum Cupping Massager": {
 		averageRating: 4.7,
-		reviews: [
-		  {
-			name: "Olivia S.",
-			rating: 5,
-			comment: "Love this mixer cup! Effortless mixing for my morning coffee. The automatic functionality is a game-changer. Easy to clean, making it a must-have for coffee enthusiasts.",
-			image:"https://i.postimg.cc/nLCjqjwX/5afc5422-7ff3-4a01-929e-55daa8daaaf3.webp"
-			
-		},
-		  {
-			name: "Ethan W.",
-			rating: 4,
-			comment: "Impressive electric mixer cup. Perfect for blending my morning milks. The multi-functional features make it versatile. Quick and efficient, saving me time in the morning routine.",
-			image:"https://i.postimg.cc/5Ng6GqhH/838e861f-655a-43c1-bce9-cd21c4493ff8.webp",
-		},
-		  {
-			name: "Sophie L.",
-			rating: 5,
-			comment: "Effortless mixing indeed! This electric mixer cup is a lifesaver for perfectly blended coffee. The automatic function is a time-saver, and it's surprisingly quiet. A must-buy for coffee lovers."
-		  },
-		  {
-			name: "Caleb M.",
-			rating: 4,
-			comment: "Great addition to my kitchen. The multi-functional electric mixer cup works well for blending various drinks. Coffee, milks, you name it. Easy to use and clean. Solid product."
-		  }
+		reviews: [{
+				name: "Elena M.",
+				rating: 4,
+				comment: "Impressed with the features. Electric heating adds a nice touch. Suction cups provide a relaxing experience. Great for relaxation and heat therapy.",
+				image: "https://i.postimg.cc/NGbTXcd2/03ec92b7-3932-4501-8345-07770d58a80e-1.webp"
+			},
+			{
+				name: "Kevin L.",
+				rating: 5,
+				comment: "Fantastic massager. The scraping function is a game-changer. Combined with electric heating, it offers a soothing experience. Suction cups are a great addition."
+			},
+			{
+				name: "Sophia G.",
+				rating: 4,
+				comment: "Effective and versatile massager. Electric heating is a plus, and scraping function feels rejuvenating. Suction cups provide a unique and enjoyable sensation."
+			},
+			{
+				name: "Alexandre B.",
+				rating: 5,
+				comment: "Reliable and powerful massager. Electric heating adds a comforting element. Scraping function is therapeutic. Suction cups make it a well-rounded relaxation device."
+			},
+			{
+				name: "Grace H.",
+				rating: 4,
+				comment: "Enjoying the benefits. Electric heating is a standout feature. Scraping and suction cups contribute to a comprehensive and effective massaging experience."
+			},
+			{
+				name: "Dylan K.",
+				rating: 5,
+				comment: "A versatile and advanced massager. Electric heating provides warmth, scraping offers a unique sensation, and suction cups enhance the overall relaxation. Highly recommended."
+			}
 		]
-	  },
+	},
+	"Gaming Power Combo: Rainbow LED Keyboard, Headset, Mice, and Pad": {
+		averageRating: 4.9,
+		reviews: [{
+				name: "Aiden R.",
+				rating: 5,
+				comment: "Incredible gaming combo. Rainbow LED keyboard adds a cool aesthetic. Headset delivers immersive sound. Mice are precise, and the pad completes the setup perfectly.",
+				image: "https://i.postimg.cc/NjPv25HC/1edee757-ff07-4b62-a52f-7f96b0f38796-1.webp"
+			},
+			{
+				name: "Zara B.",
+				rating: 5,
+				comment: "Impressed with the gaming power combo. Rainbow LED keyboard is a visual delight. The headset provides clear audio. Mice are responsive, and the pad is a nice addition for a complete gaming experience."
+			},
+			{
+				name: "Carter M.",
+				rating: 4,
+				comment: "Solid gaming set. Rainbow LED keyboard is vibrant. Headset offers good sound quality. Mice are comfortable, and the pad adds a professional touch to the setup."
+			}
+		]
+	},
+
+	"Effortless Mixing: Automatic Multi-functional Electric Mixer Cup for Perfectly Blended Coffee, Milks": {
+		averageRating: 4.7,
+		reviews: [{
+				name: "Olivia S.",
+				rating: 5,
+				comment: "Love this mixer cup! Effortless mixing for my morning coffee. The automatic functionality is a game-changer. Easy to clean, making it a must-have for coffee enthusiasts.",
+				image: "https://i.postimg.cc/nLCjqjwX/5afc5422-7ff3-4a01-929e-55daa8daaaf3.webp"
+
+			},
+			{
+				name: "Ethan W.",
+				rating: 4,
+				comment: "Impressive electric mixer cup. Perfect for blending my morning milks. The multi-functional features make it versatile. Quick and efficient, saving me time in the morning routine.",
+				image: "https://i.postimg.cc/5Ng6GqhH/838e861f-655a-43c1-bce9-cd21c4493ff8.webp",
+			},
+			{
+				name: "Sophie L.",
+				rating: 5,
+				comment: "Effortless mixing indeed! This electric mixer cup is a lifesaver for perfectly blended coffee. The automatic function is a time-saver, and it's surprisingly quiet. A must-buy for coffee lovers."
+			},
+			{
+				name: "Caleb M.",
+				rating: 4,
+				comment: "Great addition to my kitchen. The multi-functional electric mixer cup works well for blending various drinks. Coffee, milks, you name it. Easy to use and clean. Solid product."
+			}
+		]
+	},
 
 	"Xiaomi Redmi G24: 165Hz 23.8 Esports Gaming Monitor": {
 		averageRating: 4.5,
@@ -1369,12 +1365,11 @@ const productData = {
 	},
 	"HydraSound Pro 6: Wireless Hi-Fi Earbuds": {
 		averageRating: 4.5,
-		reviews: [
-			{
+		reviews: [{
 				name: "Emma W.",
 				rating: 5,
 				comment: "Impressed with the audio quality. The wireless functionality and waterproof design make them perfect for workouts. Stylish and functional, a great addition to my daily routine.",
-				image:"https://i.postimg.cc/Nj4mqvsT/34e1be21-bb0a-4885-b1ee-7c0185bff414-1.webp" 
+				image: "https://i.postimg.cc/Nj4mqvsT/34e1be21-bb0a-4885-b1ee-7c0185bff414-1.webp"
 			},
 			{
 				name: "Brandon M.",
@@ -1461,7 +1456,7 @@ function loadProductReviews(e, a = 4) {
 				a.innerHTML = `\n            <p><i style="color:cornflowerblue; margin-right:4px;" class="fa fa-check-circle"></i><strong>${e.name}</strong></p>\n            <p>Rating: ${i}</p>\n            <p>${e.comment}</p>\n            ${n}\n          `, t.appendChild(a)
 			}))
 		})), t.appendChild(e)
-	} 
+	}
 	console.log("Product reviews loaded successfully (HTML and JSON-LD).")
 }
 const initialProductName = document.getElementById("product-name").textContent;
