@@ -1359,7 +1359,7 @@ const productData = {
 			{
 				name: "Emma W.",
 				rating: 5,
-				comment: "Impressed with the audio quality. The wireless functionality and waterproof design make them perfect for workouts. Stylish and functional, a great addition to my daily routine."
+				comment: "Impressed with the audio quality. The wireless functionality and waterproof design make them perfect for workouts. Stylish and functional, a great addition to my daily routine.",
 				image:"https://i.postimg.cc/Nj4mqvsT/34e1be21-bb0a-4885-b1ee-7c0185bff414-1.webp" 
 			},
 			{
