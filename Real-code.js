@@ -1289,7 +1289,7 @@ const productData = {
 		]
 	},
 
-	"Effortless Mixing: Automatic Multi-functional Electric Mixer Cup for Perfectly Blended Coffee, Milks": {
+	"Electric Mixer Cup for Perfectly Blended Coffee, Milks": { 
 		averageRating: 4.7,
 		reviews: [{
 				name: "Olivia S.",
