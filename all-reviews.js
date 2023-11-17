@@ -1008,7 +1008,7 @@ const productData = {
 			comment: "This indoor/outdoor mini camera is a worthwhile investment in home security. The night vision capability and versatility make it a strong choice. A more adjustable mounting option would be a nice enhancement, but it's a dependable addition to your security setup."
 		}]
 	},
-	"Uninterrupted Soundtrack to Your Workout: Wireless Earbuds for Sports": {
+	"HarmonyFlow Pro: Precision Wireless Sports Earbuds": { 
 		averageRating: 4.6,
 		reviews: [{
 			name: "John W.",
