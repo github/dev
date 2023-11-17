@@ -537,7 +537,7 @@ const productData = {
 			comment: "The Massage Gun is a great addition to my fitness routine. It's effective at muscle relief, but it can be a bit heavy for extended use. Despite that, it's a fantastic tool for anyone seeking quick and powerful muscle relaxation."
 		}]
 	},
-	"SoundSleep Comfort: Wireless Sleep Mask with Adjustable Headphones and Washable Design": {
+	"Wireless Sleep Mask with Adjustable Headphones": {
 		averageRating: 4.8,
 		reviews: [{
 			name: "Sophia M.",
@@ -889,7 +889,7 @@ const productData = {
 			comment: "This TV LED backlight is a great investment. The lighting effects are entertaining, and it's user-friendly. More customizable color options would be a nice enhancement, but it's a strong choice for enhancing your TV viewing."
 		}]
 	},
-	"Portable Door Stop Alarm: Enhance Security for Your Home or Apartment Anywhere": {
+	"Portable Door Stop Alarm": {
 		averageRating: 4.6,
 		reviews: [{
 			name: "John S.",
