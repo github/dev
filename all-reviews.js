@@ -1352,6 +1352,37 @@ const productData = {
 			rating: 4,
 			comment: "Stumbled upon it, and it's a gem. The refresh rate is smooth, and the size is just what I needed. It may not have all the bells and whistles, but it delivers where it counts - in providing an immersive and responsive gaming experience."
 		}]
+	},
+	"HydraSound Pro 6: Wireless Hi-Fi Earbuds": {
+		averageRating: 4.5,
+		reviews: [
+			{
+				name: "Emma W.",
+				rating: 5,
+				comment: "Impressed with the audio quality. The wireless functionality and waterproof design make them perfect for workouts. Stylish and functional, a great addition to my daily routine."
+				image:"https://i.postimg.cc/Nj4mqvsT/34e1be21-bb0a-4885-b1ee-7c0185bff414-1.webp" 
+			},
+			{
+				name: "Brandon M.",
+				rating: 4,
+				comment: "These earbuds strike a perfect balance between design and performance. The seamless transition between activities is a game-changer. Ideal for those who value both style and functionality."
+			},
+			{
+				name: "Olivia R.",
+				rating: 5,
+				comment: "The HydraSound Pro 6 exceeded my expectations. The quick and stable connections, combined with the sleek design, make them a standout choice. Kudos for delivering a top-notch audio experience."
+			},
+			{
+				name: "David K.",
+				rating: 4,
+				comment: "A reliable choice for everyday use. The comfortable fit and advanced technology make these earbuds practical and enjoyable. They contribute to an immersive audio atmosphere without the hefty price tag."
+			},
+			{
+				name: "Grace H.",
+				rating: 5,
+				comment: "These earbuds have become an essential part of my routine. The advanced technology and stylish design make them a solid investment. Perfect for those who prioritize both performance and aesthetics."
+			}
+		]
 	}
 };
 
