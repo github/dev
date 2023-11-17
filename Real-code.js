@@ -1199,39 +1199,40 @@ const productData = {
 	},
 	"Smart V-Face Massager, Sculpt Your Jawline with Ease": {
 		averageRating: 4.8,
-		reviews: [{
-				name: "Alex K.",
-				rating: 5,
-				comment: "Integral part of Alex's routine. Noticed a significant improvement in jawline definition and appearance. Must-have for a sculpted look.",
-				image: "https://i.postimg.cc/qRNGnCXR/b477ce62-8df5-41f7-a2f2-4678dec379b3-1.webp"
-			},
-			{
-				name: "Emily S.",
-				rating: 5,
-				comment: "Game-changer in beauty tools. Easy to use, achieved a thin chin and defined jawline. Small investment for remarkable results."
-			},
-			{
-				name: "Chris M.",
-				rating: 5,
-				comment: "A relaxing ritual for Chris. Powerful vibrations for a lifted face and a more defined jawline. Highly recommended for effortless enhancement."
-			},
-			{
-				name: "Lindsay B.",
-				rating: 5,
-				comment: "Struggled with a double chin for years. Game-changer for Lindsay. Specifically targets areas for noticeable lift. Easy to incorporate into a daily routine."
-			},
-			{
-				name: "Jordan W.",
-				rating: 5,
-				comment: "Bringing the spa home for Jordan. Luxurious and effective experience. Visible improvement in skin firmness, especially around the jawline."
-			},
-			{
-				name: "Taylor L.",
-				rating: 5,
-				comment: "Compact marvel in Taylor's skincare routine. Sleek design, targeted massage for a V-face and defined jawline. Portable for on-the-go beauty."
-			}
+		reviews: [
+            {
+                name: "Alex K.",
+                rating: 5,
+                comment: "Integral part of the routine. Noticed a significant improvement in jawline definition and appearance. Must-have for a sculpted look.",
+                image: "https://i.postimg.cc/qRNGnCXR/b477ce62-8df5-41f7-a2f2-4678dec379b3-1.webp"
+            },
+            {
+                name: "Emily S.",
+                rating: 5,
+                comment: "Game-changer in beauty tools. Easy to use, achieved a thin chin and defined jawline. Small investment for remarkable results."
+            },
+            {
+                name: "Chris M.",
+                rating: 5,
+                comment: "A relaxing ritual. Powerful vibrations for a lifted face and a more defined jawline. Highly recommended for effortless enhancement."
+            },
+            {
+                name: "Lindsay B.",
+                rating: 5,
+                comment: "Struggled with a double chin for years. Game-changer. Specifically targets areas for noticeable lift. Easy to incorporate into a daily routine."
+            },
+            {
+                name: "Jordan W.",
+                rating: 5,
+                comment: "Bringing the spa home. Luxurious and effective experience. Visible improvement in skin firmness, especially around the jawline."
+            },
+            {
+                name: "Taylor L.",
+                rating: 5,
+                comment: "Compact marvel in the skincare routine. Sleek design, targeted massage for a V-face and defined jawline. Portable for on-the-go beauty."
+            }
 		]
-	},
+	}, 
 	"Intelligent Vacuum Cupping Massager": {
 		averageRating: 4.7,
 		reviews: [{
