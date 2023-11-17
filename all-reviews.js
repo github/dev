@@ -53,25 +53,25 @@ const productData = {
 				name: "Bella T.",
 				rating: 5,
 				comment: "Love this watch, looks cool, and didn't break the bank. Arrived super quickly too!",
-				image:"https://i.postimg.cc/R0Bw61d7/71u1-Om7-Me-L-2.webp"
+				image: "https://i.postimg.cc/R0Bw61d7/71u1-Om7-Me-L-2.webp"
 			},
 			{
 				name: "Mike",
 				rating: 5,
 				comment: "Thank you!!!!, I'm definitely getting one for my gf.",
-				image:"https://i.postimg.cc/c4vRVL6n/61gg8-ZOSFk-L-1.webp"
+				image: "https://i.postimg.cc/c4vRVL6n/61gg8-ZOSFk-L-1.webp"
 			},
 			{
 				name: "Finn H.",
 				rating: 5,
 				comment: "Snagged this beauty at the Black Friday price! Absolutely amazing!",
-				image:"https://i.postimg.cc/GmYkmgF3/51o-G-02-Xn0-L-1.webp"
-			}
+				image: "https://i.postimg.cc/GmYkmgF3/51o-G-02-Xn0-L-1.webp"
+			},
 			{
 				name: "Charlie M.",
 				rating: 5,
 				comment: "I was scared to order at first, but it's definitely worth it. I recommend.",
-				image:"https://i.postimg.cc/HL9XQJvf/71-Bx1s-F4r-OL-1.webp" 
+				image: "https://i.postimg.cc/HL9XQJvf/71-Bx1s-F4r-OL-1.webp"
 			},
 			{
 				name: "Dylan P.",
@@ -82,13 +82,13 @@ const productData = {
 				name: "Emma L.",
 				rating: 4,
 				comment: "Good quality, unfortunately, I got it before the Black Friday it was a bit pricey."
-			}, 
-			{ 
+			},
+			{
 				name: "Finn H.",
 				rating: 5,
 				comment: "Exactly what I wanted. Cheaper price, but the design quality stands out."
-			} 
-	]
+			}
+		]
 	},
 	"Air Pressure Eye Massager with Integrated Speaker": {
 		averageRating: 4.7,
