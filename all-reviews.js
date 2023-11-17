@@ -1219,7 +1219,7 @@ const productData = {
 			comment: "Compact marvel in Taylor's skincare routine. Sleek design, targeted massage for a V-face and defined jawline. Portable for on-the-go beauty."
 		}]
 	},
-	"Intelligent Vacuum Cupping Massager: Electric Heating, Scraping, Suction Cups for Relaxation and Hea": {
+	"Intelligent Vacuum Cupping Massager": { 
 		averageRating: 4.7, 
 		reviews: [
 		  {
