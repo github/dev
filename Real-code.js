@@ -236,7 +236,7 @@ const productData = {
 			comment: "I've tried several nail trimmers in the past, but this one is by far the best. It's precise, user-friendly, and the quality is outstanding. I'm extremely satisfied with my purchase."
 		}]
 	},
-	"Effortless Power Hub: 3-in-1 Fast Qi Wireless Charger Stand": {
+	"3-in-1 Fast Qi Wireless Charger Stand": {
 		averageRating: 4.8,
 		reviews: [{
 			name: "Victor T.",
