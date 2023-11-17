@@ -48,33 +48,47 @@ const productData = {
 	},
 	"iWatch Series 8 (45mm)": {
 		averageRating: 4.7,
-		reviews: [{
-			name: "Jake M.",
-			rating: 5,
-			comment: "an exceptional timepiece. Its sleek and stylish design sets it apart, making it a standout addition to my wrist. I highly recommend this watch to those seeking both fashion and functionality.",
-			image: "https://i.postimg.cc/s2hMpT9s/71-Bx1s-F4r-OL-SY256.webp"
-		}, {
-			name: "Samantha R.",
-			rating: 4,
-			comment: "offers a sense of sophistication and garners compliments. I'm satisfied with my purchase and believe you might be too.",
-			image: "https://i.postimg.cc/Gth3SKYB/71yl8k-Utiz-L-SL1600.webp"
-		}, {
-			name: "Max K.",
-			rating: 5,
-			comment: "high-end aura. Its premium design is a delight to wear, providing an exceptional experience. I highly recommend giving it a try."
-		}, {
-			name: "Lindsay P.",
-			rating: 5,
-			comment: "This watch complements my iPhone seamlessly, serving as my tech-savvy sidekick. It strikes the perfect balance between style and functionality. If you appreciate both, this could be your ideal choice."
-		}, {
-			name: "Chris S.",
-			rating: 5,
-			comment: "Wearing the Watch is akin to making a fashion statement. It emanates a trendsetting vibe, adding a touch of swag to your daily routine. If you're looking for a stylish and functional timepiece, this is the way to go."
-		}, {
-			name: "Sophie C.",
-			rating: 5,
-			comment: "A remarkable piece of technology. It seamlessly integrates with my daily life and enhances my productivity. I can't imagine going a day without it."
-		}]
+		reviews: [
+			{
+				name: "Bella T.",
+				rating: 5,
+				comment: "Love this watch, looks cool, and didn't break the bank. Arrived super quickly too!",
+				image:"https://i.postimg.cc/R0Bw61d7/71u1-Om7-Me-L-2.webp"
+			},
+			{
+				name: "Mike",
+				rating: 5,
+				comment: "Thank you!!!!, I'm definitely getting one for my gf.",
+				image:"https://i.postimg.cc/c4vRVL6n/61gg8-ZOSFk-L-1.webp"
+			},
+			{
+				name: "Finn H.",
+				rating: 5,
+				comment: "Snagged this beauty at the Black Friday price! Absolutely amazing!",
+				image:"https://i.postimg.cc/GmYkmgF3/51o-G-02-Xn0-L-1.webp"
+			}
+			{
+				name: "Charlie M.",
+				rating: 5,
+				comment: "I was scared to order at first, but it's definitely worth it. I recommend.",
+				image:"https://i.postimg.cc/HL9XQJvf/71-Bx1s-F4r-OL-1.webp" 
+			},
+			{
+				name: "Dylan P.",
+				rating: 5,
+				comment: "If you are in the selected areas for the same-day delivery, it's a +++ Quick delivery sealed the deal!"
+			},
+			{
+				name: "Emma L.",
+				rating: 4,
+				comment: "Good quality, unfortunately, I got it before the Black Friday it was a bit pricey."
+			}, 
+			{ 
+				name: "Finn H.",
+				rating: 5,
+				comment: "Exactly what I wanted. Cheaper price, but the design quality stands out."
+			} 
+	]
 	},
 	"Air Pressure Eye Massager with Integrated Speaker": {
 		averageRating: 4.7,
