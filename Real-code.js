@@ -1,5 +1,5 @@
 const productData = {
-	"Serene Flame Atmosphere: Ultrasonic Humidifier with Simulation Flame Effect": {
+	"SereneFlame Humidifier: Flame Atmosphere & Ultrasonic Bliss": {
 		averageRating: 4.7,
 		reviews: [{
 			name: "Paca T.",
