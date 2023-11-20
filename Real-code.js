@@ -981,7 +981,7 @@ const productData = {
 			},
 			{
 				name: "Ethan W.",
-				rating: 4,
+				rating: 5,
 				comment: "Impressive electric mixer cup. Perfect for my morning cofees.",
 				image: "https://i.postimg.cc/5Ng6GqhH/838e861f-655a-43c1-bce9-cd21c4493ff8.webp",
 			},
@@ -992,9 +992,9 @@ const productData = {
 			},
 			{
 				name: "Caleb M.",
-				rating: 4,
+				rating: 5,
 				comment: "Solid product."
-			}
+			} 
 		]
 	},
 
