@@ -997,7 +997,33 @@ const productData = {
 			} 
 		]
 	},
-
+	"ThermaTouch Pro: Advanced Electric U-Shaped Massager for Neck & Shoulders": {
+		averageRating: 4.5,
+		reviews: [{
+			name: "Alex B.",
+			rating: 5,
+			comment: "This excellent gives a rich massage only that I ordered it as for the cervical but it stayed higher on the neck but it is excellent.",
+			image: "https://i.postimg.cc/Dw5pgGC4/65570a75-c2f1-4159-8bc8-743be42f967c-1-1.webp"
+		}, {
+			name: "Lindsay S.",
+			rating: 5,
+			comment: "Excellent article to rest and relax the neck muscles, giving you a gentle massage with a little heat on the neck and shoulder",
+			image: "https://i.postimg.cc/WbGHdCgn/2875f874-39ba-4080-9fdd-37a7faf4a468-1.webp"
+		}, {
+			name: "Max D.",
+			rating: 5,
+			comment: "works well, have it on while at my computer desk.",
+			image: "https://i.postimg.cc/4xXFVP1T/0e055fb2-decf-409e-aabd-a9cfa7e7982d-2-1.webp"
+		}, {
+			name: "Sophie L.",
+			rating: 4,
+			comment: "Worth it if u sit at work, I recommend."
+		},{
+			name: "Jessica R.",
+			rating: 4,
+			comment: "bought it as a gift for my mom, thank you!."
+		}]
+	},
 	"Xiaomi Redmi G24: 165Hz 23.8 Esports Gaming Monitor": {
 		averageRating: 4.5,
 		reviews: [{
