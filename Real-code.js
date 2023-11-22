@@ -1016,11 +1016,11 @@ const productData = {
 			image: "https://i.postimg.cc/4xXFVP1T/0e055fb2-decf-409e-aabd-a9cfa7e7982d-2-1.webp"
 		}, {
 			name: "Sophie L.",
-			rating: 4,
+			rating: 5,
 			comment: "Worth it if u sit at work, I recommend."
 		},{
 			name: "Jessica R.",
-			rating: 4,
+			rating: 5,
 			comment: "bought it as a gift for my mom, thank you!."
 		}]
 	},
