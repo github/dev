@@ -447,7 +447,7 @@ const productData = {
 			comment: "👌"
 		}]
 	},
-	"Noise Cancelling Bluetooth Headphones with Built-In Microphone": {
+	"EliteSound Pro-X Wireless Over-Ear Headphones with Advanced Noise Cancellation": {
 		averageRating: 4.8,
 		reviews: [{
 			name: "Alex R.",
