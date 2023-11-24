@@ -51,6 +51,8 @@ function hideBotTypingIndicator() {
  
 function generateResponse(userQuery) {
     const helpContent = {
+        'Privacy': { href: '/Privacy',  answer: 'Your data will not be sold, exchanged, or disclosed to third parties unless it is required for order processing, shipping, or legal compliance.' }, 
+        'Affirm': { href: '/affirm', answer: 'Shop smarter with Affirm! Break down your purchase into four easy, interest-free payments. Enjoy flexibility, affordability, and freedom—all on minimum buys. Elevate your shopping game now!' }, 
         'Eva': { answer: 'Yes! that\'s me' }, 
         'art wall': { href: '/category/art-wall', answer: 'Our art wall category includes a variety of beautiful artworks. Check it out!' },
         'security': { href: '/category/security', answer: 'Explore our security category for advanced security solutions.' },
@@ -197,4 +199,16 @@ function getTimestamp() {
         if (chatMessages.children.length === 0) {
             showWelcomeMessage();
         }
-    }); 
+    });
+  // Add the handleButtonClick function
+function handleButtonClick(keyword) {
+    const response = generateResponse(keyword);
+    displayMessage(response, "bot");
+    hideBotTypingIndicator();
+
+    // Scroll to the bottom after a short delay
+    setTimeout(() => {
+        const chatMessages = document.getElementById("chat-messages");
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }, 100); // Adjust the delay time if needed
+}
