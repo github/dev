@@ -196,28 +196,29 @@ const productData = {
 			comment: "Pretty much the best gadget I needed."
 		}]
 	},
-	"Seemagic Nail Trimmer: Effortless Professional Nail Care at Your Fingertips": {
+	"Electric Nail Trimmer: Effortless Professional Care for Beautiful Nails!": {
 		averageRating: 4.8,
 		reviews: [{
 			name: "Sarah M.",
 			rating: 5,
-			comment: "Spending too much on nail care, so I thought about getting this and it's definitely worth it!"
-		}, {
+			comment: "Works great. I have always had issues with trimming my kids' nails. This makes it a breeze. Would definitely recommend that if you have kids with sensory issues or have trouble cutting your nails, this is great .As described, great value and quality",
+			image:"https://i.postimg.cc/g0BKRjyC/dc689890-0ff8-45dc-bea4-e26d688bd125-1.webp"	
+		}, { 
 			name: "David L.",
 			rating: 5,
-			comment: "I don't know where this technology is going, i use this for my baby"
+			comment: "Just amazing how there's so much useful products these days, thank you!!"
 		}, {
 			name: "Linda P.",
 			rating: 5,
-			comment: "Got a male cat? You definitely need this! It's basically a sofa saver. 🐱"
+			comment: "i use this for my cat lol, it works great"
 		}, {
 			name: "Michael R.",
 			rating: 4.5,
-			comment: "It's precise and easy to use. I'm happy with my purchase."
+			comment: "Exactly what I was looking for! I can simply toss it in my bag and use it wherever I want."
 		}, {
 			name: "Emily S.",
 			rating: 5,
-			comment: "Keeping my nails in great shape. It's efficient, and the results speak for themselves."
+			comment: "Keeping my nails in great shape, the results speak for themselves."
 		}, {
 			name: "Alex B.",
 			rating: 4.5,
