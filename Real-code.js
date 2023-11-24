@@ -447,6 +447,36 @@ const productData = {
 			comment: "👌"
 		}]
 	},
+	"Electric Foot Grinder for Smooth, Healthy Feet": {
+		averageRating: 4.8,
+		reviews: [{
+			name: "Sophia M.",
+			rating: 5,
+			comment: "Arrived on time. Looks as pictured. Everything came in the box including the usb plug. Nice compact size. Haven't used yet so can't say how it works",
+			image:"https://i.postimg.cc/d0C4ZCzH/088de0b1-30f7-4c07-9974-50efdd2f7c8e-1.webp"
+		}, {
+			name: "Olivia P.",
+			rating: 5,
+			comment: "Works great. so easy to use. it's great that it's rechargeable. highly recommended",
+			image:"https://i.postimg.cc/C1VJG10F/a2839e31-6c16-42dd-b139-abe504558cd0-1.webp"
+		}, {
+			name: "Asmae G.",
+			rating: 5,
+			comment: "This one worked as expected. Used for a few times. It gets the job done."
+		}, {
+			name: "Mia L.",
+			rating: 4.7,
+			comment: "works great!"
+		}, {
+			name: "David M.",
+			rating: 5,
+			comment: "I love it."
+		}, {
+			name: "Sophie L.",
+			rating: 4,
+			comment: "👌" 
+		}] 
+	},
 	"EliteSound Pro-X Wireless Over-Ear Headphones with Advanced Noise Cancellation": {
 		averageRating: 4.8,
 		reviews: [{
