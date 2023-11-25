@@ -1082,6 +1082,33 @@ const productData = {
 			comment: "Stumbled upon it, and it's a gem. The refresh rate is smooth, and the size is just what I needed. It may not have all the bells and whistles, but it delivers where it counts - in providing an immersive and responsive gaming experience."
 		}]
 	},
+	"ThermoComfort USB-Powered Plush Foot Warmer": {
+		averageRating: 4.5,
+		reviews: [{
+			name: "Alex B.",
+			rating: 5,
+			comment: "It gets surprisingly toasty for being USB powered. Keeps my feet and toes comfortably warm, the heat pad may be moved too if needed. Well worth it.",
+			image: "https://i.postimg.cc/NjrdW2D7/Af16ead3dd7e74170920bbb6f4f2d68c4s.webp"
+		}, {
+			name: "Lindsay S.",
+			rating: 5,
+			comment: "This is exactly what i was looking for my mom, thank you!!",
+			image:"https://i.postimg.cc/gJ540vY0/A4f3319cf6c174f80ad9fcef21e4d62943.webp"
+		}, {
+			name: "Max D.",
+			rating: 4.8,
+			comment: "Take like 3mins to warm up but its working great",
+			image:"https://i.postimg.cc/tgsx487h/A6073d59c646d4aecaadf720f952f7f734.webp" 
+		}, {
+			name: "Sophie L.",
+			rating: 5,
+			comment: "Great product i recommend"
+		},{
+			name: "Jessica R.",
+			rating: 4,
+			comment: "Worth the price"
+		}]
+	},
 	"HydraSound Pro 6: Wireless Hi-Fi Earbuds": {
 		averageRating: 4.5,
 		reviews: [{
