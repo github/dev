@@ -95,7 +95,7 @@ const productData = {
 			name: "Lena B.",
 			rating: 5,
 			comment: "It feels like a soothing oasis for my tired eyes. The built-in speaker adds a relaxing touch.",
-			image: "https://i.postimg.cc/DfXKntf2/1695202491150-500872168-1.webp"
+			image: "https://i.postimg.cc/RCQbwkD9/Abe9ea0d1d5e14d7e898693173067fb91o.webp" 
 		}, {
 			name: "Sam R.",
 			rating: 5,
