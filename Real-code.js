@@ -1097,7 +1097,7 @@ const productData = {
 		}, {
 			name: "Max D.",
 			rating: 4.8,
-			comment: "Take like 3mins to warm up but its working great",
+			comment: "Takes like 3mins to warm up but its working great",
 			image:"https://i.postimg.cc/tgsx487h/A6073d59c646d4aecaadf720f952f7f734.webp" 
 		}, {
 			name: "Sophie L.",
