@@ -1133,22 +1133,22 @@ const productData = {
 				comment: "A reliable choice for everyday use. The comfortable fit and advanced technology make these earbuds practical and enjoyable. They contribute to an immersive audio atmosphere without the hefty price tag."
 			},
 			{
-				name: "David K.",
+				name: "John M.",
 				rating: 5,
 				comment: ""
 			},
 			{
-				name: "David K.",
+				name: "Alice B.",
 				rating: 5,
 				comment: ""
 			},
 			{
-				name: "David K.",
+				name: "Charlie L.",
 				rating: 4,
 				comment: ""
 			},
 			{
-				name: "Grace H.",
+				name: "Eva G.",
 				rating: 5,
 				comment: ""
 			}
