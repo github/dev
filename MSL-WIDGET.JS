@@ -70,9 +70,9 @@ function generateResponse(userQuery) {
         'track order': { href: '/track-shipment', answer: 'Track the status of your order with our easy-to-use tracking system.' },
         'about us': { href: '/about-us', answer: 'Learn more about us and our commitment to providing quality products and services.' },
         'privacy policy': { href: '/privacy', answer: 'Your privacy matters. Read our privacy policy for details on how we handle your information.' },
-        'black friday': { answer: 'Celebrate Black Friday with us! Enjoy a 50% discount on selected items and get free shipping on your order. Don’t miss out on these incredible deals!' },
-        '50% off': { answer: 'Enjoy a 50% discount on selected items! This special offer is part of our Black Friday celebration. Shop now and save big!' },
-        'free shipping': { answer: 'Great news! We\'re offering free shipping on all orders as part of our Black Friday promotion. Don’t miss out – shop now!' },
+        'cyber week': { answer: 'Celebrate Cyber Week with us! Enjoy special discounts on selected items and take advantage of free shipping on your order. Don’t miss out on these fantastic deals!' },
+        'up to 60% off': { answer: 'Enjoy discounts of up to 60% on selected items! This special offer is part of our Cyber Week celebration. Shop now and save big!' },
+        'free shipping': { answer: 'Exciting news! We\'re offering free shipping on all orders as part of our Cyber Week promotion. Don’t miss out – shop now!' },
         'best sellers': { href: '/electronics', answer: 'Explore our best-selling products and find the most popular items among our customers.' },
         'new arrivals': { href: '/products', answer: 'Discover the latest additions to our product catalog. Check out our new arrivals and stay updated with the trends.' },
         'how to return an item': { href: '/refund-policy', answer: 'Need to return an item? Follow our simple return process to ensure a hassle-free return.' },
@@ -94,7 +94,7 @@ function generateResponse(userQuery) {
         'see you': { answer: 'See you later! If you need further assistance, don’t hesitate to reach out.' },
         'later': { answer: 'Goodbye for now! If you have more questions later, feel free to come back.' },
         'thank you': { answer: "You're welcome! If you need anything else, feel free to ask." },
-    };
+    }; 
  
     let bestMatch = null;
     let bestScore = 0;

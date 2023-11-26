@@ -1206,7 +1206,7 @@ function loadProductReviews(e, a = 4) {
 			a.innerHTML = `\n        <p><i style="color:cornflowerblue; margin-right:4px;" class="fa fa-check-circle"></i><strong>${e.name}</strong></p>\n        <p>Rating: ${i}</p>\n        <p>${e.comment}</p>\n        ${n}\n      `, t.appendChild(a)
 		})), i.reviews.length > a) {
 		const e = document.createElement("div");
-		e.textContent = "See All", e.classList.add("see-all-div"), e.style.cursor = "pointer", e.addEventListener("click", (() => {
+		e.textContent = "Load More", e.classList.add("see-all-div"), e.style.cursor = "pointer", e.addEventListener("click", (() => {
 			t.innerHTML = "", i.reviews.forEach((e => {
 				const a = document.createElement("div");
 				a.classList.add("user-review-box");
