@@ -2,36 +2,29 @@ const { MongoClient } = require("mongodb");
 const express = require("express");
 const cors = require("cors");
 const app = express();
+app.use(cors());
 
-app.use(cors);
-const path = require('path')
-app.use('/static', express.static(path.join(__dirname, 'public')))
+let database; // Variable para almacenar la conexión a la base de datos
+
 async function connectdb() {
   try {
-    const cursor = new MongoClient(
+    const client = new MongoClient(
       "mongodb://edu4rd0:bTCXFm2iljZIhWik@ac-iybykae-shard-00-00.0n1viee.mongodb.net:27017,ac-iybykae-shard-00-01.0n1viee.mongodb.net:27017,ac-iybykae-shard-00-02.0n1viee.mongodb.net:27017/?replicaSet=atlas-zvlqsn-shard-0&ssl=true&authSource=admin"
     );
-    const database = await cursor.db("Chat-Bot")
+    await client.connect();
+    database = client.db("Chat-Bot");
     console.log("☑️ Conexion con bd correcta");
+
+    // Luego de conectar la base de datos, inicia el servidor
+    app.listen(3000, () => {
+      console.log("API CORRIENDO");
+    });
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 }
 
-app.get('/api',async (req,res)=>{
- res.send("Hola")
-})
-
-
-app.get('/api',async (req,res)=>{
-    const collection = await database
-      .collection("history")
-      .find({ from: "573148315889" })
-      .toArray();
-    res.json(collection)
-})
-
-app.listen(8080, () => {
-  connectdb();
-  console.log("API CORRIENDO");
+// Importa las rutas después de establecer la conexión a la base de datos
+connectdb().then(() => {
+  app.use(require("./routes/reques_num")(database));
 });
