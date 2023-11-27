@@ -1,0 +1,4 @@
+node_modules
+bot_sessions
+*.log
+*.png
