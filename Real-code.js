@@ -159,6 +159,11 @@ const productData = {
 			rating: 5,
 			comment: "Man, the delivery was crazy fast. They packed it well, and it arrived without a scratch. These are like a steal for the price. Cheap and awesome! 📦💨"
 		},{
+			name: "Hala S.",
+			rating: 5,
+			comment: "Bought these as a gift for my sister, works great!!"
+		},
+		{
 			name: "Yatir H.",
 			rating: 5,
 			comment: "I had to leave a review; they're definitely worth it!!!!"
