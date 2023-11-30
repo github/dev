@@ -7,6 +7,7 @@ body{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+    /* position: relative; */
 }
 
 .seccont{
@@ -64,7 +65,7 @@ body{
     padding-top: 40px;
     /* margin-left: 20px; */
     background-color: #fff;
-    position: relative;
+    /* position: relative; */
 }
 
 .secondsec h2{
@@ -79,7 +80,7 @@ body{
 
 .ellisis{
     position: absolute;
-    top: 30px;
+    bottom: -50px;
     right: 30px;
 }
 
