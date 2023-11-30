@@ -1,0 +1,204 @@
+body{
+    margin: 0 1%;
+    background-color: silver;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    /* position: relative; */
+}
+
+.seccont{
+    /* width: 70%; */
+}
+
+.firstsec{
+    background-color: blue;
+    position: relative;
+    height: 100px;
+}
+.photo img{
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 20px;
+    width: 75px;
+    height:75px;
+    border-radius: 50%;
+    border: solid 5px white;
+    position: absolute;
+    bottom: -35%;
+    left: -50px;
+}
+
+.firstsec h2{
+    color: blue;
+}
+
+.red{
+    background-color: red;
+    color: red;
+    padding-top: 10px;
+    width: 60px;
+    position: absolute;
+    right: 200px;
+    bottom: 0;
+    border-top-left-radius: 10px;
+}
+
+.yellow{
+    background-color: orange;
+    color: orange;
+    width: 180px;
+    padding-top: 50px;
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.secondsec{
+    /* width: 70%; */
+    margin-top: 0;
+    padding-top: 40px;
+    /* margin-left: 20px; */
+    background-color: #fff;
+    /* position: relative; */
+}
+
+.secondsec h2{
+    /* color: blue; */
+    padding-left: 20px;
+}
+
+.student{
+    font-size: small;
+    font-weight: 600;
+}
+
+.ellisis{
+    position: absolute;
+    bottom: -50px;
+    right: 30px;
+}
+
+.details{
+    display: flex;
+    gap: 200px;
+}
+
+.details .li{
+    /* width: 50%; */
+    /* margin: 10px; */
+    padding: 20px;
+    display: flex;
+    /* background-color: red; */
+    /* list-style-type: none; */
+    /* margin: 0; */
+}
+
+flex2{
+    
+}
+
+.li i{
+    padding-top: 40px;
+    padding-right: 10px;
+    border-radius: 50%;
+    background-color: red;
+    height: 15px;
+    width: 15px;
+    color: #fff;
+    padding: 10px;
+}
+
+.bold{
+    font-weight: bolder;
+}
+
+.shift{
+    padding-left: 10px;
+}
+
+.sidebar{
+    /* background-color: #fff; */
+    width: 180px;
+    margin-top: ;
+    /* width: 25%; */
+}
+
+.box{
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+.box1{
+    background-color: #fff;
+    border-radius: 5px;
+    border-left: 5px solid blue;
+    font-size: 12px;
+    padding: 0 10px;
+    height: 150px;
+    position: relative;
+}
+
+.box2{
+    background-color: #fff;
+    border-radius: 5px;
+    border-left: 5px solid red;
+    font-size: 12px;
+    padding: 0 10px;
+    height: 150px;
+    position: relative;
+}
+
+.bold{
+    font-weight: bold;
+    font-size: 14px;
+}
+.light{
+    font-weight: 100;
+    color: silver;
+}
+
+.box1 p{
+    color: silver;
+}
+
+.box2 p{
+    color: silver;
+}
+.profilepic img{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: 15px;
+    bottom: 45px;
+}
+
+.sidebar .box1 .icon{
+    padding-top: 40px;
+    padding-right: 10px;
+    border-radius: 50%;
+    /* background-color: red; */
+    height: 5px;
+    width: 5px;
+    color: orange;
+    padding: 10px;
+}
+
+.sidebar .box2 .icon{
+    padding-top: 40px;
+    padding-right: 10px;
+    border-radius: 50%;
+    /* background-color: red; */
+    height: 5px;
+    width: 5px;
+    color: orange;
+    padding: 10px;
+}
