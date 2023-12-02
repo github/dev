@@ -113,6 +113,20 @@ class LinkedList {
         return 'unable to delete node'
     }
     
+    reverse(){
+        let [prev,curr,newHead] = [null,this.head,this.head]
+        this.tail = this.head
+        
+        while (newHead){
+            newHead = newHead.next
+            curr.next = prev
+            prev = curr
+            curr = newHead
+        }
+        this.tail.next = null
+        this.head = prev
+    }
+    
     printList(){
         if(this.isEmpty()){
             return 'List is Empty'
