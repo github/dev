@@ -1,6 +1,6 @@
 # What is this?
 Data-market.business.siteRad-Eye-Marketing-Est.01 
-The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+The github.dev web-based editoreditor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
 rad-eye-marketing-est.168.192.l.lsamixsaleem.xxxxxx=168017There are two ways to go directly to a VS Code environment in your browser and start coding:
 
 5733N084N4669-2.54e-51.8014N409N604N8241N72e+46-1.8014409604824172e+46* Press the . key on any repository or pull request.
