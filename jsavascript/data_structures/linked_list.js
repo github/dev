@@ -112,6 +112,15 @@ class LinkedList {
         }
         return 'unable to delete node'
     }
+
+    removeFromFront(){
+        if(!this.isEmpty()){
+            val = this.head.node
+            this.head = this.head.next
+            this.size--
+            return val
+        }
+    }
     
     reverse(){
         let [prev,curr,newHead] = [null,this.head,this.head]
@@ -144,18 +153,19 @@ class LinkedList {
 
 ll = new LinkedList()
 
-console.log(ll.isEmpty())
-console.log(ll.prepend(1))
-console.log(ll.prepend(2))
-console.log(ll.append(3))
-console.log(ll.append(5))
-console.log(ll.prepend(4))
-console.log(ll.insertNode(10,3))
-console.log('===================================')
-console.log(ll.findNode(2))
-console.log(ll.printList())
-console.log(ll.tail)
-console.log(ll.deleteNode(40))
-console.log(ll.tail)
-console.log(ll.append(30))
-console.log(ll.printList())
+// console.log(ll.isEmpty())
+// console.log(ll.prepend(1))
+// console.log(ll.prepend(2))
+// console.log(ll.append(3))
+// console.log(ll.append(5))
+// console.log(ll.prepend(4))
+// console.log(ll.insertNode(10,3))
+// console.log('===================================')
+// console.log(ll.findNode(2))
+// console.log(ll.printList())
+// console.log(ll.tail)
+// console.log(ll.deleteNode(40))
+// console.log(ll.tail)
+// console.log(ll.append(30))
+// console.log(ll.printList())
+
