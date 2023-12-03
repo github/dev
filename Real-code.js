@@ -89,6 +89,43 @@ const productData = {
 			}
 		]
 	},
+	"TechCanvas 6.5 - LCD Digital Drawing Tablet + Stylus": { 
+		averageRating: 4.7,
+		reviews: [{
+				name: "Bella T.",
+				rating: 5,
+				comment: "love it. perfect for taking notes at the last minute. or to remeber the small detail. fits perfect in the hand and very light.",
+				image: "https://i.postimg.cc/tCFCkbLn/df2973cb-b6ab-4ae9-b62f-9d9ad34a1a36.webp" 
+			},
+			{
+				name: "Mike",
+				rating: 5,
+				comment: "This is exactly as described and PERFECT for what I bought it for. I work from home and am always grabbing scrap paper on to take a quick note that I then throw away later once I've finished what I'm doing. This will now take place of that. I love it and may purchase a larger size later.",
+				image: "https://i.postimg.cc/Z5TZLd8X/9fe197e7-413e-437f-b3f9-8b3ed19eac60.webp"
+			},
+			{
+				name: "Finn H.",
+				rating: 5,
+				comment: "I like this writing tablet. Fun to use. It looks like you can change the battery",
+				image: "https://i.postimg.cc/5yqTHsRy/912907d4-c5d8-4c0c-a175-ae37fe7494ec.webp"
+			},
+			{
+				name: "Dylan P.",
+				rating: 5,
+				comment: "awesome absolutely love the design the product small handy useful and yeah"
+			},
+			{
+				name: "Emma L.",
+				rating: 4.8,
+				comment: "I’m a dietary aide at the hospital and this is perfect"
+			},
+			{
+				name: "Finn H.",
+				rating: 5,
+				comment: "Hmmm...smaller than I imagined I put my hand next to it I have an averaged sized hand for a gal. So in order to erase the writing the switch in the back should be put on the unlocked icon first. I like it for what I need it for."
+			}
+		]
+	}, 
 	"Air Pressure Eye Massager with Integrated Speaker": {
 		averageRating: 4.7,
 		reviews: [{
