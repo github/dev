@@ -126,6 +126,32 @@ const productData = {
 			}
 		]
 	}, 
+	"BreezeMate - Portable USB Neck Fan with 5 Speeds and Digital Display": { 
+		averageRating: 4.7,
+		reviews: [{
+				name: "Bella T.",
+				rating: 5,
+				comment: "the box arrived half damaged by a ladito but look beautiful design and good material Diosmio 5 speeds this is a jewel God who invented it deserves a gramy my people are worth it gosh worth it really buy it pq really worth the price or say this is a success",
+				image: "https://i.postimg.cc/3N4zK2sf/9945132e-f2e7-4815-b1c8-e9fc726624e5.webp"  
+			},
+			{
+				name: "Mike",
+				rating: 5,
+				comment: "Looks great and it works well with 5 speeds. One button operation. As long as you treat it with care it should last for a while. Instructions say DO NOT turn on while charging or leave it plugged in if it is fully charged. No plug, only charging/power cable included.",
+				image: "https://i.postimg.cc/BZRn2pn6/62763fa9-833c-4a88-8437-07a2a4d3729d.webp"
+			},
+			{
+				name: "Finn H.",
+				rating: 5,
+				comment: "Effective! Works well!!"
+			},
+			{
+				name: "Dylan P.",
+				rating: 4.9,
+				comment: "works nicely for my walks"
+			}
+		]
+	}, 
 	"Air Pressure Eye Massager with Integrated Speaker": {
 		averageRating: 4.7,
 		reviews: [{
