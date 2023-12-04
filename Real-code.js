@@ -1177,6 +1177,33 @@ const productData = {
 			comment: "Worth the price"
 		}]
 	},
+	"Meta Quest 2 128GB VR Headset with Touch Controllers - Light Grey": {
+		averageRating: 4.5,
+		reviews: [{
+			name: "Alex B.",
+			rating: 5,
+			comment: "Really neat piece of equipment, my Son loves it.", 
+			image: "https://i.ibb.co/8mGk6Ft/61-Dpe-LCLK3-L.jpg" 
+		}, {
+			name: "Lindsay S.",
+			rating: 5,
+			comment: "I purchased it out of impulsion. This is an entirely new experience to me. Love everything about it. Have been using it to watch videos every single day. Takes you to a virtual world. a wonderful purchase!!",
+			image:"https://i.ibb.co/mqKVMB9/61-Kb-Cx-XOjt-L.jpg"
+		}, {
+			name: "Max D.", 
+			rating: 5,
+			comment: "Works perfectly. It's unreal the feeli g once you start playing",
+			image:"https://i.ibb.co/Cm1pZsY/51-Uitj-Gdvz-L.jpg"   
+		}, {
+			name: "Sophie L.",
+			rating: 5,
+			comment: "This is hours of fun and a workout you don't even know you are doing! MSL always has awesome deals on it as well"
+		},{
+			name: "Jessica R.",
+			rating: 4.9,
+			comment: "Worth the price" 
+		}]
+	}, 
 	"HydraSound Pro 6: Wireless Hi-Fi Earbuds": {
 		averageRating: 4.5,
 		reviews: [{
