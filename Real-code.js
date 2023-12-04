@@ -1271,8 +1271,8 @@ function loadProductReviews(e, a = 4) {
 					length: e.rating
 				}, (() => '<i class="fas fa-star" style="color: #e49e21;"></i>')).join(""),
 				n = e.image ? `<img src="${e.image}" alt="${e.name}'s review image" class="review-image">` : "";
-			a.innerHTML = `\n        <p><i style="color:cornflowerblue; margin-right:4px;" class="fa fa-check-circle"></i><strong>${e.name}</strong></p>\n        <p>Rating: ${i}</p>\n        <p>${e.comment}</p>\n        ${n}\n      `, t.appendChild(a)
-		})), i.reviews.length > a) {
+			a.innerHTML = `\n        <p><i style="color:#2c5892; margin-right:4px;" class="fa fa-check-circle"></i><strong>${e.name}</strong></p>\n        <p>Rating: ${i}</p>\n        <p>${e.comment}</p>\n        ${n}\n      `, t.appendChild(a)
+		})), i.reviews.length > a) { 
 		const e = document.createElement("div");
 		e.textContent = "Load More", e.classList.add("see-all-div"), e.style.cursor = "pointer", e.addEventListener("click", (() => {
 			t.innerHTML = "", i.reviews.forEach((e => {
@@ -1282,7 +1282,7 @@ function loadProductReviews(e, a = 4) {
 						length: e.rating
 					}, (() => '<i class="fas fa-star" style="color: #e49e21;"></i>')).join(""),
 					n = e.image ? `<img src="${e.image}" alt="review image of {{ product.name }}" class="review-image">` : "";
-				a.innerHTML = `\n            <p><i style="color:cornflowerblue; margin-right:4px;" class="fa fa-check-circle"></i><strong>${e.name}</strong></p>\n            <p>Rating: ${i}</p>\n            <p>${e.comment}</p>\n            ${n}\n          `, t.appendChild(a)
+				a.innerHTML = `\n            <p><i style="color:#2c5892; margin-right:4px;" class="fa fa-check-circle"></i><strong>${e.name}</strong></p>\n            <p>Rating: ${i}</p>\n            <p>${e.comment}</p>\n            ${n}\n          `, t.appendChild(a)
 			}))
 		})), t.appendChild(e)
 	}
