@@ -2,36 +2,52 @@ const { MongoClient } = require("mongodb");
 const express = require("express");
 const cors = require("cors");
 const app = express();
+let database;
+app.use(cors());
 
-app.use(cors);
-const path = require('path')
-app.use('/static', express.static(path.join(__dirname, 'public')))
 async function connectdb() {
   try {
     const cursor = new MongoClient(
       "mongodb://edu4rd0:bTCXFm2iljZIhWik@ac-iybykae-shard-00-00.0n1viee.mongodb.net:27017,ac-iybykae-shard-00-01.0n1viee.mongodb.net:27017,ac-iybykae-shard-00-02.0n1viee.mongodb.net:27017/?replicaSet=atlas-zvlqsn-shard-0&ssl=true&authSource=admin"
     );
-    const database = await cursor.db("Chat-Bot")
+    database = await cursor.db("Chat-Bot");
     console.log("☑️ Conexion con bd correcta");
   } catch (error) {
     console.log(error);
   }
 }
 
-app.get('/api',async (req,res)=>{
- res.send("Hola")
-})
+app.get("/", async (req, res) => {
+  res.send("Hola");
+});
 
+app.get("/api", async (req, res) => {
+  let { number } = req.query;
+  if (!number) {
+    return res.json({error: 'Lost params /number'});
+  }else{
+    if (number.includes('+')) {
+      number = number.replace("+", "");
+    }
+  }
+  const query = { from: number.trim() };
+  const history = await database
+    .collection("history")
+    .find(query)
+    .toArray();
+  const accept = await database
+    .collection("users")
+    .find(query)
+    .toArray();
 
-app.get('/api',async (req,res)=>{
-    const collection = await database
-      .collection("history")
-      .find({ from: "573148315889" })
-      .toArray();
-    res.json(collection)
-})
+  const responseData = {
+    history: history,
+    accept: accept,
+  };
+  res.json(responseData);
+});
 
-app.listen(8080, () => {
+app.listen(3000, () => {
   connectdb();
   console.log("API CORRIENDO");
 });
