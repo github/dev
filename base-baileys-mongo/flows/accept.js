@@ -11,7 +11,7 @@ const flowAccept = addKeyword(["1", "Si"], { sensitive: true })
   )
   .addAnswer('')
   .addAnswer(
-    "Ingresa el *NIT*.Si eres una persona natural tu *NUMERO DE IDENTIFICACIÓN*",
+    "Ingresa el *NIT* de tu empresa o si eres una persona natural tu *NUMERO DE IDENTIFICACIÓN*",
     { capture: true },
     async (ctx, { state, fallBack, flowDynamic }) => {
       if (retry == 2) {
@@ -27,7 +27,7 @@ const flowAccept = addKeyword(["1", "Si"], { sensitive: true })
     }
   )
   .addAnswer(
-    "Y podrías indicarme el *NOMBRE DE LA EMPRESA*, en caso de no ser parte de una organizacion ingresar *(***)*",
+    "En caso de no ser un cliente activo de ISC podrías indicarme el *NOMBRE DE TU EMPRESA*.  En caso de no ser parte de una organización digitar (*)",
     { capture: true },
     async (ctx, { state }) => {
       await state.update({ company: ctx.body });

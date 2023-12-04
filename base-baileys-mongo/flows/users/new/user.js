@@ -5,7 +5,7 @@ const namebot  = require('../../../data/bot')
 
 const flowUserNotExist = addKeyword("USER_IS_NOT_REGISTER")
   .addAnswer([
-    `¡Hola, soy *${namebot}* 🤖 ! Estoy listo para ayudarte el dia de hoy`,
+    `¡Hola, soy *${namebot}* 🤖 ! Estoy listo para ayudarte el día de hoy`,
   ])
   .addAnswer(
     [

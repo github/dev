@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+      }
+      .layout-two-column {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 50fr 50fr;
+        background-color: aliceblue;
+      }
+      .group_inputut{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .one_input{
+        width: 1%;
+        justify-content: space-between;
+        display: flex;
+        gap: 7px;
+      }
+      .two_input {
+        display: flex;
+        gap: 7px;
+
+      }
+
+      .banner-bg {
+        color: white;
+        padding: 50px;
+        background: linear-gradient(316deg, #000000, #4119b9 90%, #d9c7c7 100%);
+      }
+      @media screen and (max-width: 850px) {
+        .column-banner {
+          padding: 30px 40px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="layout-two-column">
+      <section class="column-container banner-bg column-banner">
+        <!-- <div class="application-column"> -->
+        <article class="column-banner-content">
+          <h1 class="banner-title">Escuchamos tus preferencias</h1>
+          <p class="banner-text">
+            Elige con libertad, cómo deseas que te contactemos.
+          </p>
+          <p class="banner-text little">
+            Autorización de horarios y canales de comunicación con el Consumidor
+            Financiero. Ley 2300/23.
+          </p>
+        </article>
+        <img
+          src="/RS/build/img/formularios-express/hero/banner-ley2300-women.webp"
+          alt="img chicas"
+          loading="lazy"
+          width="670"
+          height="323"
+        />
+        <!-- </div> -->
+      </section>
+      <form
+        style="display: flex; flex-direction: column; align-items: center"
+        action=""
+      >
+        <h2>Algunos datos sobre ti</h2>
+        <div class="group_inputut">
+          <div class="one_input">
+            <div>
+              <select id="typePerson" class="select-option" name="field3">
+                <option disabled="disabled" selected="selected" value="">
+                  Seleccione...
+                </option>
+                <option value="persona_natural">Natural</option>
+                <option value="persona_juridica">Jurídica</option>
+              </select>
+            </div>
+            <div>
+              <input type="text" placeholder="Ingresa nombres y apellidos" />
+            </div>
+          </div>
+          <div class="two_input">
+            <input type="text" />
+            <input id="" name="" type="number" />
+          </div>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
