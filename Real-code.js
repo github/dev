@@ -151,7 +151,42 @@ const productData = {
 				comment: "works nicely for my walks"
 			}
 		]
-	}, 
+	},  
+		"AquaSoothe™ Waterproof Scalp Massager - Deep Tissue Relaxation for Head, Neck, and Body": {
+			averageRating: 4.7,
+			reviews: [
+				{
+					name: "Lynda D",
+					rating: 5,
+					comment: "I used this one for head and shoulder massage. Great product."
+				},
+				{
+					name: "Sondra Magnante",
+					rating: 5,
+					comment: "Je viens tout juste de le recevoir. Il m'a l'air très bien et mon chat aime beaucoup que je lui fasse des massages sur la tête."
+				},
+				{
+					name: "Tom",
+					rating: 5,
+					comment: "They love the massager!"
+				},
+				{
+					name: "jasmine",
+					rating: 5,
+					comment: "I get a great scalp from this. The charge lasts long too"
+				},
+				{
+					name: "Scooterbug",
+					rating: 4.8,
+					comment: "I bought it for my cat. He loves it. He close his eyes and enjoy the massage. He turns his head to get the best effect."
+				},
+				{ 
+					name: "JULES",
+					rating: 5,
+					comment: "OMG. Our cat loves this massager. The charge last forever. This is our daily routine of her head massage. She will move her body all over it to hit her favorite spots. I highly recommend buying this for your animals. Jules"
+				}]
+			
+	},
 	"Air Pressure Eye Massager with Integrated Speaker": {
 		averageRating: 4.7,
 		reviews: [{
