@@ -234,10 +234,10 @@ const productData = {
 		{
 			name: "Mike Z.",
 			rating: 5,
-			comment: "These are my second pair of earpods, as I gave my previous ones to my gf."
+			comment: "These are my second pair of earpods; I gave my previous ones to my gf. All I can say is that they are perfect for the price."
 		},
 		{
-			name: "Mike Z.",
+			name: "Simon Z.",
 			rating: 5,
 			comment: "Dang bro, the delivery here in mtl is sick fast" 
 		},{
@@ -245,7 +245,7 @@ const productData = {
 			rating: 5,
 			comment: "I mean, for this price, they're practically a steal! I'm diggin' these earphones. 🤑",
 		}]
-	}, 
+	},  
 	"Tuya Finger Robot Switch - The Smart Home Button Pusher": {
 		averageRating: 4.8,
 		reviews: [{
