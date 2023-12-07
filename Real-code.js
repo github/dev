@@ -156,27 +156,27 @@ const productData = {
 			averageRating: 4.7,
 			reviews: [
 				{
-					name: "Lynda D",
+					name: "Lynda D.",
 					rating: 5,
 					comment: "I used this one for head and shoulder massage. Great product."
 				},
 				{
-					name: "Sondra Magnante",
+					name: "Sondra M.",
 					rating: 5,
 					comment: "Je viens tout juste de le recevoir. Il m'a l'air très bien et mon chat aime beaucoup que je lui fasse des massages sur la tête."
 				},
 				{
-					name: "Tom",
+					name: "Tom H.",
 					rating: 5,
 					comment: "They love the massager!"
 				},
 				{
-					name: "jasmine",
+					name: "Jasmine W.",
 					rating: 5,
 					comment: "I get a great scalp from this. The charge lasts long too"
 				},
 				{
-					name: "Scooterbug",
+					name: "Scooterbug V.",
 					rating: 4.8,
 					comment: "I bought it for my cat. He loves it. He close his eyes and enjoy the massage. He turns his head to get the best effect."
 				},
@@ -186,7 +186,114 @@ const productData = {
 					comment: "OMG. Our cat loves this massager. The charge last forever. This is our daily routine of her head massage. She will move her body all over it to hit her favorite spots. I highly recommend buying this for your animals. Jules"
 				}]
 			
+	}, 
+	"CleanAir™ Smart Ashtray: Instantly Removes Smoke and Odor - Essential Smoking Accessory": {
+		averageRating: 4.6,
+		reviews: [
+			{
+				name: "Michael S.",
+				rating: 5,
+				comment: "Game-changer for indoor smokers. The smoke and odor removal is impressive. I can finally enjoy a cigarette without the lingering smell. Highly recommended!"
+			},
+			{
+				name: "Fiona A.",
+				rating: 5,
+				comment: "I was skeptical at first, but this really works! It instantly clears the air and eliminates smoke and odor. A must-have for any indoor smoker."
+			},
+			{
+				name: "Benjamin M.",
+				rating: 5,
+				comment: "It effectively removes smoke. Happy with the purchase."
+			},
+			{
+				name: "Nicole H.",
+				rating: 5,
+				comment: "Finally, an ashtray that does more than just hold ashes! It's like having a personal air purifier for smokers. Love it!"
+			},
+			{
+				name: "Chris L.",
+				rating: 4.0,
+				comment: "It's a thoughtful gift for smokers. The only drawback is that it needs to be cleaned regularly for optimal performance."
+			},
+			{ 
+				name: "Eva C.",
+				rating: 4.9,
+				comment: "I'm impressed with how quickly it eliminates smoke and odor. Thumbs up!"
+			}
+		]
 	},
+	"SwiftGlide™ Mini Electric Shaver: Rechargeable, Portable, One-Click Use": {
+		averageRating: 4.6,
+		reviews: [
+			{
+				name: "Mike C.",
+				rating: 4.8,
+				comment: "Easy to use, and the one-click operation is a breeze. Perfect for maintaining a polished look on the go." 
+			},
+			{
+				name: "John D.",
+				rating: 4.7,
+				comment: "It's small, powerful, and the rechargeable feature is a game-changer. Keeps me looking sharp."
+			},
+			{
+				name: "Emily F.",
+				rating: 4.6,
+				comment: "Fits in my pocket, A must-have for busy individuals!"
+			},
+			{
+				name: "Daniel G.",
+				rating: 4.9,
+				comment: "This mini electric shaver is sleek and efficient."
+			},
+			{
+				name: "Sarah H.",
+				rating: 4.8,
+				comment: "not only portable and easy to use but also environmentally friendly with its rechargeable battery."
+			},
+			{ 
+				name: "Alex I.",
+				rating: 4.7,
+				comment: "Highly recommend!"
+			}
+		]
+	},
+	"SunSync 5.3: Wireless Smart Sunglasses": {
+		averageRating: 4.6,
+		reviews: [
+			{
+				name: "Emma J.",
+				rating: 4.5,
+				comment: "pretty cool! I like that I can listen to music without wires. Sunglasses with tech? Nice combo!"
+			},
+			{
+				name: "Mark S.",
+				rating: 4.7,
+				comment: "Got these as a gift, and they're awesome. Easy to connect, and they look stylish."
+			},
+			{
+				name: "Lisa M.",
+				rating: 4.5,
+				comment: "These sunglasses are a game-changer for my runs. No more tangled wires, and they actually look good on me. Thumbs up!"
+			},
+			{
+				name: "James D.",
+				rating: 4.4,
+				comment: "worth it. The wireless feature is handy, and they're comfortable to wear. A solid pair of smart sunglasses."
+			},
+			{
+				name: "Sarah B.",
+				rating: 4.8,
+				comment: "I love tech gadgets, and these smart sunglasses are a hit! Stylish and convenient. Great for sunny days."
+			},
+			{ 
+				name: "Alex R.",
+				rating: 4.6,
+				comment: "Picked these up last week, and I'm impressed. The wireless connection is reliable, and they look just like regular sunglasses. Good job, MSL!"
+			}
+		]
+	},
+	 
+	
 	"Air Pressure Eye Massager with Integrated Speaker": {
 		averageRating: 4.7,
 		reviews: [{
