@@ -1564,39 +1564,90 @@ function generateJSONLD(e, a) {
 }
 
 function loadProductReviews(e, a = 4) {
-	const i = productData[e],
-		t = document.getElementById("review-list"),
-		n = document.getElementById("trusted-reviews"),
-		o = document.getElementById("average-rating");
-	if (t.innerHTML = "", !i) {
-		const e = document.createElement("p");
-		return e.classList.add("no-reviews-message"), e.textContent = "No reviews yet for this product.", t.appendChild(e), n && (n.style.display = "none"), void(o && (o.style.display = "none"))
-	}
-	const s = document.createElement("script");
-	s.type = "application/ld+json", s.textContent = generateJSONLD(e, productData), document.head.appendChild(s), document.getElementById("product-name").textContent = e, document.getElementById("average-rating-value").textContent = i.averageRating;
-	if (i.reviews.slice(0, a).forEach((e => {
-			const a = document.createElement("div");
-			a.classList.add("user-review-box");
-			const i = Array.from({
-					length: e.rating
-				}, (() => '<i class="fas fa-star" style="color: #e49e21;"></i>')).join(""),
-				n = e.image ? `<img src="${e.image}" alt="${e.name}'s review image" class="review-image">` : "";
-			a.innerHTML = `\n        <p><i style="color:#2c5892; margin-right:4px;" class="fa fa-check-circle"></i><strong>${e.name}</strong></p>\n        <p>Rating: ${i}</p>\n        <p>${e.comment}</p>\n        ${n}\n      `, t.appendChild(a)
-		})), i.reviews.length > a) { 
-		const e = document.createElement("div");
-		e.textContent = "Load More", e.classList.add("see-all-div"), e.style.cursor = "pointer", e.addEventListener("click", (() => {
-			t.innerHTML = "", i.reviews.forEach((e => {
-				const a = document.createElement("div");
-				a.classList.add("user-review-box");
-				const i = Array.from({
-						length: e.rating
-					}, (() => '<i class="fas fa-star" style="color: #e49e21;"></i>')).join(""),
-					n = e.image ? `<img src="${e.image}" alt="review image of {{ product.name }}" class="review-image">` : "";
-				a.innerHTML = `\n            <p><i style="color:#2c5892; margin-right:4px;" class="fa fa-check-circle"></i><strong>${e.name}</strong></p>\n            <p>Rating: ${i}</p>\n            <p>${e.comment}</p>\n            ${n}\n          `, t.appendChild(a)
-			}))
-		})), t.appendChild(e)
-	}
-	console.log("Product reviews loaded successfully (HTML and JSON-LD).")
+    const i = productData[e],
+        t = document.getElementById("review-list"),
+        n = document.getElementById("trusted-reviews"),
+        o = document.getElementById("average-rating");
+    
+    if (t.innerHTML = "", !i) {
+        const e = document.createElement("p");
+        return e.classList.add("no-reviews-message"), e.textContent = "No reviews yet for this product.", t.appendChild(e), n && (n.style.display = "none"), void(o && (o.style.display = "none"));
+    }
+
+    const s = document.createElement("script");
+    s.type = "application/ld+json";
+    s.textContent = generateJSONLD(e, productData);
+    document.head.appendChild(s);
+    document.getElementById("product-name").textContent = e;
+    document.getElementById("average-rating-value").textContent = i.averageRating;
+
+    i.reviews.slice(0, a).forEach((e => {
+        const a = document.createElement("div");
+        a.classList.add("user-review-box");
+
+        // Calculate the number of colored stars and the number of black stars
+        const coloredStars = e.rating > 0 ? e.rating - 1 : 0;
+        const blackStar = 1;
+
+        const coloredStarHTML = Array.from({
+            length: coloredStars
+        }, (() => '<i class="fas fa-star" style="color: #e49e21;"></i>')).join("");
+
+        const blackStarHTML = '<i class="fas fa-star" style="color: black;"></i>';
+
+        const starHTML = coloredStarHTML + blackStarHTML;
+
+        const n = e.image ? `<img src="${e.image}" alt="${e.name}'s review image" class="review-image">` : "";
+        a.innerHTML = `\n
+            <p><i style="color:#2c5892; margin-right:4px;" class="fa fa-check-circle"></i><strong>${e.name}</strong></p>\n
+            <p>Rating: ${starHTML}</p>\n
+            <p>${e.comment}</p>\n
+            ${n}\n
+        `;
+
+        t.appendChild(a);
+    }));
+
+    if (i.reviews.length > a) {
+        const e = document.createElement("div");
+        e.textContent = "Load More";
+        e.classList.add("see-all-div");
+        e.style.cursor = "pointer";
+        e.addEventListener("click", (() => {
+            t.innerHTML = "";
+            i.reviews.forEach((e => {
+                const a = document.createElement("div");
+                a.classList.add("user-review-box");
+
+                const coloredStars = e.rating > 0 ? e.rating - 1 : 0;
+                const blackStar = 1;
+
+                const coloredStarHTML = Array.from({
+                    length: coloredStars
+                }, (() => '<i class="fas fa-star" style="color: #e49e21;"></i>')).join("");
+
+                const blackStarHTML = '<i class="fas fa-star" style="color: black;"></i>';
+
+                const starHTML = coloredStarHTML + blackStarHTML;
+
+                const n = e.image ? `<img src="${e.image}" alt="review image of {{ product.name }}" class="review-image">` : "";
+                a.innerHTML = `\n
+                    <p><i style="color:#2c5892; margin-right:4px;" class="fa fa-check-circle"></i><strong>${e.name}</strong></p>\n
+                    <p>Rating: ${starHTML}</p>\n
+                    <p>${e.comment}</p>\n
+                    ${n}\n
+                `;
+
+                t.appendChild(a);
+            }))
+        }));
+
+        t.appendChild(e);
+    }
+
+    console.log("Product reviews loaded successfully (HTML and JSON-LD).")
 }
+
+ 
 const initialProductName = document.getElementById("product-name").textContent;
 loadProductReviews(initialProductName, 4);
