@@ -292,7 +292,138 @@ const productData = {
 			}
 		]
 	},
-	 
+	"MSL FlexiSync Pro - Professional-Grade Headset": {
+		averageRating: 4.7,
+		reviews: [
+			{
+				name: "Alex R.",
+				rating: 4.5,
+				comment: "Impressive headset!"
+			},
+			{
+				name: "Sophie L.",
+				rating: 4.8,
+				comment: "Clear sound, comfortable fit, and the syncing tech is a huge plus for multitasking."
+			},
+			{
+				name: "Ryan M.",
+				rating: 4.6,
+				comment: "MSL did it right with FlexiSync Pro. The advanced synchronization is noticeable, making this headset ideal for work calls and entertainment alike."
+			},
+			{
+				name: "Ella J.",
+				rating: 4.7,
+				comment: "the audio quality is superb. Highly recommend!"
+			},
+			{
+				name: "Mason K.",
+				rating: 4.9,
+				comment: "comfortable for long use, and the synchronization is a fantastic feature."
+			},
+			{ 
+				name: "Lily C.",
+				rating: 4.7,
+				comment: "FlexiSync Pro exceeded my expectations. Solid build, great sound, and the synchronization tech sets it apart. Great investment" 
+			}
+		]
+	},
+	"PosturePro™: Smart Sensor Posture Corrector": {
+		averageRating: 4.6,
+		reviews: [
+			{
+				name: "Emma S.",
+				rating: 4.5,
+				comment: "The vibration reminder is subtle but effective. Noticed a positive change in my posture within a week."
+			},
+			{
+				name: "Daniel P.",
+				rating: 4.8,
+				comment: "The smart sensor and vibration reminder make it easy to maintain good posture throughout the day. Simple and effective."
+			},
+			{
+				name: "Olivia L.",
+				rating: 4.6,
+				comment: "a must for anyone with desk job woes."
+			},
+			{
+				name: "Alex R.",
+				rating: 4.7,
+				comment: "Using it for a month now. Love the discreet reminders. It's like having a personal posture coach. Noticeable improvement."
+			},
+			{
+				name: "Lucas M.",
+				rating: 4.9,
+				comment: "Smart choice for posture correction. Worth every penny!!!"
+			},
+			{ 
+				name: "Sophie B.",
+				rating: 4.7,
+				comment: "PosturePro works as advertised. The gentle reminders keep me mindful of my posture. Noticed less strain on my back. Perfect product!"
+			}
+		] 
+	}, 
+	"ThermaRelax™ Home Massage Heating Cushion": {
+		averageRating: 4.7,
+		reviews: [
+			{
+				name: "Sophie H.",
+				rating: 4.5,
+				comment: "a lifesaver! The vibration and heat combo is pure bliss. Perfect for unwinding after a long day."
+			},
+			{
+				name: "Mike T.",
+				rating: 4.8,
+				comment: "The five motor vibrations hit all the right spots, and the hot seat feature is a game-changer for relaxation."
+			},
+			{
+				name: "Emma L.",
+				rating: 4.6,
+				comment: "a nice touch of comfort."
+			},
+			{
+				name: "Alex B.",
+				rating: 4.7,
+				comment: "Highly recommend for home or car relaxation."
+			},
+
+		]
+	}, 
+	"BeatMaster™ Wall-Mounted Electronic Boxing Trainer": {
+		averageRating: 4.8,
+		reviews: [
+			{
+				name: "Jake R.",
+				rating: 4.7,
+				comment: "Solid home workout gear. Keeps me on my toes and adds a fun twist to training."
+			},
+			{
+				name: "Ava S.",
+				rating: 4.9,
+				comment: "Impressive and engaging. The electronic features make every session challenging."
+			},
+			{
+				name: "Ethan L.",
+				rating: 4.8,
+				comment: "Great addition to home fitness. Smart focus keeps me motivated."
+			},
+			{
+				name: "Zoe M.",
+				rating: 4.7,
+				comment: "Love the space-saving design. Perfect for daily boxing workouts at home."
+			},
+			{
+				name: "Marcus B.",
+				rating: 4.9,
+				comment: "Ultimate home boxing trainer. The digital pads make every session dynamic and enjoyable."
+			},
+			{ 
+				name: "Lily G.",
+				rating: 4.8,
+				comment: "Exciting home workouts. Smart focus tech keeps me engaged and challenged."
+			}
+		]
+	}, 
+	
 	
 	"Air Pressure Eye Massager with Integrated Speaker": {
 		averageRating: 4.7,
