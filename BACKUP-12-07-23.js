@@ -1568,7 +1568,7 @@ function loadProductReviews(e, a = 4) {
         t = document.getElementById("review-list"),
         n = document.getElementById("trusted-reviews"),
         o = document.getElementById("average-rating");
-    
+
     if (t.innerHTML = "", !i) {
         const e = document.createElement("p");
         return e.classList.add("no-reviews-message"), e.textContent = "No reviews yet for this product.", t.appendChild(e), n && (n.style.display = "none"), void(o && (o.style.display = "none"));
@@ -1586,14 +1586,16 @@ function loadProductReviews(e, a = 4) {
         a.classList.add("user-review-box");
 
         // Calculate the number of colored stars and the number of black stars
-        const coloredStars = e.rating > 0 ? e.rating - 1 : 0;
-        const blackStar = 1;
+        const coloredStars = e.rating > 0 ? e.rating : 0;
+        const blackStars = 5 - coloredStars;
 
         const coloredStarHTML = Array.from({
             length: coloredStars
         }, (() => '<i class="fas fa-star" style="color: #e49e21;"></i>')).join("");
 
-        const blackStarHTML = '<i class="fas fa-star" style="color: black;"></i>';
+        const blackStarHTML = Array.from({
+            length: blackStars
+        }, (() => '<i class="fas fa-star" style="color: black;"></i>')).join("");
 
         const starHTML = coloredStarHTML + blackStarHTML;
 
@@ -1619,14 +1621,17 @@ function loadProductReviews(e, a = 4) {
                 const a = document.createElement("div");
                 a.classList.add("user-review-box");
 
-                const coloredStars = e.rating > 0 ? e.rating - 1 : 0;
-                const blackStar = 1;
+                // Calculate the number of colored stars and the number of black stars
+                const coloredStars = e.rating > 0 ? e.rating : 0;
+                const blackStars = 5 - coloredStars;
 
                 const coloredStarHTML = Array.from({
                     length: coloredStars
                 }, (() => '<i class="fas fa-star" style="color: #e49e21;"></i>')).join("");
 
-                const blackStarHTML = '<i class="fas fa-star" style="color: black;"></i>';
+                const blackStarHTML = Array.from({
+                    length: blackStars
+                }, (() => '<i class="fas fa-star" style="color: black;"></i>')).join("");
 
                 const starHTML = coloredStarHTML + blackStarHTML;
 
@@ -1645,7 +1650,8 @@ function loadProductReviews(e, a = 4) {
         t.appendChild(e);
     }
 
-    console.log("Product reviews loaded successfully (HTML and JSON-LD).")
-}  
+    console.log("Product reviews loaded successfully (HTML and JSON-LD).");
+}
+ 
 const initialProductName = document.getElementById("product-name").textContent;
 loadProductReviews(initialProductName, 4);
