@@ -187,7 +187,7 @@ const productData = {
 				}]
 			
 	}, 
-	"CleanAir™ Smart Ashtray: Instantly Removes Smoke and Odor - Essential Smoking Accessory": {
+	"CleanAir™ Smart Ashtray: Instantly Removes Smoke and Odor - Essential Smoking Accessory.": { 
 		averageRating: 4.6,
 		reviews: [
 			{
@@ -292,9 +292,9 @@ const productData = {
 			}
 		]
 	},
-	"MSL FlexiSync Pro - Professional-Grade Headset": {
+	"MSL FlexiSync Pro - Professional-Grade Headset with Advanced Synchronization Technology": {
 		averageRating: 4.7,
-		reviews: [
+		reviews: [ 
 			{
 				name: "Alex R.",
 				rating: 4.5,
@@ -327,7 +327,7 @@ const productData = {
 			}
 		]
 	},
-	"PosturePro™: Smart Sensor Posture Corrector": {
+	"PosturePro™: Smart Sensor Posture Corrector with Vibration Reminder": { 
 		averageRating: 4.6,
 		reviews: [
 			{
@@ -362,7 +362,7 @@ const productData = {
 			}
 		] 
 	}, 
-	"ThermaRelax™ Home Massage Heating Cushion": {
+	"ThermaRelax™ Home Massage Heating Cushion: 5 Motor Vibration, 3 Hot Seat ": { 
 		averageRating: 4.7,
 		reviews: [
 			{
@@ -388,7 +388,7 @@ const productData = {
 
 		]
 	}, 
-	"BeatMaster™ Wall-Mounted Electronic Boxing Trainer": {
+	"BeatMaster™ Wall-Mounted Electronic Boxing Trainer: Smart Focus, Digital Punching Pads": { 
 		averageRating: 4.8,
 		reviews: [
 			{
