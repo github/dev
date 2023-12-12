@@ -1,0 +1,122 @@
+{
+	"interactionModel": {
+		"languageModel": {
+			"invocationName": "vacation planner",
+			"intents": [
+				{
+					"name": "AMAZON.CancelIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.HelpIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.StopIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.NavigateHomeIntent",
+					"samples": []
+				},
+				{
+					"name": "CaptureVacationIntent",
+					"slots": [
+						{
+							"name": "month",
+							"type": "AMAZON.Month"
+						},
+						{
+							"name": "day",
+							"type": "AMAZON.Ordinal"
+						},
+						{
+							"name": "destination",
+							"type": "AMAZON.Country"
+						}
+					],
+					"samples": [
+						"{month} {day} to {destination}",
+						"My vacation is on {month} {day} and I'm going to {destination}",
+						"I'm leaving for {destination} on {month} {day}",
+						"I'll be in {destination} on {month} {day}",
+						"I'll be on vacation to {destination} on {month} {day}"
+					]
+				}
+			],
+			"types": []
+		},
+		"dialog": {
+			"intents": [
+				{
+					"name": "CaptureVacationIntent",
+					"confirmationRequired": false,
+					"prompts": {},
+					"slots": [
+						{
+							"name": "month",
+							"type": "AMAZON.Month",
+							"confirmationRequired": false,
+							"elicitationRequired": true,
+							"prompts": {
+								"elicitation": "Elicit.Slot.303899476312.795077103633"
+							}
+						},
+						{
+							"name": "day",
+							"type": "AMAZON.Ordinal",
+							"confirmationRequired": false,
+							"elicitationRequired": true,
+							"prompts": {
+								"elicitation": "Elicit.Slot.303899476312.985837334781"
+							}
+						},
+						{
+							"name": "destination",
+							"type": "AMAZON.Country",
+							"confirmationRequired": false,
+							"elicitationRequired": true,
+							"prompts": {
+								"elicitation": "Elicit.Slot.303899476312.27341833344"
+							}
+						}
+					]
+				}
+			],
+			"delegationStrategy": "ALWAYS"
+		},
+		"prompts": [
+			{
+				"id": "Elicit.Slot.303899476312.795077103633",
+				"variations": [
+					{
+						"type": "PlainText",
+						"value": "When is your vacation? What month are you leaving?"
+					},
+					{
+						"type": "PlainText",
+						"value": "What month are you planning your vacation?"
+					}
+				]
+			},
+			{
+				"id": "Elicit.Slot.303899476312.985837334781",
+				"variations": [
+					{
+						"type": "PlainText",
+						"value": "I'm leaving on the sixth. What day are you leaving for your vacation?"
+					}
+				]
+			},
+			{
+				"id": "Elicit.Slot.303899476312.27341833344",
+				"variations": [
+					{
+						"type": "PlainText",
+						"value": "I'm planning my vacation in two thousand fifteen. What year are you planning your vacation?"
+					}
+				]
+			}
+		]
+	}
+}
