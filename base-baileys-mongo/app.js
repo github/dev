@@ -13,7 +13,7 @@ const BaileysProvider = require("@bot-whatsapp/provider/baileys");
 const MongoAdapter = require("@bot-whatsapp/database/mongo");
 
 /**
- * Declaramos las conexiones de Mongo
+ * Connect Mongo
  */
 
 const MONGO_DB_URI = process.env.BD_URI;
@@ -59,5 +59,4 @@ const main = async () => {
   });
   QRPortalWeb();
 };
-
 main();

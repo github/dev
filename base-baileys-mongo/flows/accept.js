@@ -35,13 +35,11 @@ const flowAccept = addKeyword(["1", "Si"], { sensitive: true })
   )
   .addAction(async (ctx, { state, flowDynamic, gotoFlow }) => {
     const { name, document, company } = state.getMyState();
-    const url_img = `https://upcdn.io/12a1ygh/image/Frame.png?text=${name}&layer-x=363&layer-y=646&font-size=200&text=${document}&layer-x=267&layer-y=707&font-size=200&text=${company}&layer-x=627&layer-y=767&font-size=200`;
-    await flowDynamic([
-      {
-        body: "Tu Informacion",
-        media: url_img,
-      },
-    ]);
+    await flowDynamic(
+      [
+        `Tu informacion : *Nombre*: ${name} *NIT*: ${document} *Nombre de Empresa*: ${company}`
+      ]
+  );
     return gotoFlow(flowRetryOrNot);
   });
 module.exports = flowAccept

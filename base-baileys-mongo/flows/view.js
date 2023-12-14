@@ -3,7 +3,7 @@ const flowAccept = require('./accept')
 const namebot = require('../data/bot')
 const flowView = addKeyword("2", { sensitive: true })
   .addAnswer("Terminos y Condiciones", {
-    media: "https://res.cloudinary.com/dw2burqsv/image/upload/v1701347422/ceykcdec5tslfoevzhad.png",
+    media: "C:\\Users\\AUXILIARSISTEMAS\\Documents\\Documents\\Proyectos\\dev\\base-baileys-mongo\\pictures\\Snow.png",
   })
   .addAnswer(
     ["Aceptas nuestros terminos y condiciones ?", "*Si* o *No*"],

@@ -8,7 +8,6 @@ const flowPrincipal = addKeyword(["hola", "ola"]).addAction(
           .find({ from: `${ctx.from}` })
           .toArray();
         if (cursor.length > 0) {
-          await 
           await state.update({ name: cursor[0].name });
           return gotoFlow(require('./users/old/user')) ;
         } else {
