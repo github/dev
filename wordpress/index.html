@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      
+      
+      .layout-two-column {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 50fr 50fr;
+        background-color: aliceblue;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+      }
+      .one_input {
+        display: flex;
+        justify-content: space-between;
+      }
+      .two_input {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .banner-bg {
+        color: white;
+        padding: 50px;
+        background: linear-gradient(316deg, #000000, #4119b9 90%, #d9c7c7 100%);
+      }
+      @media screen and (max-width: 850px) {
+        .column-banner {
+          padding: 30px 40px 0;
+        }
+      }
+      .banner-title {
+        color: white;
+      }
+      .content-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        gap: 20px;
+      }
+      .content-form-hide {
+        display: none;
+      }
+      .content-form-hiden {
+        display: none;
+      }
+      .application-media {
+        text-align: center;
+        padding: 0 30px;
+      }
+      .list-check-medios {
+        display: flex;
+        justify-content: center;
+        width: 95%;
+        margin-bottom: 20px;
+      }
+      .list-labels p {
+        padding: 8px;
+        padding-right: 20px;
+        text-align: end;
+      }
+      .list-input-check {
+				margin-top: 9px;
+    		gap: 6px;
+    		height: 100%;
+        display: grid;
+        margin-right: 3rem;
+      }
+      .list-input-check input[type="checkbox"] {
+        transform: scale(1.4);
+      }
+      .row-button-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        font-size: 1rem;
+        font-weight: 100;
+				text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="layout-two-column">
+      <section class="column-container banner-bg column-banner">
+        <!-- <div class="application-column"> -->
+        <article class="column-banner-content">
+          <h1 class="banner-title">Escuchamos tus preferencias</h1>
+          <p class="banner-text">
+            Elige con libertad, cómo deseas que te contactemos.
+          </p>
+          <p class="banner-text little">
+            Autorización de horarios y canales de comunicación con el Consumidor
+            Financiero. Ley 2300/23.
+          </p>
+        </article>
+        <!-- </div> -->
+      </section>
+      <form onsubmit="saveResponse(event)" id="idLey2300">
+        <section class="content-form" id="step1">
+          <h2>Algunos datos sobre ti</h2>
+          <div class="group_inputut" style="width: 100%; padding: 27px">
+            <div class="one_input">
+              <div>
+                <select id="typePerson" class="select-option" name="field3">
+                  <option disabled="disabled" selected="selected" value="">
+                    Seleccione…
+                  </option>
+                  <option value="persona_natural">Natural</option>
+                  <option value="persona_juridica">Jurídica</option>
+                </select>
+              </div>
+              <div>
+                <input type="text" placeholder="Ingresa nombres y apellidos" />
+              </div>
+            </div>
+            <div class="two_input">
+              <input type="text" /><br />
+              <input id="" name="" type="number" />
+            </div>
+            <p></p>
+          </div>
+          <button>Consultar</button>
+        </section>
+
+        <section class="content-form-hide" id="step2">
+          <input type="hidden" name="field9" value="medio de comunicacion" />
+
+          <h2 class="form-title red">Hola, <span id="txtnombre"></span></h2>
+          <section class="application-media">
+            <p class="text">
+              Ponemos a tu disposición todos nuestros medios de contacto y
+              agradecemos desmarques cual(es) de los siguientes canales
+              <strong>no autorizas</strong> para que el Banco Finandina pueda
+              tener un contacto efectivo contigo:
+            </p>
+            <div class="list-check-medios">
+              <div class="list-labels">
+                <p for="telefonico">Telefónico</p>
+                <p for="mnsTexto">Mensaje de texto</p>
+                <p for="whatsApp">WhatsApp</p>
+                <p for="email">Correo electrónico</p>
+                <p for="mediosFisicos">Medios físicos</p>
+              </div>
+              <div class="list-input-check">
+                <input
+                  type="checkbox"
+                  name="field10"
+                  id="chkTelefono"
+                  value="true"
+                  checked=""
+                />
+                <input
+                  type="checkbox"
+                  name="field11"
+                  id="chkMensajeTexto"
+                  value="true"
+                  checked=""
+                />
+                <input
+                  type="checkbox"
+                  name="field12"
+                  id="chkWhatsApp"
+                  value="true"
+                  checked=""
+                />
+                <input
+                  type="checkbox"
+                  name="field13"
+                  id="chkEmail"
+                  value="true"
+                  checked=""
+                />
+                <input
+                  type="checkbox"
+                  name="field14"
+                  id="chkMediosFisicos"
+                  value="true"
+                  checked=""
+                />
+              </div>
+            </div>
+            <p class="text">
+              En caso de que no selecciones ninguno de los canales anteriormente
+              informados, autorizas al Banco Finandina para que te contacte por
+              todos los canales indicados y consignados en los documentos de
+              vinculación y demás documentos contractuales.
+            </p>
+            <p class="text">
+              Si no logramos comunicarnos contigo por los canales que elegiste
+              anteriormente, nos autorizas para que intentemos realizar el
+              contacto, por cualquiera de los otros canales, con el fin de
+              lograr un contacto directo y efectivo.
+            </p>
+          </section>
+          <div class="row-button-form">
+            <button>Atrás</button>
+            <button>Aceptar y continuar</button>
+          </div>
+        </section>
+      </form>
+    </section>
+    <section class="content-form" id="step3">
+      <input type="hidden" name="field15" value="autorizacion">
+
+      <h2 class="form-title red">Últimos pasos</h2>
+      <div class="application-allow">
+          
+          <div class="list-info paraf-space">
+              <p style="text-align:justify;">
+                  Autorizo al Banco Finandina S.A BIC, sus aliados comerciales y/o terceros autorizados para realizar la gestión de
+                  cobro, para que puedan contactarme en los horarios, periodicidad y frecuencias que este determine según sus
+                  políticas, con el fin de mantenerme informado entre otros sobre:
+                  <br><br>
+                  El estado de mis productos, su información comercial, legal o de seguridad, fechas de pago, alternativas de
+                  normalización, realización y confirmación de operaciones, gestiones de cobranza prejudicial o judicial, servicios,
+                  novedades, noticias de interés o confirmación del estado de mis solicitudes. De igual forma, podrá informarme de
+                  todos los beneficios, campañas de marketing, publicidad o prospección comercial y promociones con aliados o terceros.
+              </p>
+          </div>
+          <div class="paraf-space">
+              ¿Autorizas?
+              <input class="check-allow" type="checkbox" name="field16" id="autorizacion" value="true" checked="">
+          </div>
+          <h2 class="form-title red paraf-space">
+              Recuerda
+          </h2>
+          <p class="paraf-space">
+              Siempre tendrás la opción de cambiar tus canales de contacto cuando lo desees, comunicándote con
+              nosotros a la línea <strong class="red"> 601 219 1919</strong> o enviándonos un correo a <strong class="red">servicioalcliente@bancofinandina.com</strong>
+          </p> 
+      </div>
+      <div class="row-button-form">
+          <a class="btn-previus" id="backStep3">Atrás</a>
+          <button class="btn-next" id="nextStep3" type="submit">Finalizar</button>
+      </div>
+  </section>
+  </body>
+  <script>
+    function saveResponse(e) {
+      e.preventDefault();
+      const step1 = (document.querySelector(".content-form").className =
+        "content-form-hiden");
+      const step2 = (document.querySelector(".content-form-hide").className =
+        "content-form");
+    }
+  </script>
+</html>
