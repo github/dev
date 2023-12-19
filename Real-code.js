@@ -393,22 +393,22 @@ const productData = {
 		reviews: [
 			{
 				name: "Jake R.",
-				rating: 4.7,
+				rating: 5,
 				comment: "Solid home workout gear. Keeps me on my toes and adds a fun twist to training."
-			},
+			}, 
 			{
 				name: "Ava S.",
-				rating: 4.9,
+				rating: 5,
 				comment: "Impressive and engaging. The electronic features make every session challenging."
 			},
 			{
 				name: "Ethan L.",
-				rating: 4.8,
+				rating: 5,
 				comment: "Great addition to home fitness. Smart focus keeps me motivated."
 			},
 			{
 				name: "Zoe M.",
-				rating: 4.7,
+				rating: 5,
 				comment: "Love the space-saving design. Perfect for daily boxing workouts at home."
 			},
 			{
