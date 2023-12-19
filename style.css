@@ -1,0 +1,44 @@
+*{
+    margin:0;
+    padding:0;
+  }
+  h1,nav{
+      text-align:center;
+    margin:0;
+    padding:0;
+  }
+  h1 {
+    background-color: yellow  ;
+   color: blue;
+    font-size: 80px;
+  }
+  
+  nav {
+    background-color: red;
+    font-size: 60px;
+    text-decoration: none;
+    transition: 0.5s;
+    margin-bottom:0px;
+  }
+  nav a{
+  
+    display: inline-block;
+  }
+  
+  nav a:hover{
+    opacity:0.1;
+  }
+  .box{
+    width:600px;
+    background-color:lightgrey;
+    margin:auto;
+    display:flex;
+  }
+  
+    .column{
+      width:150px;
+      background-color:darkgrey;
+      margin:10px;
+      padding:10px;
+      border:1px solid white
+    } 
