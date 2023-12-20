@@ -327,6 +327,41 @@ const productData = {
 			}
 		]
 	},
+	"BeatMaster™ Wall-Mounted Electronic Boxing Trainer: Smart Focus, Digital Punching Pads": { 
+		averageRating: 5,
+		reviews: [
+			{
+				name: "Jake R.",
+				rating: 5,
+				comment: "Solid home workout gear. Keeps me on my toes and adds a fun twist to training."
+			}, 
+			{
+				name: "Ava S.",
+				rating: 5,
+				comment: "Impressive and engaging. The electronic features make every session challenging."
+			},
+			{
+				name: "Ethan L.",
+				rating: 5,
+				comment: "Great addition to home fitness. Smart focus keeps me motivated."
+			},
+			{
+				name: "Zoe M.",
+				rating: 5,
+				comment: "Love the space-saving design. Perfect for daily boxing workouts at home."
+			},
+			{
+				name: "Marcus B.",
+				rating: 5,
+				comment: "Ultimate home boxing trainer. The digital pads make every session dynamic and enjoyable."
+			},
+			{ 
+				name: "Lily G.",
+				rating: 4.1,
+				comment: "Exciting home workouts. Smart focus tech keeps me engaged and challenged."
+			}
+		]
+	},
 	"PosturePro™: Smart Sensor Posture Corrector with Vibration Reminder": { 
 		averageRating: 4.6,
 		reviews: [
