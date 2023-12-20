@@ -388,8 +388,8 @@ const productData = {
 
 		]
 	}, 
-	"BeatMaster™ Wall-Mounted Electronic Boxing Trainer: Smart Focus, Digital Punching Pads": { 
-		averageRating: 4.8,
+	"BeatMastser™ Wall-Mounted Electronic Boxing Trainer: Smart Focus, Digital Punching Pads": { 
+		averageRating: 5,
 		reviews: [
 			{
 				name: "Jake R.",
