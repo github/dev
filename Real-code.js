@@ -397,7 +397,7 @@ const productData = {
 			},
 			{
 				name: "Christopher M.",
-				rating: 5,
+				rating: 4.2,
 				comment: "Motivation On Point! Keep the momentum going and achieve your fitness goals with this innovative training tool. The LED lights and music sync make each punch feel like a cinematic moment. Syncing it with my playlist has turned my training sessions into a dance party."
 			},
 			{
@@ -406,7 +406,7 @@ const productData = {
 				comment: "Absolutely love it! The LED lights add a whole new dimension to my workouts. It's like having a personal trainer cheering me on. The music sync keeps me pumped, and the relaxation target is a fantastic touch for refining my moves. It's become the highlight of my day – I'm hooked!"
 			}
 		]
-	},
+	}, 
 	"PosturePro™: Smart Sensor Posture Corrector with Vibration Reminder": { 
 		averageRating: 4.6,
 		reviews: [
