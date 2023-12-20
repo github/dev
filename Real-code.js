@@ -413,12 +413,12 @@ const productData = {
 			},
 			{
 				name: "Marcus B.",
-				rating: 4.9,
+				rating: 5,
 				comment: "Ultimate home boxing trainer. The digital pads make every session dynamic and enjoyable."
 			},
 			{ 
 				name: "Lily G.",
-				rating: 4.8,
+				rating: 4.1,
 				comment: "Exciting home workouts. Smart focus tech keeps me engaged and challenged."
 			}
 		]
