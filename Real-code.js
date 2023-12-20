@@ -370,11 +370,7 @@ const productData = {
 				rating: 5,
 				comment: "Exciting home workouts. Intelligent reactive tech keeps me engaged and challenged."
 			},
-			{
-				name: "Emma D.",
-				rating: 5,
-				comment: "Unleashed a new level of intensity in my workouts! The LED lights and the music sync keeps me going. Perfect for staying motivated and improving my reflexes. It's like having a personal trainer in my home. The Relaxing Reaction Training Target is a game-changer for serious athletes!"
-			},
+
 			{
 				name: "David R.",
 				rating: 5,
@@ -404,7 +400,12 @@ const productData = {
 				name: "Sophia B.",
 				rating: 5,
 				comment: "Absolutely love it! The LED lights add a whole new dimension to my workouts. It's like having a personal trainer cheering me on. The music sync keeps me pumped, and the relaxation target is a fantastic touch for refining my moves. It's become the highlight of my day – I'm hooked!"
-			}
+			},
+			{
+				name: "Emma D.",
+				rating: 5,
+				comment: "Unleashed a new level of intensity in my workouts! The LED lights and the music sync keeps me going. Perfect for staying motivated and improving my reflexes. It's like having a personal trainer in my home. The Relaxing Reaction Training Target is a game-changer for serious athletes!"
+			}, 
 		]
 	}, 
 	"PosturePro™: Smart Sensor Posture Corrector with Vibration Reminder": { 
