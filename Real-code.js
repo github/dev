@@ -362,6 +362,51 @@ const productData = {
 			}
 		]
 	},
+	"PrecisionBeat Pro: Intelligent Reactive Training System for Boxing Mastery": {  
+		averageRating: 5,
+		reviews: [
+			{  
+				name: "Sophia W.",
+				rating: 5,
+				comment: "Exciting home workouts. Intelligent reactive tech keeps me engaged and challenged."
+			},
+			{
+				name: "Emma D.",
+				rating: 5,
+				comment: "Unleashed a new level of intensity in my workouts! The LED lights and the music sync keeps me going. Perfect for staying motivated and improving my reflexes. It's like having a personal trainer in my home. The Relaxing Reaction Training Target is a game-changer for serious athletes!"
+			},
+			{
+				name: "David R.",
+				rating: 5,
+				comment: "Versatile enough for all skill levels—essential for anyone serious about improving their boxing skills."
+			},
+			{
+				name: "Sophie G.",
+				rating: 5,
+				comment: "it's a stress-relief powerhouse! really love it"
+			},
+			{
+				name: "Anthony J.",
+				rating: 5,
+				comment: "Got it for my bf, he absolutely loves it."
+			},
+			{
+				name: "Isabella P.",
+				rating: 5,
+				comment: "best tool for home training, thank you msl!!"
+			},
+			{
+				name: "Christopher M.",
+				rating: 5,
+				comment: "Motivation On Point! Keep the momentum going and achieve your fitness goals with this innovative training tool. The LED lights and music sync make each punch feel like a cinematic moment. Syncing it with my playlist has turned my training sessions into a dance party."
+			},
+			{
+				name: "Sophia B.",
+				rating: 5,
+				comment: "Absolutely love it! The LED lights add a whole new dimension to my workouts. It's like having a personal trainer cheering me on. The music sync keeps me pumped, and the relaxation target is a fantastic touch for refining my moves. It's become the highlight of my day – I'm hooked!"
+			}
+		]
+	},
 	"PosturePro™: Smart Sensor Posture Corrector with Vibration Reminder": { 
 		averageRating: 4.6,
 		reviews: [
