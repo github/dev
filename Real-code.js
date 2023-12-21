@@ -1069,45 +1069,46 @@ const productData = {
 		reviews: [{
 			name: "John D.",
 			rating: 5,
-			comment: "The TV LED backlight is a game-changer for enhancing my viewing experience. The lighting effects create a fantastic ambiance, and it's easy to install. It has added a whole new dimension to my TV watching."
+			comment: "Awesome backlight! It transformed my TV into a whole new experience. Super easy to install, and the lighting effects are captivating."
 		}, {
 			name: "Sarah L.",
 			rating: 4,
-			comment: "I'm quite happy with this TV LED backlight. The lighting effects are enjoyable, and it's a breeze to set up. More customizable color options would be a nice addition, but it's a solid choice for enhancing your viewing experience."
+			comment: "Loving this backlight! Simple setup, cool lighting effects. Wish there were more color options, but it's a solid choice for better TV vibes."
 		}, {
 			name: "Robert S.",
 			rating: 5,
-			comment: "The TV LED backlight is a must-have for any home theater. The lighting effects create a dynamic atmosphere, and it's user-friendly. It has significantly improved my TV viewing, and I highly recommend it."
+			comment: "A must for home theaters! Easy setup, friendly vibes. It seriously upgraded my TV game. Highly recommended."
 		}, {
 			name: "Emma W.",
 			rating: 4,
-			comment: "This TV LED backlight is a good buy. The lighting effects add flair to the viewing experience, and it's straightforward to use. More customizable color options would make it even more versatile, but it's a reliable option for enhancing your TV viewing."
+			comment: "Smart buy! Adds flair to TV time. Easy to use, though more color options would be cool. Still, it's reliable for an enhanced viewing experience."
 		}, {
 			name: "James H.",
 			rating: 5,
-			comment: "The TV LED backlight is a fantastic addition to my home theater. The lighting effects are mesmerizing, and it's easy to set the mood. It has turned my TV into an immersive experience, and I couldn't be happier."
+			comment: "Fantastic addition! Turned my TV into an immersive experience. Easy mood-setting and mesmerizing lighting effects. Couldn't be happier!"
 		}, {
 			name: "Sophia M.",
 			rating: 4,
-			comment: "I'm impressed with this TV LED backlight. The lighting effects are enjoyable, and it's user-friendly. More customizable color options would be a nice enhancement, but it's a strong choice for enhancing your TV viewing."
+			comment: "Impressed! Enjoyable effects and user-friendly. More color options would be nice, but it's a solid choice for spicing up TV time."
 		}, {
 			name: "David R.",
 			rating: 5,
-			comment: "The TV LED backlight is a game-changer for home theaters. The lighting effects are stunning, and it's easy to use. It has added a whole new dimension to my TV viewing, and I highly recommend it."
+			comment: "Game-changer for home theaters! Stunning effects and easy to use. Took my TV to the next level. Highly recommend it."
 		}, {
 			name: "Olivia P.",
 			rating: 4,
-			comment: "This TV LED backlight is a reliable choice. The lighting effects are enjoyable, and it's user-friendly. More customizable color options would be a nice addition, but it's a solid option for enhancing your TV viewing."
+			comment: "Reliable choice! Enjoyable effects and user-friendly. More colors would be a nice touch, but it adds to the TV viewing experience."
 		}, {
 			name: "William L.",
 			rating: 5,
-			comment: "I can't recommend this TV LED backlight enough. The lighting effects are mesmerizing, and it's a breeze to set up. It has transformed my TV into a dynamic and colorful experience."
+			comment: "Highly recommend! Mesmerizing effects and a breeze to set up. Transformed my TV into a colorful experience. A must-have."
 		}, {
 			name: "Lucas R.",
 			rating: 4,
-			comment: "This TV LED backlight is a great investment. The lighting effects are entertaining, and it's user-friendly. More customizable color options would be a nice enhancement, but it's a strong choice for enhancing your TV viewing."
+			comment: "Great investment! Entertaining effects and user-friendly. More color options would be cool, but it sure improves the TV experience."
 		}]
 	},
+	
 	"Portable Door Stop Alarm": {
 		averageRating: 4.6,
 		reviews: [{
