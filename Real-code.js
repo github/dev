@@ -362,6 +362,37 @@ const productData = {
 			}
 		]
 	},
+	"NUBWO G06 Pro Dual-Mode Wireless Gaming Headset with Microphone": {
+		averageRating: 5,
+		reviews: [
+			{  
+				name: "Sophia W.",
+				rating: 5,
+				comment: "lown away! The surround sound is insane, and the dual-mode switch is a game-changer. Communication with the squad is crystal clear. It's a whole new level of gaming!"
+			},
+
+			{
+				name: "David R.",
+				rating: 5,
+				comment: "I've been using the NUBWO G06 Pro, and it's legit comfy and durable. No more discomfort during marathon gaming, and it feels like it can take a beating. Totally worth the investment!"
+			},
+			{
+				name: "Sophie G.",
+				rating: 5,
+				comment: "mic is on another level! Clear as day, and the noise canceling is no joke. Makes team coordination a breeze. "
+			},
+			{
+				name: "Anthony J.",
+				rating: 5,
+				comment: "No lags, no interference, just pure gaming bliss. The dual-mode is a sweet bonus. Highly recommend!"
+			},
+			{
+				name: "Isabella P.",
+				rating: 5,
+				comment: "got this for my lil bro , he absolutely love it!"
+			},
+			]
+	},  
 	"PrecisionBeat Pro: Intelligent Reactive Training System for Boxing Mastery": {  
 		averageRating: 5,
 		reviews: [
