@@ -546,18 +546,16 @@ const productData = {
 			comment: "i got it before the black friday price, now its worth less, not happy with that"
 		}]
 	},
-	"EarPods Pro 2023": {
+	"Bluetooth Earphone Wireless Earphone Sound Noise Cancelling Bluetooth": {  
 		averageRating: 4.8,
 		reviews: [{
 			name: "Klemens T.",
 			rating: 5,
 			comment: "Wow, these earphones are amazing! Super easy to connect, and the sound is pretty darn good. I'm impressed. 🎵",
-			image: "https://i.postimg.cc/8cCFTbZm/Webppro-out-136abc0b8ce635835e5743689fa4aaa0.webp"
 		}, {
 			name: "Gage E.",
 			rating: 5,
 			comment: "These earphones are the bomb! Sound is crystal clear, and the bass? It's like a party in my ears. Highly recommend! 🎧",
-			image: "https://i.postimg.cc/vBYTvzww/51m-FQo0q-T-L-SL1600.webp"
 		}, {
 			name: "Gayla T.",
 			rating: 4,
@@ -583,7 +581,7 @@ const productData = {
 		{
 			name: "Mike Z.",
 			rating: 5,
-			comment: "These are my second pair of earpods; I gave my previous ones to my gf. All I can say is that they are perfect for the price."
+			comment: "These are my second pair of earphones; I gave my previous ones to my gf. All I can say is that they are perfect for the price."
 		},
 		{
 			name: "Simon Z.",
@@ -594,7 +592,7 @@ const productData = {
 			rating: 5,
 			comment: "I mean, for this price, they're practically a steal! I'm diggin' these earphones. 🤑",
 		}]
-	},  
+	},   
 	"Tuya Finger Robot Switch - The Smart Home Button Pusher": {
 		averageRating: 4.8,
 		reviews: [{
