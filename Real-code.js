@@ -333,12 +333,14 @@ const productData = {
 			{
 				name: "Jake R.",
 				rating: 5,
-				comment: "Solid home workout gear. Keeps me on my toes and adds a fun twist to training."
+				comment: "Solid home workout gear. Keeps me on my toes and adds a fun twist to training.",
+				image: "https://i.postimg.cc/y6XgpscZ/8b10b0fa-ad35-4748-b81e-cbc7902b60ea.webp"
 			}, 
 			{
 				name: "Ava S.",
 				rating: 5,
-				comment: "Impressive and engaging. The electronic features make every session challenging."
+				comment: "Impressive and engaging. The electronic features make every session challenging.",
+				image: "https://i.postimg.cc/bwdZvnMx/92a90d19-6499-4f42-afec-8c6b00af0253.webp"
 			},
 			{
 				name: "Ethan L.",
