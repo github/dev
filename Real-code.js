@@ -370,13 +370,15 @@ const productData = {
 			{  
 				name: "Sophia W.",
 				rating: 5,
-				comment: "lown away! The surround sound is insane, and the dual-mode switch is a game-changer. Communication with the squad is crystal clear. It's a whole new level of gaming!"
+				comment: "lown away! The surround sound is insane, and the dual-mode switch is a game-changer. Communication with the squad is crystal clear. It's a whole new level of gaming!",
+				image:"https://i.postimg.cc/yYXB8gff/media-SL853-FMjpeg-1.jpg"
 			},
 
 			{
 				name: "David R.",
 				rating: 5,
-				comment: "I've been using the NUBWO G06 Pro, and it's legit comfy and durable. No more discomfort during marathon gaming, and it feels like it can take a beating. Totally worth the investment!"
+				comment: "I've been using the NUBWO G06 Pro, and it's legit comfy and durable. No more discomfort during marathon gaming, and it feels like it can take a beating. Totally worth the investment!",
+				image:"https://i.postimg.cc/vBcH1Y14/61uvy-YOo-U6-L-2.jpg"
 			},
 			{
 				name: "Sophie G.",
@@ -390,10 +392,10 @@ const productData = {
 			},
 			{
 				name: "Isabella P.",
-				rating: 5,
-				comment: "got this for my lil bro , he absolutely love it!"
+				rating: 4.7,
+				comment: "got this for my lil bro , he absolutely loves it!"
 			},
-			]
+			] 
 	},  
 	"PrecisionBeat Pro: Intelligent Reactive Training System for Boxing Mastery": {  
 		averageRating: 5,
