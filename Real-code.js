@@ -369,30 +369,37 @@ const productData = {
 		reviews: [{
 				name: "Alice J.",
 				rating: 4.7,
+				comment: ""
 			},
 			{
 				name: "Bob S.",
 				rating: 4.5,
+				comment: ""
 			},
 			{
 				name: "Charlie B.",
 				rating: 4.8,
+				comment: ""
 			},
 			{
 				name: "David M.",
 				rating: 4.4,
+				comment: ""
 			},
 			{
 				name: "Eva D.",
 				rating: 4.9,
+				comment: ""
 			},
 			{
 				name: "Frank W.",
 				rating: 4.3,
+				comment: ""
 			},
 			{
 				name: "Grace T.",
 				rating: 4.6,
+				comment: ""
 			}
 		]
 	},
@@ -402,30 +409,37 @@ const productData = {
 			{
 				name: "Alexa H.",
 				rating: 5,
+				comment: ""
 			},
 			{
 				name: "Benjamin K.",
 				rating: 5,
+				comment: ""
 			},
 			{
 				name: "Catherine L.",
 				rating: 5,
+				comment: ""
 			},
 			{
 				name: "Daniel M.",
 				rating: 4.8,
+				comment: ""
 			},
 			{
 				name: "Emily S.",
 				rating: 5,
+				comment: ""
 			},
 			{
 				name: "Finn C.",
 				rating: 4.9,
+				comment: ""
 			},
 			{
 				name: "Grace T.",
 				rating: 4.5,
+				comment: ""
 			}
 		]
 	},
@@ -435,30 +449,37 @@ const productData = {
 			{
 				name: "Adam W.",
 				rating: 4.7,
+				comment: ""
 			},
 			{
 				name: "Bella G.",
 				rating: 4.9,
+				comment: ""
 			},
 			{
 				name: "Charlie P.",
 				rating: 4.8,
+				comment: ""
 			},
 			{
 				name: "Diana R.",
 				rating: 4.5,
+				comment: ""
 			},
 			{
 				name: "Evan S.",
 				rating: 4.9,
+				comment: ""
 			},
 			{
 				name: "Fiona M.",
 				rating: 4.6,
+				comment: ""
 			},
 			{
 				name: "George K.",
 				rating: 4.8,
+				comment: ""
 			}
 		]
 	},
@@ -468,30 +489,37 @@ const productData = {
 			{
 				name: "Alice B.",
 				rating: 4.8,
+				comment: ""
 			},
 			{
 				name: "Brandon T.",
 				rating: 4.7,
+				comment: ""
 			},
 			{
 				name: "Chloe L.",
 				rating: 4.5,
+				comment: ""
 			},
 			{
 				name: "David P.",
 				rating: 4.9,
+				comment: ""
 			},
 			{
 				name: "Eva S.",
 				rating: 4.6,
+				comment: ""
 			},
 			{
 				name: "Frankie H.",
 				rating: 4.4,
+				comment: ""
 			},
 			{
 				name: "Grace M.",
 				rating: 4.7,
+				comment: ""
 			}
 		]
 	},
@@ -501,30 +529,37 @@ const productData = {
 			{
 				name: "Alex C.",
 				rating: 4.8,
+				comment: ""
 			},
 			{
 				name: "Bethany M.",
 				rating: 4.6,
+				comment: ""
 			},
 			{
 				name: "Connor L.",
 				rating: 4.9,
+				comment: ""
 			},
 			{
 				name: "Daisy R.",
 				rating: 4.7,
+				comment: ""
 			},
 			{
 				name: "Ethan K.",
 				rating: 4.5,
+				comment: ""
 			},
 			{
 				name: "Fiona H.",
 				rating: 4.8,
+				comment: ""
 			},
 			{
 				name: "George S.",
 				rating: 4.7,
+				comment: ""
 			}
 		]
 	},
@@ -534,30 +569,37 @@ const productData = {
 			{
 				name: "Aaron D.",
 				rating: 4.6,
+				comment: ""
 			},
 			{
 				name: "Bella W.",
 				rating: 4.7,
+				comment: ""
 			},
 			{
 				name: "Cameron L.",
 				rating: 4.4,
+				comment: ""
 			},
 			{
 				name: "Diana S.",
 				rating: 4.5,
+				comment: ""
 			},
 			{
 				name: "Ethan M.",
 				rating: 4.8,
+				comment: ""
 			},
 			{
 				name: "Fiona K.",
 				rating: 4.6,
+				comment: ""
 			},
 			{
 				name: "George P.",
 				rating: 4.5,
+				comment: ""
 			}
 		]
 	}, 
