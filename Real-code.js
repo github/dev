@@ -366,160 +366,151 @@ const productData = {
 	},
 	"CarLink ProWire+, Wireless CarPlay Dongle For Wired CarPlay Cars": {
 		averageRating: 4.6,
-		reviews: [{
-				name: "Alice J.",
-				rating: 4.7,
-				comment: ""
-			},
-			{
-				name: "Bob S.",
-				rating: 4.5,
-				comment: ""
-			},
-			{
-				name: "Charlie B.",
-				rating: 4.8,
-				comment: ""
-			},
-			{
-				name: "David M.",
-				rating: 4.4,
-				comment: ""
-			},
-			{
-				name: "Eva D.",
-				rating: 4.9,
-				comment: ""
-			},
-			{
-				name: "Frank W.",
-				rating: 4.3,
-				comment: ""
-			},
-			{
-				name: "Grace T.",
-				rating: 4.6,
-				comment: ""
-			}
-		]
-	},
-	"TheraSculpt Pro™ 8D Precision Neck & Shoulder Massager": {
-		averageRating: 4.7,
 		reviews: [
 			{
-				name: "Alexa H.",
-				rating: 5,
-				comment: ""
+				name: "Alice J.",
+				rating: 4.7,
+				comment: "Had issues within 3 days, returned and trying another. Works great for Apple CarPlay, connects fast, seamless performance from inside armrest. Worth it!"
 			},
 			{
-				name: "Benjamin K.",
-				rating: 5,
-				comment: ""
+				name: "Morteza A.",
+				rating: 5.0,
+				comment: "Thrilled with wireless Apple CarPlay! Easy setup, flawless connectivity, sleek interface. Transformed my driving experience. Highly recommended!"
 			},
 			{
-				name: "Catherine L.",
-				rating: 5,
-				comment: ""
+				name: "Alain L.",
+				rating: 5.0,
+				comment: "Excellent! Easy to pair, connects automatically, stable, responsive. What CarPlay should have been. Use wireless charger and still enjoy CarPlay."
 			},
 			{
-				name: "Daniel M.",
-				rating: 4.8,
-				comment: ""
+				name: "Mike J.",
+				rating: 4.0,
+				comment: "Connects well initially, with a few hiccups in reconnecting to music later. Overall, a decent purchase."
 			},
 			{
-				name: "Emily S.",
-				rating: 5,
-				comment: ""
+				name: "D R.",
+				rating: 5.0,
+				comment: "Works excellent with Alpine ILX-650 deck. No need to plug in the phone, bought another for my other truck."
 			},
 			{
-				name: "Finn C.",
-				rating: 4.9,
-				comment: ""
+				name: "Alex B.",
+				rating: 5.0,
+				comment: "Decently fast. Music has a slight delay when skipping songs, but responds quickly to other tasks."
 			},
 			{
-				name: "Grace T.",
-				rating: 4.5,
-				comment: ""
+				name: "Dickson B.",
+				rating: 5.0,
+				comment: "Works great! Quick response, amazing performance. Using for two weeks, will review again in three months."
+			},
+			{
+				name: "Robert J. C.",
+				rating: 5.0,
+				comment: "It works. Installed in 2 vehicles without issues."
 			}
 		]
-	},
-	"ThermaRelax™ Home Massage Heating Cushion: 5 Motor Vibration, 3 Hot Seat": {
+	}, 
+	"TheraSculpt Pro™ 8D Precision Neck & Shoulder Massager": {
 		averageRating: 4.8,
 		reviews: [
 			{
-				name: "Adam W.",
-				rating: 4.7,
-				comment: ""
-			},
-			{
-				name: "Bella G.",
-				rating: 4.9,
-				comment: ""
-			},
-			{
-				name: "Charlie P.",
+				name: "Mike C.",
 				rating: 4.8,
-				comment: ""
+				comment: "I've struggled with back problems since childhood. Regular massages are essential, but they cost a fortune. Snailax is a game-changer, providing hours of relief while I work. A lifesaver!"
 			},
 			{
-				name: "Diana R.",
-				rating: 4.5,
-				comment: ""
+				name: "Alice J.",
+				rating: 5.0,
+				comment: "This is a solidly built and reliable machine. Easy to use and versatile, it massages hard-to-reach places and is very soothing."
 			},
 			{
-				name: "Evan S.",
-				rating: 4.9,
-				comment: ""
+				name: "Tina C.",
+				rating: 4.0,
+				comment: "Great product and service. Easy to use, adjustable pressure, and pliable for massaging the whole upper body. Heat could be stronger, but overall fantastic."
 			},
 			{
-				name: "Fiona M.",
-				rating: 4.6,
-				comment: ""
+				name: "Roadrutz",
+				rating: 5.0,
+				comment: "Digs into neck muscles with adjustable intensity. A bit awkward to use, but effective. Daily use eliminated extreme neck and shoulder pain."
 			},
 			{
-				name: "George K.",
-				rating: 4.8,
-				comment: ""
+				name: "Louanna",
+				rating: 5.0,
+				comment: "Great massager with heat feature. Power feels just right. Only downside is the short cord, requiring an extension cord."
+			},
+			{
+				name: "Moe",
+				rating: 3.0,
+				comment: "Well-made but limited application to specific spots. Price is a bit high for the quality. Room for improvement in future models."
+			},
+			{
+				name: "L. R.",
+				rating: 5.0,
+				comment: "Still 5 stars. Excellent for chronic arthritis. Well-built and comfortable. Satisfied with the purchase."
+			},
+			{
+				name: "Jaskaran Singh",
+				rating: 4.0,
+				comment: "Good investment for relief."
+			}
+		]
+	}, 
+	"ThermaRelax™ Home Massage Heating Cushion: 5 Motor Vibration, 3 Hot Seat": {
+		averageRating: 4.0,
+		reviews: [
+			{
+				name: "Mike C.",
+				rating: 5.0,
+				comment: "Love it! Well made, a quality product that performs very well. Bought it for myself and my family. We all find it very helpful to loosen up tense back and neck muscles."
+			},
+			{
+				name: "Alice J.",
+				rating: 4.0,
+				comment: "Great for low-cost massage chair. Easy to use, it does the job, and the massage balls in the add-on are really good."
+			},
+			{
+				name: "Charlie B.",
+				rating: 5.0,
+				comment: "Excellent product. The massage works very well for my back and neck."
+			},
+			{
+				name: "Eva D.",
+				rating: 5.0,
+				comment: "Works well. Finally made the move to purchase a home massaging chair, and I'm glad I did! My husband and I have been using it daily and can feel the difference right away. Very happy with the product."
+			},
+			{
+				name: "Grace T.",
+				rating: 4.0,
+				comment: "Excellent soft massager. A wonderful product with many options to choose which part of your body you want to massage. Giving it 4 stars instead of 5 because I find the motor running a bit too loud."
 			}
 		]
 	},
 	"ProFit FlexBoard: Multifunctional Folding Push-Up System for Home and Gym Workouts": {
-		averageRating: 4.6,
+		averageRating: 5.0,
 		reviews: [
 			{
-				name: "Alice B.",
-				rating: 4.8,
-				comment: ""
+				name: "Nolan",
+				rating: 5.0,
+				comment: "Amazing push-up board. Using it for over a month now, and it makes working on specific muscles much easier. Great product!!"
 			},
 			{
-				name: "Brandon T.",
-				rating: 4.7,
-				comment: ""
+				name: "Simon",
+				rating: 5.0,
+				comment: "Ça sert pas à grand chose mais la job me payait une bebelle reliée à l'activité physique. J'ai vu passé un vidéo et j'ai trouver ça cool. N'achète pas ça, ça sert a rien. Achète toi des tapis à la place."
 			},
 			{
-				name: "Chloe L.",
-				rating: 4.5,
-				comment: ""
+				name: "KD",
+				rating: 5.0,
+				comment: "Fantastic product. Got it as a gift for my brother, and he is very happy with it. The product has helped him get deeper into his dips and push ups."
 			},
 			{
-				name: "David P.",
-				rating: 4.9,
-				comment: ""
+				name: "Alex Ross",
+				rating: 4.0,
+				comment: "Durable. Very durable. Dropped it and mistreated it, and so far no dents or scratches. Only problem was that out of the box, they didn't give enough sticker pads to prevent scratching the floor."
 			},
 			{
-				name: "Eva S.",
-				rating: 4.6,
-				comment: ""
-			},
-			{
-				name: "Frankie H.",
-				rating: 4.4,
-				comment: ""
-			},
-			{
-				name: "Grace M.",
-				rating: 4.7,
-				comment: ""
+				name: "Djifas",
+				rating: 5.0,
+				comment: "Super. Répond à la tâche."
 			}
 		]
 	},
@@ -602,7 +593,7 @@ const productData = {
 				comment: ""
 			}
 		]
-	}, 
+	},  
 	"NUBWO G06 Pro Dual-Mode Wireless Gaming Headset with Microphone": {
 		averageRating: 5,
 		reviews: [
