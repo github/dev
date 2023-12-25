@@ -365,7 +365,9 @@ const productData = {
 		]
 	},
 	"CarLink ProWire+, Wireless CarPlay Dongle For Wired CarPlay Cars": {
+		
 		averageRating: 4.6,
+		video: "https://www.example.com/carlink-prowire-video",
 		reviews: [
 			{
 				name: "Alice J.",
@@ -1969,3 +1971,19 @@ function loadProductReviews(e, a = 4) {
  
 const initialProductName = document.getElementById("product-name").textContent;
 loadProductReviews(initialProductName, 4);
+
+
+
+const productNameId = document.getElementById("product-name");
+const productName = productNameId ? productNameId.dataset.productName : null;
+
+// Displaying video
+if (productName) {
+  const productInfo = productData[productName];
+  const videoContainer = document.getElementById("video-container");
+
+  if (productInfo && productInfo.video && videoContainer) {
+    const videoHTML = `<iframe width="560" height="315" src="${productInfo.video}" frameborder="0" allowfullscreen></iframe>`;
+    videoContainer.innerHTML = videoHTML;
+  }
+}
