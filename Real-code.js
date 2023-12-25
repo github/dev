@@ -367,12 +367,13 @@ const productData = {
 	"CarLink ProWire+, Wireless CarPlay Dongle For Wired CarPlay Cars": {
 		
 		averageRating: 4.6,
-		video: "https://www.example.com/carlink-prowire-video",
+		video: "https://mysmartlifeca.github.io/dev/e48eff4d1ea1a9fc427fc5449ea32c267bc081fd.f30.mp4", 
 		reviews: [
 			{
 				name: "Alice J.",
-				rating: 4.7,
-				comment: "Had issues within 3 days, returned and trying another. Works great for Apple CarPlay, connects fast, seamless performance from inside armrest. Worth it!"
+				rating: 5,
+				comment: "Works great for Apple CarPlay, connects fast, seamless performance from inside armrest. Worth it!",
+				image:"https://i.postimg.cc/BnxPBX5X/0e997ef2-7c1e-408b-94b4-dc1abe8d8227.webp"
 			},
 			{
 				name: "Morteza A.",
