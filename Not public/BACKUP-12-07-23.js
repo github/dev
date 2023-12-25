@@ -327,6 +327,319 @@ const productData = {
 			}
 		]
 	},
+	"BeatMaster™ Wall-Mounted Electronic Boxing Trainer: Smart Focus, Digital Punching Pads": { 
+		averageRating: 5,
+		reviews: [
+			{
+				name: "Jake R.",
+				rating: 5,
+				comment: "Solid home workout gear. Keeps me on my toes and adds a fun twist to training.",
+				image: "https://i.postimg.cc/y6XgpscZ/8b10b0fa-ad35-4748-b81e-cbc7902b60ea.webp"
+			}, 
+			{
+				name: "Ava S.",
+				rating: 5,
+				comment: "Impressive and engaging. The electronic features make every session challenging.",
+				image: "https://i.postimg.cc/bwdZvnMx/92a90d19-6499-4f42-afec-8c6b00af0253.webp"
+			},
+			{
+				name: "Ethan L.",
+				rating: 5,
+				comment: "Great addition to home fitness. Smart focus keeps me motivated."
+			},
+			{
+				name: "Zoe M.",
+				rating: 5,
+				comment: "Love the space-saving design. Perfect for daily boxing workouts at home."
+			},
+			{
+				name: "Marcus B.",
+				rating: 5,
+				comment: "Ultimate home boxing trainer. The digital pads make every session dynamic and enjoyable."
+			},
+			{ 
+				name: "Lily G.",
+				rating: 4.1,
+				comment: "Exciting home workouts. Smart focus tech keeps me engaged and challenged."
+			}
+		]
+	},
+	"CarLink ProWire+, Wireless CarPlay Dongle For Wired CarPlay Cars": {
+		averageRating: 4.6,
+		reviews: [{
+				name: "Alice J.",
+				rating: 4.7,
+			},
+			{
+				name: "Bob S.",
+				rating: 4.5,
+			},
+			{
+				name: "Charlie B.",
+				rating: 4.8,
+			},
+			{
+				name: "David M.",
+				rating: 4.4,
+			},
+			{
+				name: "Eva D.",
+				rating: 4.9,
+			},
+			{
+				name: "Frank W.",
+				rating: 4.3,
+			},
+			{
+				name: "Grace T.",
+				rating: 4.6,
+			}
+		]
+	},
+	"TheraSculpt Pro™ 8D Precision Neck & Shoulder Massager": {
+		averageRating: 4.7,
+		reviews: [
+			{
+				name: "Alexa H.",
+				rating: 5,
+			},
+			{
+				name: "Benjamin K.",
+				rating: 5,
+			},
+			{
+				name: "Catherine L.",
+				rating: 5,
+			},
+			{
+				name: "Daniel M.",
+				rating: 4.8,
+			},
+			{
+				name: "Emily S.",
+				rating: 5,
+			},
+			{
+				name: "Finn C.",
+				rating: 4.9,
+			},
+			{
+				name: "Grace T.",
+				rating: 4.5,
+			}
+		]
+	},
+	"ThermaRelax™ Home Massage Heating Cushion: 5 Motor Vibration, 3 Hot Seat": {
+		averageRating: 4.8,
+		reviews: [
+			{
+				name: "Adam W.",
+				rating: 4.7,
+			},
+			{
+				name: "Bella G.",
+				rating: 4.9,
+			},
+			{
+				name: "Charlie P.",
+				rating: 4.8,
+			},
+			{
+				name: "Diana R.",
+				rating: 4.5,
+			},
+			{
+				name: "Evan S.",
+				rating: 4.9,
+			},
+			{
+				name: "Fiona M.",
+				rating: 4.6,
+			},
+			{
+				name: "George K.",
+				rating: 4.8,
+			}
+		]
+	},
+	"ProFit FlexBoard: Multifunctional Folding Push-Up System for Home and Gym Workouts": {
+		averageRating: 4.6,
+		reviews: [
+			{
+				name: "Alice B.",
+				rating: 4.8,
+			},
+			{
+				name: "Brandon T.",
+				rating: 4.7,
+			},
+			{
+				name: "Chloe L.",
+				rating: 4.5,
+			},
+			{
+				name: "David P.",
+				rating: 4.9,
+			},
+			{
+				name: "Eva S.",
+				rating: 4.6,
+			},
+			{
+				name: "Frankie H.",
+				rating: 4.4,
+			},
+			{
+				name: "Grace M.",
+				rating: 4.7,
+			}
+		]
+	},
+	"PrecisionCore Ab Roller Wheel Set: Advanced Abdominal Workout System with Automatic Rebound, Timer": {
+		averageRating: 4.7,
+		reviews: [
+			{
+				name: "Alex C.",
+				rating: 4.8,
+			},
+			{
+				name: "Bethany M.",
+				rating: 4.6,
+			},
+			{
+				name: "Connor L.",
+				rating: 4.9,
+			},
+			{
+				name: "Daisy R.",
+				rating: 4.7,
+			},
+			{
+				name: "Ethan K.",
+				rating: 4.5,
+			},
+			{
+				name: "Fiona H.",
+				rating: 4.8,
+			},
+			{
+				name: "George S.",
+				rating: 4.7,
+			}
+		]
+	},
+	"Elegance Series Smartwatch - Fusion of Style and Technology with Bluetooth Calling, Fitness Tracking": {
+		averageRating: 4.5,
+		reviews: [
+			{
+				name: "Aaron D.",
+				rating: 4.6,
+			},
+			{
+				name: "Bella W.",
+				rating: 4.7,
+			},
+			{
+				name: "Cameron L.",
+				rating: 4.4,
+			},
+			{
+				name: "Diana S.",
+				rating: 4.5,
+			},
+			{
+				name: "Ethan M.",
+				rating: 4.8,
+			},
+			{
+				name: "Fiona K.",
+				rating: 4.6,
+			},
+			{
+				name: "George P.",
+				rating: 4.5,
+			}
+		]
+	}, 
+	"NUBWO G06 Pro Dual-Mode Wireless Gaming Headset with Microphone": {
+		averageRating: 5,
+		reviews: [
+			{  
+				name: "Sophia W.",
+				rating: 5,
+				comment: "lown away! The surround sound is insane, and the dual-mode switch is a game-changer. Communication with the squad is crystal clear. It's a whole new level of gaming!",
+				image:"https://i.postimg.cc/yYXB8gff/media-SL853-FMjpeg-1.jpg"
+			},
+
+			{
+				name: "David R.",
+				rating: 5,
+				comment: "I've been using the NUBWO G06 Pro, and it's legit comfy and durable. No more discomfort during marathon gaming, and it feels like it can take a beating. Totally worth the investment!",
+				image:"https://i.postimg.cc/vBcH1Y14/61uvy-YOo-U6-L-2.jpg"
+			},
+			{
+				name: "Sophie G.",
+				rating: 5,
+				comment: "mic is on another level! Clear as day, and the noise canceling is no joke. Makes team coordination a breeze. "
+			},
+			{
+				name: "Anthony J.",
+				rating: 5,
+				comment: "No lags, no interference, just pure gaming bliss. The dual-mode is a sweet bonus. Highly recommend!"
+			},
+			{
+				name: "Isabella P.",
+				rating: 4.7,
+				comment: "got this for my lil bro , he absolutely loves it!"
+			},
+			] 
+	},  
+	"PrecisionBeat Pro: Intelligent Reactive Training System for Boxing Mastery": {  
+		averageRating: 5,
+		reviews: [
+			{  
+				name: "Sophia W.",
+				rating: 5,
+				comment: "Exciting home workouts. Intelligent reactive tech keeps me engaged and challenged."
+			},
+
+			{
+				name: "David R.",
+				rating: 5,
+				comment: "Versatile enough for all skill levels—essential for anyone serious about improving their boxing skills."
+			},
+			{
+				name: "Sophie G.",
+				rating: 5,
+				comment: "it's a stress-relief powerhouse! really love it"
+			},
+			{
+				name: "Anthony J.",
+				rating: 5,
+				comment: "Got it for my bf, he absolutely loves it."
+			},
+			{
+				name: "Isabella P.",
+				rating: 5,
+				comment: "best tool for home training, thank you msl!!"
+			},
+			{
+				name: "Christopher M.",
+				rating: 4.2,
+				comment: "Motivation On Point! Keep the momentum going and achieve your fitness goals with this innovative training tool. The LED lights and music sync make each punch feel like a cinematic moment. Syncing it with my playlist has turned my training sessions into a dance party."
+			},
+			{
+				name: "Sophia B.",
+				rating: 5,
+				comment: "Absolutely love it! The LED lights add a whole new dimension to my workouts. It's like having a personal trainer cheering me on. The music sync keeps me pumped, and the relaxation target is a fantastic touch for refining my moves. It's become the highlight of my day – I'm hooked!"
+			},
+			{
+				name: "Emma D.",
+				rating: 5,
+				comment: "Unleashed a new level of intensity in my workouts! The LED lights and the music sync keeps me going. Perfect for staying motivated and improving my reflexes. It's like having a personal trainer in my home. The Relaxing Reaction Training Target is a game-changer for serious athletes!"
+			}, 
+		]
+	}, 
 	"PosturePro™: Smart Sensor Posture Corrector with Vibration Reminder": { 
 		averageRating: 4.6,
 		reviews: [
@@ -388,43 +701,7 @@ const productData = {
 
 		]
 	}, 
-	"BeatMaster™ Wall-Mounted Electronic Boxing Trainer: Smart Focus, Digital Punching Pads": { 
-		averageRating: 4.8,
-		reviews: [
-			{
-				name: "Jake R.",
-				rating: 4.7,
-				comment: "Solid home workout gear. Keeps me on my toes and adds a fun twist to training."
-			},
-			{
-				name: "Ava S.",
-				rating: 4.9,
-				comment: "Impressive and engaging. The electronic features make every session challenging."
-			},
-			{
-				name: "Ethan L.",
-				rating: 4.8,
-				comment: "Great addition to home fitness. Smart focus keeps me motivated."
-			},
-			{
-				name: "Zoe M.",
-				rating: 4.7,
-				comment: "Love the space-saving design. Perfect for daily boxing workouts at home."
-			},
-			{
-				name: "Marcus B.",
-				rating: 4.9,
-				comment: "Ultimate home boxing trainer. The digital pads make every session dynamic and enjoyable."
-			},
-			{ 
-				name: "Lily G.",
-				rating: 4.8,
-				comment: "Exciting home workouts. Smart focus tech keeps me engaged and challenged."
-			}
-		]
-	}, 
-	
-	
+ 
 	"Air Pressure Eye Massager with Integrated Speaker": {
 		averageRating: 4.7,
 		reviews: [{
@@ -470,18 +747,16 @@ const productData = {
 			comment: "i got it before the black friday price, now its worth less, not happy with that"
 		}]
 	},
-	"EarPods Pro 2023": {
+	"Bluetooth Earphone Wireless Earphone Sound Noise Cancelling Bluetooth": {  
 		averageRating: 4.8,
 		reviews: [{
 			name: "Klemens T.",
 			rating: 5,
 			comment: "Wow, these earphones are amazing! Super easy to connect, and the sound is pretty darn good. I'm impressed. 🎵",
-			image: "https://i.postimg.cc/8cCFTbZm/Webppro-out-136abc0b8ce635835e5743689fa4aaa0.webp"
 		}, {
 			name: "Gage E.",
 			rating: 5,
 			comment: "These earphones are the bomb! Sound is crystal clear, and the bass? It's like a party in my ears. Highly recommend! 🎧",
-			image: "https://i.postimg.cc/vBYTvzww/51m-FQo0q-T-L-SL1600.webp"
 		}, {
 			name: "Gayla T.",
 			rating: 4,
@@ -507,7 +782,7 @@ const productData = {
 		{
 			name: "Mike Z.",
 			rating: 5,
-			comment: "These are my second pair of earpods; I gave my previous ones to my gf. All I can say is that they are perfect for the price."
+			comment: "These are my second pair of earphones; I gave my previous ones to my gf. All I can say is that they are perfect for the price."
 		},
 		{
 			name: "Simon Z.",
@@ -518,7 +793,7 @@ const productData = {
 			rating: 5,
 			comment: "I mean, for this price, they're practically a steal! I'm diggin' these earphones. 🤑",
 		}]
-	},  
+	},   
 	"Tuya Finger Robot Switch - The Smart Home Button Pusher": {
 		averageRating: 4.8,
 		reviews: [{
@@ -993,45 +1268,46 @@ const productData = {
 		reviews: [{
 			name: "John D.",
 			rating: 5,
-			comment: "The TV LED backlight is a game-changer for enhancing my viewing experience. The lighting effects create a fantastic ambiance, and it's easy to install. It has added a whole new dimension to my TV watching."
+			comment: "Awesome backlight! It transformed my TV into a whole new experience. Super easy to install, and the lighting effects are captivating."
 		}, {
 			name: "Sarah L.",
 			rating: 4,
-			comment: "I'm quite happy with this TV LED backlight. The lighting effects are enjoyable, and it's a breeze to set up. More customizable color options would be a nice addition, but it's a solid choice for enhancing your viewing experience."
+			comment: "Loving this backlight! Simple setup, cool lighting effects. Wish there were more color options, but it's a solid choice for better TV vibes."
 		}, {
 			name: "Robert S.",
 			rating: 5,
-			comment: "The TV LED backlight is a must-have for any home theater. The lighting effects create a dynamic atmosphere, and it's user-friendly. It has significantly improved my TV viewing, and I highly recommend it."
+			comment: "A must for home theaters! Easy setup, friendly vibes. It seriously upgraded my TV game. Highly recommended."
 		}, {
 			name: "Emma W.",
 			rating: 4,
-			comment: "This TV LED backlight is a good buy. The lighting effects add flair to the viewing experience, and it's straightforward to use. More customizable color options would make it even more versatile, but it's a reliable option for enhancing your TV viewing."
+			comment: "Smart buy! Adds flair to TV time. Easy to use, though more color options would be cool. Still, it's reliable for an enhanced viewing experience."
 		}, {
 			name: "James H.",
 			rating: 5,
-			comment: "The TV LED backlight is a fantastic addition to my home theater. The lighting effects are mesmerizing, and it's easy to set the mood. It has turned my TV into an immersive experience, and I couldn't be happier."
+			comment: "Fantastic addition! Turned my TV into an immersive experience. Easy mood-setting and mesmerizing lighting effects. Couldn't be happier!"
 		}, {
 			name: "Sophia M.",
 			rating: 4,
-			comment: "I'm impressed with this TV LED backlight. The lighting effects are enjoyable, and it's user-friendly. More customizable color options would be a nice enhancement, but it's a strong choice for enhancing your TV viewing."
+			comment: "Impressed! Enjoyable effects and user-friendly. More color options would be nice, but it's a solid choice for spicing up TV time."
 		}, {
 			name: "David R.",
 			rating: 5,
-			comment: "The TV LED backlight is a game-changer for home theaters. The lighting effects are stunning, and it's easy to use. It has added a whole new dimension to my TV viewing, and I highly recommend it."
+			comment: "Game-changer for home theaters! Stunning effects and easy to use. Took my TV to the next level. Highly recommend it."
 		}, {
 			name: "Olivia P.",
 			rating: 4,
-			comment: "This TV LED backlight is a reliable choice. The lighting effects are enjoyable, and it's user-friendly. More customizable color options would be a nice addition, but it's a solid option for enhancing your TV viewing."
+			comment: "Reliable choice! Enjoyable effects and user-friendly. More colors would be a nice touch, but it adds to the TV viewing experience."
 		}, {
 			name: "William L.",
 			rating: 5,
-			comment: "I can't recommend this TV LED backlight enough. The lighting effects are mesmerizing, and it's a breeze to set up. It has transformed my TV into a dynamic and colorful experience."
+			comment: "Highly recommend! Mesmerizing effects and a breeze to set up. Transformed my TV into a colorful experience. A must-have."
 		}, {
 			name: "Lucas R.",
 			rating: 4,
-			comment: "This TV LED backlight is a great investment. The lighting effects are entertaining, and it's user-friendly. More customizable color options would be a nice enhancement, but it's a strong choice for enhancing your TV viewing."
+			comment: "Great investment! Entertaining effects and user-friendly. More color options would be cool, but it sure improves the TV experience."
 		}]
 	},
+	
 	"Portable Door Stop Alarm": {
 		averageRating: 4.6,
 		reviews: [{
@@ -1571,7 +1847,17 @@ function loadProductReviews(e, a = 4) {
 
     if (t.innerHTML = "", !i) {
         const e = document.createElement("p");
-        return e.classList.add("no-reviews-message"), e.textContent = "No reviews yet for this product.", t.appendChild(e), n && (n.style.display = "none"), void(o && (o.style.display = "none"));
+        e.classList.add("no-reviews-message");
+        e.textContent = "No reviews yet for this product.";
+        t.appendChild(e);
+
+        if (n) {
+            n.style.display = "none";
+        }
+        if (o) {
+            o.style.display = "none";
+        }
+        return;
     }
 
     const s = document.createElement("script");
@@ -1585,28 +1871,25 @@ function loadProductReviews(e, a = 4) {
         const a = document.createElement("div");
         a.classList.add("user-review-box");
 
-        // Calculate the number of colored stars and the number of black stars
-        const coloredStars = e.rating > 0 ? e.rating : 0;
-        const blackStars = 5 - coloredStars;
+        // Calculate the number of colored stars, half stars, and black stars
+        const coloredStars = Math.floor(e.rating);
+        const hasHalfStar = e.rating % 1 !== 0;
+        const blackStars = 5 - coloredStars - (hasHalfStar ? 1 : 0);
 
-        const coloredStarHTML = Array.from({
-            length: coloredStars
-        }, (() => '<i class="fas fa-star" style="color: #e49e21;"></i>')).join("");
+        const coloredStarHTML = Array.from({ length: coloredStars }, (() => '<i class="fas fa-star" style="color: #e49e21;"></i>')).join("");
+        const halfStarHTML = hasHalfStar ? '<i class="fas fa-star-half" style="color: #e49e21;"></i>' : '';
+        const blackStarHTML = Array.from({ length: blackStars }, (() => '<i class="fas fa-star-half" style="color: #e49e21;"></i>')).join("");
 
-        const blackStarHTML = Array.from({
-            length: blackStars
-        }, (() => '<i class="fas fa-star" style="color: black;"></i>')).join("");
+        const starHTML = coloredStarHTML + halfStarHTML + blackStarHTML;
 
-        const starHTML = coloredStarHTML + blackStarHTML;
-
-        const n = e.image ? `<img src="${e.image}" alt="${e.name}'s review image" class="review-image">` : "";
-        a.innerHTML = `\n
-            <p><i style="color:#2c5892; margin-right:4px;" class="fa fa-check-circle"></i><strong>${e.name}</strong></p>\n
-            <p>Rating: ${starHTML}</p>\n
-            <p>${e.comment}</p>\n
-            ${n}\n
+        const reviewContent = `
+            <p><i style="color:#2c5892; margin-right:4px;" class="fa fa-check-circle"></i><strong>${e.name}</strong></p> 
+            <p>Rating: ${starHTML}</p>
+            <p>${e.comment}</p>
+            ${e.image ? `<img src="${e.image}" alt="${e.name}'s review image" class="review-image">` : ""}
         `;
 
+        a.innerHTML = reviewContent;
         t.appendChild(a);
     }));
 
@@ -1621,30 +1904,26 @@ function loadProductReviews(e, a = 4) {
                 const a = document.createElement("div");
                 a.classList.add("user-review-box");
 
-                // Calculate the number of colored stars and the number of black stars
-                const coloredStars = e.rating > 0 ? e.rating : 0;
-                const blackStars = 5 - coloredStars;
+                const coloredStars = Math.floor(e.rating);
+                const hasHalfStar = e.rating % 1 !== 0;
+                const blackStars = 5 - coloredStars - (hasHalfStar ? 1 : 0);
 
-                const coloredStarHTML = Array.from({
-                    length: coloredStars
-                }, (() => '<i class="fas fa-star" style="color: #e49e21;"></i>')).join("");
+                const coloredStarHTML = Array.from({ length: coloredStars }, (() => '<i class="fas fa-star" style="color: #e49e21;"></i>')).join("");
+                const halfStarHTML = hasHalfStar ? '<i class="fas fa-star-half" style="color: #e49e21;"></i>' : '';
+                const blackStarHTML = Array.from({ length: blackStars }, (() => '<i class="fas fa-star-half" style="color: #e49e21;"></i>')).join("");
 
-                const blackStarHTML = Array.from({
-                    length: blackStars
-                }, (() => '<i class="fas fa-star" style="color: black;"></i>')).join("");
+                const starHTML = coloredStarHTML + halfStarHTML + blackStarHTML; 
 
-                const starHTML = coloredStarHTML + blackStarHTML;
-
-                const n = e.image ? `<img src="${e.image}" alt="review image of {{ product.name }}" class="review-image">` : "";
-                a.innerHTML = `\n
-                    <p><i style="color:#2c5892; margin-right:4px;" class="fa fa-check-circle"></i><strong>${e.name}</strong></p>\n
-                    <p>Rating: ${starHTML}</p>\n
-                    <p>${e.comment}</p>\n
-                    ${n}\n
+                const reviewContent = `
+                    <p><i style="color:#2c5892; margin-right:4px;" class="fa fa-check-circle"></i><strong>${e.name}</strong></p>
+                    <p>Rating: ${starHTML}</p>
+                    <p>${e.comment}</p>
+                    ${e.image ? `<img src="${e.image}" alt="${e.name}'s review image" class="review-image">` : ""}
                 `;
 
+                a.innerHTML = reviewContent;
                 t.appendChild(a);
-            }))
+            }));
         }));
 
         t.appendChild(e);
@@ -1652,6 +1931,8 @@ function loadProductReviews(e, a = 4) {
 
     console.log("Product reviews loaded successfully (HTML and JSON-LD).");
 }
+ 
+
  
 const initialProductName = document.getElementById("product-name").textContent;
 loadProductReviews(initialProductName, 4);

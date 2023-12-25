@@ -364,6 +364,203 @@ const productData = {
 			}
 		]
 	},
+	"CarLink ProWire+, Wireless CarPlay Dongle For Wired CarPlay Cars": {
+		averageRating: 4.6,
+		reviews: [{
+				name: "Alice J.",
+				rating: 4.7,
+			},
+			{
+				name: "Bob S.",
+				rating: 4.5,
+			},
+			{
+				name: "Charlie B.",
+				rating: 4.8,
+			},
+			{
+				name: "David M.",
+				rating: 4.4,
+			},
+			{
+				name: "Eva D.",
+				rating: 4.9,
+			},
+			{
+				name: "Frank W.",
+				rating: 4.3,
+			},
+			{
+				name: "Grace T.",
+				rating: 4.6,
+			}
+		]
+	},
+	"TheraSculpt Pro™ 8D Precision Neck & Shoulder Massager": {
+		averageRating: 4.7,
+		reviews: [
+			{
+				name: "Alexa H.",
+				rating: 5,
+			},
+			{
+				name: "Benjamin K.",
+				rating: 5,
+			},
+			{
+				name: "Catherine L.",
+				rating: 5,
+			},
+			{
+				name: "Daniel M.",
+				rating: 4.8,
+			},
+			{
+				name: "Emily S.",
+				rating: 5,
+			},
+			{
+				name: "Finn C.",
+				rating: 4.9,
+			},
+			{
+				name: "Grace T.",
+				rating: 4.5,
+			}
+		]
+	},
+	"ThermaRelax™ Home Massage Heating Cushion: 5 Motor Vibration, 3 Hot Seat": {
+		averageRating: 4.8,
+		reviews: [
+			{
+				name: "Adam W.",
+				rating: 4.7,
+			},
+			{
+				name: "Bella G.",
+				rating: 4.9,
+			},
+			{
+				name: "Charlie P.",
+				rating: 4.8,
+			},
+			{
+				name: "Diana R.",
+				rating: 4.5,
+			},
+			{
+				name: "Evan S.",
+				rating: 4.9,
+			},
+			{
+				name: "Fiona M.",
+				rating: 4.6,
+			},
+			{
+				name: "George K.",
+				rating: 4.8,
+			}
+		]
+	},
+	"ProFit FlexBoard: Multifunctional Folding Push-Up System for Home and Gym Workouts": {
+		averageRating: 4.6,
+		reviews: [
+			{
+				name: "Alice B.",
+				rating: 4.8,
+			},
+			{
+				name: "Brandon T.",
+				rating: 4.7,
+			},
+			{
+				name: "Chloe L.",
+				rating: 4.5,
+			},
+			{
+				name: "David P.",
+				rating: 4.9,
+			},
+			{
+				name: "Eva S.",
+				rating: 4.6,
+			},
+			{
+				name: "Frankie H.",
+				rating: 4.4,
+			},
+			{
+				name: "Grace M.",
+				rating: 4.7,
+			}
+		]
+	},
+	"PrecisionCore Ab Roller Wheel Set: Advanced Abdominal Workout System with Automatic Rebound, Timer": {
+		averageRating: 4.7,
+		reviews: [
+			{
+				name: "Alex C.",
+				rating: 4.8,
+			},
+			{
+				name: "Bethany M.",
+				rating: 4.6,
+			},
+			{
+				name: "Connor L.",
+				rating: 4.9,
+			},
+			{
+				name: "Daisy R.",
+				rating: 4.7,
+			},
+			{
+				name: "Ethan K.",
+				rating: 4.5,
+			},
+			{
+				name: "Fiona H.",
+				rating: 4.8,
+			},
+			{
+				name: "George S.",
+				rating: 4.7,
+			}
+		]
+	},
+	"Elegance Series Smartwatch - Fusion of Style and Technology with Bluetooth Calling, Fitness Tracking": {
+		averageRating: 4.5,
+		reviews: [
+			{
+				name: "Aaron D.",
+				rating: 4.6,
+			},
+			{
+				name: "Bella W.",
+				rating: 4.7,
+			},
+			{
+				name: "Cameron L.",
+				rating: 4.4,
+			},
+			{
+				name: "Diana S.",
+				rating: 4.5,
+			},
+			{
+				name: "Ethan M.",
+				rating: 4.8,
+			},
+			{
+				name: "Fiona K.",
+				rating: 4.6,
+			},
+			{
+				name: "George P.",
+				rating: 4.5,
+			}
+		]
+	}, 
 	"NUBWO G06 Pro Dual-Mode Wireless Gaming Headset with Microphone": {
 		averageRating: 5,
 		reviews: [
