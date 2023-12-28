@@ -1798,6 +1798,51 @@ const productData = {
 			comment: "Worth the price" 
 		}]
 	}, 
+	"AuraGlow™ Nordic Flame Aromatherapy Humidifier with Atmosphere Light": { 
+		averageRating: 4.5,
+		reviews: [
+		  {
+			name: "Sophia A.",
+			rating: 5,
+			comment:
+			  "Cozy and quiet, this lamp is perfect for a tranquil atmosphere. The gentle water sensitivity adds a positive touch. Love the aromatic experience!",
+			image:
+			  "https://i.postimg.cc/rpTd8G6J/A9f8d1f21592e4ccda135f28a3bbfc061z.webp",
+		  }, 
+		  {
+			name: "Liam B.",
+			rating: 4,
+			comment: "It's very nice when it's on now I just need the oils",
+			image:"https://i.postimg.cc/Qd19G4zC/A2ba1233438c34964850a7670723d1526-X.webp"
+		  }, 
+		  {
+			name: "Ava C.",
+			rating: 5,
+			comment: "Very good👍🏿, Arrived before the deadline, very MSM time, I recommend it to anyone who wants to decorate the room!",
+			image:"https://i.postimg.cc/y6pSFS91/A8b3f9ac286bd4649ad7301e3fb622d9b-O.webp"
+		  },
+		  {
+			name: "Mia E.",
+			rating: 5,
+			comment: "",
+		  },
+		  {
+			name: "Jackson F.",
+			rating: 5,
+			comment: "",
+		  },
+		  {
+			name: "Chloe G.",
+			rating: 4,
+			comment: "",
+		  },
+		  {
+			name: "Elijah H.",
+			rating: 5,
+			comment: "",
+		  },
+		], 
+	  },  
 	"HydraSound Pro 6: Wireless Hi-Fi Earbuds": {
 		averageRating: 4.5,
 		reviews: [{
