@@ -1824,7 +1824,7 @@ const productData = {
 		  {
 			name: "Mia E.",
 			rating: 5,
-			comment: "",
+			comment: "Fast delivery. Excellent quality. Despite the price looks very good.", 
 		  },
 		  {
 			name: "Jackson F.",
