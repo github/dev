@@ -1984,7 +1984,7 @@ function loadProductReviews(e, a = 4) {
     if (t.innerHTML = "", !i) {
         const e = document.createElement("p");
         e.classList.add("no-reviews-message");
-        e.textContent = "Your feedback is invaluable. Check your email to be the first to review. Join us in building trust and shaping the experience for everyone."; 
+        e.innerHTML = "Already received your product? Your <strong>feedback is invaluable</strong>. Check your email to be the <strong>first</strong> to review. Join us in <strong>building trust</strong> and <strong>shaping the experience</strong> for everyone.";
         t.appendChild(e);
 
         if (n) {
@@ -1994,7 +1994,7 @@ function loadProductReviews(e, a = 4) {
             o.style.display = "none";
         }
         return;
-    }
+    } 
 
     const s = document.createElement("script");
     s.type = "application/ld+json";
