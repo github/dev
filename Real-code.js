@@ -1843,6 +1843,36 @@ const productData = {
 		  },
 		], 
 	  },  
+	  "RoséGlam™ Luxury Red Zircon Pendant Necklace with Rose Flower Gift Box": {  
+		averageRating: 4.5,
+		reviews: [
+		  {
+			name: "Olivia A.",
+			rating: 5,
+			comment:
+			  "It's super beautiful I recommend", 
+			image:
+			  "https://i.postimg.cc/nh17HMz8/A8045c71f0c954c2f95bbc0794b47d0e58.webp",  
+		  }, 
+		  {
+			name: "Noah B.",
+			rating: 4,
+			comment: "My girlfriend loves it very sweet",
+			image:"https://i.postimg.cc/Zq7ddgpV/Abf3f31e902f648258d7bbf58914052082.webp" 
+		  }, 
+		  {
+			name: "Isabella C.",
+			rating: 5,
+			comment: "It is lovely and well packaged, thank you!!",
+			image:"https://i.postimg.cc/mr29hRzP/Af1531953bb0a47efaab7d82c0f909a56-L.webp" 
+		  },
+		  {
+			name: "Ethan E.",
+			rating: 5,
+			comment: "Fast delivery. Excellent quality. Despite the price looks very good.", 
+		  }, 
+		],  
+	  }, 
 	"HydraSound Pro 6: Wireless Hi-Fi Earbuds": {
 		averageRating: 4.5,
 		reviews: [{
