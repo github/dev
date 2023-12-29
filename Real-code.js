@@ -1984,7 +1984,7 @@ function loadProductReviews(e, a = 4) {
     if (t.innerHTML = "", !i) {
         const e = document.createElement("p");
         e.classList.add("no-reviews-message");
-        e.textContent = "No reviews yet for this product.";
+        e.textContent = "Your feedback is invaluable. Check your email to be the first to review. Join us in building trust and shaping the experience for everyone."; 
         t.appendChild(e);
 
         if (n) {
