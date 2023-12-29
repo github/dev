@@ -1885,7 +1885,20 @@ const productData = {
 			  "https://i.postimg.cc/Tw08JzT5/Ab560cc70e2d4454b808a64bb3192d479x.webp",   
 		  }, 
 		],  
-	  },   
+	  },
+	  "RosyEmbrace™ 25/40cm Teddy Rose Bear Heart with Artificial Roses": {  
+		averageRating: 4.5,
+		reviews: [
+		  {
+			name: "Ahmed C",
+			rating: 5,
+			comment:
+			  "Bought this as a gift for my gf, really good quality!", 
+			image:
+			  "https://i.postimg.cc/904hXxj4/Sd8738382b18f41888dee6ee1810869f0z.webp",   
+		  }, 
+		],  
+	  },       
 	"HydraSound Pro 6: Wireless Hi-Fi Earbuds": {
 		averageRating: 4.5,
 		reviews: [{
