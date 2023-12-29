@@ -1873,6 +1873,19 @@ const productData = {
 		  }, 
 		],  
 	  }, 
+	  "EternaBloom™ Eternal Rose Apple Gift Box with Crystal Heart Necklace and Love Soap Flower Jewelry": {  
+		averageRating: 4.5,
+		reviews: [
+		  {
+			name: "Sarah A.",
+			rating: 5,
+			comment:
+			  "Lovely!!!", 
+			image:
+			  "https://i.postimg.cc/Tw08JzT5/Ab560cc70e2d4454b808a64bb3192d479x.webp",   
+		  }, 
+		],  
+	  },   
 	"HydraSound Pro 6: Wireless Hi-Fi Earbuds": {
 		averageRating: 4.5,
 		reviews: [{
