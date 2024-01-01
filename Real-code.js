@@ -1898,7 +1898,53 @@ const productData = {
 			  "https://i.postimg.cc/904hXxj4/Sd8738382b18f41888dee6ee1810869f0z.webp",   
 		  }, 
 		],  
-	  },       
+	  },      
+	  "Redragon M811 PRO Wireless MMO Gaming Mouse": {   
+		averageRating: 4.5,
+		reviews: [
+		  {
+			name: "Zayn S.",
+			rating: 5,
+			comment:
+			  "Bought it as a gift , he loves it! He mentioned it being a great quality mouse for the price, good battery life, comfortable, great wireless range and he had no complaints.", 
+			image:
+			  "https://i.postimg.cc/52Ln4W8G/51-Ep-TXruze-L-1.webp",    
+		  }, 
+		  {
+			name: "Noor S.", 
+			rating: 5,
+			comment:
+			  "Best mouse i ever bought!!!!", 
+			image:
+			  "https://i.postimg.cc/Jh7J9fxj/612n-FAPHLNL-1.webp",    
+		  },  
+		  {
+			name: "Alice M.",
+			rating: 5,
+			comment: "Absolutely fantastic! this mouse is a piece of art.",
+		  },
+		  {
+			name: "Chris W.",
+			rating: 4.7,
+			comment: "Great purchase! comfortable to use and very responsive for a wireless mouse.",
+		  },
+		  {
+			name: "Laura H.",
+			rating: 5,
+			comment: "Superb quality! I'm extremely satisfied with this mouse.",
+		  },
+		  {
+			name: "Mike H.",
+			rating: 5,
+			comment: "I always buy from you guys and i will always do, best support team, thank you msl!!",
+		  },  
+		  {
+			name: "Hayla H.",
+			rating: 5,
+			comment: "great mouse. very comfy. lots of thumb buttons for easy/lazy gaming. love being able to use it as wireless or corded. 100% worth it for gamers.",
+		  }     
+		],  
+	  },        
 	"HydraSound Pro 6: Wireless Hi-Fi Earbuds": {
 		averageRating: 4.5,
 		reviews: [{
