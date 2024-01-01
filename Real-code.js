@@ -1898,6 +1898,56 @@ const productData = {
 			  "https://i.postimg.cc/904hXxj4/Sd8738382b18f41888dee6ee1810869f0z.webp",   
 		  }, 
 		],  
+	  },   
+	  "RhythmStrike™ Rechargeable Musical Punching Wall Boxing Machine": {
+		averageRating: 4.5,
+		reviews: [
+		  {
+			name: "Ethan M.",
+			rating: 5,
+			comment: "The quality of the product is very good and the delivery was fast. Sound could be better but is ok for the training. Very happy with the purchase",
+			image: "https://i.postimg.cc/N53XLv0p/p8wzt296.jpg",
+		  },
+		  {
+			name: "Olivia B.",
+			rating: 5,
+			comment: "Didn’t realize when I purchased it that the pads you punch are soft so major plus! Love this product because it is challenging! Great for exercise and fun!",
+			image: "https://i.postimg.cc/gnXRY2Gx/1-SNC5y-Cd-Q-mid.jpg",
+		  },
+		  {
+			name: "Nathan S.",
+			rating: 5,
+			comment: "This is actually a pretty fun boxing machine even for adults and kids will really enjoy it. Just don't hit it with all of your force and use it as a speed and agility game.",
+			image: "https://i.postimg.cc/QBbK6BJy/jf0-HZxw-V8-mid.jpg",
+		  },
+		  {
+			name: "Sophia W.",
+			rating: 5,
+			comment: "My Grandson loves it!!!",
+			image: "https://i.postimg.cc/bZ1ttVD8/U6o3-Ov-Yv-Z-mid.jpg",
+		  },
+		  {
+			name: "Liam K.",
+			rating: 5,
+			comment: "Boxing machine was simple to set up and connect. A lot of fun. I was surprised at how well this stays on the wall. The music and game type rhythm make this better to use.",
+			image: "https://i.postimg.cc/ThHgMDv8/U-Y7-C7-UQ-mid.jpg",
+		  },
+		  {
+			name: "Ava P.",
+			rating: 5,
+			comment: "This is really nice! It connects to your phone and allows you to play the music you're most comfortable with while exercising",
+		  },
+		  {
+			name: "Jackson R.",
+			rating: 5,
+			comment: "Easy to use functions properly work well to maintain focus",
+		  },
+		  {
+			name: "Scarlett L.",
+			rating: 5,
+			comment: "",
+		  },
+		],
 	  },      
 	  "Redragon M811 PRO Wireless MMO Gaming Mouse": {   
 		averageRating: 4.5,
