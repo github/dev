@@ -2080,8 +2080,8 @@ function loadProductReviews(e, a = 4) {
     if (t.innerHTML = "", !i) {
         const e = document.createElement("p");
         e.classList.add("no-reviews-message");
-        e.innerHTML = "Already received your product? Your <strong>feedback is invaluable</strong>. Check your email to be the <strong>first</strong> to review. Join us in <strong>building trust</strong> and <strong>shaping the experience</strong> for everyone.";
-        t.appendChild(e);
+        e.innerHTML = "Got your product? Be the <strong>first to review</strong>! Check email for a chance to win: <strong>$5 for a photo</strong>, <strong>$10 for a video</strong>. <strong>Shape the experience</strong>! 🌟"; 
+        t.appendChild(e); 
 
         if (n) {
             n.style.display = "none";
