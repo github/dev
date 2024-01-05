@@ -1,0 +1,40 @@
+Hackerrank code for Time conversion
+//Not complete
+
+#include <iostream>
+#include <sstream>
+#include <string>
+
+using namespace std;
+
+string timeConversion(string s) {
+    boolean isAm = false;
+    if(s[8] == 'A')
+    isAm = true;
+    
+    //splitting the string at points ':'
+    stringstream ss(s);
+    vector<string> subStrings;
+    string token;
+    
+    while(getline(ss,token,':')){
+        subStrings.push_back(token);
+    }
+    
+    if(isAm == false){
+        if(subStrings[0] != '12'){
+            int hour;
+            istringstream >> hour;
+            hour+12;
+            
+        }
+    }
+    
+}
+
+int main()
+{
+    
+
+    return 0;
+}
