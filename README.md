@@ -1,1 +1,1 @@
-This repo contains my coding practices
+This repo contains my coding practices for interviews
