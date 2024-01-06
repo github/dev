@@ -2183,5 +2183,5 @@ function loadProductReviews(e, a = 4) {
 
  
 const initialProductName = document.getElementById("product-name").textContent;
-loadProductReviews(initialProductName, 4);
+loadProductReviews(initialProductName, 6);
 
