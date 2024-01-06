@@ -632,23 +632,30 @@ const productData = {
 	"PrecisionBeat Pro: Intelligent Reactive Training System for Boxing Mastery": {  
 		averageRating: 5,
 		reviews: [
+			{
+				name: "Crystal L.",
+				rating: 5,
+				comment: "Amazing for the price, really love it!!",
+				image:"https://i.postimg.cc/C1pvSM8K/Ab43b5afdac7746c3a79bfa2c23ad1561f.webp"
+			},
 			{  
 				name: "Sophia W.",
 				rating: 5,
-				comment: "Exciting home workouts. Intelligent reactive tech keeps me engaged and challenged.",
+				comment: "Arrived safe, thank you.",
 				image:"https://i.postimg.cc/MGTPdrSW/Acf96e09bcf7c48c4b7dc8f058506da5cs.webp"
 			},
 
 			{
 				name: "David R.",
 				rating: 5,
-				comment: "Versatile enough for all skill levels—essential for anyone serious about improving their boxing skills.",
+				comment: "Bought this for my son for Christmas, and he's been using it since then. It's like I've added more motivation to him.",
 				image:"https://i.postimg.cc/RVpvg2rF/A354120ea8eb4447496589cc997d70118z.webp"
 			},
 			{
-				name: "Sophie G.",
+				name: "Alex S.",
 				rating: 5,
-				comment: "it's a stress-relief powerhouse! really love it"
+				comment: "thank you msl <3",
+				image:"https://i.postimg.cc/tgwKPHx0/A73eca9fe599e465f8164397a234dfe657.webp"
 			},
 			{
 				name: "Anthony J.",
@@ -656,24 +663,24 @@ const productData = {
 				comment: "Got it for my bf, he absolutely loves it."
 			},
 			{
-				name: "Isabella P.",
+				name: "Ahmed.",
 				rating: 5,
-				comment: "best tool for home training, thank you msl!!"
+				comment: "best tool for home training"
 			},
 			{
 				name: "Christopher M.",
 				rating: 4.2,
-				comment: "Motivation On Point! Keep the momentum going and achieve your fitness goals with this innovative training tool. The LED lights and music sync make each punch feel like a cinematic moment. Syncing it with my playlist has turned my training sessions into a dance party."
+				comment: "Technology is going crazy these days, not gonna lie. Package arrived well."
 			},
 			{
 				name: "Sophia B.",
 				rating: 5,
-				comment: "Absolutely love it! The LED lights add a whole new dimension to my workouts. It's like having a personal trainer cheering me on. The music sync keeps me pumped, and the relaxation target is a fantastic touch for refining my moves. It's become the highlight of my day – I'm hooked!"
+				comment: "Absolutely love it! The LED lights add a whole new dimension to my workouts."
 			},
 			{
 				name: "Emma D.",
 				rating: 5,
-				comment: "Unleashed a new level of intensity in my workouts! The LED lights and the music sync keeps me going. Perfect for staying motivated and improving my reflexes. It's like having a personal trainer in my home. The Relaxing Reaction Training Target is a game-changer for serious athletes!"
+				comment: "Perfect for staying motivated and improving my reflexes. It's like having a personal trainer in my home."
 			}, 
 		]
 	}, 
