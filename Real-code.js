@@ -339,28 +339,35 @@ const productData = {
 			{
 				name: "Ava S.",
 				rating: 5,
-				comment: "Impressive and engaging. The electronic features make every session challenging.",
+				comment: "Well arrived, thank you!",
 				image: "https://i.postimg.cc/bwdZvnMx/92a90d19-6499-4f42-afec-8c6b00af0253.webp"
 			},
 			{
 				name: "Ethan L.",
 				rating: 5,
-				comment: "Great addition to home fitness. Smart focus keeps me motivated."
+				Comment: "I only bought it so I can start moving a bit; I've been lazy these days.",
+				image:"https://i.postimg.cc/FFBCFk6T/Abba673b227dd49ebb32566be84b867abs.webp"
+
 			},
 			{
 				name: "Zoe M.",
 				rating: 5,
-				comment: "Love the space-saving design. Perfect for daily boxing workouts at home."
+				comment: "Works great for the price, i placed it in my garage."
 			},
 			{
 				name: "Marcus B.",
 				rating: 5,
-				comment: "Ultimate home boxing trainer. The digital pads make every session dynamic and enjoyable."
-			},
-			{ 
+				Comment: "Really enjoyable! It's like even if you're lazy, you just put on some music and start moving. I'm not even a good boxer, but at least I move a bit."	
+					},
+				{ 
 				name: "Lily G.",
 				rating: 4.1,
-				comment: "Exciting home workouts. Smart focus tech keeps me engaged and challenged."
+				comment: "works great."
+			},
+			{
+				name:"Salma B",
+				rating: 4.9,
+				comment:""
 			}
 		]
 	},
