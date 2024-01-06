@@ -635,13 +635,15 @@ const productData = {
 			{  
 				name: "Sophia W.",
 				rating: 5,
-				comment: "Exciting home workouts. Intelligent reactive tech keeps me engaged and challenged."
+				comment: "Exciting home workouts. Intelligent reactive tech keeps me engaged and challenged.",
+				image:"https://i.postimg.cc/MGTPdrSW/Acf96e09bcf7c48c4b7dc8f058506da5cs.webp"
 			},
 
 			{
 				name: "David R.",
 				rating: 5,
-				comment: "Versatile enough for all skill levels—essential for anyone serious about improving their boxing skills."
+				comment: "Versatile enough for all skill levels—essential for anyone serious about improving their boxing skills.",
+				image:"https://i.postimg.cc/RVpvg2rF/A354120ea8eb4447496589cc997d70118z.webp"
 			},
 			{
 				name: "Sophie G.",
