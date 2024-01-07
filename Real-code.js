@@ -2167,7 +2167,7 @@ function loadProductReviews(e, a = 4) {
 
         const reviewContent = `
             <p><i style="color:#2c5892; margin-right:4px;" class="fa fa-check-circle"></i><strong>${e.name}</strong></p> 
-            <p>Rating: ${starHTML} (${ratingValue})</p>  
+            <p>Rating: ${starHTML} </p> 
             <p>${e.comment}</p>
             ${e.image ? `<img src="${e.image}" alt="${e.name}'s review image" class="review-image">` : ""}
         `;
