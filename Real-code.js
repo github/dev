@@ -2011,6 +2011,41 @@ const productData = {
 		  }     
 		],  
 	  },        
+	  "BeatStrike™ Smart Music Boxing Machine with gloves 2023": {  
+		averageRating: 4.5, 
+		reviews: [
+		  {
+			name: "Sophia A.",
+			rating: 5,
+			comment:
+			  "I'm only making this review for the 10$ coupon but everything is good with the beatstrike.", 
+			image:
+			  "https://i.postimg.cc/7YNXrhpL/71-v-G3-Esjt-L-2.jpg",  
+		  }, 
+		  {
+			name: "Mike B.",
+			rating: 4.3,
+			comment: "I have ADHD and just get bored of exercise quickly. This is a cool way to keep my attention and make some exercise fun.",
+			image:"https://i.postimg.cc/wB1kNV3t/81mgvv-GWzs-L-3.jpg" 
+		  }, 
+		  {
+			name: "Ava C.",
+			rating: 4.6,
+			comment: "This is a good boxing machine for my 14 year old who’s into working out.",
+			image:"https://i.postimg.cc/Rh5G4HSW/71-W64-Tl4o-CL-1.jpg" 
+		  },
+		  {
+			name: "Mason E.",
+			rating: 5,
+			comment: "Great concept and idea. Lots of fun and sweating. Highly recommended",  
+		  }, 
+		  {
+			name: "Haym B.",
+			rating: 5,
+			comment: "Super fun workout. Durable and well made. Easy to get started. Versatile. ",  
+		  }, 
+		],  
+	  }, 
 	"HydraSound Pro 6: Wireless Hi-Fi Earbuds": {
 		averageRating: 4.5,
 		reviews: [{
