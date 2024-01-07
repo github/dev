@@ -345,7 +345,7 @@ const productData = {
 			{
 				name: "Ethan L.",
 				rating: 5,
-				Comment: "I only bought it so I can start moving a bit; I've been lazy these days.",
+				comment: "I only bought it so I can start moving a bit; I've been lazy these days.",
 				image:"https://i.postimg.cc/FFBCFk6T/Abba673b227dd49ebb32566be84b867abs.webp"
 
 			},
@@ -357,7 +357,7 @@ const productData = {
 			{
 				name: "Marcus B.",
 				rating: 5,
-				Comment: "Really enjoyable! It's like even if you're lazy, you just put on some music and start moving. I'm not even a good boxer, but at least I move a bit."	
+				comment: "Really enjoyable! It's like even if you're lazy, you just put on some music and start moving. I'm not even a good boxer, but at least I move a bit."	
 					},
 				{ 
 				name: "Lily G.",
