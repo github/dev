@@ -569,22 +569,23 @@ const productData = {
 			{
 				name: "Aaron D.",
 				rating: 4.6,
-				comment: ""
-			},
+				comment: "useful.,good quality, awesome worth buying way better than I thought ! holds a charge for the whole day it makes calls and you can listen to music with it as well I'm satisfied!",
+				image:"https://i.postimg.cc/cHdnH81r/97fc2f10-0462-4c4c-a2e8-9fe2bb070327-4160x1872-jpeg-compressed.webp"
+			}, 
 			{
 				name: "Bella W.",
 				rating: 4.7,
-				comment: ""
+				comment: "I just received it, it is very beautiful. A bit of trouble logging into the app. But once it's connected, it stays well connected."
 			},
 			{
 				name: "Cameron L.",
 				rating: 4.4,
-				comment: ""
+				comment: "Granddaughter loves the look of her new watch and all the different activities on it, so far better than her old Apple watch!"
 			},
 			{
 				name: "Diana S.",
 				rating: 4.5,
-				comment: ""
+				comment: "definitely recommend!!" 
 			},
 			{
 				name: "Ethan M.",
