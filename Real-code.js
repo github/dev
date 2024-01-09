@@ -649,6 +649,52 @@ const productData = {
 			}
 		]
 	}, 
+	"PurrGleam™ 3-in-1 Electric Steam Brush for Cats and Dogs": {
+		avgRating: 4.5,
+		reviews: [
+			{
+				name: "Aria W.",
+				rating: 5,
+				comment: "Worked well and my cat likes it way more than his regular brush. Got lots of fur, so big win.",
+				image: "https://i.postimg.cc/T2Szdz8F/71-X-b8-RVSNL-1.jpg"
+			}, 
+			{ 
+				name: "Blake T.",
+				rating: 5,
+				comment: "Quality cleaning brush The steam jet is discreet my cat lets go Good product",
+				image: "https://i.postimg.cc/9QxSkKBL/Ae5e209aefb324a648f0e9a192a737ad92.webp"
+			},
+			{
+				name: "Caroline S.",
+				rating: 5,
+				comment: "It's worth it, my kittens love it ❤️",
+				image: "https://i.postimg.cc/jdMZqNJ5/S457a7a5884324e60a2102e4bda65812f1.webp" 
+			}, 
+			{
+				name: "Damian M.",
+				rating: 5,
+				comment: "Very good, my cat doesn't reject me at all. I use this to comb his hair",
+				image: "https://i.postimg.cc/5N2Sr0kM/Sd91c46ae03d147c9994ea1c5d8d398741.webp"
+			},
+			{
+				name: "Eleanor H.",
+				rating: 4.5,
+				comment: "Works perfect! My cats still get a little scared by the water, but they come back for more, and remove a lot of hair",
+				image: "https://i.postimg.cc/MpjVkj7g/Ab52e00a553ee4b7cb3f82b08124dffac-F.webp"
+			},
+			{
+				name: "Finn K.",
+				rating: 5,
+				comment: "Products of very good quality, 100% recommended.",
+				image: "https://i.postimg.cc/3Jz0ZJs1/A3d8385c5535d4245afe5b1337a6cb4c2j.webp"
+			},
+			{
+				name: "Gabrielle P.",
+				rating: 4,
+				comment: "works good",
+			}
+		]
+	},
 	
 	"NUBWO G06 Pro Dual-Mode Wireless Gaming Headset with Microphone": {
 		averageRating: 5,
