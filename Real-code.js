@@ -2218,14 +2218,17 @@ function generateJSONLD(e, a) {
 	};
 	return JSON.stringify(t)
 }
+// Function to get a random flag icon URL
 function getRandomFlagIcon() {
-	const randomNum = Math.random();
-	const flagSrc = randomNum <= 0.6
-		? 'https://i.postimg.cc/ZnYGMdQd/3909383.webp' // USA flag image URL
-		: 'https://i.postimg.cc/Dy0VQ1LV/5372678-1.webp'; // Canada flag image URL
+    const randomNum = Math.random();
+    const flagSrc = randomNum <= 0.6
+        ? 'https://i.postimg.cc/ZnYGMdQd/3909383.webp' // USA flag image URL
+        : 'https://i.postimg.cc/Dy0VQ1LV/5372678-1.webp'; // Canada flag image URL
 
-	return `<img src="${flagSrc}" class="flag-icon" alt="Flag">`; 
+    return `<img src="${flagSrc}" class="flag-icon" alt="Flag">`; 
 }  
+
+// Function to load product reviews
 function loadProductReviews(e, a = 6) {
     const i = productData[e],
         t = document.getElementById("review-list"),
@@ -2268,12 +2271,21 @@ function loadProductReviews(e, a = 6) {
         const blackStarHTML = Array.from({ length: blackStars }, (() => '<i class="fas fa-star-half" style="color: #e49e21;"></i>')).join("");
 
         const starHTML = coloredStarHTML + halfStarHTML + blackStarHTML;
-		const flagIcon = getRandomFlagIcon();
+
+        const storedFlagIcon = localStorage.getItem(`flagIcon_${e.name}`);
+        const flagIcon = storedFlagIcon || getRandomFlagIcon();
+
+        // Save the flag icon to local storage if it's not already stored
+        if (!storedFlagIcon) {
+            localStorage.setItem(`flagIcon_${e.name}`, flagIcon);
+        }
+
         const reviewContent = `
-		<p class="name-icons">
-		<span> ${flagIcon}</span>
-		<strong> ${e.name} </strong>
-		<i style="color:#2c5892; margin-left: 4px;" class="fa fa-check-circle"></i></p> 
+            <p class="name-icons">
+                <span> ${flagIcon}</span>
+                <strong> ${e.name} </strong>
+                <i style="color:#2c5892; margin-left: 4px;" class="fa fa-check-circle"></i>
+            </p> 
             <p>Rating: ${starHTML} </p>  
             <p>${e.comment}</p>
             ${e.image ? `<img src="${e.image}" alt="${e.name}'s review image" class="review-image">` : ""}
@@ -2303,17 +2315,24 @@ function loadProductReviews(e, a = 6) {
                 const blackStarHTML = Array.from({ length: blackStars }, (() => '<i class="fas fa-star-half" style="color: #e49e21;"></i>')).join("");
 
                 const starHTML = coloredStarHTML + halfStarHTML + blackStarHTML; 
-				const flagIcon = getRandomFlagIcon();
+                const storedFlagIcon = localStorage.getItem(`flagIcon_${e.name}`);
+                const flagIcon = storedFlagIcon || getRandomFlagIcon();
+
+                // Save the flag icon to local storage if it's not already stored
+                if (!storedFlagIcon) {
+                    localStorage.setItem(`flagIcon_${e.name}`, flagIcon);
+                }
 
                 const reviewContent = `
-				<p class="name-icons">
-				<span> ${flagIcon}</span>
-				<strong> ${e.name} </strong>
-				<i style="color:#2c5892; margin-left: 4px;" class="fa fa-check-circle"></i></p> 
-					<p>Rating: ${starHTML} </p>  
-					<p>${e.comment}</p>
-					${e.image ? `<img src="${e.image}" alt="${e.name}'s review image" class="review-image">` : ""}
-				`; 
+                    <p class="name-icons">
+                        <span> ${flagIcon}</span>
+                        <strong> ${e.name} </strong>
+                        <i style="color:#2c5892; margin-left: 4px;" class="fa fa-check-circle"></i>
+                    </p> 
+                    <p>Rating: ${starHTML} </p>  
+                    <p>${e.comment}</p>
+                    ${e.image ? `<img src="${e.image}" alt="${e.name}'s review image" class="review-image">` : ""}
+                `; 
 
                 a.innerHTML = reviewContent;
                 t.appendChild(a);
@@ -2325,6 +2344,7 @@ function loadProductReviews(e, a = 6) {
 
     console.log("Product reviews loaded successfully (HTML and JSON-LD).");
 }
+ 
  
 
  
