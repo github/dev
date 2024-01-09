@@ -2270,10 +2270,10 @@ function loadProductReviews(e, a = 4) {
         const starHTML = coloredStarHTML + halfStarHTML + blackStarHTML;
 		const flagIcon = getRandomFlagIcon();
         const reviewContent = `
-		<p style="display: inline-block;">
+		<p class="name-icons">
 		<i style="color:#2c5892; margin-right: 4px;" class="fa fa-check-circle"></i>
-		<strong style="display: inline-block;">${e.name}</strong>
-		<span style="display: inline-block;">${flagIcon}</span></p> 
+		<strong> ${e.name} </strong>
+		<span> ${flagIcon}</span></p> 
             <p>Rating: ${starHTML} </p> 
             <p>${e.comment}</p>
             ${e.image ? `<img src="${e.image}" alt="${e.name}'s review image" class="review-image">` : ""}
