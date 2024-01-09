@@ -611,20 +611,20 @@ const productData = {
 		reviews: [
 			{
 				name: "Alexis H.",
-				rating: 4.6,
+				rating: 5,
 				comment: "I bought this so I could feed my barn cats a little throughout the day without having to make a trip down to the barn. It works great to be able to program a set time to have them fed.",
 				image: "https://i.postimg.cc/jSZH4rhS/61x-Jb-Hh8k-L-1.jpg"
 			}, 
 			{
 				name: "Bentley Q.",
-				rating: 4.7,
+				rating: 5,
 				comment: "I just got 2 kittens and may take in their sister as well. Sometimes I may need to spend the night away and I wanted to make sure that there is always enough food.",
 				image: "https://i.postimg.cc/tgcF8tw0/71u0a-BK7-Tu-L-1.jpg"
 			},
 			{
 				name: "Cassandra R.",
 				rating: 4.4,
-				comment: "",
+				comment: "I like the most thing is the bowl, it is stainless and easy to clean with wet kitchen paper or tower.",
 				image: "https://i.postimg.cc/nhc7zPtb/81-D9j-A4b-K9-L-SL1600-1.jpg"
 			},
 			{
@@ -635,7 +635,7 @@ const productData = {
 			{
 				name: "Ella M.",
 				rating: 4.8,
-				comment: "I like the most thing is the bowl, it is stainless and easy to clean with wet kitchen paper or tower.",
+				comment: "",
 			},
 			{
 				name: "Felix K.",
