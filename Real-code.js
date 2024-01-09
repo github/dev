@@ -2241,8 +2241,11 @@ function loadProductReviews(e, a = 4) {
     } 
 	function getRandomFlagIcon() {
 		const randomNum = Math.random();
-		const flagIconClass = randomNum <= 0.6 ? 'usa-flag' : 'canada-flag';
-		return `<img class="flag-icon ${flagIconClass}" alt="Flag">`;
+		const flagSrc = randomNum <= 0.6
+			? 'https://i.postimg.cc/ZnYGMdQd/3909383.webp' // USA flag image URL
+			: 'https://i.postimg.cc/Dy0VQ1LV/5372678-1.webp'; // Canada flag image URL
+	
+		return `<img src="${flagSrc}" class="flag-icon" alt="Flag">`;
 	} 
     const s = document.createElement("script");
     s.type = "application/ld+json";
