@@ -2271,9 +2271,9 @@ function loadProductReviews(e, a = 4) {
 		const flagIcon = getRandomFlagIcon();
         const reviewContent = `
 		<p class="name-icons">
-		<span> ${flagIcon}</span>< 
+		<span> ${flagIcon}</span>
 		<strong> ${e.name} </strong>
-		<i style="color:#2c5892; margin-left: 4px;" class="fa fa-check-circle"></i>/p> 
+		<i style="color:#2c5892; margin-left: 4px;" class="fa fa-check-circle"></i></p> 
             <p>Rating: ${starHTML} </p>  
             <p>${e.comment}</p>
             ${e.image ? `<img src="${e.image}" alt="${e.name}'s review image" class="review-image">` : ""}
