@@ -529,8 +529,9 @@ const productData = {
 			{
 				name: "Alex C.",
 				rating: 4.8,
-				comment: "I've been using it for some time now and still working well and I love it, let's see if it's still as solid after some time."
-			},
+				comment: "I've been using it for some time now and still working well and I love it, let's see if it's still as solid after some time.",
+				image:"https://i.postimg.cc/5ttcNvgN/715-RUo-TLfm-L-1.jpg"
+			}, 
 			{
 				name: "Bethany M.",
 				rating: 4.6,
@@ -554,7 +555,7 @@ const productData = {
 			{
 				name: "Fiona H.",
 				rating: 4.8,
-				comment: ""
+				comment: "Love love love this item very easy to use put together Very sturdy and you can use in Carpet. I am 195 pound and my bf is 6’7 240 pounds We both use it and it’s great."
 			},
 			{
 				name: "George S.",
