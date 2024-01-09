@@ -2190,117 +2190,130 @@ const productData = {
 	}
 };
 
-function generateJSONLD(productName, data) {
-	if (!data[productName]) return "";
-	const ldJSON = {
+function generateJSONLD(e, a) {
+	const i = a[e];
+	if (!i) return "";
+	const t = {
 		"@context": "http://schema.org",
 		"@type": "Product",
-		name: productName,
+		name: e,
 		aggregateRating: {
 			"@type": "AggregateRating",
-			ratingValue: data[productName].averageRating,
-			reviewCount: data[productName].reviews.length
+			ratingValue: i.averageRating,
+			reviewCount: i.reviews.length
 		},
-		review: data[productName].reviews.map(review => ({
+		review: i.reviews.map(((e, a) => ({
 			"@type": "Review",
-			author: { "@type": "Person", name: review.name },
-			reviewRating: { "@type": "Rating", ratingValue: review.rating },
-			reviewBody: review.comment,
-			image: review.image
-		}))
+			author: {
+				"@type": "Person",
+				name: e.name
+			},
+			reviewRating: {
+				"@type": "Rating",
+				ratingValue: e.rating
+			},
+			reviewBody: e.comment,
+			image: e.image
+		})))
 	};
-	return JSON.stringify(ldJSON);
+	return JSON.stringify(t)
 }
 
-function getRandomFlagIcon() {
-	const randomNum = Math.random();
-	const flagIconClass = randomNum <= 0.6 ? 'usa-flag' : 'canada-flag';
-	return `<img class="flag-icon ${flagIconClass}" alt="Flag">`;
+function loadProductReviews(e, a = 4) {
+    const i = productData[e],
+        t = document.getElementById("review-list"),
+        n = document.getElementById("trusted-reviews"),
+        o = document.getElementById("average-rating");
+
+    if (t.innerHTML = "", !i) {
+        const e = document.createElement("p");
+        e.classList.add("no-reviews-message");
+        e.innerHTML = "Got your product? Be the <strong>first to review</strong>! Check email for a chance to win: <strong>$5 for a photo</strong>, <strong>$10 for a video</strong>. <strong>Shape the experience</strong>! 🌟"; 
+        t.appendChild(e); 
+
+        if (n) {
+            n.style.display = "none";
+        }
+        if (o) {
+            o.style.display = "none";
+        }
+        return;
+    } 
+
+    const s = document.createElement("script");
+    s.type = "application/ld+json";
+    s.textContent = generateJSONLD(e, productData);
+    document.head.appendChild(s);
+    document.getElementById("product-name").textContent = e;
+    document.getElementById("average-rating-value").textContent = i.averageRating;
+
+    i.reviews.slice(0, a).forEach((e => {
+        const a = document.createElement("div");
+        a.classList.add("user-review-box");
+
+        // Calculate the number of colored stars, half stars, and black stars
+        const coloredStars = Math.floor(e.rating);
+        const hasHalfStar = e.rating % 1 !== 0;
+        const blackStars = 5 - coloredStars - (hasHalfStar ? 1 : 0);
+
+        const coloredStarHTML = Array.from({ length: coloredStars }, (() => '<i class="fas fa-star" style="color: #e49e21;"></i>')).join("");
+        const halfStarHTML = hasHalfStar ? '<i class="fas fa-star-half" style="color: #e49e21;"></i>' : '';
+        const blackStarHTML = Array.from({ length: blackStars }, (() => '<i class="fas fa-star-half" style="color: #e49e21;"></i>')).join("");
+
+        const starHTML = coloredStarHTML + halfStarHTML + blackStarHTML;
+
+        const reviewContent = `
+            <p><i style="color:#2c5892; margin-right:4px;" class="fa fa-check-circle"></i><strong>${e.name}</strong></p> 
+            <p>Rating: ${starHTML} </p> 
+            <p>${e.comment}</p>
+            ${e.image ? `<img src="${e.image}" alt="${e.name}'s review image" class="review-image">` : ""}
+        `;
+
+        a.innerHTML = reviewContent;
+        t.appendChild(a);
+    }));
+
+    if (i.reviews.length > a) {
+        const e = document.createElement("div");
+        e.textContent = "Load More";
+        e.classList.add("see-all-div");
+        e.style.cursor = "pointer";
+        e.addEventListener("click", (() => {
+            t.innerHTML = "";
+            i.reviews.forEach((e => {
+                const a = document.createElement("div");
+                a.classList.add("user-review-box");
+
+                const coloredStars = Math.floor(e.rating);
+                const hasHalfStar = e.rating % 1 !== 0;
+                const blackStars = 5 - coloredStars - (hasHalfStar ? 1 : 0);
+
+                const coloredStarHTML = Array.from({ length: coloredStars }, (() => '<i class="fas fa-star" style="color: #e49e21;"></i>')).join("");
+                const halfStarHTML = hasHalfStar ? '<i class="fas fa-star-half" style="color: #e49e21;"></i>' : '';
+                const blackStarHTML = Array.from({ length: blackStars }, (() => '<i class="fas fa-star-half" style="color: #e49e21;"></i>')).join("");
+
+                const starHTML = coloredStarHTML + halfStarHTML + blackStarHTML; 
+
+                const reviewContent = `
+                    <p><i style="color:#2c5892; margin-right:4px;" class="fa fa-check-circle"></i><strong>${e.name}</strong></p>
+                    <p>Rating: ${starHTML}</p>
+                    <p>${e.comment}</p>
+                    ${e.image ? `<img src="${e.image}" alt="${e.name}'s review image" class="review-image">` : ""}
+                `;
+
+                a.innerHTML = reviewContent;
+                t.appendChild(a);
+            }));
+        }));
+
+        t.appendChild(e);
+    }
+
+    console.log("Product reviews loaded successfully (HTML and JSON-LD).");
 }
+ 
 
-function loadProductReviews(productName, numToShow = 4) {
-	const product = productData[productName];
-	const reviewList = document.getElementById("review-list");
-
-	if (!product) {
-		const noReviewsMessage = document.createElement("p");
-		noReviewsMessage.classList.add("no-reviews-message");
-		noReviewsMessage.innerHTML = "Got your product? Be the <strong>first to review</strong>!";
-		reviewList.appendChild(noReviewsMessage);
-		return;
-	}
-
-	const scriptTag = document.createElement("script");
-	scriptTag.type = "application/ld+json";
-	scriptTag.textContent = generateJSONLD(productName, productData);
-	document.head.appendChild(scriptTag);
-
-	document.getElementById("product-name").textContent = productName;
-	document.getElementById("average-rating-value").textContent = product.averageRating;
-
-	product.reviews.slice(0, numToShow).forEach(review => {
-		const reviewBox = document.createElement("div");
-		reviewBox.classList.add("user-review-box");
-
-		const coloredStars = Math.floor(review.rating);
-		const hasHalfStar = review.rating % 1 !== 0;
-		const blackStars = 5 - coloredStars - (hasHalfStar ? 1 : 0);
-
-		const coloredStarHTML = Array.from({ length: coloredStars }, () => '<i class="fas fa-star" style="color: #e49e21;"></i>').join("");
-		const halfStarHTML = hasHalfStar ? '<i class="fas fa-star-half" style="color: #e49e21;"></i>' : '';
-		const blackStarHTML = Array.from({ length: blackStars }, () => '<i class="fas fa-star" style="color: #e49e21;"></i>').join("");
-
-		const starHTML = coloredStarHTML + halfStarHTML + blackStarHTML;
-
-		const reviewContent = `
-			<p>${getRandomFlagIcon()}<strong>${review.name}</strong></p>
-			<p>Rating: ${starHTML}</p>
-			<p>${review.comment}</p>
-			${review.image ? `<img src="${review.image}" alt="${review.name}'s review image" class="review-image">` : ""}
-		`;
-
-		reviewBox.innerHTML = reviewContent;
-		reviewList.appendChild(reviewBox);
-	});
-
-	if (product.reviews.length > numToShow) {
-		const loadMoreButton = document.createElement("div");
-		loadMoreButton.textContent = "Load More";
-		loadMoreButton.classList.add("see-all-div");
-		loadMoreButton.style.cursor = "pointer";
-		loadMoreButton.addEventListener("click", () => {
-			reviewList.innerHTML = "";
-			product.reviews.forEach(review => {
-				const reviewBox = document.createElement("div");
-				reviewBox.classList.add("user-review-box");
-
-				const coloredStars = Math.floor(review.rating);
-				const hasHalfStar = review.rating % 1 !== 0;
-				const blackStars = 5 - coloredStars - (hasHalfStar ? 1 : 0);
-
-				const coloredStarHTML = Array.from({ length: coloredStars }, () => '<i class="fas fa-star" style="color: #e49e21;"></i>').join("");
-				const halfStarHTML = hasHalfStar ? '<i class="fas fa-star-half" style="color: #e49e21;"></i>' : '';
-				const blackStarHTML = Array.from({ length: blackStars }, () => '<i class="fas fa-star" style="color: #e49e21;"></i>').join("");
-
-				const starHTML = coloredStarHTML + halfStarHTML + blackStarHTML;
-
-				const reviewContent = `
-					<p>${getRandomFlagIcon()}<strong>${review.name}</strong></p>
-					<p>Rating: ${starHTML}</p>
-					<p>${review.comment}</p>
-					${review.image ? `<img src="${review.image}" alt="${review.name}'s review image" class="review-image">` : ""}
-				`;
-
-				reviewBox.innerHTML = reviewContent;
-				reviewList.appendChild(reviewBox);
-			});
-		});
-
-		reviewList.appendChild(loadMoreButton);
-	}
-
-	console.log("Product reviews loaded successfully (HTML and JSON-LD).");
-}
-
+ 
 const initialProductName = document.getElementById("product-name").textContent;
 loadProductReviews(initialProductName, 6);
+
