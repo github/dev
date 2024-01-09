@@ -2218,7 +2218,14 @@ function generateJSONLD(e, a) {
 	};
 	return JSON.stringify(t)
 }
+function getRandomFlagIcon() {
+	const randomNum = Math.random();
+	const flagSrc = randomNum <= 0.6
+		? 'https://i.postimg.cc/ZnYGMdQd/3909383.webp' // USA flag image URL
+		: 'https://i.postimg.cc/Dy0VQ1LV/5372678-1.webp'; // Canada flag image URL
 
+	return `<img src="${flagSrc}" class="flag-icon" alt="Flag">`; 
+}  
 function loadProductReviews(e, a = 4) {
     const i = productData[e],
         t = document.getElementById("review-list"),
@@ -2239,14 +2246,7 @@ function loadProductReviews(e, a = 4) {
         }
         return;
     } 
-	function getRandomFlagIcon() {
-		const randomNum = Math.random();
-		const flagSrc = randomNum <= 0.6
-			? 'https://i.postimg.cc/ZnYGMdQd/3909383.webp' // USA flag image URL
-			: 'https://i.postimg.cc/Dy0VQ1LV/5372678-1.webp'; // Canada flag image URL
-	
-		return `<img src="${flagSrc}" class="flag-icon" alt="Flag">`; 
-	} 
+
     const s = document.createElement("script");
     s.type = "application/ld+json";
     s.textContent = generateJSONLD(e, productData);
@@ -2303,6 +2303,7 @@ function loadProductReviews(e, a = 4) {
                 const blackStarHTML = Array.from({ length: blackStars }, (() => '<i class="fas fa-star-half" style="color: #e49e21;"></i>')).join("");
 
                 const starHTML = coloredStarHTML + halfStarHTML + blackStarHTML; 
+				const flagIcon = getRandomFlagIcon();
 
                 const reviewContent = `
 				<p class="name-icons">
