@@ -339,159 +339,190 @@ const productData = {
 			{
 				name: "Ava S.",
 				rating: 5,
-				comment: "Impressive and engaging. The electronic features make every session challenging.",
+				comment: "Well arrived, thank you!",
 				image: "https://i.postimg.cc/bwdZvnMx/92a90d19-6499-4f42-afec-8c6b00af0253.webp"
 			},
 			{
 				name: "Ethan L.",
 				rating: 5,
-				comment: "Great addition to home fitness. Smart focus keeps me motivated."
+				comment: "I only bought it so I can start moving a bit; I've been lazy these days.",
+				image:"https://i.postimg.cc/FFBCFk6T/Abba673b227dd49ebb32566be84b867abs.webp"
+
 			},
 			{
 				name: "Zoe M.",
 				rating: 5,
-				comment: "Love the space-saving design. Perfect for daily boxing workouts at home."
+				comment: "Works great for the price, i placed it in my garage."
 			},
 			{
 				name: "Marcus B.",
 				rating: 5,
-				comment: "Ultimate home boxing trainer. The digital pads make every session dynamic and enjoyable."
-			},
-			{ 
+				comment: "Really enjoyable! It's like even if you're lazy, you just put on some music and start moving. I'm not even a good boxer, but at least I move a bit."	
+					},
+				{ 
 				name: "Lily G.",
 				rating: 4.1,
-				comment: "Exciting home workouts. Smart focus tech keeps me engaged and challenged."
+				comment: "works great."
+			},
+			{
+				name:"Salma B",
+				rating: 4.9,
+				comment:""
 			}
 		]
 	},
 	"CarLink ProWire+, Wireless CarPlay Dongle For Wired CarPlay Cars": {
-		averageRating: 4.6,
-		reviews: [{
-				name: "Alice J.",
-				rating: 4.7,
-			},
-			{
-				name: "Bob S.",
-				rating: 4.5,
-			},
-			{
-				name: "Charlie B.",
-				rating: 4.8,
-			},
-			{
-				name: "David M.",
-				rating: 4.4,
-			},
-			{
-				name: "Eva D.",
-				rating: 4.9,
-			},
-			{
-				name: "Frank W.",
-				rating: 4.3,
-			},
-			{
-				name: "Grace T.",
-				rating: 4.6,
-			}
-		]
-	},
-	"TheraSculpt Pro™ 8D Precision Neck & Shoulder Massager": {
-		averageRating: 4.7,
+		
+		averageRating: 4.6, 
 		reviews: [
 			{
-				name: "Alexa H.",
+				name: "Alice J.",
 				rating: 5,
+				comment: "Works great for Apple CarPlay, connects fast, seamless performance from inside armrest. Worth it!",
+				image:"https://i.postimg.cc/BnxPBX5X/0e997ef2-7c1e-408b-94b4-dc1abe8d8227.webp"
 			},
 			{
-				name: "Benjamin K.",
-				rating: 5,
+				name: "Morteza A.",
+				rating: 5.0,
+				comment: "Thrilled with wireless Apple CarPlay! Easy setup, flawless connectivity, sleek interface. Transformed my driving experience. Highly recommended!"
 			},
 			{
-				name: "Catherine L.",
-				rating: 5,
+				name: "Alain L.",
+				rating: 5.0,
+				comment: "Excellent! Easy to pair, connects automatically, stable, responsive. What CarPlay should have been. Use wireless charger and still enjoy CarPlay."
 			},
 			{
-				name: "Daniel M.",
-				rating: 4.8,
+				name: "Mike J.",
+				rating: 4.0,
+				comment: "Connects well initially, with a few hiccups in reconnecting to music later. Overall, a decent purchase."
 			},
 			{
-				name: "Emily S.",
-				rating: 5,
+				name: "D R.",
+				rating: 5.0,
+				comment: "Works excellent with Alpine ILX-650 deck. No need to plug in the phone, bought another for my other truck."
 			},
 			{
-				name: "Finn C.",
-				rating: 4.9,
+				name: "Alex B.",
+				rating: 5.0,
+				comment: "Decently fast. Music has a slight delay when skipping songs, but responds quickly to other tasks."
 			},
 			{
-				name: "Grace T.",
-				rating: 4.5,
+				name: "Dickson B.",
+				rating: 5.0,
+				comment: "Works great! Quick response, amazing performance. Using for two weeks, will review again in three months."
+			},
+			{
+				name: "Robert J. C.",
+				rating: 5.0,
+				comment: "It works. Installed in 2 vehicles without issues."
 			}
 		]
-	},
-	"ThermaRelax™ Home Massage Heating Cushion: 5 Motor Vibration, 3 Hot Seat": {
+	}, 
+	"TheraSculpt Pro™ 8D Precision Neck & Shoulder Massager": {
 		averageRating: 4.8,
 		reviews: [
 			{
-				name: "Adam W.",
-				rating: 4.7,
-			},
-			{
-				name: "Bella G.",
-				rating: 4.9,
-			},
-			{
-				name: "Charlie P.",
+				name: "Mike C.",
 				rating: 4.8,
+				comment: "I've struggled with back problems since childhood. Regular massages are essential, but they cost a fortune. Snailax is a game-changer, providing hours of relief while I work. A lifesaver!"
 			},
 			{
-				name: "Diana R.",
-				rating: 4.5,
+				name: "Alice J.",
+				rating: 5.0,
+				comment: "This is a solidly built and reliable machine. Easy to use and versatile, it massages hard-to-reach places and is very soothing."
 			},
 			{
-				name: "Evan S.",
-				rating: 4.9,
+				name: "Tina C.",
+				rating: 4.0,
+				comment: "Great product and service. Easy to use, adjustable pressure, and pliable for massaging the whole upper body. Heat could be stronger, but overall fantastic."
 			},
 			{
-				name: "Fiona M.",
-				rating: 4.6,
+				name: "Roadrutz",
+				rating: 5.0,
+				comment: "Digs into neck muscles with adjustable intensity. A bit awkward to use, but effective. Daily use eliminated extreme neck and shoulder pain."
 			},
 			{
-				name: "George K.",
-				rating: 4.8,
+				name: "Louanna",
+				rating: 5.0,
+				comment: "Great massager with heat feature. Power feels just right. Only downside is the short cord, requiring an extension cord."
+			},
+			{
+				name: "Moe",
+				rating: 3.0,
+				comment: "Well-made but limited application to specific spots. Price is a bit high for the quality. Room for improvement in future models."
+			},
+			{
+				name: "L. R.",
+				rating: 5.0,
+				comment: "Still 5 stars. Excellent for chronic arthritis. Well-built and comfortable. Satisfied with the purchase."
+			},
+			{
+				name: "Jaskaran Singh",
+				rating: 4.0,
+				comment: "Good investment for relief."
 			}
+		]
+	}, 
+	"ThermaRelax™ Home Massage Heating Cushion: 5 Motor Vibration, 3 Hot Seat": {
+		averageRating: 4.0,
+		reviews: [
+			{
+				name: "Mike C.",
+				rating: 5.0,
+				comment: "Got this for my husband who suffers with back pain. He liked it, but then suggested I try it. I tried it out and now it is mine-I’ll have to order another for him.",
+				image:"https://i.postimg.cc/52VYG93m/71-EQ5d4-GWf-L-SL1600-2.jpg"
+			},
+			{
+				name: "Alice J.",
+				rating: 4.0,
+				comment: "I bought it last minute for my husbands birthday gift, he was super impressed! Fast arrival, worked so well! ",
+				image:"https://i.postimg.cc/26VVv1kC/71t-RTYG8-Dt-L-SL1600-1.jpg"
+			},
+			{
+				name: "Charlie B.",
+				rating: 5.0,
+				comment: "Excellent product. The massage works very well for my back and neck.",
+				image:""
+			},
+			{
+				name: "Eva D.",
+				rating: 5.0,
+				comment: "Works well. Finally made the move to purchase a home massaging chair, and I'm glad I did!"
+			},
+			{
+				name: "Grace T.",
+				rating: 4.0,
+				comment: "Excellent soft massager. A wonderful product with many options to choose which part of your body you want to massage."
+			} 
 		]
 	},
 	"ProFit FlexBoard: Multifunctional Folding Push-Up System for Home and Gym Workouts": {
-		averageRating: 4.6,
+		averageRating: 5.0,
 		reviews: [
 			{
-				name: "Alice B.",
-				rating: 4.8,
+				name: "Nolan",
+				rating: 5.0,
+				comment: "Amazing push-up board. Using it for over a month now, and it makes working on specific muscles much easier. Great product!!"
 			},
 			{
-				name: "Brandon T.",
-				rating: 4.7,
+				name: "Simon",
+				rating: 5.0,
+				comment: "Ça sert pas à grand chose mais la job me payait une bebelle reliée à l'activité physique. J'ai vu passé un vidéo et j'ai trouver ça cool. N'achète pas ça, ça sert a rien. Achète toi des tapis à la place."
 			},
 			{
-				name: "Chloe L.",
-				rating: 4.5,
+				name: "KD",
+				rating: 5.0,
+				comment: "Fantastic product. Got it as a gift for my brother, and he is very happy with it. The product has helped him get deeper into his dips and push ups."
 			},
 			{
-				name: "David P.",
-				rating: 4.9,
+				name: "Alex Ross",
+				rating: 4.0,
+				comment: "Durable. Very durable. Dropped it and mistreated it, and so far no dents or scratches. Only problem was that out of the box, they didn't give enough sticker pads to prevent scratching the floor."
 			},
 			{
-				name: "Eva S.",
-				rating: 4.6,
-			},
-			{
-				name: "Frankie H.",
-				rating: 4.4,
-			},
-			{
-				name: "Grace M.",
-				rating: 4.7,
+				name: "Djifas",
+				rating: 5.0,
+				comment: "Super. Répond à la tâche."
 			}
 		]
 	},
@@ -501,30 +532,38 @@ const productData = {
 			{
 				name: "Alex C.",
 				rating: 4.8,
-			},
+				comment: "I've been using it for some time now and still working well and I love it, let's see if it's still as solid after some time.",
+				image:"https://i.postimg.cc/5ttcNvgN/715-RUo-TLfm-L-1.jpg"
+			}, 
 			{
 				name: "Bethany M.",
 				rating: 4.6,
+				comment: "Works really well. Highly recommend."
 			},
 			{
 				name: "Connor L.",
 				rating: 4.9,
+				comment: "I am tall and so getting started was a bit laborious but with persistence you get more than satisfactory results..."
 			},
 			{
 				name: "Daisy R.",
 				rating: 4.7,
+				comment: "thanks to the support on the elbows, this machine allows maximum work of the abdominal muscles👍"
 			},
 			{
 				name: "Ethan K.",
 				rating: 4.5,
+				comment: "Wonderful"
 			},
 			{
 				name: "Fiona H.",
 				rating: 4.8,
+				comment: "Love love love this item very easy to use put together Very sturdy and you can use in Carpet. I am 195 pound and my bf is 6’7 240 pounds We both use it and it’s great."
 			},
 			{
 				name: "George S.",
 				rating: 4.7,
+				comment: ""
 			}
 		]
 	},
@@ -534,33 +573,133 @@ const productData = {
 			{
 				name: "Aaron D.",
 				rating: 4.6,
-			},
+				comment: "useful.,good quality, awesome worth buying way better than I thought ! holds a charge for the whole day it makes calls and you can listen to music with it as well I'm satisfied!",
+				image:"https://i.postimg.cc/cHdnH81r/97fc2f10-0462-4c4c-a2e8-9fe2bb070327-4160x1872-jpeg-compressed.webp"
+			}, 
 			{
 				name: "Bella W.",
 				rating: 4.7,
+				comment: "I just received it, it is very beautiful. A bit of trouble logging into the app. But once it's connected, it stays well connected.",
+				image:"https://i.postimg.cc/SRPNsBxx/S70167fdd6c364dd0ba33b9a5f3c0f129-T.webp"
+				
 			},
 			{
 				name: "Cameron L.",
 				rating: 4.4,
+				comment: "Granddaughter loves the look of her new watch and all the different activities on it, so far better than her old Apple watch!"
 			},
 			{
 				name: "Diana S.",
 				rating: 4.5,
+				comment: "definitely recommend!!" 
 			},
 			{
 				name: "Ethan M.",
 				rating: 4.8,
+				comment: ""
 			},
 			{
 				name: "Fiona K.",
 				rating: 4.6,
+				comment: ""
 			},
 			{
 				name: "George P.",
 				rating: 4.5,
+				comment: ""
+			}
+		]
+	},  
+	"PawsConnect WiFi Smart Pet Feeder 2L": {
+		averageRating: 4.5,
+		reviews: [
+			{
+				name: "Alexis H.",
+				rating: 5,
+				comment: "I bought this so I could feed my barn cats a little throughout the day without having to make a trip down to the barn. It works great to be able to program a set time to have them fed.",
+				image: "https://i.postimg.cc/jSZH4rhS/61x-Jb-Hh8k-L-1.jpg"
+			}, 
+			{
+				name: "Bentley Q.",
+				rating: 5,
+				comment: "I just got 2 kittens and may take in their sister as well. Sometimes I may need to spend the night away and I wanted to make sure that there is always enough food.",
+				image: "https://i.postimg.cc/tgcF8tw0/71u0a-BK7-Tu-L-1.jpg"
+			},
+			{
+				name: "Cassandra R.",
+				rating: 4.4,
+				comment: "I like the most thing is the bowl, it is stainless and easy to clean with wet kitchen paper or tower.",
+				image: "https://i.postimg.cc/nhc7zPtb/81-D9j-A4b-K9-L-SL1600-1.jpg"
+			},
+			{
+				name: "Darius S.",
+				rating: 4.5,
+				comment: "Simple and clear interface. Easy to operate. And my biggest concern is capacity. It has a very large capacity and is suitable for fat orange cats.",
+			},
+			{
+				name: "Ella M.",
+				rating: 4.8,
+				comment: "",
+			},
+			{
+				name: "Felix K.",
+				rating: 4.6,
+				comment: "",
+			},
+			{
+				name: "Grace P.",
+				rating: 4.5,
+				comment: "",
 			}
 		]
 	}, 
+	"PurrGleam™ 3-in-1 Electric Steam Brush for Cats and Dogs": {
+		averageRating: 4.5,
+		reviews: [
+			{
+				name: "Aria W.",
+				rating: 5,
+				comment: "Worked well and my cat likes it way more than his regular brush. Got lots of fur, so big win.",
+				image: "https://i.postimg.cc/T2Szdz8F/71-X-b8-RVSNL-1.jpg"
+			}, 
+			{ 
+				name: "Blake T.",
+				rating: 5,
+				comment: "Quality cleaning brush The steam jet is discreet my cat lets go Good product",
+				image: "https://i.postimg.cc/9QxSkKBL/Ae5e209aefb324a648f0e9a192a737ad92.webp"
+			},
+			{
+				name: "Caroline S.",
+				rating: 5,
+				comment: "It's worth it, my kittens love it ❤️",
+				image: "https://i.postimg.cc/jdMZqNJ5/S457a7a5884324e60a2102e4bda65812f1.webp" 
+			}, 
+			{
+				name: "Damian M.",
+				rating: 5,
+				comment: "Very good, my cat doesn't reject me at all. I use this to comb his hair",
+				image: "https://i.postimg.cc/5N2Sr0kM/Sd91c46ae03d147c9994ea1c5d8d398741.webp"
+			},
+			{
+				name: "Eleanor H.",
+				rating: 4.5,
+				comment: "Works perfect! My cats still get a little scared by the water, but they come back for more, and remove a lot of hair",
+				image: "https://i.postimg.cc/MpjVkj7g/Ab52e00a553ee4b7cb3f82b08124dffac-F.webp"
+			},
+			{
+				name: "Finn K.",
+				rating: 5,
+				comment: "Products of very good quality, 100% recommended.",
+				image: "https://i.postimg.cc/3Jz0ZJs1/A3d8385c5535d4245afe5b1337a6cb4c2j.webp"
+			},
+			{
+				name: "Gabrielle P.",
+				rating: 4,
+				comment: "works good",
+			}
+		]
+	},
+	
 	"NUBWO G06 Pro Dual-Mode Wireless Gaming Headset with Microphone": {
 		averageRating: 5,
 		reviews: [
@@ -597,21 +736,30 @@ const productData = {
 	"PrecisionBeat Pro: Intelligent Reactive Training System for Boxing Mastery": {  
 		averageRating: 5,
 		reviews: [
+			{
+				name: "Crystal L.",
+				rating: 5,
+				comment: "Amazing for the price, really love it!!",
+				image:"https://i.postimg.cc/C1pvSM8K/Ab43b5afdac7746c3a79bfa2c23ad1561f.webp"
+			},
 			{  
 				name: "Sophia W.",
 				rating: 5,
-				comment: "Exciting home workouts. Intelligent reactive tech keeps me engaged and challenged."
+				comment: "Arrived safe, thank you.",
+				image:"https://i.postimg.cc/MGTPdrSW/Acf96e09bcf7c48c4b7dc8f058506da5cs.webp"
 			},
 
 			{
 				name: "David R.",
 				rating: 5,
-				comment: "Versatile enough for all skill levels—essential for anyone serious about improving their boxing skills."
+				comment: "Bought this for my son for Christmas, and he's been using it since then. It's like I've added more motivation to him.",
+				image:"https://i.postimg.cc/RVpvg2rF/A354120ea8eb4447496589cc997d70118z.webp"
 			},
 			{
-				name: "Sophie G.",
+				name: "Alex S.",
 				rating: 5,
-				comment: "it's a stress-relief powerhouse! really love it"
+				comment: "thank you msl <3",
+				image:"https://i.postimg.cc/tgwKPHx0/A73eca9fe599e465f8164397a234dfe657.webp"
 			},
 			{
 				name: "Anthony J.",
@@ -619,24 +767,24 @@ const productData = {
 				comment: "Got it for my bf, he absolutely loves it."
 			},
 			{
-				name: "Isabella P.",
+				name: "Ahmed.",
 				rating: 5,
-				comment: "best tool for home training, thank you msl!!"
+				comment: "best tool for home training"
 			},
 			{
 				name: "Christopher M.",
 				rating: 4.2,
-				comment: "Motivation On Point! Keep the momentum going and achieve your fitness goals with this innovative training tool. The LED lights and music sync make each punch feel like a cinematic moment. Syncing it with my playlist has turned my training sessions into a dance party."
+				comment: "Technology is going crazy these days, not gonna lie. Package arrived well."
 			},
 			{
 				name: "Sophia B.",
 				rating: 5,
-				comment: "Absolutely love it! The LED lights add a whole new dimension to my workouts. It's like having a personal trainer cheering me on. The music sync keeps me pumped, and the relaxation target is a fantastic touch for refining my moves. It's become the highlight of my day – I'm hooked!"
+				comment: "Absolutely love it! The LED lights add a whole new dimension to my workouts."
 			},
 			{
 				name: "Emma D.",
 				rating: 5,
-				comment: "Unleashed a new level of intensity in my workouts! The LED lights and the music sync keeps me going. Perfect for staying motivated and improving my reflexes. It's like having a personal trainer in my home. The Relaxing Reaction Training Target is a game-changer for serious athletes!"
+				comment: "Perfect for staying motivated and improving my reflexes. It's like having a personal trainer in my home."
 			}, 
 		]
 	}, 
@@ -1763,6 +1911,238 @@ const productData = {
 			comment: "Worth the price" 
 		}]
 	}, 
+	"AuraGlow™ Nordic Flame Aromatherapy Humidifier with Atmosphere Light": { 
+		averageRating: 4.5,
+		reviews: [
+		  {
+			name: "Sophia A.",
+			rating: 5,
+			comment:
+			  "Cozy and quiet, this lamp is perfect for a tranquil atmosphere. The gentle water sensitivity adds a positive touch. Love the aromatic experience!",
+			image:
+			  "https://i.postimg.cc/rpTd8G6J/A9f8d1f21592e4ccda135f28a3bbfc061z.webp",
+		  }, 
+		  {
+			name: "Liam B.",
+			rating: 4,
+			comment: "It's very nice when it's on now I just need the oils",
+			image:"https://i.postimg.cc/Qd19G4zC/A2ba1233438c34964850a7670723d1526-X.webp"
+		  }, 
+		  {
+			name: "Ava C.",
+			rating: 5,
+			comment: "Very good👍🏿, Arrived before the deadline, very MSM time, I recommend it to anyone who wants to decorate the room!",
+			image:"https://i.postimg.cc/y6pSFS91/A8b3f9ac286bd4649ad7301e3fb622d9b-O.webp"
+		  },
+		  {
+			name: "Mia E.",
+			rating: 5,
+			comment: "Fast delivery. Excellent quality. Despite the price looks very good.", 
+		  },
+		  {
+			name: "Jackson F.",
+			rating: 5,
+			comment: "",
+		  },
+		  {
+			name: "Chloe G.",
+			rating: 4,
+			comment: "",
+		  },
+		  {
+			name: "Elijah H.",
+			rating: 5,
+			comment: "",
+		  },
+		], 
+	  },  
+	  "RoséGlam™ Luxury Red Zircon Pendant Necklace with Rose Flower Gift Box": {  
+		averageRating: 4.5,
+		reviews: [
+		  {
+			name: "Olivia A.",
+			rating: 5,
+			comment:
+			  "It's super beautiful I recommend", 
+			image:
+			  "https://i.postimg.cc/nh17HMz8/A8045c71f0c954c2f95bbc0794b47d0e58.webp",  
+		  }, 
+		  {
+			name: "Noah B.",
+			rating: 4,
+			comment: "My girlfriend loves it very sweet",
+			image:"https://i.postimg.cc/Zq7ddgpV/Abf3f31e902f648258d7bbf58914052082.webp" 
+		  }, 
+		  {
+			name: "Isabella C.",
+			rating: 5,
+			comment: "It is lovely and well packaged, thank you!!",
+			image:"https://i.postimg.cc/mr29hRzP/Af1531953bb0a47efaab7d82c0f909a56-L.webp" 
+		  },
+		  {
+			name: "Ethan E.",
+			rating: 5,
+			comment: "Fast delivery. Excellent quality. Despite the price looks very good.", 
+		  }, 
+		],  
+	  }, 
+	  "EternaBloom™ Eternal Rose Apple Gift Box with Crystal Heart Necklace and Love Soap Flower Jewelry": {  
+		averageRating: 4.5,
+		reviews: [
+		  {
+			name: "Sarah A.",
+			rating: 5,
+			comment:
+			  "Lovely!!!", 
+			image:
+			  "https://i.postimg.cc/Tw08JzT5/Ab560cc70e2d4454b808a64bb3192d479x.webp",   
+		  }, 
+		],  
+	  },
+	  "RosyEmbrace™ 25/40cm Teddy Rose Bear Heart with Artificial Roses": {  
+		averageRating: 4.5,
+		reviews: [
+		  {
+			name: "Ahmed C",
+			rating: 5,
+			comment:
+			  "Bought this as a gift for my gf, really good quality!", 
+			image:
+			  "https://i.postimg.cc/904hXxj4/Sd8738382b18f41888dee6ee1810869f0z.webp",   
+		  }, 
+		],  
+	  },   
+	  "RhythmStrike™ Rechargeable Musical Punching Wall Boxing Machine": {
+		averageRating: 4.5,
+		reviews: [
+		  {
+			name: "Ethan M.",
+			rating: 5,
+			comment: "The quality of the product is very good and the delivery was fast. Sound could be better but is ok for the training. Very happy with the purchase",
+			image: "https://i.postimg.cc/N53XLv0p/p8wzt296.jpg",
+		  },
+		  {
+			name: "Olivia B.",
+			rating: 5,
+			comment: "Didn’t realize when I purchased it that the pads you punch are soft so major plus! Love this product because it is challenging! Great for exercise and fun!",
+			image: "https://i.postimg.cc/gnXRY2Gx/1-SNC5y-Cd-Q-mid.jpg",
+		  },
+		  {
+			name: "Nathan S.",
+			rating: 5,
+			comment: "This is actually a pretty fun boxing machine even for adults and kids will really enjoy it. Just don't hit it with all of your force and use it as a speed and agility game.",
+			image: "https://i.postimg.cc/QBbK6BJy/jf0-HZxw-V8-mid.jpg",
+		  },
+		  {
+			name: "Sophia W.",
+			rating: 5,
+			comment: "My Grandson loves it!!!",
+			image: "https://i.postimg.cc/bZ1ttVD8/U6o3-Ov-Yv-Z-mid.jpg",
+		  },
+		  {
+			name: "Liam K.",
+			rating: 5,
+			comment: "Boxing machine was simple to set up and connect. A lot of fun. I was surprised at how well this stays on the wall. The music and game type rhythm make this better to use.",
+			image: "https://i.postimg.cc/ThHgMDv8/U-Y7-C7-UQ-mid.jpg",
+		  },
+		  {
+			name: "Ava P.",
+			rating: 5,
+			comment: "This is really nice! It connects to your phone and allows you to play the music you're most comfortable with while exercising",
+		  },
+		  {
+			name: "Jackson R.",
+			rating: 5,
+			comment: "Easy to use functions properly work well to maintain focus",
+		  },
+		  {
+			name: "Scarlett L.",
+			rating: 5,
+			comment: "",
+		  },
+		],
+	  },      
+	  "Redragon M811 PRO Wireless MMO Gaming Mouse": {   
+		averageRating: 4.5,
+		reviews: [
+		  {
+			name: "Zayn S.",
+			rating: 5,
+			comment:
+			  "Bought it as a gift , he loves it! He mentioned it being a great quality mouse for the price, good battery life, comfortable, great wireless range and he had no complaints.", 
+			image:
+			  "https://i.postimg.cc/52Ln4W8G/51-Ep-TXruze-L-1.webp",    
+		  }, 
+		  {
+			name: "Noor S.", 
+			rating: 5,
+			comment:
+			  "Best mouse i ever bought!!!!", 
+			image:
+			  "https://i.postimg.cc/Jh7J9fxj/612n-FAPHLNL-1.webp",    
+		  },  
+		  {
+			name: "Alice M.",
+			rating: 5,
+			comment: "Absolutely fantastic! this mouse is a piece of art.",
+		  },
+		  {
+			name: "Chris W.",
+			rating: 4.7,
+			comment: "Great purchase! comfortable to use and very responsive for a wireless mouse.",
+		  },
+		  {
+			name: "Laura H.",
+			rating: 5,
+			comment: "Superb quality! I'm extremely satisfied with this mouse.",
+		  },
+		  {
+			name: "Mike H.",
+			rating: 5,
+			comment: "I always buy from you guys and i will always do, best support team, thank you msl!!",
+		  },  
+		  {
+			name: "Hayla H.",
+			rating: 5,
+			comment: "great mouse. very comfy. lots of thumb buttons for easy/lazy gaming. love being able to use it as wireless or corded. 100% worth it for gamers.",
+		  }     
+		],  
+	  },        
+	  "BeatStrike™ Smart Music Boxing Machine with gloves 2023": {  
+		averageRating: 4.5, 
+		reviews: [
+		  {
+			name: "Sophia A.",
+			rating: 5,
+			comment:
+			  "I'm only making this review for the 10$ coupon but everything is good with the beatstrike.", 
+			image:
+			  "https://i.postimg.cc/7YNXrhpL/71-v-G3-Esjt-L-2.jpg",  
+		  }, 
+		  {
+			name: "Mike B.",
+			rating: 4.3,
+			comment: "I have ADHD and just get bored of exercise quickly. This is a cool way to keep my attention and make some exercise fun.",
+			image:"https://i.postimg.cc/wB1kNV3t/81mgvv-GWzs-L-3.jpg" 
+		  }, 
+		  {
+			name: "Ava C.",
+			rating: 4.6,
+			comment: "This is a good boxing machine for my 14 year old who’s into working out.",
+			image:"https://i.postimg.cc/Rh5G4HSW/71-W64-Tl4o-CL-1.jpg" 
+		  },
+		  {
+			name: "Mason E.",
+			rating: 5,
+			comment: "Great concept and idea. Lots of fun and sweating. Highly recommended",  
+		  }, 
+		  {
+			name: "Haym B.",
+			rating: 5,
+			comment: "Super fun workout. Durable and well made. Easy to get started. Versatile. ",  
+		  }, 
+		],  
+	  }, 
 	"HydraSound Pro 6: Wireless Hi-Fi Earbuds": {
 		averageRating: 4.5,
 		reviews: [{
@@ -1848,8 +2228,8 @@ function loadProductReviews(e, a = 4) {
     if (t.innerHTML = "", !i) {
         const e = document.createElement("p");
         e.classList.add("no-reviews-message");
-        e.textContent = "No reviews yet for this product.";
-        t.appendChild(e);
+        e.innerHTML = "Got your product? Be the <strong>first to review</strong>! Check email for a chance to win: <strong>$5 for a photo</strong>, <strong>$10 for a video</strong>. <strong>Shape the experience</strong>! 🌟"; 
+        t.appendChild(e); 
 
         if (n) {
             n.style.display = "none";
@@ -1858,7 +2238,7 @@ function loadProductReviews(e, a = 4) {
             o.style.display = "none";
         }
         return;
-    }
+    } 
 
     const s = document.createElement("script");
     s.type = "application/ld+json";
@@ -1884,7 +2264,7 @@ function loadProductReviews(e, a = 4) {
 
         const reviewContent = `
             <p><i style="color:#2c5892; margin-right:4px;" class="fa fa-check-circle"></i><strong>${e.name}</strong></p> 
-            <p>Rating: ${starHTML}</p>
+            <p>Rating: ${starHTML} </p> 
             <p>${e.comment}</p>
             ${e.image ? `<img src="${e.image}" alt="${e.name}'s review image" class="review-image">` : ""}
         `;
@@ -1935,4 +2315,5 @@ function loadProductReviews(e, a = 4) {
 
  
 const initialProductName = document.getElementById("product-name").textContent;
-loadProductReviews(initialProductName, 4);
+loadProductReviews(initialProductName, 6);
+
