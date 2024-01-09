@@ -2239,7 +2239,11 @@ function loadProductReviews(e, a = 4) {
         }
         return;
     } 
-
+	function getRandomFlagIcon() {
+		const randomNum = Math.random();
+		const flagIconClass = randomNum <= 0.6 ? 'usa-flag' : 'canada-flag';
+		return `<img class="flag-icon ${flagIconClass}" alt="Flag">`;
+	} 
     const s = document.createElement("script");
     s.type = "application/ld+json";
     s.textContent = generateJSONLD(e, productData);
@@ -2261,9 +2265,9 @@ function loadProductReviews(e, a = 4) {
         const blackStarHTML = Array.from({ length: blackStars }, (() => '<i class="fas fa-star-half" style="color: #e49e21;"></i>')).join("");
 
         const starHTML = coloredStarHTML + halfStarHTML + blackStarHTML;
-
+		const flagIcon = getRandomFlagIcon();
         const reviewContent = `
-            <p><i style="color:#2c5892; margin-right:4px;" class="fa fa-check-circle"></i><strong>${e.name}</strong></p> 
+            <p><i style="color:#2c5892; margin-right:4px;" class="fa fa-check-circle"></i><strong>${e.name}</strong>${flagIcon}</p> 
             <p>Rating: ${starHTML} </p> 
             <p>${e.comment}</p>
             ${e.image ? `<img src="${e.image}" alt="${e.name}'s review image" class="review-image">` : ""}
