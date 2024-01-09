@@ -575,7 +575,9 @@ const productData = {
 			{
 				name: "Bella W.",
 				rating: 4.7,
-				comment: "I just received it, it is very beautiful. A bit of trouble logging into the app. But once it's connected, it stays well connected."
+				comment: "I just received it, it is very beautiful. A bit of trouble logging into the app. But once it's connected, it stays well connected.",
+				image:"https://i.postimg.cc/SRPNsBxx/S70167fdd6c364dd0ba33b9a5f3c0f129-T.webp"
+				
 			},
 			{
 				name: "Cameron L.",
