@@ -2293,20 +2293,28 @@ function loadProductReviews(e, a = 4) {
                 const blackStarHTML = Array.from({ length: blackStars }, (() => '<i class="fas fa-star-half" style="color: #e49e21;"></i>')).join("");
 
                 const starHTML = coloredStarHTML + halfStarHTML + blackStarHTML; 
+				
+				function getRandomFlagIcon() {
+					const randomNumber = Math.random();
+					const flagIconClass = randomNumber <= 0.6 ? 'usa-flag' : 'canada-flag';
+					return `<img class="flag-icon ${flagIconClass}" alt="Flag">`;
+				  } 
 
                 const reviewContent = `
-                    <p><i style="color:#2c5892; margin-right:4px;" class="fa fa-check-circle"></i><strong>${e.name}</strong></p>
+                    <p><i style="color:#2c5892; margin-right:4px;" class="fa fa-check-circle"></i><strong>${e.name}</strong>${getRandomFlagIcon()}</p>
                     <p>Rating: ${starHTML}</p>
                     <p>${e.comment}</p>
                     ${e.image ? `<img src="${e.image}" alt="${e.name}'s review image" class="review-image">` : ""}
                 `;
-
+				reviewsData.forEach(review => {
+					renderReview(review);
+				  });
                 a.innerHTML = reviewContent;
                 t.appendChild(a);
             }));
         }));
 
-        t.appendChild(e);
+        t.appendChild(e); 
     }
 
     console.log("Product reviews loaded successfully (HTML and JSON-LD).");
