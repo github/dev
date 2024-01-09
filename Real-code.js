@@ -469,28 +469,31 @@ const productData = {
 			{
 				name: "Mike C.",
 				rating: 5.0,
-				comment: "Love it! Well made, a quality product that performs very well. Bought it for myself and my family. We all find it very helpful to loosen up tense back and neck muscles."
+				comment: "Got this for my husband who suffers with back pain. He liked it, but then suggested I try it. I tried it out and now it is mine-I’ll have to order another for him.",
+				image:"https://i.postimg.cc/52VYG93m/71-EQ5d4-GWf-L-SL1600-2.jpg"
 			},
 			{
 				name: "Alice J.",
 				rating: 4.0,
-				comment: "Great for low-cost massage chair. Easy to use, it does the job, and the massage balls in the add-on are really good."
+				comment: "I bought it last minute for my husbands birthday gift, he was super impressed! Fast arrival, worked so well! ",
+				image:"https://i.postimg.cc/26VVv1kC/71t-RTYG8-Dt-L-SL1600-1.jpg"
 			},
 			{
 				name: "Charlie B.",
 				rating: 5.0,
-				comment: "Excellent product. The massage works very well for my back and neck."
+				comment: "Excellent product. The massage works very well for my back and neck.",
+				image:""
 			},
 			{
 				name: "Eva D.",
 				rating: 5.0,
-				comment: "Works well. Finally made the move to purchase a home massaging chair, and I'm glad I did! My husband and I have been using it daily and can feel the difference right away. Very happy with the product."
+				comment: "Works well. Finally made the move to purchase a home massaging chair, and I'm glad I did!"
 			},
 			{
 				name: "Grace T.",
 				rating: 4.0,
-				comment: "Excellent soft massager. A wonderful product with many options to choose which part of your body you want to massage. Giving it 4 stars instead of 5 because I find the motor running a bit too loud."
-			}
+				comment: "Excellent soft massager. A wonderful product with many options to choose which part of your body you want to massage."
+			} 
 		]
 	},
 	"ProFit FlexBoard: Multifunctional Folding Push-Up System for Home and Gym Workouts": {
