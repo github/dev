@@ -2226,7 +2226,7 @@ function getRandomFlagIcon() {
 
 	return `<img src="${flagSrc}" class="flag-icon" alt="Flag">`; 
 }  
-function loadProductReviews(e, a = 4) {
+function loadProductReviews(e, a = 6) {
     const i = productData[e],
         t = document.getElementById("review-list"),
         n = document.getElementById("trusted-reviews"),
@@ -2329,5 +2329,5 @@ function loadProductReviews(e, a = 4) {
 
  
 const initialProductName = document.getElementById("product-name").textContent;
-loadProductReviews(initialProductName, 6);
+loadProductReviews(initialProductName, 6); 
 
