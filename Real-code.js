@@ -607,7 +607,7 @@ const productData = {
 		]
 	},  
 	"PawsConnect WiFi Smart Pet Feeder 2L": {
-		avgRating: 4.5,
+		averageRating: 4.5,
 		reviews: [
 			{
 				name: "Alexis H.",
@@ -650,7 +650,7 @@ const productData = {
 		]
 	}, 
 	"PurrGleam™ 3-in-1 Electric Steam Brush for Cats and Dogs": {
-		avgRating: 4.5,
+		averageRating: 4.5,
 		reviews: [
 			{
 				name: "Aria W.",
