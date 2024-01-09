@@ -2245,7 +2245,7 @@ function loadProductReviews(e, a = 4) {
 			? 'https://i.postimg.cc/ZnYGMdQd/3909383.webp' // USA flag image URL
 			: 'https://i.postimg.cc/Dy0VQ1LV/5372678-1.webp'; // Canada flag image URL
 	
-		return `<img src="${flagSrc}" class="flag-icon" alt="Flag">`;
+		return `<img src="${flagSrc}" class="flag-icon" alt="Flag">`; 
 	} 
     const s = document.createElement("script");
     s.type = "application/ld+json";
@@ -2273,7 +2273,7 @@ function loadProductReviews(e, a = 4) {
 		<p class="name-icons">
 		<i style="color:#2c5892; margin-right: 4px;" class="fa fa-check-circle"></i>
 		<strong> ${e.name} </strong>
-		<span class="flag-icon"> ${flagIcon}</span></p> 
+		<span> ${flagIcon}</span></p>  
             <p>Rating: ${starHTML} </p> 
             <p>${e.comment}</p>
             ${e.image ? `<img src="${e.image}" alt="${e.name}'s review image" class="review-image">` : ""}
