@@ -529,27 +529,27 @@ const productData = {
 			{
 				name: "Alex C.",
 				rating: 4.8,
-				comment: ""
+				comment: "I've been using it for some time now and still working well and I love it, let's see if it's still as solid after some time."
 			},
 			{
 				name: "Bethany M.",
 				rating: 4.6,
-				comment: ""
+				comment: "Works really well. Highly recommend."
 			},
 			{
 				name: "Connor L.",
 				rating: 4.9,
-				comment: ""
+				comment: "I am tall and so getting started was a bit laborious but with persistence you get more than satisfactory results..."
 			},
 			{
 				name: "Daisy R.",
 				rating: 4.7,
-				comment: ""
+				comment: "thanks to the support on the elbows, this machine allows maximum work of the abdominal muscles👍"
 			},
 			{
 				name: "Ethan K.",
 				rating: 4.5,
-				comment: ""
+				comment: "Wonderful"
 			},
 			{
 				name: "Fiona H.",
