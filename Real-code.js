@@ -2273,11 +2273,11 @@ function loadProductReviews(e, a = 4) {
 		<p class="name-icons">
 		<i style="color:#2c5892; margin-right: 4px;" class="fa fa-check-circle"></i>
 		<strong> ${e.name} </strong>
-		<span> ${flagIcon}</span></p> 
+		<span class="flag-icon"> ${flagIcon}</span></p> 
             <p>Rating: ${starHTML} </p> 
             <p>${e.comment}</p>
             ${e.image ? `<img src="${e.image}" alt="${e.name}'s review image" class="review-image">` : ""}
-        `;
+        `; 
 
         a.innerHTML = reviewContent;
         t.appendChild(a);
