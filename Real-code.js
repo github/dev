@@ -2274,7 +2274,6 @@ function loadProductReviews(e, a = 4) {
 		<span> ${flagIcon}</span></p> 
 		<strong> ${e.name} </strong>
 		<i style="color:#2c5892; margin-left: 4px;" class="fa fa-check-circle"></i>
-		<span> ${flagIcon}</span></p>  
             <p>Rating: ${starHTML} </p>  
             <p>${e.comment}</p>
             ${e.image ? `<img src="${e.image}" alt="${e.name}'s review image" class="review-image">` : ""}
