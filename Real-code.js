@@ -2343,6 +2343,8 @@ function loadProductReviews(e, a = 6) {
     }
 
     console.log("Product reviews loaded successfully (HTML and JSON-LD).");
+	window.reviewCount = i.reviews.length;
+
 }
  
  
