@@ -1999,6 +1999,19 @@ const productData = {
 		  }, 
 		],  
 	  },
+	  "HeatEase™ Electric Heated Shoulder Massager and Neck Wrap": {   
+		averageRating: 5,
+		reviews: [
+		  {
+			name: "Hana A.",
+			rating: 5,
+			comment:
+			  "Great product, great for relieving neck and shoulder pain, will be buying one again for my mom 👍", 
+			image:
+			  "https://i.postimg.cc/L6pFz0SJ/A2cfb2d6cb6f34843aa2cf21d273657493-1.jpg",    
+		  },  
+		],  
+	  },  
 	  "RosyEmbrace™ 25/40cm Teddy Rose Bear Heart with Artificial Roses": {  
 		averageRating: 4.5,
 		reviews: [
