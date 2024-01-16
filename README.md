@@ -5,7 +5,7 @@ The github.dev web-based editor is a lightweight editing experience that runs en
 There are two ways to go directly to a VS Code environment in your browser and start coding:
 
 * Press the . key on any repository or pull request.
-* Swap `.com` with `.dev` in the URL. For example, this repo https://github.com/github/dev becomes http://github.dev/github/dev
+* Swap `.com` with `.dev` in the URL. For example, this repo https://github.com/github/dev becomes https://github.dev/github/dev
 
 Preview the gif below to get a quick demo of github.dev in action.
 
