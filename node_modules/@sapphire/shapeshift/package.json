@@ -1,0 +1,124 @@
+{
+  "name": "@sapphire/shapeshift",
+  "version": "3.9.6",
+  "description": "Blazing fast input validation and transformation ⚡",
+  "author": "@sapphire",
+  "license": "MIT",
+  "main": "dist/cjs/index.cjs",
+  "module": "dist/esm/index.mjs",
+  "browser": "dist/iife/index.global.js",
+  "unpkg": "dist/iife/index.global.js",
+  "types": "dist/cjs/index.d.cts",
+  "exports": {
+    "import": {
+      "types": "./dist/esm/index.d.mts",
+      "default": "./dist/esm/index.mjs"
+    },
+    "require": {
+      "types": "./dist/cjs/index.d.cts",
+      "default": "./dist/cjs/index.cjs"
+    },
+    "browser": "./dist/iife/index.global.js"
+  },
+  "sideEffects": false,
+  "homepage": "https://www.sapphirejs.dev",
+  "scripts": {
+    "lint": "eslint src tests --ext ts --fix",
+    "format": "prettier --write \"{src,tests}/**/*.ts\"",
+    "docs": "typedoc-json-parser",
+    "test": "vitest run",
+    "build": "tsup && yarn build:rename-cjs-index",
+    "build:rename-cjs-index": "node scripts/rename-cjs-index.mjs",
+    "clean": "rimraf dist",
+    "typecheck": "tsc -p tsconfig.eslint.json",
+    "bump": "cliff-jumper",
+    "check-update": "cliff-jumper --dry-run",
+    "prepack": "yarn build"
+  },
+  "dependencies": {
+    "fast-deep-equal": "^3.1.3",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
+    "@favware/cliff-jumper": "^2.2.3",
+    "@favware/npm-deprecate": "^1.0.7",
+    "@sapphire/eslint-config": "^5.0.3",
+    "@sapphire/prettier-config": "^2.0.0",
+    "@sapphire/ts-config": "^5.0.0",
+    "@types/jsdom": "^21.1.6",
+    "@types/lodash": "^4.14.202",
+    "@types/node": "^20.11.5",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "@vitest/coverage-v8": "^1.2.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "esbuild-plugins-node-modules-polyfill": "^1.6.1",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "jsdom": "^23.2.0",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.2.4",
+    "rimraf": "^5.0.5",
+    "tsup": "^8.0.1",
+    "typedoc": "^0.25.7",
+    "typedoc-json-parser": "^9.0.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sapphiredev/shapeshift.git"
+  },
+  "files": [
+    "dist/"
+  ],
+  "engines": {
+    "node": ">=v18"
+  },
+  "keywords": [
+    "@sapphire/shapeshift",
+    "shapeshift",
+    "bot",
+    "typescript",
+    "ts",
+    "yarn",
+    "sapphire",
+    "schema",
+    "validation",
+    "type-checking",
+    "checking",
+    "input-validation",
+    "runtime-validation",
+    "ow",
+    "type-validation",
+    "zod"
+  ],
+  "bugs": {
+    "url": "https://github.com/sapphiredev/shapeshift/issues"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*": "prettier --ignore-unknown --write",
+    "*.{mjs,js,ts}": "eslint --fix --ext mjs,js,ts"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "resolutions": {
+    "ansi-regex": "^5.0.1",
+    "minimist": "^1.2.8"
+  },
+  "packageManager": "yarn@4.0.2"
+}

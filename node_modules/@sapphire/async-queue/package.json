@@ -1,0 +1,72 @@
+{
+  "name": "@sapphire/async-queue",
+  "version": "1.5.2",
+  "description": "Sequential asynchronous lock-based queue for promises",
+  "author": "@sapphire",
+  "license": "MIT",
+  "main": "dist/cjs/index.cjs",
+  "module": "dist/esm/index.mjs",
+  "browser": "dist/iife/index.global.js",
+  "unpkg": "dist/iife/index.global.js",
+  "types": "dist/cjs/index.d.cts",
+  "exports": {
+    "import": {
+      "types": "./dist/esm/index.d.mts",
+      "default": "./dist/esm/index.mjs"
+    },
+    "require": {
+      "types": "./dist/cjs/index.d.cts",
+      "default": "./dist/cjs/index.cjs"
+    },
+    "browser": "./dist/iife/index.global.js"
+  },
+  "sideEffects": false,
+  "homepage": "https://github.com/sapphiredev/utilities/tree/main/packages/async-queue",
+  "scripts": {
+    "test": "vitest run",
+    "lint": "eslint src tests --ext ts --fix -c ../../.eslintrc",
+    "docs": "typedoc-json-parser",
+    "build": "tsup && yarn build:rename-cjs-index",
+    "build:rename-cjs-index": "node ../../scripts/rename-cjs-index.mjs",
+    "prepack": "yarn build",
+    "bump": "cliff-jumper",
+    "check-update": "cliff-jumper --dry-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sapphiredev/utilities.git",
+    "directory": "packages/async-queue"
+  },
+  "files": [
+    "dist/"
+  ],
+  "engines": {
+    "node": ">=v14.0.0",
+    "npm": ">=7.0.0"
+  },
+  "keywords": [
+    "@sapphire/async-queue",
+    "bot",
+    "typescript",
+    "ts",
+    "yarn",
+    "discord",
+    "sapphire",
+    "standalone"
+  ],
+  "bugs": {
+    "url": "https://github.com/sapphiredev/utilities/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@favware/cliff-jumper": "^2.2.3",
+    "@vitest/coverage-v8": "^1.2.1",
+    "tsup": "^8.0.1",
+    "typedoc": "^0.25.7",
+    "typedoc-json-parser": "^9.0.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.1"
+  }
+}

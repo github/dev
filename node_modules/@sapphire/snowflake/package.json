@@ -1,0 +1,67 @@
+{
+  "name": "@sapphire/snowflake",
+  "version": "3.5.1",
+  "description": "Deconstructs and generates snowflake IDs using BigInts",
+  "author": "@sapphire",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "browser": "dist/index.global.js",
+  "unpkg": "dist/index.global.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js",
+    "types": "./dist/index.d.ts"
+  },
+  "sideEffects": false,
+  "homepage": "https://github.com/sapphiredev/utilities/tree/main/packages/snowflake",
+  "scripts": {
+    "test": "vitest run",
+    "lint": "eslint src tests --ext ts --fix -c ../../.eslintrc",
+    "build": "tsup",
+    "docs": "typedoc-json-parser",
+    "prepack": "yarn build",
+    "bump": "cliff-jumper",
+    "check-update": "cliff-jumper --dry-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sapphiredev/utilities.git",
+    "directory": "packages/snowflake"
+  },
+  "files": [
+    "dist/**/*.js*",
+    "dist/**/*.mjs*",
+    "dist/**/*.d*"
+  ],
+  "engines": {
+    "node": ">=v14.0.0",
+    "npm": ">=7.0.0"
+  },
+  "keywords": [
+    "@sapphire/snowflake",
+    "bot",
+    "typescript",
+    "ts",
+    "yarn",
+    "discord",
+    "sapphire",
+    "standalone"
+  ],
+  "bugs": {
+    "url": "https://github.com/sapphiredev/utilities/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@favware/cliff-jumper": "^2.0.0",
+    "@vitest/coverage-c8": "^0.31.0",
+    "tsup": "^6.7.0",
+    "typedoc": "^0.24.7",
+    "typedoc-json-parser": "^7.4.0",
+    "typescript": "^5.0.4",
+    "vitest": "^0.31.0"
+  }
+}
