@@ -1,0 +1,63 @@
+{
+  "name": "ts-mixer",
+  "version": "6.0.3",
+  "description": "A very small TypeScript library that provides tolerable Mixin functionality.",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "browser": "dist/esm/index.js",
+  "unpkg": "dist/esm/index.min.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "yarn clean",
+    "build": "rollup -c && tsc",
+    "clean": "rimraf dist",
+    "lint": "eslint src/**/*.ts",
+    "test": "nyc mocha",
+    "codegen": "node ./codegen.js",
+    "release": "standard-version"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@rollup/plugin-typescript": "^8.2.1",
+    "@types/chai": "^4.2.19",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^15.12.4",
+    "@types/sinon": "^10.0.2",
+    "@typescript-eslint/parser": "^4.27.0",
+    "chai": "^4.3.4",
+    "class-validator": "^0.13.1",
+    "coveralls": "^3.1.0",
+    "eslint": "^7.29.0",
+    "husky": "^4.2.5",
+    "js-yaml": "^4.1.0",
+    "mocha": "^9.0.1",
+    "nyc": "14.1.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.52.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "sinon": "^11.1.1",
+    "standard-version": "^9.3.0",
+    "ts-node": "^10.0.0",
+    "tslib": "^2.3.0",
+    "typescript": "^4.3.4",
+    "yarn-add-no-save": "^1.0.3"
+  },
+  "homepage": "https://github.com/tannerntannern/ts-mixer#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tannerntannern/ts-mixer.git"
+  },
+  "keywords": [
+    "typescript",
+    "mixin",
+    "mixins",
+    "multiple inheritance",
+    "mixin classes"
+  ],
+  "author": "Tanner Nielsen",
+  "license": "MIT"
+}
