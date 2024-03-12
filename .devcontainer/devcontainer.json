@@ -1,0 +1,5 @@
+{[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/github/dev)
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+  }
+}
