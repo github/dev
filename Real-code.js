@@ -2251,7 +2251,7 @@ function loadProductReviews(e, a = 6) {
     if (t.innerHTML = "", !i) {
         const e = document.createElement("p");
         e.classList.add("no-reviews-message");
-        e.innerHTML = "Got your product? Be the <strong>first to review</strong>! Check email for a chance to win: <strong>$5 for a photo</strong>, <strong>$10 for a video</strong>. <strong>Shape the experience</strong>! 🌟"; 
+        e.innerHTML = "No reviews yet from customers who bought this product."; 
         t.appendChild(e); 
 
         if (n) {
