@@ -1,0 +1,61 @@
+ <div id="cyberweek-countdown-container">
+        <div id="cyberweek-countdown">
+          <div class="cyberweek-title"><span>Cyber Week </span>starts in </div>
+            <div class="cyberweek-countdown-item">
+                <div id="cyberweek-days" class="cyberweek-countdown-number">00</div>
+                <div class="cyberweek-countdown-label">day</div>
+            </div>
+                    <span class>:</span>
+            <div class="cyberweek-countdown-item">
+                <div id="cyberweek-hours" class="cyberweek-countdown-number">00</div>
+                <div class="cyberweek-countdown-label">hours</div>
+            </div>
+                    <span class>:</span>
+            <div class="cyberweek-countdown-item">
+                <div id="cyberweek-minutes" class="cyberweek-countdown-number">00</div>
+                <div class="cyberweek-countdown-label">min</div>
+            </div>
+          <span class>:</span>
+            <div class="cyberweek-countdown-item">
+                <div id="cyberweek-seconds" class="cyberweek-countdown-number">00</div>
+                <div class="cyberweek-countdown-label">sec</div>
+            </div>
+        </div>
+    </div> 
+
+    <script>
+        // Set the date we're counting down to
+        const cyberweekCountDownDate = new Date("Nov 27, 2023 00:00:00").getTime();
+
+        // Update the countdown every 1 second
+        const cyberweekX = setInterval(function() {
+            // Get the current date and time
+            const cyberweekNow = new Date().getTime();
+
+            // Calculate the remaining time
+            const cyberweekDistance = cyberweekCountDownDate - cyberweekNow;
+
+            // Calculate days, hours, minutes, and seconds
+            const cyberweekDays = Math.floor(cyberweekDistance / (1000 * 60 * 60 * 24));
+            const cyberweekHours = Math.floor((cyberweekDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const cyberweekMinutes = Math.floor((cyberweekDistance % (1000 * 60 * 60)) / (1000 * 60));
+            const cyberweekSeconds = Math.floor((cyberweekDistance % (1000 * 60)) / 1000);
+
+            // Display the countdown
+            document.getElementById("cyberweek-days").innerHTML = formatTime(cyberweekDays);
+            document.getElementById("cyberweek-hours").innerHTML = formatTime(cyberweekHours);
+            document.getElementById("cyberweek-minutes").innerHTML = formatTime(cyberweekMinutes);
+            document.getElementById("cyberweek-seconds").innerHTML = formatTime(cyberweekSeconds);
+
+            // If the countdown is over, display a message
+            if (cyberweekDistance < 0) {
+                clearInterval(cyberweekX);
+                document.getElementById("cyberweek-countdown").innerHTML = "Cyber Week has started!";
+            }
+        }, 1000);
+
+        // Add leading zero if the time is less than 10
+        function formatTime(time) {
+            return time < 10 ? "0" + time : time;
+        }
+    </script>
