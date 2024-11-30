@@ -36,3 +36,36 @@ body {
     text-decoration: none;
   }
   
+
+
+  body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: gold;
+}
+
+#login-container {
+    margin-top: 50px;
+}
+
+input, button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+button {
+    background-color: green;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
