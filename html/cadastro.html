@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Cadastro</h1>
+  <form id="formCadastro">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+    
+    <label for="celular">Celular (opcional):</label>
+    <input type="text" id="celular" name="celular" placeholder="(XX) XXXXX-XXXX">
+    
+    <label for="serie">Preciso dos livros do:</label>
+    <select id="serie" name="serie" required>
+      <option value="1">G5  (Ciclo 1)</option>
+      <option value="2">1º Ano (Ciclo 1)</option>
+      <option value="3">2º Ano (Ciclo 1)</option>
+      <option value="4">3º Ano (Ciclo 1)</option>
+      <option value="5">4º Ano (Ciclo 2)</option>
+      <option value="6">5º Ano (Ciclo 2)</option>
+      <option value="7">6º Ano (Ciclo 2)</option>
+      <option value="8">7º Ano (Ciclo 2)</option>
+      <option value="9">8º Ano (Ciclo 2)</option>
+      <option value="10">1º Ano EM (Ciclo 3)</option>
+      <option value="11">2º Ano EM (Ciclo 3)</option>
+      <option value="12">3º Ano EM (Ciclo 3)</option>
+      
+    </select>
+    
+    <label>Livros (Marque os que você possui):</label>
+    <div id="livros">
+      <input type="checkbox" id="livro1" value="Livro 1">
+      <label for="livro1">Livro 1</label><br>
+      <input type="checkbox" id="livro2" value="Livro 2">
+      <label for="livro2">Livro 2</label>
+    </div>
+    
+    <button type="submit">Cadastrar</button>
+  </form>
+</body>
+</html>
