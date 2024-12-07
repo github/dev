@@ -1,15 +1,59 @@
-# What is this?
+##**Resume Website**
 
-The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+##**Overview**
 
-There are two ways to go directly to a VS Code environment in your browser and start coding:
+This project is a simple, responsive resume website created using HTML and CSS. It showcases key information about the individual, including contact details, skills, education, and work experience.
+Project Structure
 
-* Press the . key on any repository or pull request.
-* Swap `.com` with `.dev` in the URL. For example, this repo https://github.com/github/dev becomes http://github.dev/github/dev
+##**The project consists of two main files:**
 
-Preview the gif below to get a quick demo of github.dev in action.
+    index.html: The main structure of the resume.
+    styles.css: The styling for the webpage.
 
-![github dev](https://user-images.githubusercontent.com/856858/130119109-4769f2d7-9027-4bc4-a38c-10f297499e8f.gif)
+##**Features
+**
+    Header: Displays the name and title of the individual.
+    Contact Section: Includes email, GitHub profile, and LinkedIn link.
+    Skills Section: Lists technical skills in web development and programming.
+    Education Section: Shows the education details.
+    About Section: Provides a brief personal description and career goals.
+    Work Experience Section: Details internship experience, responsibilities, and achievements.
 
-# Why?
-It’s a quick way to edit and navigate code. It's especially useful if you want to edit multiple files at a time or take advantage of all the powerful code editing features of Visual Studio Code when making a quick change. For more information, see our [documentation](https://github.co/codespaces-editor-help).
+##**How to Use**
+
+    Clone or download this repository to your local machine.
+    Open index.html in your web browser to view the resume.
+    Modify the content in index.html to customize it for your own use.
+
+##**Technologies Used**
+
+    HTML for the structure of the webpage.
+    CSS for styling and layout.
+
+##**Installation Instructions**
+
+    Clone the repository:
+
+git clone https://github.com/yourusername/your-repo-name.git
+
+Navigate into the project directory:
+
+    cd your-repo-name
+
+    Open index.html in your preferred web browser to preview the project.
+
+##**Live Demo**
+
+[Insert your live demo link here, e.g., GitHub Pages, Netlify, or Vercel link]
+Customization
+
+    Modify the content in the index.html file to change the details like name, contact information, and work history.
+    Adjust the styles.css file to change the appearance, including colors, fonts, and layout.
+
+License
+
+This project is licensed under the MIT License.
+Acknowledgements
+
+    Inspired by modern resume designs.
+    Thanks to the open-source community for their resources.

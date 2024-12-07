@@ -1,0 +1,107 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+
+  /* Styling for Lines */
+.line {
+    width: 100%;
+    margin: 10px auto;
+    border: 0;
+    border-top: 2px solid #333;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Header */
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    letter-spacing: 5px;
+  }
+  
+  header .title {
+    font-size: 1.2em;
+    color: #666;
+  }
+  
+  .line {
+    width: 50%;
+    margin: 10px auto;
+    border: 0;
+    border-top: 2px solid #333;
+  }
+  
+  /* Main Content */
+  .main-content {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .left-column {
+    flex: 1;
+  }
+  
+  .right-column {
+    flex: 2;
+  }
+  
+  /* Sections */
+  section {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #333;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 5px;
+  }
+  
+  ul li a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Skills and Education */
+  .skills ul, .work-experience ul {
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+  
+  /* Work Experience */
+  .job h3 {
+    margin: 5px 0;
+    font-size: 1.2em;
+  }
+  
+  .job p {
+    font-size: 0.9em;
+    color: #666;
+  }
