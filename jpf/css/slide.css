@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+
+
+/*CSSスライドショーアニメーション設定
+---------------------------------------------------------------------------*/
+/*1枚目*/
+@keyframes slide1 {
+	0% {left: 110%;}
+	3% {left: 0%;}
+	20% {left: 0%;}
+	23% {left: -110%;}
+	100% {left: -110%;}
+}
+/*2枚目*/
+@keyframes slide2 {
+	0% {left: 110%;}
+	33% {left: 110%;}
+	36% {left: 0%;}
+	53% {left: 0%;}
+	56% {left: -110%;}
+	100% {left: -110%;}
+}
+/*3枚目*/
+@keyframes slide3 {
+	0% {left: 110%;}
+	66% {left: 110%;}
+	69% {left: 0%;}
+	86% {left: 0%;}
+	89% {left: -110%;}
+	100% {left: -110%;}
+}
+
+/*mainimg
+---------------------------------------------------------------------------*/
+/*画像ブロック*/
+#mainimg {
+	clear: left;
+	position: relative;
+	width: 100%;
+	height: 100%;		/*高さ*/
+	z-index: 1;
+	/*background: #000;	背景色*/
+	/*overflow: hidden;*/
+}
+/*３枚画像の共通設定*/
+.slide1,.slide2,.slide3 {
+	position: absolute;left:0px;top:0px;width: 100%;height: 100%;
+	animation-duration: 15s;				/*実行する時間。「s」は秒の事。*/
+	animation-iteration-count:infinite;		/*実行する回数。「infinite」は無限に繰り返す意味。*/
+	animation-delay: 4s;					/*アニメーションを遅れて開始させる。「s」は秒の事。*/
+	animation-fill-mode: both;				/*アニメーションの待機中は最初のフレームを、アニメーションの完了後は最後のフレームを維持する。*/
+}
+/*メッセージ欄*/
+#mainimg p {
+	position: absolute;z-index: 1;
+	left: 0px;			/*左から0pxの場所にブロックを配置*/
+	bottom: 30px;		/*下から30pxの場所にブロックを配置*/
+	width: 90%;			/*幅。下のpaddingと合計して100になるように。*/
+	padding: 10px 5% !important;	/*上下、左右へのボックス内の余白。*/
+	background: #000;	/*背景色（古いブラウザ用）*/
+	background: rgba(0,0,0,0.8);	/*背景色。0,0,0は黒の事で0.8は80%色がついた状態の事。*/
+	color: #fff;		/*文字色*/
+}
+/*1枚目*/
+.slide1 {
+	background: url(../images/1.jpg) no-repeat center center/cover;	/*1.jpg画像の読み込み*/
+	animation-name: slide1;		/*上で設定しているキーフレーム（keyframes）の名前*/
+}
+/*2枚目*/
+.slide2 {
+	background: url(../images/2.jpg) no-repeat center center/cover;	/*2.jpg画像の読み込み*/
+	animation-name: slide2;		/*上で設定しているキーフレーム（keyframes）の名前*/
+}
+/*3枚目*/
+.slide3 {
+	background: url(../images/3.jpg) no-repeat center center/cover;	/*3.jpg画像の読み込み*/
+	animation-name: slide3;		/*上で設定しているキーフレーム（keyframes）の名前*/
+}
+

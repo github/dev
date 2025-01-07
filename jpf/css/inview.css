@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+
+/*inviewのスタイル
+---------------------------------------------------------------------------*/
+/*共通設定（待機中）*/
+.up, .left, .right, .transform1, .transform2 {
+	opacity: 0;		/*透明度（透明の状態）*/
+	position: relative;
+}
+/*共通設定（要素が見えたら実行するアクション）*/
+.upstyle, .leftstyle, .rightstyle, .transform1style, .transform2style {
+	opacity: 1;		/*透明度（色が100%出た状態）*/
+	transition: 0.5s 1s;	/*0.5sはアニメーションの実行時間0.5秒。1sは1秒遅れてスタートする指定。*/
+}
+/*upスタイル。下から上にフェードインしてくるスタイル（待機中）*/
+.up {
+	bottom: -50px;	/*基準値の下50pxの場所からスタート*/
+}
+/*要素が見えたら実行するアクション*/
+.upstyle {
+	bottom: 0px;	/*基準値まで戻す*/
+}
+/*leftスタイル。左からフェードインしてくるスタイル（待機中）*/
+.left {
+	left: -100px;	/*基準値より左に100pxの場所からスタート*/
+}
+/*要素が見えたら実行するアクション*/
+.leftstyle {
+	left: 0px;		/*基準値まで戻す*/
+}
+/*rightスタイル。右からフェードインしてくるスタイル（待機中）*/
+.right {
+	right: -100px;	/*基準値より右に100pxの場所からスタート*/
+}
+/*要素が見えたら実行するアクション*/
+.rightstyle {
+	right: 0px;		/*基準値まで戻す*/
+}
+/*transform1スタイル。その場で回転するスタイル（待機中）*/
+.transform1 {
+	transform: scaleX(0);	/*幅を0%でスタート*/
+}
+/*要素が見えたら実行するアクション*/
+.transform1style {
+	transform: scaleX(1);	/*幅を100%に戻す*/
+}
+/*transform2スタイル。倒れた状態から起き上がるスタイル（待機中）*/
+.transform2 {
+	transform: perspective(400px) rotateX(100deg);
+}
+/*要素が見えたら実行するアクション*/
+.transform2style {
+	transform: perspective(0px) rotateX(0deg);
+}
