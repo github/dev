@@ -1,0 +1,19 @@
+{
+  "domain": "ingeniumassistant",
+  "name": "IngeniumAssistant",
+  "integration_type": "hub",
+  "version": "1.0.0",
+  "config_flow": true,
+  "documentation": "https://github.com/BorjaIglesias/ingeniumassistant-homeassistant",
+  "requirements": [
+    "ingeniumpy==1.0.0",
+    "pyserial==3.5"
+  ],
+  "ssdp": [],
+  "zeroconf": [],
+  "homekit": {},
+  "dependencies": [],
+  "codeowners": [
+    "@BorjaIglesias"
+  ]
+}
