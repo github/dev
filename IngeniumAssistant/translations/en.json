@@ -1,0 +1,23 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Device is already configured"
+        },
+        "error": {
+            "cannot_connect": "Failed to connect, please try again",
+            "invalid_auth": "Invalid authentication",
+            "unknown": "Unexpected error"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "host": "Host",
+                    "username": "Username",
+                    "password": "Password"
+                },
+                "title": "Connect to the device"
+            }
+        },
+        "title": "IngeniumAssistant"
+    }
+}
