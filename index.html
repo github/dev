@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Scanner & Digitizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Handwritten Note Scanner</h1>
+        <input type="file" id="imageUpload" accept="image/*">
+        <button id="processButton">Process Image</button>
+        <canvas id="canvas" style="display: none;"></canvas>
+        <textarea id="outputText" placeholder="Extracted text will appear here..."></textarea>
+        <div class="buttons">
+            <button onclick="downloadPDF()">Download PDF</button>
+            <button onclick="downloadImage()">Download Image</button>
+            <button onclick="downloadEPUB()">Download EPUB</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/4.0.2/tesseract.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
