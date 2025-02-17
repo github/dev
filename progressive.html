@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Progressive Payment Calculator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="number"], button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f9;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Progressive Payment Calculator (Singapore)</h2>
+        <div class="form-group">
+            <label for="propertyPrice">Price of Property (SGD):</label>
+            <input type="number" id="propertyPrice" step="0.01">
+        </div>
+        <div class="form-group">
+            <label for="interestRate">Annual Interest Rate (%):</label>
+            <input type="number" id="interestRate" step="0.01" value="3.5">
+        </div>
+        <div class="form-group">
+            <label for="ltvRatio">Max Loan-to-Value (LTV) Ratio (%):</label>
+            <input type="number" id="ltvRatio" step="0.01" value="75">
+        </div>
+        <button onclick="calculateProgressivePayment()">Calculate</button>
+        <div class="result" id="result"></div>
+        <canvas id="amortizationChart" width="400" height="200"></canvas>
+    </div>
+
+    <script>
+        function calculateProgressivePayment() {
+            const propertyPrice = parseFloat(document.getElementById('propertyPrice').value);
+            const interestRate = parseFloat(document.getElementById('interestRate').value) / 100;
+            const ltvRatio = parseFloat(document.getElementById('ltvRatio').value) / 100;
+
+            if (isNaN(propertyPrice) || isNaN(interestRate) || isNaN(ltvRatio)) {
+                alert("Please enter valid numbers.");
+                return;
+            }
+
+            const downPayment = propertyPrice * 0.20; // 20% upfront cash payment
+            const firstStagePayment = propertyPrice * 0.05; // 5% cash payment in the first stage
+
+            const loanAmount = propertyPrice * ltvRatio;
+            const balanceAmountPayable = propertyPrice - downPayment - firstStagePayment - loanAmount;
+
+            const progressivePayments = [
+                { stage: 'Booking Fee (5%)', amount: firstStagePayment },
+                { stage: 'Down Payment (15%)', amount: propertyPrice * 0.15 },
+                { stage: 'Completion of Foundation (10%)', amount: propertyPrice * 0.10 },
+                { stage: 'Completion of Structure (10%)', amount: propertyPrice * 0.10 },
+                { stage: 'Completion of Walls (10%)', amount: propertyPrice * 0.10 },
+                { stage: 'Completion of Roofing (10%)', amount: propertyPrice * 0.10 },
+                { stage: 'Completion of Plastering (5%)', amount: propertyPrice * 0.05 },
+                { stage: 'Completion of Carpentry (5%)', amount: propertyPrice * 0.05 },
+                { stage: 'Completion of Carpark, Drains and Roads (5%)', amount: propertyPrice * 0.05 },
+                { stage: 'Obtain TOP (25%)', amount: propertyPrice * 0.25 },
+                { stage: 'Obtain CSC (15%)', amount: propertyPrice * 0.15 }
+            ];
+
+            const monthlyInterestRate = interestRate / 12;
+            const loanTenureYears = 25; // Maximum loan tenure is 25 years
+            const numberOfPayments = loanTenureYears * 12;
+
+            let resultHTML = `<h3>Payment Stages</h3>
+                              <table>
+                                  <thead>
+                                      <tr>
+                                          <th>Stage</th>
+                                          <th>Amount (SGD)</th>
+                                          <th>Monthly Installment (SGD)</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>`;
+            for (const payment of progressivePayments) {
+                let principalPayment = payment.amount * ltvRatio;
+                let monthlyRepayment = principalPayment * (monthlyInterestRate / (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments)));
+
+                resultHTML += `<tr>
+                                <td>${payment.stage}</td>
+                                <td>${payment.amount.toFixed(2)}</td>
+                                <td>${monthlyRepayment.toFixed(2)}</td>
+                               </tr>`;
+            }
+            resultHTML += `</tbody></table>`;
+            resultHTML += `<p>Total Loan Amount: SGD ${loanAmount.toFixed(2)}</p>`;
+            resultHTML += `<p>Balance Amount Payable in Cash / CPF: SGD ${balanceAmountPayable.toFixed(2)}</p>`;
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = resultHTML;
+        }
+    </script>
+</body>
+</html>
