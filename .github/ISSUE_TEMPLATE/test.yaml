@@ -1,0 +1,63 @@
+---
+title: Coffee/Tea Issue Report
+description: Report issues with your coffee or tea purchase
+sections:
+  - type: select
+    name: Beverage Type
+    options:
+      - Coffee
+      - Tea
+    default: Coffee
+
+  - type: conditional
+    condition: Beverage Type == "Coffee"
+    section:
+      - type: select
+        name: Coffee Type
+        options:
+          - Espresso
+          - Cappuccino
+          - Latte
+          - Drip Coffee
+      - type: select
+        name: Coffee Size
+        options:
+          - Small
+          - Medium
+          - Large
+      - type: checkbox
+        name: Additional Options
+        options:
+          - Sugar
+          - Cream
+          - Syrup
+
+  - type: conditional
+    condition: Beverage Type == "Tea"
+    section:
+      - type: select
+        name: Tea Type
+        options:
+          - Black Tea
+          - Green Tea
+          - Herbal Tea
+          - Chai
+      - type: select
+        name: Tea Size
+        options:
+          - Small
+          - Medium
+          - Large
+      - type: checkbox
+        name: Additional Options
+        options:
+          - Honey
+          - Lemon
+          - Milk
+
+  - type: text
+    name: Order Number
+  - type: date
+    name: Date of Purchase
+  - type: text
+    name: Location
